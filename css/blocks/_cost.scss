@@ -1,0 +1,189 @@
+.cost {
+  display: flex;
+  flex-direction: row;
+  padding: 80px 50px 0 0;
+  width: 100%;
+
+  &__block {
+    &-text {
+      display: flex;
+      width: 70%;
+      flex-direction: column;
+      justify-content: space-between;
+      background: $popupBackground;
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 6px;
+
+      padding: 56px 80px 56px 220px;
+
+    }
+
+    &-img {
+      width: 30%;
+      position: relative;
+      padding: 0 24px;
+    }
+  }
+
+  &__title {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    padding: 12px 0;
+
+    color: #000000;
+  }
+
+  &__text {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 12px 0;
+
+    color: #000000;
+  }
+
+  &__btn {
+    background: #219653;
+    mix-blend-mode: normal;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    padding: 12px 96px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  &__img {
+    position: relative;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+    &-label {
+      font-family: Roboto;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 10px;
+      line-height: 12px;
+
+      color: #141414;
+
+      position: absolute;
+      bottom: 0;
+      left: 44px;
+    }
+  }
+}
+
+//@media (min-width: $break-point-large-screen) {
+//  .cost {
+//
+//    &__block {
+//      &-text {
+//      }
+//
+//      &-img {
+//
+//      }
+//    }
+//
+//    &__title {
+//
+//    }
+//
+//    &__text {
+//
+//    }
+//
+//    &__btn {
+//
+//    }
+//
+//    &__img {
+//
+//      &-label {
+//
+//      }
+//    }
+//  }
+//}
+//
+//@media (max-width: $break-point-tablet) {
+//  .cost {
+//
+//    &__block {
+//      &-text {
+//      }
+//
+//      &-img {
+//
+//      }
+//    }
+//
+//    &__title {
+//
+//    }
+//
+//    &__text {
+//
+//    }
+//
+//    &__btn {
+//
+//    }
+//
+//    &__img {
+//
+//      &-label {
+//
+//      }
+//    }
+//  }
+//}
+//
+//@media (max-width: $break-point-mobile) {
+//  .cost {
+//
+//    &__block {
+//      &-text {
+//      }
+//
+//      &-img {
+//
+//      }
+//    }
+//
+//    &__title {
+//
+//    }
+//
+//    &__text {
+//
+//    }
+//
+//    &__btn {
+//
+//    }
+//
+//    &__img {
+//
+//      &-label {
+//
+//      }
+//    }
+//  }
+//}

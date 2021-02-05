@@ -1,0 +1,71 @@
+.promo {
+  &__title {
+    @include container();
+    font-family: Helvetica;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 41px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  &__inner {
+    @include container(24px);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__manifest {
+    width: 50%;
+    background: #FFFFFF;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    border-left: #001437 solid 6px;
+    padding: 12px 20px;
+  }
+
+  &__text {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+
+    color: #000000;
+
+    &:not(:first-child) {
+      padding-top: 20px;
+    }
+  }
+
+  &__trailer {
+
+  }
+
+  &__footer {
+    width: 100%;
+    background: #001437;
+    text-align: center;
+    padding: 36px;
+  }
+
+  &__contract-btn {
+    display: inline-block;
+    width: 40%;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    padding: 16px;
+
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+    background: #FFFFFF;
+    border-radius: 6px;
+  }
+}

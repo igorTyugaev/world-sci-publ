@@ -1,0 +1,53 @@
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: $style;
+
+    src: url('#{$file-path}.eot');
+    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype');
+  }
+}
+
+
+@font-face {
+  font-family: 'Helvetica World';
+  src: url('HelveticaWorld.eot');
+  src: local('HelveticaWorld'), local('HelveticaWorld'),
+  url('HelveticaWorld.woff2') format('woff2'),
+  url('HelveticaWorld.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin container($padding-v: 0px, $padding-h: 140px) {
+  padding: $padding-v $padding-h;
+
+  @media (min-width: $break-point-large-screen) {
+    padding: #{get-vw($padding-v, $break-point-large-screen)} #{get-vw($padding-h, $break-point-large-screen)};
+  }
+
+  @media (max-width: #{$break-point-tablet}) {
+    padding: #{get-vw($padding-v, $break-point-tablet)} #{get-vw($padding-h, $break-point-tablet)};
+  }
+
+  @media (max-width: #{$break-point-mobile}) {
+    padding: #{get-vw($padding-v, $break-point-mobile)} #{get-vw($padding-h, $break-point-mobile)};
+  }
+}
+
+@mixin text-size($f-size: 12px) {
+  font-size: $f-size;
+
+  @media (min-width: $break-point-large-screen) {
+    font-size: #{get-vw($f-size, $break-point-large-screen)};
+  }
+
+  @media (max-width: #{$break-point-tablet}) {
+    font-size: #{get-vw($f-size, $break-point-tablet)};
+  }
+
+  @media (max-width: #{$break-point-mobile}) {
+    font-size: #{get-vw($f-size, $break-point-mobile)};
+  }
+}

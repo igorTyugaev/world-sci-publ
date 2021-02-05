@@ -1,0 +1,148 @@
+.consultation {
+  &__img {
+    position: relative;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: get-vw(153px, 1440px);
+    width: get-vw(96px, 1440px);
+    transform: translateX(-50%);
+    display: flex;
+    background-image: url("/media/pennant.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    align-items: center;
+
+    &-container {
+      transform: translateX(5px);
+    }
+
+    &-img {
+      object-fit: contain;
+      width: get-vw(78px, 1440px);
+      margin-top: get-vw(22px, 1440px);
+    }
+
+    &-title {
+      color: white;
+      text-align: center;
+      @include text-size(11px);
+    }
+  }
+
+  &__inner {
+    padding: 100px 120px;
+    position: absolute;
+    left: 0;
+    border-radius: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    transform: translateY(-100%);
+  }
+
+  &__btn {
+    width: 20%;
+    padding: 10px 24px;
+    border: solid 2px $textColorPrimary;
+    border-radius: 28px;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    @include text-size(14px);
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  &__text {
+    width: 40%;
+    @include text-size(12px);
+
+    &-left {
+      text-align: left;
+    }
+
+    &-right {
+      text-align: right;
+    }
+  }
+}
+
+@media (min-width: $break-point-large-screen) {
+  .consultation {
+    &__logo {
+      height: get-vw(153px, $break-point-large-screen);
+      width: get-vw(96px, $break-point-large-screen);
+      transform: translateX(-50%);
+
+      &-container {
+        transform: translateX(#{get-vw(5px, $break-point-large-screen)});
+      }
+
+      &-img {
+        width: get-vw(78px, $break-point-large-screen);
+        margin-top: get-vw(22px, $break-point-large-screen);
+      }
+
+      &-title {
+
+      }
+    }
+  }
+}
+
+@media (max-width: $break-point-tablet) {
+  .header {
+    &__logo {
+      height: get-vw(153px, $break-point-tablet);
+      width: get-vw(96px, $break-point-tablet);
+      transform: translateX(-50%);
+
+      &-container {
+        transform: translateX(#{get-vw(5px, $break-point-tablet)});
+      }
+
+      &-img {
+        width: get-vw(78px, $break-point-tablet);
+        margin-top: get-vw(22px, $break-point-tablet);
+      }
+
+      &-title {
+      }
+    }
+  }
+}
+
+@media (max-width: $break-point-mobile) {
+  .header {
+    &__logo {
+      height: get-vw(153px, $break-point-mobile);
+      width: get-vw(96px, $break-point-mobile);
+      transform: translateX(-50%);
+
+      &-container {
+        transform: translateX(#{get-vw(5px, $break-point-mobile)});
+      }
+
+      &-img {
+        width: get-vw(78px, $break-point-mobile);
+        margin-top: get-vw(22px, $break-point-mobile);
+      }
+
+      &-title {
+      }
+    }
+  }
+}

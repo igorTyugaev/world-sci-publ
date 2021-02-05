@@ -1,0 +1,23 @@
+@import 'mixins';
+
+@include font-face("Helvetica", "../fonts/HelveticaRegular/HelveticaRegular");
+@include font-face("Helvetica", "../fonts/HelveticaBold/HelveticaBold", bold);
+
+span, a {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  @include text-size(12px);
+  line-height: 120%;
+  color: $textColorPrimary;
+}
+
+p {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  @include text-size(12px);
+  line-height: 120%;
+
+  color: #FFFFFF;
+}
