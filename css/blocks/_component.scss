@@ -1,0 +1,78 @@
+.component {
+  position: relative;
+
+  &__img {
+  }
+
+  &__title {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 41px;
+
+    color: #FFFFFF;
+  }
+
+  &__inner {
+    padding: 100px 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    width: 50%;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    color: #FFFFFF;
+
+    &:not(:first-child) {
+      padding-top: 20px;
+    }
+  }
+
+  &__quote {
+    display: flex;
+    flex-direction: row;
+    padding: 45px 0;
+    width: 100%;
+    height: 100%;
+
+    &-text {
+      font-family: Helvetica;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 120%;
+      display: flex;
+      align-items: center;
+      padding: 0 5px;
+
+      color: #FFFFFF;
+    }
+
+    &::before {
+      content: "“";
+    }
+
+    &::after {
+      content: "“";
+      transform: rotateZ(180deg);
+    }
+
+    &::before, &::after {
+      font-family: Helvetica;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 72px;
+      line-height: 120%;
+      color: #FFFFFF;
+    }
+  }
+}

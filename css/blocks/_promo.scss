@@ -43,6 +43,74 @@
 
   }
 
+  &__video {
+
+  }
+
+  &__description {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #000000;
+  }
+
+  &__form {
+    &-title {
+      font-family: Helvetica;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+
+      color: #000000;
+    }
+
+    &-inner {
+      width: 100%;
+    }
+
+    &-input {
+      width: 60%;
+      padding: 10px;
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    &-btn {
+      box-sizing: border-box;
+      width: 40%;
+      font-family: Helvetica;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 120%;
+      text-align: center;
+
+      color: #FFFFFF;
+
+      background: #219653;
+      mix-blend-mode: normal;
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 34px;
+      padding: 8px 20px;
+    }
+
+    &-note {
+      font-family: Helvetica;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 9px;
+      line-height: 10px;
+
+      color: #BBBBBB;
+    }
+  }
+
   &__footer {
     width: 100%;
     background: #001437;

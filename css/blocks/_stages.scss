@@ -1,0 +1,37 @@
+@import 'slider';
+@import 'stage-gird';
+
+.stages {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    background: #001437;
+  }
+
+  &__title {
+    @include container(12px);
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 41px;
+
+    color: #FFFFFF;
+
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__slider {
+    width: 50%;
+  }
+
+  &__stage-gird {
+    width: 50%;
+  }
+}
