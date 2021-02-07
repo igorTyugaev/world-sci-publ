@@ -1,0 +1,119 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    background: #001437;
+  }
+
+  &__title {
+    @include container(12px);
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 41px;
+
+    color: #FFFFFF;
+
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.profile-slider {
+  &__hint {
+
+  }
+
+  &__nav {
+
+  }
+}
+
+.slider-menu {
+
+
+  &__tabs {
+
+  }
+}
+
+.tabs {
+  margin: 0px 0px 50px 0px;
+
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+    flex: 0 1 33.333%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+
+    span {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &__body {
+  }
+
+  &__block {
+    position: relative;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 24px;
+    display: none;
+
+    &:before {
+      content: "";
+      height: 50px;
+      width: 33.333%;
+      position: absolute;
+      top: -50px;
+    }
+
+    &:nth-child(1) {
+      background-color: #eb8698;
+    }
+
+    &:nth-child(1):before {
+      background-color: #eb8698;
+      left: 0;
+    }
+
+    &:nth-child(2) {
+      background-color: #9278aa;
+    }
+
+    &:nth-child(2):before {
+      background-color: #9278aa;
+      left: 33.333%;
+    }
+
+    &:nth-child(3) {
+      background-color: #97c67d;
+    }
+
+    &:nth-child(3):before {
+      background-color: #97c67d;
+      right: 0;
+    }
+
+    &:target {
+      display: block;
+    }
+  }
+}

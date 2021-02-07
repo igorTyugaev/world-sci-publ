@@ -1,0 +1,41 @@
+.foreign {
+  margin-top: 40px;
+  width: 100%;
+
+  &__title {
+    padding: 12px;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 120%;
+    text-align: center;
+
+    color: #161616;
+  }
+
+  &__inner {
+
+  }
+}
+
+
+.cards-gird {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+          "single single single single"
+          "single double single single";
+
+  &__item {
+    grid-area: single;
+
+    background-color: #9278aa;
+
+    &--double {
+      grid-area: double;
+    }
+  }
+
+}
