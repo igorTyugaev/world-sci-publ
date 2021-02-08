@@ -1,36 +1,61 @@
 .cost {
   display: flex;
   flex-direction: row;
-  padding: 80px 50px 0 0;
   width: 100%;
+  padding: 0 50px 0 0;
 
-  &__block {
-    &-text {
-      display: flex;
-      width: 70%;
-      flex-direction: column;
-      justify-content: space-between;
-      background: $popupBackground;
-      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 6px;
+  @include _more-than($bp-large) {
+    @include padding-size($bp-large, 0px, 50px, 0px, 0px);
+  }
 
-      padding: 56px 80px 56px 220px;
+  @include _less-than($bp-tablet) {
+    @include padding-size($bp-tablet, 0px, 0px, 0px, 0px);
+  }
 
+  @include _less-than($bp-mobile) {
+    @include padding-size($bp-tablet, 0px, 0px, 0px, 0px);
+  }
+
+  &__block-text {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    justify-content: space-between;
+    background: $popupBackground;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+
+    padding: 28px 40px 28px 60px;
+
+    @include _more-than($bp-large) {
+      @include padding-size($bp-large, 56px, 80px, 56px, 60px);
     }
 
-    &-img {
-      width: 30%;
-      position: relative;
-      padding: 0 24px;
+    @include _less-than($bp-desktop) {
+      @include padding-size($bp-tablet, 56px, 80px, 56px, 60px);
     }
+
+    @include _less-than($bp-tablet) {
+      @include padding-size($bp-tablet, 56px, 80px, 56px, 60px);
+    }
+
+    @include _less-than($bp-mobile) {
+      @include padding-size($bp-tablet, 56px, 80px, 56px, 60px);
+    }
+  }
+
+  &__block-img {
+    width: 30%;
+    position: relative;
+    padding: 0 24px;
   }
 
   &__title {
     font-family: Helvetica;
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
+    @include text-size(24px);
+    line-height: 120%;
     padding: 12px 0;
 
     color: #000000;
@@ -88,102 +113,3 @@
     }
   }
 }
-
-//@media (min-width: $break-point-large-screen) {
-//  .cost {
-//
-//    &__block {
-//      &-text {
-//      }
-//
-//      &-img {
-//
-//      }
-//    }
-//
-//    &__title {
-//
-//    }
-//
-//    &__text {
-//
-//    }
-//
-//    &__btn {
-//
-//    }
-//
-//    &__img {
-//
-//      &-label {
-//
-//      }
-//    }
-//  }
-//}
-//
-//@media (max-width: $break-point-tablet) {
-//  .cost {
-//
-//    &__block {
-//      &-text {
-//      }
-//
-//      &-img {
-//
-//      }
-//    }
-//
-//    &__title {
-//
-//    }
-//
-//    &__text {
-//
-//    }
-//
-//    &__btn {
-//
-//    }
-//
-//    &__img {
-//
-//      &-label {
-//
-//      }
-//    }
-//  }
-//}
-//
-//@media (max-width: $break-point-mobile) {
-//  .cost {
-//
-//    &__block {
-//      &-text {
-//      }
-//
-//      &-img {
-//
-//      }
-//    }
-//
-//    &__title {
-//
-//    }
-//
-//    &__text {
-//
-//    }
-//
-//    &__btn {
-//
-//    }
-//
-//    &__img {
-//
-//      &-label {
-//
-//      }
-//    }
-//  }
-//}

@@ -394,8 +394,8 @@ html {
 .cost {
   display: flex;
   flex-direction: row;
-  padding: 80px 50px 0 0;
   width: 100%;
+  padding: 0 50px 0 0;
 }
 
 .cost__block-text {
@@ -406,7 +406,7 @@ html {
   background: #FFFFFF;
   box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
   border-radius: 6px;
-  padding: 56px 80px 56px 220px;
+  padding: 28px 40px 28px 60px;
 }
 
 .cost__block-img {
@@ -420,7 +420,7 @@ html {
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
-  line-height: 28px;
+  line-height: 120%;
   padding: 12px 0;
   color: #000000;
 }
@@ -1619,6 +1619,18 @@ html {
     margin-top: 1.71875vw;
   }
 
+  .cost {
+    padding: 0vw 3.90625vw 0vw 0vw;
+  }
+
+  .cost__block-text {
+    padding: 4.375vw 6.25vw 4.375vw 4.6875vw;
+  }
+
+  .cost__title {
+    font-size: 1.875vw;
+  }
+
   .advantages {
     padding: 3.125vw 10.9375vw;
   }
@@ -1672,6 +1684,28 @@ html {
   }
 }
 
+@media (max-width:1170px) {
+  .cost {
+    padding: 0vw 0vw 0vw 0vw;
+  }
+
+  .cost {
+    padding: 0vw 0vw 0vw 0vw;
+  }
+
+  .cost__block-text {
+    padding: 6.2222222222vw 8.8888888889vw 6.2222222222vw 6.6666666667vw;
+  }
+
+  .cost__block-text {
+    padding: 6.2222222222vw 8.8888888889vw 6.2222222222vw 6.6666666667vw;
+  }
+
+  .cost__block-text {
+    padding: 6.2222222222vw 8.8888888889vw 6.2222222222vw 6.6666666667vw;
+  }
+}
+
 @media (max-width:900px) {
   a,
   span {
@@ -1711,6 +1745,10 @@ html {
   .header__logo-img {
     width: 8.6666666667vw;
     margin-top: 2.4444444444vw;
+  }
+
+  .cost__title {
+    font-size: 2.6666666667vw;
   }
 
   .advantages {
@@ -1805,6 +1843,10 @@ html {
   .header__logo-img {
     width: 15vw;
     margin-top: 4.2307692308vw;
+  }
+
+  .cost__title {
+    font-size: 4.6153846154vw;
   }
 
   .advantages {

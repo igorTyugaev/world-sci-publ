@@ -80,20 +80,20 @@
   }
 }
 
-@media (min-width: $break-point-large-screen) {
+@media (min-width: $bp-large) {
   .consultation {
     &__logo {
-      height: get-vw(153px, $break-point-large-screen);
-      width: get-vw(96px, $break-point-large-screen);
+      height: get-vw(153px, $bp-large);
+      width: get-vw(96px, $bp-large);
       transform: translateX(-50%);
 
       &-container {
-        transform: translateX(#{get-vw(5px, $break-point-large-screen)});
+        transform: translateX(#{get-vw(5px, $bp-large)});
       }
 
       &-img {
-        width: get-vw(78px, $break-point-large-screen);
-        margin-top: get-vw(22px, $break-point-large-screen);
+        width: get-vw(78px, $bp-large);
+        margin-top: get-vw(22px, $bp-large);
       }
 
       &-title {
@@ -103,20 +103,20 @@
   }
 }
 
-@media (max-width: $break-point-tablet) {
+@media (max-width: $bp-tablet) {
   .header {
     &__logo {
-      height: get-vw(153px, $break-point-tablet);
-      width: get-vw(96px, $break-point-tablet);
+      height: get-vw(153px, $bp-tablet);
+      width: get-vw(96px, $bp-tablet);
       transform: translateX(-50%);
 
       &-container {
-        transform: translateX(#{get-vw(5px, $break-point-tablet)});
+        transform: translateX(#{get-vw(5px, $bp-tablet)});
       }
 
       &-img {
-        width: get-vw(78px, $break-point-tablet);
-        margin-top: get-vw(22px, $break-point-tablet);
+        width: get-vw(78px, $bp-tablet);
+        margin-top: get-vw(22px, $bp-tablet);
       }
 
       &-title {
@@ -125,20 +125,20 @@
   }
 }
 
-@media (max-width: $break-point-mobile) {
+@media (max-width: $bp-mobile) {
   .header {
     &__logo {
-      height: get-vw(153px, $break-point-mobile);
-      width: get-vw(96px, $break-point-mobile);
+      height: get-vw(153px, $bp-mobile);
+      width: get-vw(96px, $bp-mobile);
       transform: translateX(-50%);
 
       &-container {
-        transform: translateX(#{get-vw(5px, $break-point-mobile)});
+        transform: translateX(#{get-vw(5px, $bp-mobile)});
       }
 
       &-img {
-        width: get-vw(78px, $break-point-mobile);
-        margin-top: get-vw(22px, $break-point-mobile);
+        width: get-vw(78px, $bp-mobile);
+        margin-top: get-vw(22px, $bp-mobile);
       }
 
       &-title {

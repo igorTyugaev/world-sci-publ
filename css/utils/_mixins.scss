@@ -9,7 +9,6 @@
   }
 }
 
-
 @font-face {
   font-family: 'Helvetica World';
   src: url('HelveticaWorld.eot');
@@ -23,31 +22,53 @@
 @mixin container($padding-v: 0px, $padding-h: 140px) {
   padding: $padding-v $padding-h;
 
-  @media (min-width: $break-point-large-screen) {
-    padding: #{get-vw($padding-v, $break-point-large-screen)} #{get-vw($padding-h, $break-point-large-screen)};
+  @media (min-width: $bp-large) {
+    padding: #{get-vw($padding-v, $bp-large)} #{get-vw($padding-h, $bp-large)};
   }
 
-  @media (max-width: #{$break-point-tablet}) {
-    padding: #{get-vw($padding-v, $break-point-tablet)} #{get-vw($padding-h, $break-point-tablet)};
+  @media (max-width: #{$bp-tablet}) {
+    padding: #{get-vw($padding-v, $bp-tablet)} #{get-vw($padding-h, $bp-tablet)};
   }
 
-  @media (max-width: #{$break-point-mobile}) {
-    padding: #{get-vw($padding-v, $break-point-mobile)} #{get-vw($padding-h, $break-point-mobile)};
+  @media (max-width: #{$bp-mobile}) {
+    padding: #{get-vw($padding-v, $bp-mobile)} #{get-vw($padding-h, $bp-mobile)};
   }
 }
 
 @mixin text-size($f-size: 12px) {
   font-size: $f-size;
 
-  @media (min-width: $break-point-large-screen) {
-    font-size: #{get-vw($f-size, $break-point-large-screen)};
+  @media (min-width: $bp-large) {
+    font-size: #{get-vw($f-size, $bp-large)};
   }
 
-  @media (max-width: #{$break-point-tablet}) {
-    font-size: #{get-vw($f-size, $break-point-tablet)};
+  @media (max-width: #{$bp-tablet}) {
+    font-size: #{get-vw($f-size, $bp-tablet)};
   }
 
-  @media (max-width: #{$break-point-mobile}) {
-    font-size: #{get-vw($f-size, $break-point-mobile)};
+  @media (max-width: #{$bp-mobile}) {
+    font-size: #{get-vw($f-size, $bp-mobile)};
+  }
+}
+
+@mixin padding-size($resolution: 1280px, $p-top: 0px, $p-right: 0px, $p-bottom: 0px, $p-left: 0px) {
+
+  padding: #{get-vw($p-top, $resolution)}
+  #{get-vw($p-right, $resolution)}
+  #{get-vw($p-bottom, $resolution)}
+  #{get-vw($p-left, $resolution)};
+
+}
+
+
+@mixin _more-than($resolution: 1280px) {
+  @media (min-width: $resolution) {
+    @content;
+  }
+}
+
+@mixin _less-than($resolution: 1170px) {
+  @media (max-width: 1170px) {
+    @content;
   }
 }
