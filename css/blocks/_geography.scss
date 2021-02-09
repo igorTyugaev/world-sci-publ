@@ -1,0 +1,22 @@
+.geography {
+  &__title {
+    @include container(12px);
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 120%;
+    text-align: center;
+
+    color: #000000;
+  }
+
+  &__map {
+    text-align: center;
+  }
+
+  &__img {
+    height: 100%;
+    object-fit: contain;
+  }
+}

@@ -1838,6 +1838,26 @@ html {
   color: #000000;
 }
 
+.geography__title {
+  padding: 12px 140px;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 120%;
+  text-align: center;
+  color: #000000;
+}
+
+.geography__map {
+  text-align: center;
+}
+
+.geography__img {
+  height: 100%;
+  object-fit: contain;
+}
+
 .footer {
   padding: 12px 140px;
   display: flex;
@@ -2011,6 +2031,10 @@ html {
     padding: 2.34375vw 10.9375vw;
   }
 
+  .geography__title {
+    padding: 0.9375vw 10.9375vw;
+  }
+
   .footer {
     padding: 0.9375vw 10.9375vw;
   }
@@ -2143,6 +2167,10 @@ html {
     padding: 3.3333333333vw 15.5555555556vw;
   }
 
+  .geography__title {
+    padding: 1.3333333333vw 15.5555555556vw;
+  }
+
   .footer {
     padding: 1.3333333333vw 15.5555555556vw;
   }
@@ -2251,6 +2279,10 @@ html {
 
   .reviews__content {
     padding: 5.7692307692vw 26.9230769231vw;
+  }
+
+  .geography__title {
+    padding: 2.3076923077vw 26.9230769231vw;
   }
 
   .footer {
