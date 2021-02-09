@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "Helvetica World";
+  font-family: 'Helvetica World';
   src: url("HelveticaWorld.eot");
   src: local("HelveticaWorld"),local("HelveticaWorld"),url("HelveticaWorld.woff2") format("woff2"),url("HelveticaWorld.woff") format("woff");
   font-weight: normal;
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-family: "Helvetica World";
+  font-family: 'Helvetica World';
   src: url("HelveticaWorld.eot");
   src: local("HelveticaWorld"),local("HelveticaWorld"),url("HelveticaWorld.woff2") format("woff2"),url("HelveticaWorld.woff") format("woff");
   font-weight: normal;
@@ -1858,6 +1858,117 @@ html {
   object-fit: contain;
 }
 
+.spoiler>input+label:after {
+  content: "+";
+  float: right;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.spoiler>input:checked+label:after {
+  content: "-";
+  float: right;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.spoiler>input {
+  display: none;
+}
+
+.spoiler>.spoiler_body,
+.spoiler>input+label {
+  background: #CCC;
+  padding: 5px 15px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+.spoiler>input+label+.spoiler_body {
+  display: none;
+}
+
+.spoiler>input:checked+label+.spoiler_body {
+  display: block;
+}
+
+.spoiler>.spoiler_body {
+  background: #FFF;
+  border: 3px solid #CCC;
+  border-top: none;
+}
+
+.faq__title {
+  padding: 12px 140px;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 122%;
+  text-align: left;
+  color: #000000;
+}
+
+.faq__inner {
+  padding: 12px 140px;
+}
+
+.faq__form {
+  padding: 12px 140px;
+}
+
+.your-question {
+  display: flex;
+  flex-direction: column;
+}
+
+.your-question__description {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.your-question__textarea {
+  width: 100%;
+  min-height: 200px;
+  border: 1px solid rgba(0,0,0,0.49);
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.your-question__email {
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,0.49);
+  box-sizing: border-box;
+  border-radius: 6px;
+  width: 30%;
+  margin-top: 20px;
+}
+
+.your-question__submit {
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
+  border-radius: 50px;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 120%;
+  padding: 12px;
+  width: 30%;
+  margin-top: 20px;
+  color: #000000;
+}
+
 .footer {
   padding: 12px 140px;
   display: flex;
@@ -2035,6 +2146,18 @@ html {
     padding: 0.9375vw 10.9375vw;
   }
 
+  .faq__title {
+    padding: 0.9375vw 10.9375vw;
+  }
+
+  .faq__inner {
+    padding: 0.9375vw 10.9375vw;
+  }
+
+  .faq__form {
+    padding: 0.9375vw 10.9375vw;
+  }
+
   .footer {
     padding: 0.9375vw 10.9375vw;
   }
@@ -2171,6 +2294,18 @@ html {
     padding: 1.3333333333vw 15.5555555556vw;
   }
 
+  .faq__title {
+    padding: 1.3333333333vw 15.5555555556vw;
+  }
+
+  .faq__inner {
+    padding: 1.3333333333vw 15.5555555556vw;
+  }
+
+  .faq__form {
+    padding: 1.3333333333vw 15.5555555556vw;
+  }
+
   .footer {
     padding: 1.3333333333vw 15.5555555556vw;
   }
@@ -2282,6 +2417,18 @@ html {
   }
 
   .geography__title {
+    padding: 2.3076923077vw 26.9230769231vw;
+  }
+
+  .faq__title {
+    padding: 2.3076923077vw 26.9230769231vw;
+  }
+
+  .faq__inner {
+    padding: 2.3076923077vw 26.9230769231vw;
+  }
+
+  .faq__form {
     padding: 2.3076923077vw 26.9230769231vw;
   }
 

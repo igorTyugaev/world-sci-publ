@@ -1,0 +1,76 @@
+
+.faq {
+  &__title {
+    @include container(12px);
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 122%;
+    text-align: left;
+    color: #000000;
+  }
+
+  &__inner {
+    @include container(12px);
+  }
+
+  &__form {
+    @include container(12px);
+  }
+}
+
+
+.your-question {
+  display: flex;
+  flex-direction: column;
+
+
+  &__description {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #000000;
+  }
+
+  &__textarea {
+    width: 100%;
+    min-height: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.49);
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  &__email {
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.49);
+    box-sizing: border-box;
+    border-radius: 6px;
+    width: 30%;
+    margin-top: 20px;
+  }
+
+  &__submit {
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 120%;
+    padding: 12px;
+    width: 30%;
+    margin-top: 20px;
+    color: #000000;
+
+  }
+}

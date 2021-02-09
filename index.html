@@ -37,17 +37,38 @@
 
  @import "reviews.html"
 
-<section class="geography">
-    <h2 class="geography__title">
-        Работаем с Авторами не только в России, но и за рубежом
+ @import "geography.html"
+
+<section class="faq">
+
+    <h2 class="faq__title">
+        F.A.Q. Часто задаваемые вопросы
     </h2>
-    <div class="geography__map">
-        <img src="/media/geography.svg" alt="map" class="geography__img">
+
+    <div class="faq__inner">
+        <div class="spoiler">
+            <input type="checkbox" id="spoilerid_1"><label for="spoilerid_1">
+            Есть ли вероятность, что мою статью не удастся опубликовать?
+        </label>
+            <div class="spoiler_body">
+                Скрываемый текст
+            </div>
+        </div>
     </div>
 
-</section>
- @import "faq.html"
+    <form class="faq__form your-question" action="">
+        <h3 class="your-question__description">
+            Если Вашего вопроса нет в списке, задайте его в форме расположенной ниже.
+            Ответ будет направлен на электронную почту.
+        </h3>
+        <input type="text" class="your-question__textarea">
+        <input type="text" class="your-question__email" placeholder="email">
+        <button type="submit" class="your-question__submit">Задать
+            свой
+            вопрос</button>
+    </form>
 
+</section>
  @import "footer.html"
 
 </body>
