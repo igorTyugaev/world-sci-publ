@@ -1858,46 +1858,111 @@ html {
   object-fit: contain;
 }
 
-.spoiler>input+label:after {
+.spoilers {
+  counter-reset: counter-spoiler;
+}
+
+.spoilers__item {
+  counter-increment: counter-spoiler;
+}
+
+.spoiler {
+  width: 100%;
+}
+
+.spoiler__checkbox {
+  display: none;
+}
+
+.spoiler__header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.spoiler__header:before {
+  display: inline;
+  content: "0" counter(counter-spoiler);
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 122%;
+  padding-right: 12px;
+  color: #000000;
+}
+
+.spoiler__label {
+  width: 95%;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 120%;
+  border-bottom: 2px solid #C4C4C4;
+  color: #000000;
+}
+
+.spoiler__label:after {
   content: "+";
   float: right;
   font-family: monospace;
   font-weight: bold;
+  color: #C4C4C4;
+  font-size: 20px;
 }
 
-.spoiler>input:checked+label:after {
-  content: "-";
-  float: right;
-  font-family: monospace;
-  font-weight: bold;
-}
-
-.spoiler>input {
-  display: none;
-}
-
-.spoiler>.spoiler_body,
-.spoiler>input+label {
-  background: #CCC;
-  padding: 5px 15px;
+.spoiler__label {
+  background: transparent;
+  padding: 24px 18px 24px 0;
   overflow: hidden;
   width: 100%;
+  display: block;
   box-sizing: border-box;
-  display: block;
 }
 
-.spoiler>input+label+.spoiler_body {
-  display: none;
+.spoiler__text {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 140%;
+  color: #000000;
 }
 
-.spoiler>input:checked+label+.spoiler_body {
-  display: block;
+.spoiler__checkbox:checked+.spoiler__label:after {
+  content: "-";
 }
 
-.spoiler>.spoiler_body {
+.spoiler__inner {
   background: #FFF;
-  border: 3px solid #CCC;
+  border: 2px solid #C4C4C4;
   border-top: none;
+  padding: 20px;
+}
+
+.spoiler__body {
+  display: none;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+}
+
+.spoiler__body:before {
+  display: inline;
+  content: "00";
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 122%;
+  padding-right: 12px;
+  color: transparent;
+}
+
+.spoiler>input:checked+.spoiler__body {
+  display: flex;
 }
 
 .faq__title {
