@@ -1,0 +1,24 @@
+$p-side: 20px;
+$maxWidthContainer: 1031px;
+$maxWidthContainer: $maxWidthContainer + 2 * $p-side;
+
+.container {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $p-side;
+
+  @include _more-than($bp-large) {
+    max-width: #{get-vw($maxWidthContainer, $bp-large)};
+    padding: 0 #{get-vw($p-side, $bp-large)};
+  }
+
+  @include _less-than($bp-tablet) {
+    max-width: #{get-vw($maxWidthContainer, $bp-tablet)};
+    padding: 0 #{get-vw($p-side, $bp-tablet)};
+  }
+
+  @include _less-than($bp-mobile) {
+    max-width: #{get-vw($maxWidthContainer, $bp-mobile)};
+    padding: 0 #{get-vw($p-side, $bp-mobile)};
+  }
+}

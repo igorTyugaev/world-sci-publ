@@ -1,6 +1,5 @@
 .quiz {
   &__title {
-    @include container();
     font-family: Helvetica;
     font-style: normal;
     font-weight: bold;

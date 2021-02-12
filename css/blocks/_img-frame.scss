@@ -1,0 +1,33 @@
+.img-frame {
+  &__img {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+
+  }
+
+  &__labels {
+    @include padding-size(0px, 12px, 12px, 12px);
+    @include text-size(10px);
+
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 300;
+    color: #141414;
+
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+
+  &__label {
+    display: block;
+  }
+}

@@ -25,30 +25,47 @@
 }
 
 @font-face {
-  font-family: "Helvetica";
+  font-family: "HelveticaBold";
   font-weight: bold;
   font-style: normal;
   src: url("../fonts/HelveticaBold/HelveticaBold.eot");
   src: url("../fonts/HelveticaBold/HelveticaBold.eot?#iefix") format("embedded-opentype"),url("../fonts/HelveticaBold/HelveticaBold.woff") format("woff"),url("../fonts/HelveticaBold/HelveticaBold.ttf") format("truetype");
 }
 
-a,
-span {
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 120%;
-  color: #FFFFFF;
+body,
+button,
+input,
+textarea {
+  font-family: "Helvetica";
 }
 
-p {
-  font-family: Helvetica;
+h2,
+h3 {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: bold;
+  line-height: 120%;
+  color: #000000;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+a,
+button,
+p,
+span {
+  font-family: "Helvetica";
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
   line-height: 120%;
-  color: #FFFFFF;
+  font-size: 12px;
+  color: #000000;
 }
 
 a,
@@ -233,9 +250,178 @@ th {
   text-align: left;
 }
 
+.container {
+  max-width: 1071px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.extended-block:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 70vw;
+  background: #FFFFFF;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
+  border-radius: 6px;
+}
+
+.extended-block {
+  position: relative;
+}
+
+.extended-block>* {
+  z-index: 1;
+}
+
 body,
 html {
   background: #F5F5F5;
+}
+
+.button {
+  color: #FFFFFF;
+  background: #219653;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
+  border-radius: 24px;
+  font-size: 18px;
+  text-align: center;
+  padding: 12px;
+}
+
+.img-frame__img {
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
+  border-radius: 6px;
+}
+
+.img-frame__labels {
+  padding: 0px 12px 12px 12px;
+  font-size: 10px;
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 300;
+  color: #141414;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.img-frame__label {
+  display: block;
+}
+
+.spoilers {
+  counter-reset: counter-spoiler;
+}
+
+.spoilers__item {
+  counter-increment: counter-spoiler;
+}
+
+.spoiler {
+  width: 100%;
+}
+
+.spoiler__checkbox {
+  display: none;
+}
+
+.spoiler__header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.spoiler__header:before {
+  display: inline;
+  content: "0" counter(counter-spoiler);
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 122%;
+  padding-right: 12px;
+  color: #000000;
+}
+
+.spoiler__label {
+  width: 95%;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 120%;
+  border-bottom: 2px solid #C4C4C4;
+  color: #000000;
+}
+
+.spoiler__label:after {
+  content: "+";
+  float: right;
+  font-family: monospace;
+  font-weight: bold;
+  color: #C4C4C4;
+  font-size: 20px;
+}
+
+.spoiler__label {
+  background: transparent;
+  padding: 24px 18px 24px 0;
+  overflow: hidden;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.spoiler__text {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 140%;
+  color: #000000;
+}
+
+.spoiler__inner {
+  background: #FFF;
+  border: 2px solid #C4C4C4;
+  border-top: none;
+  padding: 20px;
+}
+
+.spoiler__body {
+  display: none;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+}
+
+.spoiler__body:before {
+  display: inline;
+  content: "00";
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 122%;
+  padding-right: 12px;
+  color: transparent;
+}
+
+.spoiler>input:checked+.spoiler__body {
+  display: flex;
+}
+
+.spoiler>input:checked+.spoiler__label:after {
+  content: "-";
 }
 
 .header {
@@ -245,7 +431,6 @@ html {
 }
 
 .header__container {
-  padding: 0px 140px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -305,7 +490,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid 2px #FFFFFF;
+  border: solid 2px #000000;
   border-radius: 28px;
   height: 100%;
   padding: 4px 26px;
@@ -366,7 +551,7 @@ html {
 .consultation__btn {
   width: 20%;
   padding: 10px 24px;
-  border: solid 2px #FFFFFF;
+  border: solid 2px #000000;
   border-radius: 28px;
   color: inherit;
   background-color: transparent;
@@ -392,84 +577,40 @@ html {
   text-align: right;
 }
 
-.cost {
+.cost__inner {
   display: flex;
   flex-direction: row;
   width: 100%;
-  padding: 0 50px 0 0;
 }
 
-.cost__block-text {
+.cost__main {
   display: flex;
   width: 70%;
   flex-direction: column;
-  justify-content: space-between;
-  background: #FFFFFF;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
-  border-radius: 6px;
-  padding: 28px 40px 28px 60px;
+  padding: 56px 95px 69px 0px;
 }
 
-.cost__block-img {
+.cost__poster {
   width: 30%;
   position: relative;
-  padding: 0 24px;
+  margin: 0px 0px 0px 24px;
 }
 
 .cost__title {
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: bold;
   font-size: 24px;
-  line-height: 120%;
-  padding: 12px 0;
-  color: #000000;
 }
 
 .cost__text {
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: normal;
+  margin: 24px 0px 0px 0px;
   font-size: 18px;
-  line-height: 21px;
-  padding: 12px 0;
-  color: #000000;
+  padding-right: 100px;
+  text-align: left;
+  flex-grow: 1;
 }
 
 .cost__btn {
-  background: #219653;
-  mix-blend-mode: normal;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
-  border-radius: 24px;
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 140%;
-  padding: 12px 96px;
-  text-align: center;
-  color: #FFFFFF;
-}
-
-.cost__img {
-  position: relative;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
-  border-radius: 6px;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.cost__img-label {
-  font-family: Roboto;
-  font-style: italic;
-  font-weight: 300;
-  font-size: 10px;
-  line-height: 12px;
-  color: #141414;
-  position: absolute;
-  bottom: 0;
-  left: 44px;
+  margin: 24px 0px 0px 0px;
+  width: 60%;
 }
 
 .advantages {
@@ -477,7 +618,6 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 40px 140px;
 }
 
 .advantages__item {
@@ -509,7 +649,6 @@ html {
 }
 
 .quiz__title {
-  padding: 0px 140px;
   font-family: Helvetica;
   font-style: normal;
   font-weight: bold;
@@ -692,7 +831,6 @@ html {
 }
 
 .promo__title {
-  padding: 0px 140px;
   font-family: Helvetica;
   font-size: 36px;
   font-style: normal;
@@ -703,7 +841,6 @@ html {
 }
 
 .promo__inner {
-  padding: 24px 140px;
   display: flex;
   justify-content: space-between;
 }
@@ -808,10 +945,6 @@ html {
   color: #000000;
   background: #FFFFFF;
   border-radius: 6px;
-}
-
-.guaranty {
-  padding: 0px 140px;
 }
 
 .guaranty__title {
@@ -1088,7 +1221,6 @@ html {
 }
 
 .stages__title {
-  padding: 12px 140px;
   font-family: Helvetica;
   font-style: normal;
   font-weight: bold;
@@ -1121,7 +1253,6 @@ html {
 }
 
 .profile__title {
-  padding: 12px 140px;
   font-family: Helvetica;
   font-style: normal;
   font-weight: bold;
@@ -1209,7 +1340,6 @@ html {
 }
 
 .audit__title {
-  padding: 12px 140px;
   font-family: Helvetica;
   font-style: normal;
   font-weight: bold;
@@ -1234,10 +1364,6 @@ html {
 
 .audit__item {
   width: 100%;
-}
-
-.audit__form {
-  padding: 20px 140px;
 }
 
 .audit__instruction {
@@ -1324,7 +1450,6 @@ html {
 }
 
 .quarter-block__header {
-  padding: 12px 140px;
   background: #219653;
   width: 100%;
   margin-top: 30px;
@@ -1436,7 +1561,6 @@ html {
 }
 
 .team__title {
-  padding: 0px 140px;
   font-family: Helvetica;
   font-style: normal;
   font-weight: bold;
@@ -1446,7 +1570,6 @@ html {
 }
 
 .team__about {
-  padding: 20px 140px;
   font-family: Helvetica;
   font-style: normal;
   font-weight: normal;
@@ -1461,7 +1584,6 @@ html {
 
 .team__slider {
   z-index: 2;
-  padding: 0px 140px;
   min-height: 500px;
 }
 
@@ -1595,7 +1717,6 @@ html {
 }
 
 .reviews__title {
-  padding: 30px 140px;
   font-family: Helvetica;
   font-style: normal;
   font-weight: bold;
@@ -1603,10 +1724,6 @@ html {
   line-height: 140%;
   text-align: center;
   color: #FFFFFF;
-}
-
-.reviews__content {
-  padding: 30px 140px;
 }
 
 .reviews__subtitle {
@@ -1839,7 +1956,6 @@ html {
 }
 
 .geography__title {
-  padding: 12px 140px;
   font-family: Helvetica;
   font-style: normal;
   font-weight: bold;
@@ -1858,115 +1974,7 @@ html {
   object-fit: contain;
 }
 
-.spoilers {
-  counter-reset: counter-spoiler;
-}
-
-.spoilers__item {
-  counter-increment: counter-spoiler;
-}
-
-.spoiler {
-  width: 100%;
-}
-
-.spoiler__checkbox {
-  display: none;
-}
-
-.spoiler__header {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.spoiler__header:before {
-  display: inline;
-  content: "0" counter(counter-spoiler);
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 122%;
-  padding-right: 12px;
-  color: #000000;
-}
-
-.spoiler__label {
-  width: 95%;
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 120%;
-  border-bottom: 2px solid #C4C4C4;
-  color: #000000;
-}
-
-.spoiler__label:after {
-  content: "+";
-  float: right;
-  font-family: monospace;
-  font-weight: bold;
-  color: #C4C4C4;
-  font-size: 20px;
-}
-
-.spoiler__label {
-  background: transparent;
-  padding: 24px 18px 24px 0;
-  overflow: hidden;
-  width: 100%;
-  display: block;
-  box-sizing: border-box;
-}
-
-.spoiler__text {
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 140%;
-  color: #000000;
-}
-
-.spoiler__checkbox:checked+.spoiler__label:after {
-  content: "-";
-}
-
-.spoiler__inner {
-  background: #FFF;
-  border: 2px solid #C4C4C4;
-  border-top: none;
-  padding: 20px;
-}
-
-.spoiler__body {
-  display: none;
-  width: 100%;
-  flex-direction: row;
-  align-items: center;
-}
-
-.spoiler__body:before {
-  display: inline;
-  content: "00";
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 122%;
-  padding-right: 12px;
-  color: transparent;
-}
-
-.spoiler>input:checked+.spoiler__body {
-  display: flex;
-}
-
 .faq__title {
-  padding: 12px 140px;
   font-family: Helvetica;
   font-style: normal;
   font-weight: bold;
@@ -1974,14 +1982,6 @@ html {
   line-height: 122%;
   text-align: left;
   color: #000000;
-}
-
-.faq__inner {
-  padding: 12px 140px;
-}
-
-.faq__form {
-  padding: 12px 140px;
 }
 
 .your-question {
@@ -2006,6 +2006,7 @@ html {
   border-radius: 6px;
   margin-top: 20px;
   padding: 10px;
+  text-align: left;
 }
 
 .your-question__email {
@@ -2035,7 +2036,6 @@ html {
 }
 
 .footer {
-  padding: 12px 140px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -2096,16 +2096,33 @@ html {
 
 @media (min-width:1280px) {
   a,
+  button,
+  p,
   span {
     font-size: 0.9375vw;
   }
 
-  p {
-    font-size: 0.9375vw;
+  .container {
+    max-width: 83.671875vw;
+    padding: 0 1.5625vw;
   }
 
-  .header__container {
-    padding: 0vw 10.9375vw;
+  .button {
+    font-size: 1.40625vw;
+  }
+
+  .button {
+    box-shadow: 0.078125vw 0.078125vw 0.3125vw rgba(0,0,0,0.25);
+    border-radius: 1.875vw;
+    padding: 0.9375vw;
+  }
+
+  .img-frame__labels {
+    padding: 0vw 0.9375vw 0.9375vw 0.9375vw;
+  }
+
+  .img-frame__labels {
+    font-size: 0.78125vw;
   }
 
   .consultation__logo-title {
@@ -2135,259 +2152,125 @@ html {
     margin-top: 1.71875vw;
   }
 
-  .cost {
-    padding: 0vw 3.90625vw 0vw 0vw;
+  .cost__main {
+    padding: 4.375vw 7.421875vw 5.390625vw 0vw;
   }
 
-  .cost__block-text {
-    padding: 4.375vw 6.25vw 4.375vw 4.6875vw;
+  .cost__poster {
+    margin: 0vw 0vw 0vw 1.875vw;
   }
 
   .cost__title {
     font-size: 1.875vw;
   }
 
-  .advantages {
-    padding: 3.125vw 10.9375vw;
+  .cost__text {
+    margin: 1.875vw 0vw 0vw 0vw;
   }
 
-  .quiz__title {
-    padding: 0vw 10.9375vw;
+  .cost__text {
+    font-size: 1.40625vw;
   }
 
-  .promo__title {
-    padding: 0vw 10.9375vw;
+  .cost__text {
+    padding-right: 7.8125vw;
   }
 
-  .promo__inner {
-    padding: 1.875vw 10.9375vw;
-  }
-
-  .guaranty {
-    padding: 0vw 10.9375vw;
-  }
-
-  .stages__title {
-    padding: 0.9375vw 10.9375vw;
-  }
-
-  .profile__title {
-    padding: 0.9375vw 10.9375vw;
-  }
-
-  .audit__title {
-    padding: 0.9375vw 10.9375vw;
-  }
-
-  .audit__form {
-    padding: 1.5625vw 10.9375vw;
-  }
-
-  .quarter-block__header {
-    padding: 0.9375vw 10.9375vw;
-  }
-
-  .team__title {
-    padding: 0vw 10.9375vw;
-  }
-
-  .team__about {
-    padding: 1.5625vw 10.9375vw;
-  }
-
-  .team__slider {
-    padding: 0vw 10.9375vw;
-  }
-
-  .reviews__title {
-    padding: 2.34375vw 10.9375vw;
-  }
-
-  .reviews__content {
-    padding: 2.34375vw 10.9375vw;
-  }
-
-  .geography__title {
-    padding: 0.9375vw 10.9375vw;
-  }
-
-  .faq__title {
-    padding: 0.9375vw 10.9375vw;
-  }
-
-  .faq__inner {
-    padding: 0.9375vw 10.9375vw;
-  }
-
-  .faq__form {
-    padding: 0.9375vw 10.9375vw;
-  }
-
-  .footer {
-    padding: 0.9375vw 10.9375vw;
+  .cost__btn {
+    margin: 1.875vw 0vw 0vw 0vw;
   }
 }
 
-@media (max-width:1170px) {
-  .cost {
-    padding: 0vw 0vw 0vw 0vw;
-  }
-
-  .cost {
-    padding: 0vw 0vw 0vw 0vw;
-  }
-
-  .cost__block-text {
-    padding: 6.2222222222vw 8.8888888889vw 6.2222222222vw 6.6666666667vw;
-  }
-
-  .cost__block-text {
-    padding: 6.2222222222vw 8.8888888889vw 6.2222222222vw 6.6666666667vw;
-  }
-
-  .cost__block-text {
-    padding: 6.2222222222vw 8.8888888889vw 6.2222222222vw 6.6666666667vw;
-  }
-}
-
-@media (max-width:900px) {
+@media (max-width:940px) {
   a,
+  button,
+  p,
   span {
-    font-size: 1.3333333333vw;
+    font-size: 1.2765957447vw;
   }
 
-  p {
-    font-size: 1.3333333333vw;
+  .container {
+    max-width: 113.936170213vw;
+    padding: 0 2.1276595745vw;
   }
 
-  .header__container {
-    padding: 0vw 15.5555555556vw;
+  .button {
+    font-size: 1.914893617vw;
+  }
+
+  .button {
+    box-shadow: 0.1063829787vw 0.1063829787vw 0.4255319149vw rgba(0,0,0,0.25);
+    border-radius: 2.5531914894vw;
+    padding: 1.2765957447vw;
+  }
+
+  .img-frame__labels {
+    font-size: 1.0638297872vw;
   }
 
   .consultation__logo-title {
-    font-size: 1.2222222222vw;
+    font-size: 1.170212766vw;
   }
 
   .consultation__btn {
-    font-size: 1.5555555556vw;
+    font-size: 1.4893617021vw;
   }
 
   .consultation__text {
-    font-size: 1.3333333333vw;
+    font-size: 1.2765957447vw;
   }
 
   .header__logo {
-    height: 17vw;
-    width: 10.6666666667vw;
+    height: 16.2765957447vw;
+    width: 10.2127659574vw;
     transform: translateX(-50%);
   }
 
   .header__logo-container {
-    transform: translateX(0.5555555556vw);
+    transform: translateX(0.5319148936vw);
   }
 
   .header__logo-img {
-    width: 8.6666666667vw;
-    margin-top: 2.4444444444vw;
+    width: 8.2978723404vw;
+    margin-top: 2.3404255319vw;
+  }
+
+  .cost__main {
+    padding: 4.2553191489vw 2.1276595745vw;
   }
 
   .cost__title {
-    font-size: 2.6666666667vw;
+    font-size: 2.5531914894vw;
   }
 
-  .advantages {
-    padding: 4.4444444444vw 15.5555555556vw;
+  .cost__text {
+    font-size: 1.914893617vw;
   }
 
-  .quiz__title {
-    padding: 0vw 15.5555555556vw;
-  }
-
-  .promo__title {
-    padding: 0vw 15.5555555556vw;
-  }
-
-  .promo__inner {
-    padding: 2.6666666667vw 15.5555555556vw;
-  }
-
-  .guaranty {
-    padding: 0vw 15.5555555556vw;
-  }
-
-  .stages__title {
-    padding: 1.3333333333vw 15.5555555556vw;
-  }
-
-  .profile__title {
-    padding: 1.3333333333vw 15.5555555556vw;
-  }
-
-  .audit__title {
-    padding: 1.3333333333vw 15.5555555556vw;
-  }
-
-  .audit__form {
-    padding: 2.2222222222vw 15.5555555556vw;
-  }
-
-  .quarter-block__header {
-    padding: 1.3333333333vw 15.5555555556vw;
-  }
-
-  .team__title {
-    padding: 0vw 15.5555555556vw;
-  }
-
-  .team__about {
-    padding: 2.2222222222vw 15.5555555556vw;
-  }
-
-  .team__slider {
-    padding: 0vw 15.5555555556vw;
-  }
-
-  .reviews__title {
-    padding: 3.3333333333vw 15.5555555556vw;
-  }
-
-  .reviews__content {
-    padding: 3.3333333333vw 15.5555555556vw;
-  }
-
-  .geography__title {
-    padding: 1.3333333333vw 15.5555555556vw;
-  }
-
-  .faq__title {
-    padding: 1.3333333333vw 15.5555555556vw;
-  }
-
-  .faq__inner {
-    padding: 1.3333333333vw 15.5555555556vw;
-  }
-
-  .faq__form {
-    padding: 1.3333333333vw 15.5555555556vw;
-  }
-
-  .footer {
-    padding: 1.3333333333vw 15.5555555556vw;
+  .cost__text {
+    padding-right: 5.3191489362vw;
   }
 }
 
 @media (max-width:520px) {
   a,
+  button,
+  p,
   span {
     font-size: 2.3076923077vw;
   }
 
-  p {
-    font-size: 2.3076923077vw;
+  .container {
+    max-width: 205.961538462vw;
+    padding: 0 3.8461538462vw;
   }
 
-  .header__container {
-    padding: 0vw 26.9230769231vw;
+  .button {
+    font-size: 3.4615384615vw;
+  }
+
+  .img-frame__labels {
+    font-size: 1.9230769231vw;
   }
 
   .consultation__logo-title {
@@ -2421,83 +2304,7 @@ html {
     font-size: 4.6153846154vw;
   }
 
-  .advantages {
-    padding: 7.6923076923vw 26.9230769231vw;
-  }
-
-  .quiz__title {
-    padding: 0vw 26.9230769231vw;
-  }
-
-  .promo__title {
-    padding: 0vw 26.9230769231vw;
-  }
-
-  .promo__inner {
-    padding: 4.6153846154vw 26.9230769231vw;
-  }
-
-  .guaranty {
-    padding: 0vw 26.9230769231vw;
-  }
-
-  .stages__title {
-    padding: 2.3076923077vw 26.9230769231vw;
-  }
-
-  .profile__title {
-    padding: 2.3076923077vw 26.9230769231vw;
-  }
-
-  .audit__title {
-    padding: 2.3076923077vw 26.9230769231vw;
-  }
-
-  .audit__form {
-    padding: 3.8461538462vw 26.9230769231vw;
-  }
-
-  .quarter-block__header {
-    padding: 2.3076923077vw 26.9230769231vw;
-  }
-
-  .team__title {
-    padding: 0vw 26.9230769231vw;
-  }
-
-  .team__about {
-    padding: 3.8461538462vw 26.9230769231vw;
-  }
-
-  .team__slider {
-    padding: 0vw 26.9230769231vw;
-  }
-
-  .reviews__title {
-    padding: 5.7692307692vw 26.9230769231vw;
-  }
-
-  .reviews__content {
-    padding: 5.7692307692vw 26.9230769231vw;
-  }
-
-  .geography__title {
-    padding: 2.3076923077vw 26.9230769231vw;
-  }
-
-  .faq__title {
-    padding: 2.3076923077vw 26.9230769231vw;
-  }
-
-  .faq__inner {
-    padding: 2.3076923077vw 26.9230769231vw;
-  }
-
-  .faq__form {
-    padding: 2.3076923077vw 26.9230769231vw;
-  }
-
-  .footer {
-    padding: 2.3076923077vw 26.9230769231vw;
+  .cost__text {
+    font-size: 3.4615384615vw;
   }
 }

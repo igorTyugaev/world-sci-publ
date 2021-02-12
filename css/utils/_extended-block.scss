@@ -1,0 +1,24 @@
+%block-background {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 70vw;
+  background: $popupBackground;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+
+.extended-block {
+  position: relative;
+
+  &:after {
+    @extend %block-background;
+  }
+
+
+  & > * {
+    z-index: $z-index-content;
+  }
+}

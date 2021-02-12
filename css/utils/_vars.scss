@@ -1,11 +1,20 @@
+$minWidth: 320px;
+$maxWidth: 1440px;
+
 // Sass Screen Variables
 $bp-large: 1280px;
 $bp-desktop: 1170px;
-$bp-tablet: 900px;
+$bp-tablet: 940px;
 $bp-mobile: 520px;
 
 // Sass Z-index Variables
 $z-index-menu: 2;
+$z-index-content: 1;
+
+
+//Text font
+$fontFamilyPrimary: "Helvetica";
+$fontFamilySecondary: "Helvetica";
 
 
 // Dimensions
@@ -13,9 +22,9 @@ $textSize: 23px;
 $padding-container: 23px;
 
 // Colors
-$textColorPrimary: #FFFFFF;
-$textColorSecondary: #219653;
-$textColorAccent: #219653;
+$textColorPrimary: #000000;
+$textColorSecondary: #FFFFFF;
+//$textColorAccent: #219653;
 
 $colorPrimary: #031435;
 $colorSecondary: #219653;
@@ -23,6 +32,7 @@ $colorAccent: #219653;
 
 $windowBackground: #F5F5F5;
 $popupBackground: #FFFFFF;
+$colorShadow: rgba(0, 0, 0, 0.25);
 
 
 //1280

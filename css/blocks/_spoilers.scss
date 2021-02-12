@@ -74,22 +74,11 @@
 
   }
 
-
-  &__checkbox:checked + &__label {
-    &:after {
-      content: "-";
-    }
-  }
-
   &__inner {
     background: #FFF;
     border: 2px solid #C4C4C4;
     border-top: none;
     padding: 20px;
-  }
-
-  &__body &:before {
-
   }
 
   &__body {
@@ -115,4 +104,11 @@
   & > input:checked + &__body {
     display: flex;
   }
+
+  & > input:checked + &__label {
+    &:after {
+      content: "-";
+    }
+  }
+
 }

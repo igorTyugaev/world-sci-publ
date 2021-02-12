@@ -1,6 +1,5 @@
 .audit {
   &__title {
-    @include container(12px);
     font-family: Helvetica;
     font-style: normal;
     font-weight: bold;
@@ -29,7 +28,6 @@
   }
 
   &__form {
-    @include container(20px);
   }
 
   &__instruction {
@@ -120,7 +118,6 @@
   border-radius: 6px;
 
   &__header {
-    @include container(12px);
     background: #219653;
     width: 100%;
     margin-top: 30px;

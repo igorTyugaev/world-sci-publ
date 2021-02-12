@@ -1,7 +1,6 @@
 
 .faq {
   &__title {
-    @include container(12px);
     font-family: Helvetica;
     font-style: normal;
     font-weight: bold;
@@ -12,11 +11,9 @@
   }
 
   &__inner {
-    @include container(12px);
   }
 
   &__form {
-    @include container(12px);
   }
 }
 
@@ -24,7 +21,6 @@
 .your-question {
   display: flex;
   flex-direction: column;
-
 
   &__description {
     font-family: Helvetica;
@@ -44,6 +40,7 @@
     border-radius: 6px;
     margin-top: 20px;
     padding: 10px;
+    text-align: left;
   }
 
   &__email {

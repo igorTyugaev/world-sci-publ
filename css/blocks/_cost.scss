@@ -1,115 +1,66 @@
 .cost {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  padding: 0 50px 0 0;
 
-  @include _more-than($bp-large) {
-    @include padding-size($bp-large, 0px, 50px, 0px, 0px);
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
   }
 
-  @include _less-than($bp-tablet) {
-    @include padding-size($bp-tablet, 0px, 0px, 0px, 0px);
-  }
-
-  @include _less-than($bp-mobile) {
-    @include padding-size($bp-tablet, 0px, 0px, 0px, 0px);
-  }
-
-  &__block-text {
+  &__main {
     display: flex;
     width: 70%;
     flex-direction: column;
-    justify-content: space-between;
-    background: $popupBackground;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 6px;
-
-    padding: 28px 40px 28px 60px;
+    padding: 56px 95px 69px 0px;
 
     @include _more-than($bp-large) {
-      @include padding-size($bp-large, 56px, 80px, 56px, 60px);
-    }
-
-    @include _less-than($bp-desktop) {
-      @include padding-size($bp-tablet, 56px, 80px, 56px, 60px);
+      padding: #{get-vw(56px, $bp-large)}
+      #{get-vw(95px, $bp-large)}
+      #{get-vw(69px, $bp-large)}
+      #{get-vw(0px, $bp-large)};
     }
 
     @include _less-than($bp-tablet) {
-      @include padding-size($bp-tablet, 56px, 80px, 56px, 60px);
+      padding: #{get-vw(40px, $bp-tablet)}
+      #{get-vw(20px, $bp-tablet)}
     }
 
     @include _less-than($bp-mobile) {
-      @include padding-size($bp-tablet, 56px, 80px, 56px, 60px);
+
     }
   }
 
-  &__block-img {
+  &__poster {
     width: 30%;
     position: relative;
-    padding: 0 24px;
+    @include margin-size(0px, 0px, 0px, 24px);
   }
 
   &__title {
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
     @include text-size(24px);
-    line-height: 120%;
-    padding: 12px 0;
-
-    color: #000000;
   }
 
   &__text {
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
-    padding: 12px 0;
+    @include margin-size(24px);
+    @include text-size(18px);
+    padding-right: 100px;
+    text-align: left;
+    flex-grow: 1;
 
-    color: #000000;
+    @include _more-than($bp-large) {
+      padding-right: #{get-vw(100px, $bp-large)};
+    }
+
+    @include _less-than($bp-tablet) {
+      padding-right: #{get-vw(50px, $bp-tablet)};
+    }
+
+    @include _less-than($bp-mobile) {
+
+    }
   }
 
   &__btn {
-    background: #219653;
-    mix-blend-mode: normal;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 24px;
-
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 140%;
-    padding: 12px 96px;
-
-    text-align: center;
-
-    color: #FFFFFF;
-  }
-
-  &__img {
-    position: relative;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 6px;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-
-    &-label {
-      font-family: Roboto;
-      font-style: italic;
-      font-weight: 300;
-      font-size: 10px;
-      line-height: 12px;
-
-      color: #141414;
-
-      position: absolute;
-      bottom: 0;
-      left: 44px;
-    }
+    @include margin-size(24px);
+    width: 60%;
   }
 }

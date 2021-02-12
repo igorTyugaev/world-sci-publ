@@ -14,7 +14,6 @@
   }
 
   &__title {
-    @include container(30px);
 
     font-family: Helvetica;
     font-style: normal;
@@ -27,7 +26,6 @@
   }
 
   &__content {
-    @include container(30px);
   }
 
   &__subtitle {

@@ -1,0 +1,27 @@
+.button {
+  color: $textColorSecondary;
+  background: $colorAccent;
+  box-shadow: 1px 1px 4px $colorShadow;
+  border-radius: 24px;
+
+  @include text-size(18px);
+  text-align: center;
+  padding: 12px;
+
+
+  @include _more-than($bp-large) {
+    box-shadow: #{get-vw(1px, $bp-large)} #{get-vw(1px, $bp-large)} #{get-vw(4px, $bp-large)} $colorShadow;
+    border-radius: #{get-vw(24px, $bp-large)};
+    padding: #{get-vw(12px, $bp-large)};
+  }
+
+  @include _less-than($bp-tablet) {
+    box-shadow: #{get-vw(1px, $bp-tablet)} #{get-vw(1px, $bp-tablet)} #{get-vw(4px, $bp-tablet)} $colorShadow;
+    border-radius: #{get-vw(24px, $bp-tablet)};
+    padding: #{get-vw(12px, $bp-tablet)};
+  }
+
+  @include _less-than($bp-mobile) {
+
+  }
+}

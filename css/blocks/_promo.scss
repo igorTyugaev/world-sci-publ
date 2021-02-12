@@ -1,6 +1,5 @@
 .promo {
   &__title {
-    @include container();
     font-family: Helvetica;
     font-size: 36px;
     font-style: normal;
@@ -11,7 +10,6 @@
   }
 
   &__inner {
-    @include container(24px);
     display: flex;
     justify-content: space-between;
   }

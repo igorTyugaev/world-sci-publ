@@ -4,7 +4,6 @@
   margin-top: 40px;
 
   &__title {
-    @include container();
     font-family: Helvetica;
     font-style: normal;
     font-weight: bold;
@@ -15,7 +14,6 @@
   }
 
   &__about {
-    @include container(20px);
     font-family: Helvetica;
     font-style: normal;
     font-weight: normal;
@@ -31,7 +29,6 @@
 
   &__slider {
     z-index: 2;
-    @include container();
     min-height: 500px;
   }
 

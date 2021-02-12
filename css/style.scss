@@ -1,4 +1,9 @@
 @import 'entry';
+
+@import "blocks/button";
+@import "blocks/img-frame";
+@import "blocks/spoilers";
+
 @import "blocks/header";
 @import "blocks/consultation";
 @import "blocks/cost";
@@ -14,6 +19,5 @@
 @import "blocks/foreign";
 @import "blocks/reviews";
 @import "blocks/geography";
-@import "blocks/spoilers";
 @import "blocks/faq";
 @import "blocks/footer";

@@ -19,23 +19,7 @@
   font-style: normal;
 }
 
-@mixin container($padding-v: 0px, $padding-h: 140px) {
-  padding: $padding-v $padding-h;
-
-  @media (min-width: $bp-large) {
-    padding: #{get-vw($padding-v, $bp-large)} #{get-vw($padding-h, $bp-large)};
-  }
-
-  @media (max-width: #{$bp-tablet}) {
-    padding: #{get-vw($padding-v, $bp-tablet)} #{get-vw($padding-h, $bp-tablet)};
-  }
-
-  @media (max-width: #{$bp-mobile}) {
-    padding: #{get-vw($padding-v, $bp-mobile)} #{get-vw($padding-h, $bp-mobile)};
-  }
-}
-
-@mixin text-size($f-size: 12px) {
+@mixin text-size($f-size: 12px,) {
   font-size: $f-size;
 
   @media (min-width: $bp-large) {
@@ -51,24 +35,74 @@
   }
 }
 
-@mixin padding-size($resolution: 1280px, $p-top: 0px, $p-right: 0px, $p-bottom: 0px, $p-left: 0px) {
+@mixin shadow() {
+  box-shadow: 1px 1px 4px $colorShadow;
 
-  padding: #{get-vw($p-top, $resolution)}
-  #{get-vw($p-right, $resolution)}
-  #{get-vw($p-bottom, $resolution)}
-  #{get-vw($p-left, $resolution)};
+  @media (min-width: $bp-large) {
+    box-shadow: #{get-vw(1px, $bp-large)}
+    #{get-vw(1px, $bp-large)}
+    #{get-vw(4px, $bp-large)}
+    $colorShadow;
+  }
 
+  @media (max-width: #{$bp-tablet}) {
+    box-shadow: #{get-vw(1px, $bp-tablet)}
+    #{get-vw(1px, $bp-tablet)}
+    #{get-vw(4px, $bp-tablet)}
+    $colorShadow;
+  }
+
+  @media (max-width: #{$bp-mobile}) {
+    box-shadow: #{get-vw(1px, $bp-mobile)}
+    #{get-vw(1px, $bp-mobile)}
+    #{get-vw(4px, $bp-mobile)}
+    $colorShadow;
+  }
+}
+
+@mixin padding-size($t-padding: 0px, $r-padding: 0px, $b-padding: 0px, $l-padding: 0px) {
+  padding: $t-padding $r-padding $b-padding $l-padding;
+
+  @media (min-width: $bp-large) {
+    padding: #{get-vw($t-padding, $bp-large)}
+    #{get-vw($r-padding, $bp-large)}
+    #{get-vw($b-padding, $bp-large)}
+    #{get-vw($l-padding, $bp-large)};
+  }
+
+  @media (max-width: #{$bp-tablet}) {
+  }
+
+  @media (max-width: #{$bp-mobile}) {
+  }
+}
+
+@mixin margin-size($t-margin: 0px, $r-margin: 0px, $b-margin: 0px, $l-margin: 0px) {
+  margin: $t-margin $r-margin $b-margin $l-margin;
+
+  @media (min-width: $bp-large) {
+    margin: #{get-vw($t-margin, $bp-large)}
+    #{get-vw($r-margin, $bp-large)}
+    #{get-vw($b-margin, $bp-large)}
+    #{get-vw($l-margin, $bp-large)};
+  }
+
+  @media (max-width: #{$bp-tablet}) {
+  }
+
+  @media (max-width: #{$bp-mobile}) {
+  }
 }
 
 
-@mixin _more-than($resolution: 1280px) {
+@mixin _more-than($resolution: 180px) {
   @media (min-width: $resolution) {
     @content;
   }
 }
 
 @mixin _less-than($resolution: 1170px) {
-  @media (max-width: 1170px) {
+  @media (max-width: $resolution) {
     @content;
   }
 }
