@@ -8,12 +8,24 @@
   font-style: normal;
 }
 
+.extended-block:after,
+.feature-card {
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
+  border-radius: 6px;
+}
+
 @font-face {
   font-family: 'Helvetica World';
   src: url("HelveticaWorld.eot");
   src: local("HelveticaWorld"),local("HelveticaWorld"),url("HelveticaWorld.woff2") format("woff2"),url("HelveticaWorld.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+}
+
+.extended-block:after,
+.feature-card {
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
+  border-radius: 6px;
 }
 
 @font-face {
@@ -40,8 +52,9 @@ textarea {
 }
 
 h2,
-h3 {
-  font-family: "Helvetica";
+h3,
+h4 {
+  font-family: "HelveticaBold";
   font-style: normal;
   font-weight: bold;
   line-height: 120%;
@@ -264,8 +277,6 @@ th {
   height: 100%;
   width: 70vw;
   background: #FFFFFF;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
-  border-radius: 6px;
 }
 
 .extended-block {
@@ -422,6 +433,27 @@ html {
 
 .spoiler>input:checked+.spoiler__label:after {
   content: "-";
+}
+
+.feature-card {
+  background: #FFFFFF;
+  padding: 30px 24px 48px 17px;
+}
+
+.feature-card__title {
+  font-family: "HelveticaBold";
+  color: #373737;
+  font-size: 48px;
+}
+
+.feature-card__text {
+  color: #373737;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.feature-card+.feature-card {
+  margin-left: 85px;
 }
 
 .header {
@@ -621,31 +653,7 @@ html {
 }
 
 .advantages__item {
-  display: flex;
-  flex-direction: column;
-  width: 185px;
-  backgroud: #FFFFFF;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
-  border-radius: 6px;
-  padding: 30px 12px;
-}
-
-.advantages__number {
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 48px;
-  line-height: 55px;
-  color: #373737;
-}
-
-.advantages__text {
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 14px;
-  color: #373737;
+  width: 24%;
 }
 
 .quiz__title {
@@ -2094,94 +2102,138 @@ html {
 
 /*# sourceMappingURL=style.css.map */
 
-@media (min-width:1280px) {
+@media (min-width:1442px) {
+  .extended-block:after,
+  .feature-card {
+    border-radius: 0.4160887656vw;
+    box-shadow: 0.0693481276vw 0.0693481276vw 0.2773925104vw rgba(0,0,0,0.25);
+  }
+
+  .extended-block:after,
+  .feature-card {
+    border-radius: 0.4160887656vw;
+    box-shadow: 0.0693481276vw 0.0693481276vw 0.2773925104vw rgba(0,0,0,0.25);
+  }
+
   a,
   button,
   p,
   span {
-    font-size: 0.9375vw;
+    font-size: 0.8321775312vw;
   }
 
   .container {
-    max-width: 83.671875vw;
-    padding: 0 1.5625vw;
+    max-width: 74.2718446602vw;
+    padding: 0 1.386962552vw;
   }
 
   .button {
-    font-size: 1.40625vw;
+    font-size: 1.2482662968vw;
   }
 
   .button {
-    box-shadow: 0.078125vw 0.078125vw 0.3125vw rgba(0,0,0,0.25);
-    border-radius: 1.875vw;
-    padding: 0.9375vw;
+    box-shadow: 0.0693481276vw 0.0693481276vw 0.2773925104vw rgba(0,0,0,0.25);
+    border-radius: 1.6643550624vw;
+    padding: 0.8321775312vw;
   }
 
   .img-frame__labels {
-    padding: 0vw 0.9375vw 0.9375vw 0.9375vw;
+    padding: 0vw 0.8321775312vw 0.8321775312vw 0.8321775312vw;
   }
 
   .img-frame__labels {
-    font-size: 0.78125vw;
+    font-size: 0.693481276vw;
+  }
+
+  .feature-card {
+    padding: 2.080443828vw 1.6643550624vw 3.3287101248vw 1.1789181692vw;
+  }
+
+  .feature-card__title {
+    font-size: 3.3287101248vw;
+  }
+
+  .feature-card__text {
+    font-size: 0.8321775312vw;
+  }
+
+  .feature-card__text {
+    margin-top: 0.2773925104vw;
+  }
+
+  .feature-card+.feature-card {
+    margin-left: 5.894590846vw;
   }
 
   .consultation__logo-title {
-    font-size: 0.859375vw;
+    font-size: 0.7628294036vw;
   }
 
   .consultation__btn {
-    font-size: 1.09375vw;
+    font-size: 0.9708737864vw;
   }
 
   .consultation__text {
-    font-size: 0.9375vw;
+    font-size: 0.8321775312vw;
   }
 
   .consultation__logo {
-    height: 11.953125vw;
-    width: 7.5vw;
+    height: 10.6102635229vw;
+    width: 6.6574202497vw;
     transform: translateX(-50%);
   }
 
   .consultation__logo-container {
-    transform: translateX(0.390625vw);
+    transform: translateX(0.346740638vw);
   }
 
   .consultation__logo-img {
-    width: 6.09375vw;
-    margin-top: 1.71875vw;
+    width: 5.4091539528vw;
+    margin-top: 1.5256588072vw;
   }
 
   .cost__main {
-    padding: 4.375vw 7.421875vw 5.390625vw 0vw;
+    padding: 3.8834951456vw 6.5880721221vw 4.7850208044vw 0vw;
   }
 
   .cost__poster {
-    margin: 0vw 0vw 0vw 1.875vw;
+    margin: 0vw 0vw 0vw 1.6643550624vw;
   }
 
   .cost__title {
-    font-size: 1.875vw;
+    font-size: 1.6643550624vw;
   }
 
   .cost__text {
-    margin: 1.875vw 0vw 0vw 0vw;
+    margin: 1.6643550624vw 0vw 0vw 0vw;
   }
 
   .cost__text {
-    font-size: 1.40625vw;
+    font-size: 1.2482662968vw;
   }
 
   .cost__text {
-    padding-right: 7.8125vw;
+    padding-right: 6.9348127601vw;
   }
 
   .cost__btn {
-    margin: 1.875vw 0vw 0vw 0vw;
+    margin: 1.6643550624vw 0vw 0vw 0vw;
   }
 }
 
 @media (max-width:940px) {
+  .extended-block:after,
+  .feature-card {
+    border-radius: 0.6382978723vw;
+    box-shadow: 0.1063829787vw 0.1063829787vw 0.4255319149vw rgba(0,0,0,0.25);
+  }
+
+  .extended-block:after,
+  .feature-card {
+    border-radius: 0.6382978723vw;
+    box-shadow: 0.1063829787vw 0.1063829787vw 0.4255319149vw rgba(0,0,0,0.25);
+  }
+
   a,
   button,
   p,
@@ -2206,6 +2258,26 @@ html {
 
   .img-frame__labels {
     font-size: 1.0638297872vw;
+  }
+
+  .feature-card {
+    padding: 3.1914893617vw 2.5531914894vw 5.1063829787vw 1.8085106383vw;
+  }
+
+  .feature-card__title {
+    font-size: 5.1063829787vw;
+  }
+
+  .feature-card__text {
+    font-size: 1.2765957447vw;
+  }
+
+  .feature-card__text {
+    margin-top: 0.4255319149vw;
+  }
+
+  .feature-card+.feature-card {
+    margin-left: 9.0425531915vw;
   }
 
   .consultation__logo-title {
@@ -2253,6 +2325,18 @@ html {
 }
 
 @media (max-width:520px) {
+  .extended-block:after,
+  .feature-card {
+    border-radius: 1.1538461538vw;
+    box-shadow: 0.1923076923vw 0.1923076923vw 0.7692307692vw rgba(0,0,0,0.25);
+  }
+
+  .extended-block:after,
+  .feature-card {
+    border-radius: 1.1538461538vw;
+    box-shadow: 0.1923076923vw 0.1923076923vw 0.7692307692vw rgba(0,0,0,0.25);
+  }
+
   a,
   button,
   p,
@@ -2271,6 +2355,14 @@ html {
 
   .img-frame__labels {
     font-size: 1.9230769231vw;
+  }
+
+  .feature-card__title {
+    font-size: 9.2307692308vw;
+  }
+
+  .feature-card__text {
+    font-size: 2.3076923077vw;
   }
 
   .consultation__logo-title {

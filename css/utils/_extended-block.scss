@@ -6,8 +6,7 @@
   height: 100%;
   width: 70vw;
   background: $popupBackground;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 6px;
+  @extend %s-border;
 }
 
 .extended-block {

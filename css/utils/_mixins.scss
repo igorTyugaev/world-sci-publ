@@ -35,10 +35,12 @@
   }
 }
 
-@mixin shadow() {
+%s-border {
   box-shadow: 1px 1px 4px $colorShadow;
+  border-radius: 6px;
 
   @media (min-width: $bp-large) {
+    border-radius: #{get-vw(6px, $bp-large)};
     box-shadow: #{get-vw(1px, $bp-large)}
     #{get-vw(1px, $bp-large)}
     #{get-vw(4px, $bp-large)}
@@ -46,6 +48,7 @@
   }
 
   @media (max-width: #{$bp-tablet}) {
+    border-radius: #{get-vw(6px, $bp-tablet)};
     box-shadow: #{get-vw(1px, $bp-tablet)}
     #{get-vw(1px, $bp-tablet)}
     #{get-vw(4px, $bp-tablet)}
@@ -53,6 +56,7 @@
   }
 
   @media (max-width: #{$bp-mobile}) {
+    border-radius: #{get-vw(6px, $bp-mobile)};
     box-shadow: #{get-vw(1px, $bp-mobile)}
     #{get-vw(1px, $bp-mobile)}
     #{get-vw(4px, $bp-mobile)}

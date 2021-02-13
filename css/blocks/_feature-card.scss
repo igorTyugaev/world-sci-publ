@@ -1,0 +1,64 @@
+.feature-card {
+  background: $popupBackground;
+  @extend %s-border;
+
+  padding: 30px 24px 48px 17px;
+
+  @include _more-than($bp-large) {
+    padding: #{get-vw(30px, $bp-large)}
+    #{get-vw(24px, $bp-large)}
+    #{get-vw(48px, $bp-large)}
+    #{get-vw(17px, $bp-large)};
+  }
+
+  @include _less-than($bp-tablet) {
+    padding: #{get-vw(30px, $bp-tablet)}
+    #{get-vw(24px, $bp-tablet)}
+    #{get-vw(48px, $bp-tablet)}
+    #{get-vw(17px, $bp-tablet)};
+  }
+
+  @include _less-than($bp-mobile) {
+
+  }
+
+  &__title {
+    font-family: $fontFamilySecondary;
+    color: $textColorAccent;
+    @include text-size(48px);
+  }
+
+  &__text {
+    color: $textColorAccent;
+    @include text-size(12px);
+    margin-top: 4px;
+
+    @include _more-than($bp-large) {
+      margin-top: #{get-vw(4px, $bp-large)};
+    }
+
+    @include _less-than($bp-tablet) {
+      margin-top: #{get-vw(4px, $bp-tablet)};
+    }
+
+    @include _less-than($bp-mobile) {
+
+    }
+  }
+
+  & + & {
+    margin-left: 85px;
+
+    @include _more-than($bp-large) {
+      margin-left: #{get-vw(85px, $bp-large)};
+    }
+
+    @include _less-than($bp-tablet) {
+      margin-left: #{get-vw(85px, $bp-tablet)};
+    }
+
+    @include _less-than($bp-mobile) {
+
+    }
+  }
+}
