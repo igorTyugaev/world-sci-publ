@@ -64,6 +64,30 @@
   }
 }
 
+@mixin padding($top: 0px, $right: 0px, $bottom: 0px, $left: 0px) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+
+  @media (min-width: $bp-large) {
+    padding-top: #{get-vw($top, $bp-large)};
+    padding-right: #{get-vw($right, $bp-large)};
+    padding-bottom: #{get-vw($bottom, $bp-large)};
+    padding-left: #{get-vw($left, $bp-large)};
+  }
+
+  @media (max-width: #{$bp-tablet}) {
+    padding-top: #{get-vw($top, $bp-tablet)};
+    padding-right: #{get-vw($right, $bp-tablet)};
+    padding-bottom: #{get-vw($bottom, $bp-tablet)};
+    padding-left: #{get-vw($left, $bp-tablet)};
+  }
+
+  @media (max-width: #{$bp-mobile}) {
+  }
+}
+
 @mixin padding-size($t-padding: 0px, $r-padding: 0px, $b-padding: 0px, $l-padding: 0px) {
   padding: $t-padding $r-padding $b-padding $l-padding;
 

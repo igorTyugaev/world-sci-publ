@@ -1,0 +1,11 @@
+.progress-bar {
+
+  &__title {
+    font-family: $fontFamilySecondary;
+    @include text-size(14px);
+  }
+
+  &__inner {
+    @include margin-size(3px);
+  }
+}

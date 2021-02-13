@@ -1,40 +1,67 @@
-<section class="quiz">
+<section class="quiz container">
     <h2 class="quiz__title">Поможем рассчитать стоимость публикации Вашей рукописи, исходя
         из необходимых показателей журнала</h2>
 
-    <div class="quiz__container">
-        <div class="quiz__main">
-            <div class="quiz__header">
-                <h3 class="quiz__header-title">Ответьте на несколько вопросов, чтобы мы
+    <div class="quiz__inner">
+        <div class="quiz__main extended-block">
+
+            <div class="quiz__header extended-header">
+                <h3 class="quiz__subtitle">Ответьте на несколько вопросов, чтобы мы
                     могли проанализировать <br>ответы и
                     рассчитать стоимость публикации по Вашему направлению,<br> а также
                     возможные
                     сроки </h3>
+                <img class="quiz__header-logo"
+                     src="./media/logo-min.svg"
+                     alt="logo-min">
             </div>
-            <div class="quiz__inner">
-                <div class="quiz__status">
-                    <span class="quiz__status-text">Вопрос 1 из 5</span>
-                    <div class="quiz__progress">
 
+            <div class="quiz__content quizlet">
+
+                <div class="quizlet__progress progress-bar">
+                    <h4 class="progress-bar__title">Вопрос 1 из 5</h4>
+                    <div class="progress-bar__inner">
+                        <img class="progress-bar__img"
+                             src="./media/progress-bar.svg"
+                             alt="progress-bar">
                     </div>
                 </div>
-                <div class="quiz__question">
-                    <h3 class="quiz__question-text">1. В какие сроки Вам необходима
-                        публикация?</h3>
+
+                <h3 class="quizlet__question">1. В какие сроки Вам необходима
+                    публикация?</h3>
+
+                <div class="quizlet__answers">
+                    <button class="quizlet__option button button--quiz">
+                        До 6 месяцев
+                    </button>
+                    <button class="quizlet__option button button--quiz">
+                        От 6 до 12 месяцев
+                    </button>
+                    <button class="quizlet__option button button--quiz">
+                        Более 12 месяцев
+                    </button>
+                    <button class="quizlet__option button button--quiz">
+                        Еще не знаю
+                    </button>
                 </div>
-                <div class="quiz__options">
-                    <button class="quiz__options-btn">До 6 месяцев</button>
-                    <button class="quiz__options-btn">От 6 до 12 месяцев</button>
-                    <button class="quiz__options-btn">Более 12 месяцев</button>
-                    <button class="quiz__options-btn">Еще не знаю</button>
-                </div>
-                <button class="quiz__scip">Пропустить вопрос</button>
+
+                <button class="quizlet__option button button--quiz">
+                    Пропустить вопрос
+                </button>
+
             </div>
+
         </div>
 
-        <div class="quiz__poster">
-            <img src="/media/Marcel_Kadyrov.jpg" alt="Marcel_Kadyrov" class="quiz__img">
-            <span class="quiz__img-label">Марсель Кадыров<br>Соучредитель компании</span>
+        <div class="quiz__poster img-frame">
+            <img class="img-frame__img"
+                 src="/media/Marcel_Kadyrov.jpg"
+                 alt="Marcel_Kadyrov">
+            <div class="img-frame__labels">
+                <span class="img-frame__label">Марсель Кадыров</span>
+                <span class="img-frame__label">Соучредитель компании</span>
+                </p>
+            </div>
         </div>
     </div>
 

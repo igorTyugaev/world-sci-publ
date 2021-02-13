@@ -21,3 +21,27 @@
     z-index: $z-index-content;
   }
 }
+
+%header-background {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 70vw;
+  background: $colorAccent;
+}
+
+.extended-header {
+  position: relative;
+
+  &:after {
+    @extend %header-background;
+  }
+
+
+  & > * {
+    position: relative;
+    z-index: $z-index-content;
+  }
+}

@@ -13,49 +13,80 @@
 
  @import "cost.html"
 
-<section class="advantages container">
-    <div class="advantages__item feature-card">
-        <h4 class="feature-card__title">
-            250+
-        </h4>
-        <p class="feature-card__text">
-            Высококлассных англоговорящих специалистов со степенью Phd и опытом
-            публикаций помогут достичь успешного результата в необходимые сроки
-        </p>
+ @import "advantages.html"
+
+<section class="quiz container">
+    <h2 class="quiz__title">Поможем рассчитать стоимость публикации Вашей рукописи, исходя
+        из необходимых показателей журнала</h2>
+
+    <div class="quiz__inner">
+        <div class="quiz__main extended-block">
+
+            <div class="quiz__header extended-header">
+                <h3 class="quiz__subtitle">Ответьте на несколько вопросов, чтобы мы
+                    могли проанализировать <br>ответы и
+                    рассчитать стоимость публикации по Вашему направлению,<br> а также
+                    возможные
+                    сроки </h3>
+                <img class="quiz__header-logo"
+                     src="./media/logo-min.svg"
+                     alt="logo-min">
+            </div>
+
+            <div class="quiz__content quizlet">
+
+                <div class="quizlet__progress progress-bar">
+                    <h4 class="progress-bar__title">Вопрос 1 из 5</h4>
+                    <div class="progress-bar__inner">
+                        <img class="progress-bar__img"
+                             src="./media/progress-bar.svg"
+                             alt="progress-bar">
+                    </div>
+                </div>
+
+                <h3 class="quizlet__question">1. В какие сроки Вам необходима
+                    публикация?</h3>
+
+                <div class="quizlet__answers">
+                    <button class="quizlet__option button button--quiz">
+                        До 6 месяцев
+                    </button>
+                    <button class="quizlet__option button button--quiz">
+                        От 6 до 12 месяцев
+                    </button>
+                    <button class="quizlet__option button button--quiz">
+                        Более 12 месяцев
+                    </button>
+                    <button class="quizlet__option button button--quiz">
+                        Еще не знаю
+                    </button>
+                </div>
+
+                <button class="quizlet__option button button--quiz">
+                    Пропустить вопрос
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="quiz__poster img-frame">
+            <img class="img-frame__img"
+                 src="/media/Marcel_Kadyrov.jpg"
+                 alt="Marcel_Kadyrov">
+            <div class="img-frame__labels">
+                <span class="img-frame__label">Марсель Кадыров</span>
+                <span class="img-frame__label">Соучредитель компании</span>
+                </p>
+            </div>
+        </div>
     </div>
 
-    <div class="advantages__item feature-card">
-        <h4 class="feature-card__title">
-            11
-        </h4>
-        <p class="feature-card__text">
-            Этапов работы, которые проходит Ваше научное исследование для публикации в
-            авторитетном международном издании
-        </p>
-    </div>
-
-
-    <div class="advantages__item feature-card">
-        <h4 class="feature-card__title">
-            1500+
-        </h4>
-        <p class="feature-card__text">
-            Авторов, успешно опубликовавших с нашей помощью свои научные труды в
-            индексируемых изданиях
-        </p>
-    </div>
-
-    <div class="advantages__item feature-card">
-        <h4 class="feature-card__title">
-            1
-        </h4>
-        <p class="feature-card__text">
-            Первый адаптированный сервис для РФ и стран СНГ в области научных публикаций
-        </p>
+    <div class="quiz__quote">
+        <h3 class="quiz__quote-text">Персонально для Вас подберём подходящее издание в <br>
+            соответствии с требованиями к его показателям</h3>
     </div>
 </section>
- @import "quiz.html"
-
  @import "promo.html"
 
  @import "guaranty.html"

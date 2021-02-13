@@ -9,6 +9,14 @@
   padding: 12px;
 
 
+  &--quiz {
+    background: $popupBackground;
+    color: $textColorPrimary;
+    @include text-size(14px);
+    border: 1px solid rgba(51, 51, 51, 0.6);
+  }
+
+
   @include _more-than($bp-large) {
     box-shadow: #{get-vw(1px, $bp-large)} #{get-vw(1px, $bp-large)} #{get-vw(4px, $bp-large)} $colorShadow;
     border-radius: #{get-vw(24px, $bp-large)};

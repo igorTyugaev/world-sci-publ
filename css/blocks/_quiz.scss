@@ -1,189 +1,67 @@
 .quiz {
   &__title {
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 122%;
-
-    color: #000000;
+    @include text-size(36px);
   }
 
-  &__container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 40px 50px 0 0;
-    width: 100%;
-  }
+  &__subtitle {
+    font-family: $fontFamilySecondary;
+    color: $textColorSecondary;
 
-  &__main {
-    position: relative;
-    display: flex;
-    width: 70%;
-    flex-direction: column;
-    justify-content: space-between;
-    background: $popupBackground;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 6px;
-  }
-
-  &__header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 12px;
-    height: 60px;
-    background: #219653;
-    width: 100%;
-    padding: 7px 0 7px 120px;
-
-    &-title {
-      font-family: Helvetica;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 16px;
-
-      color: #FFFFFF;
-    }
+    @include text-size(14px);
+    @include padding(7px, 64px, 7px, 82px);
   }
 
   &__inner {
-    padding: 92px 120px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    @include margin-size(36px);
   }
 
-  &__status {
+  &__header {
+    @include margin-size(12px);
 
-    &-text {
-      font-family: Helvetica;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 16px;
-
-      color: #000000;
+    &-logo {
+      object-fit: contain;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translateY(-14.41048%);
     }
   }
 
-  &__progress {
-
+  &__main {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
   }
 
-  &__question {
-    background: #219653;
-    border-radius: 6px;
-    width: 100%;
-    padding: 8px 12px;
-
-    &-text {
-      font-family: Helvetica;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 16px;
-
-      color: #FFFFFF;
-    }
-  }
-
-  &__options {
-
-  }
-
-  &__options {
-    width: 100%;
-    padding: 20px 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50%;
-    row-gap: 20px;
-    column-gap: 20px;
-
-    &-btn {
-      background: #FFFFFF;
-      border: 1px solid rgba(51, 51, 51, 0.6);
-      box-sizing: border-box;
-      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 24px;
-
-      font-family: Helvetica;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 120%;
-      color: #333333;
-
-      padding: 15px;
-    }
-  }
-
-  &__scip {
-    background: #FFFFFF;
-    width: 100%;
-    border: 1px solid rgba(51, 51, 51, 0.6);
-    box-sizing: border-box;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 24px;
-
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 16px;
-    color: #333333;
-
-    padding: 15px 90px;
-  }
-
-  &__title {
-
+  &__content {
+    @include padding(0px, 64px, 60px, 82px);
+    @include margin-size(20px);
   }
 
   &__poster {
     width: 30%;
     position: relative;
-    padding: 0 24px;
-  }
-
-  &__img {
-    position: relative;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 6px;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-
-    &-label {
-      font-family: Roboto;
-      font-style: italic;
-      font-weight: 300;
-      font-size: 10px;
-      line-height: 12px;
-
-      color: #141414;
-
-      position: absolute;
-      bottom: 0;
-      left: 44px;
-    }
+    @include margin-size(0px, 0px, 0px, 24px);
   }
 
   &__quote {
     display: flex;
     flex-direction: row;
-    padding: 30px;
+
+    @include margin-size(28px);
+    @include padding(0px, 64px, 0px, 82px);
+
     width: 100%;
     height: 100%;
 
     &-text {
-      font-family: Helvetica;
+      font-family: $fontFamilyPrimary;
       font-style: italic;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 140%;
-      padding: 0 20px;
-      color: #000000;
+      @include text-size(18px);
+      @include padding(0px, 20px, 0px, 20px);
     }
 
     &::before {
@@ -193,15 +71,13 @@
 
     &::after {
       content: "“";
-      transform: rotateZ(180deg) translateY(40%);
+      transform: rotateZ(180deg) translateX(15%) translateY(40%);
     }
 
     &::before, &::after {
-      font-family: Helvetica;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 96px;
-      color: #219653;
+      font-family: $fontFamilyPrimary;
+      @include text-size(96px);
+      color: $colorAccent;
     }
   }
 }
