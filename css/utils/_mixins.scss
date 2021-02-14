@@ -19,7 +19,7 @@
   font-style: normal;
 }
 
-@mixin text-size($f-size: 12px,) {
+@mixin font-size($f-size: 12px,) {
   font-size: $f-size;
 
   @media (min-width: $bp-xxl-1442) {

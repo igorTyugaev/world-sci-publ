@@ -32,6 +32,6 @@ span, a, p, button {
   font-weight: normal;
   line-height: 120%;
 
-  @include text-size(12px);
+  @include font-size(12px);
   color: $textColorPrimary;
 }

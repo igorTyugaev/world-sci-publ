@@ -36,12 +36,12 @@
   }
 
   &__title {
-    @include text-size(24px);
+    @include font-size(24px);
   }
 
   &__text {
     @include margin(24px);
-    @include text-size(18px);
+    @include font-size(18px);
     padding-right: 100px;
     text-align: left;
     flex-grow: 1;

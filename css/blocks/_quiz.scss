@@ -1,13 +1,13 @@
 .quiz {
   &__title {
-    @include text-size(36px);
+    @include font-size(36px);
   }
 
   &__subtitle {
     font-family: $fontFamilySecondary;
     color: $textColorSecondary;
 
-    @include text-size(14px);
+    @include font-size(14px);
     @include padding(7px, 64px, 7px, 82px);
   }
 
@@ -60,7 +60,7 @@
     &-text {
       font-family: $fontFamilyPrimary;
       font-style: italic;
-      @include text-size(18px);
+      @include font-size(18px);
       @include padding(0px, 20px, 0px, 20px);
     }
 
@@ -76,7 +76,7 @@
 
     &::before, &::after {
       font-family: $fontFamilyPrimary;
-      @include text-size(96px);
+      @include font-size(96px);
       color: $colorAccent;
     }
   }

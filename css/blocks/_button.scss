@@ -4,7 +4,7 @@
   box-shadow: 1px 1px 4px $colorShadow;
   border-radius: 24px;
 
-  @include text-size(18px);
+  @include font-size(18px);
   text-align: center;
   padding: 12px;
 
@@ -12,18 +12,18 @@
   &--quiz {
     background: $popupBackground;
     color: $textColorPrimary;
-    @include text-size(14px);
+    @include font-size(14px);
     border: 1px solid rgba(51, 51, 51, 0.6);
   }
 
   &--submit {
     font-family: $fontFamilyPrimary;
-    @include text-size(14px);
+    @include font-size(14px);
   }
 
   &--contract {
     font-family: $fontFamilyPrimary;
-    @include text-size(14px);
+    @include font-size(14px);
     background: $popupBackground;
     color: $textColorPrimary;
     border-radius: 6px;

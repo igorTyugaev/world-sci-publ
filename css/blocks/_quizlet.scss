@@ -30,7 +30,7 @@
   }
 
   &__question {
-    @include text-size(14px);
+    @include font-size(14px);
     @include margin(20px);
     @extend %highlighter;
   }

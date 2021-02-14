@@ -3,7 +3,7 @@
   &__title {
     font-family: $fontFamilySecondary;
     text-align: left;
-    @include text-size(36px);
+    @include font-size(36px);
     padding-right: 280px;
 
     @include _more-than($bp-xxl-1442) {
@@ -69,18 +69,49 @@
 }
 
 .manifest {
+  position: relative;
   background: $popupBackground;
-  @extend %s-border--manifest;
+  @extend %s-border;
   @include padding(12px, 5px, 20px, 21px);
+
+  &--ribbon {
+    @extend %s-border--manifest;
+  }
+
+  &--logo {
+    @include padding(50px, 16px, 20px, 28px);
+  }
+
+  &__logo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    object-fit: contain;
+
+    $h-logo: 80px;
+    height: $h-logo;
+
+    @include _more-than($bp-xxl-1442) {
+      height: #{get-vw($h-logo, $bp-xxl-1442)};
+    }
+
+    @include _less-than($bp-lg-979) {
+      height: #{get-vw($h-logo, $bp-lg-979)};
+    }
+
+    @include _less-than($bp-sm-576) {
+      height: #{get-vw($h-logo, $bp-sm-576)};
+    }
+  }
 
   &__title {
     font-family: $fontFamilySecondary;
-    @include text-size(14px);
+    @include font-size(14px);
     line-height: 110%;
   }
 
   &__text {
-    @include text-size(14px);
+    @include font-size(14px);
     line-height: 110%;
 
     &:not(:first-child) {
@@ -112,7 +143,7 @@
   }
 
   &__description {
-    @include text-size(14px);
+    @include font-size(14px);
     @include margin(16px);
   }
 
@@ -130,7 +161,7 @@
   color: $textColorInput;
   text-align: left;
 
-  @include text-size(14px);
+  @include font-size(14px);
   @include padding(10px, 20px, 10px, 20px);
 
   border: 1px solid $borderColorInput;
@@ -154,7 +185,7 @@
 
   &__title {
     font-family: $fontFamilySecondary;
-    @include text-size(18px);
+    @include font-size(18px);
   }
 
   &__inner {
@@ -187,7 +218,7 @@
   }
 
   &__note {
-    @include text-size(9px);
+    @include font-size(9px);
     @include margin(4px);
     line-height: 105%;
 

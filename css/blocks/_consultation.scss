@@ -32,7 +32,7 @@
     &-title {
       color: white;
       text-align: center;
-      @include text-size(11px);
+      @include font-size(11px);
     }
   }
 
@@ -60,7 +60,7 @@
     font-family: Helvetica;
     font-style: normal;
     font-weight: normal;
-    @include text-size(14px);
+    @include font-size(14px);
 
     text-align: center;
 
@@ -69,7 +69,7 @@
 
   &__text {
     width: 40%;
-    @include text-size(12px);
+    @include font-size(12px);
 
     &-left {
       text-align: left;

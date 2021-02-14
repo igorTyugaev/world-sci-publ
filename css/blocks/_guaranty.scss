@@ -1,57 +1,68 @@
 .guaranty {
 
   &__title {
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 120%;
-
-    color: #000000;
+    font-family: $fontFamilySecondary;
+    @include font-size(36px);
   }
 
-  &__inner {
+  &__content {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
+    justify-content: space-between;
+    @include margin(24px);
   }
 
-  &__main {
-    width: 50%;
-    background: #FFFFFF;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 6px;
-    padding: 20px;
-  }
+  &__column {
+    height: 100%;
 
-  &__text {
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 140%;
-    color: #000000;
-
-    &-title {
-      font-family: Helvetica;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 120%;
-
-      color: #000000;
+    &:nth-child(1) {
+      width: 43.3559650824%;
     }
 
-    &:not(:first-child) {
-      padding-top: 20px;
+    &:nth-child(2) {
+      width: 48.6905916586%;
+    }
+
+    @include _less-than($bp-lg-979) {
+      &:nth-child(1) {
+        width: calc(43.3559650824% + 7.953443259% / 4);
+      }
+
+      &:nth-child(2) {
+        width: calc(48.6905916586% + 7.953443259% / 4);
+      }
     }
   }
+}
+
+.protection {
+  display: flex;
+  flex-direction: column;
 
   &__poster {
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
   }
 
   &__img {
+    align-self: center;
+    width: 57%;
+  }
 
+  &__text {
+    font-family: $fontFamilySecondary;
+    @include font-size(18px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%) translateY(-60%);
+  }
+
+  &__form {
+    @include margin(40px);
   }
 }

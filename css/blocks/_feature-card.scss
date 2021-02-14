@@ -25,12 +25,12 @@
   &__title {
     font-family: $fontFamilySecondary;
     color: $textColorAccent;
-    @include text-size(48px);
+    @include font-size(48px);
   }
 
   &__text {
     color: $textColorAccent;
-    @include text-size(12px);
+    @include font-size(12px);
     margin-top: 4px;
 
     @include _more-than($bp-xxl-1442) {
