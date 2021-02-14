@@ -12,19 +12,19 @@
     flex-direction: column;
     padding: 56px 95px 69px 0px;
 
-    @include _more-than($bp-large) {
-      padding: #{get-vw(56px, $bp-large)}
-      #{get-vw(95px, $bp-large)}
-      #{get-vw(69px, $bp-large)}
-      #{get-vw(0px, $bp-large)};
+    @include _more-than($bp-xxl-1442) {
+      padding: #{get-vw(56px, $bp-xxl-1442)}
+      #{get-vw(95px, $bp-xxl-1442)}
+      #{get-vw(69px, $bp-xxl-1442)}
+      #{get-vw(0px, $bp-xxl-1442)};
     }
 
-    @include _less-than($bp-tablet) {
-      padding: #{get-vw(40px, $bp-tablet)}
-      #{get-vw(20px, $bp-tablet)}
+    @include _less-than($bp-lg-979) {
+      padding: #{get-vw(40px, $bp-lg-979)}
+      #{get-vw(20px, $bp-lg-979)}
     }
 
-    @include _less-than($bp-mobile) {
+    @include _less-than($bp-sm-576) {
 
     }
   }
@@ -32,7 +32,7 @@
   &__poster {
     width: 30%;
     position: relative;
-    @include margin-size(0px, 0px, 0px, 24px);
+    @include margin(0px, 0px, 0px, 24px);
   }
 
   &__title {
@@ -40,27 +40,27 @@
   }
 
   &__text {
-    @include margin-size(24px);
+    @include margin(24px);
     @include text-size(18px);
     padding-right: 100px;
     text-align: left;
     flex-grow: 1;
 
-    @include _more-than($bp-large) {
-      padding-right: #{get-vw(100px, $bp-large)};
+    @include _more-than($bp-xxl-1442) {
+      padding-right: #{get-vw(100px, $bp-xxl-1442)};
     }
 
-    @include _less-than($bp-tablet) {
-      padding-right: #{get-vw(50px, $bp-tablet)};
+    @include _less-than($bp-lg-979) {
+      padding-right: #{get-vw(50px, $bp-lg-979)};
     }
 
-    @include _less-than($bp-mobile) {
+    @include _less-than($bp-sm-576) {
 
     }
   }
 
   &__btn {
-    @include margin-size(24px);
+    @include margin(24px);
     width: 60%;
   }
 }

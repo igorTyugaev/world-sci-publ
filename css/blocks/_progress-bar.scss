@@ -6,6 +6,6 @@
   }
 
   &__inner {
-    @include margin-size(3px);
+    @include margin(3px);
   }
 }

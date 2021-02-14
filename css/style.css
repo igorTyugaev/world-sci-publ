@@ -14,6 +14,12 @@
   border-radius: 6px;
 }
 
+.manifest {
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
+  border-radius: 6px;
+  border-left: #001437 solid 12px;
+}
+
 @font-face {
   font-family: 'Helvetica World';
   src: url("HelveticaWorld.eot");
@@ -26,6 +32,12 @@
 .feature-card {
   box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
   border-radius: 6px;
+}
+
+.manifest {
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
+  border-radius: 6px;
+  border-left: #001437 solid 12px;
 }
 
 @font-face {
@@ -326,6 +338,19 @@ html {
   color: #000000;
   font-size: 14px;
   border: 1px solid rgba(51,51,51,0.6);
+}
+
+.button--submit {
+  font-family: "Helvetica";
+  font-size: 14px;
+}
+
+.button--contract {
+  font-family: "Helvetica";
+  font-size: 14px;
+  background: #FFFFFF;
+  color: #000000;
+  border-radius: 6px;
 }
 
 .img-frame__img {
@@ -818,120 +843,132 @@ html {
 }
 
 .promo__title {
-  font-family: Helvetica;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 41px;
-  letter-spacing: 0em;
+  font-family: "HelveticaBold";
   text-align: left;
+  font-size: 36px;
+  padding-top: 0px;
+  padding-right: 280px;
+  padding-bottom: 0px;
+  padding-left: 0px;
 }
 
-.promo__inner {
-  display: flex;
-  justify-content: space-between;
-}
-
-.promo__manifest {
-  width: 50%;
-  background: #FFFFFF;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
-  border-radius: 6px;
-  border-left: #001437 solid 6px;
-  padding: 12px 20px;
-}
-
-.promo__text {
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 140%;
-  color: #000000;
-}
-
-.promo__text:not(:first-child) {
-  padding-top: 20px;
-}
-
-.promo__description {
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  color: #000000;
-}
-
-.promo__form-title {
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 21px;
-  color: #000000;
-}
-
-.promo__form-inner {
+.promo__content {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 24px 0px 0px 0px;
 }
 
-.promo__form-input {
-  width: 60%;
-  padding: 10px;
-  background: #FFFFFF;
-  border: 1px solid rgba(0,0,0,0.3);
-  border-radius: 6px;
-  box-sizing: border-box;
+.promo__column:first-child {
+  width: 43.3559650824%;
 }
 
-.promo__form-btn {
-  box-sizing: border-box;
-  width: 40%;
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 120%;
-  text-align: center;
-  color: #FFFFFF;
-  background: #219653;
-  mix-blend-mode: normal;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
-  border-radius: 34px;
-  padding: 8px 20px;
-}
-
-.promo__form-note {
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 9px;
-  line-height: 10px;
-  color: #BBBBBB;
+.promo__column:nth-child(2) {
+  width: 48.6905916586%;
 }
 
 .promo__footer {
   width: 100%;
   background: #001437;
   text-align: center;
-  padding: 36px;
+  padding-top: 36px;
+  padding-right: 0px;
+  padding-bottom: 36px;
+  padding-left: 0px;
+  margin-top: 90px;
 }
 
-.promo__contract-btn {
-  display: inline-block;
-  width: 40%;
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 140%;
-  padding: 16px;
-  align-items: center;
-  text-align: center;
-  color: #000000;
+.promo__contract {
+  width: 32%;
+}
+
+.manifest {
   background: #FFFFFF;
+  padding-top: 12px;
+  padding-right: 5px;
+  padding-bottom: 20px;
+  padding-left: 21px;
+}
+
+.manifest__title {
+  font-family: "HelveticaBold";
+  font-size: 14px;
+  line-height: 110%;
+}
+
+.manifest__text {
+  font-size: 14px;
+  line-height: 110%;
+}
+
+.manifest__text:not(:first-child) {
+  padding-top: 18px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.manifest__text--green {
+  color: #219653;
+}
+
+.trailer__video {
+  width: 100%;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.trailer__video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: inherit;
+  height: 100%;
+}
+
+.trailer__description {
+  font-size: 14px;
+  margin: 16px 0px 0px 0px;
+}
+
+.trailer__form {
+  margin: 16px 0px 0px 0px;
+}
+
+.app-form__input {
+  background: #FFFFFF;
+  color: #B7B7B7;
+  text-align: left;
+  font-size: 14px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  border: 1px solid rgba(0,0,0,0.3);
   border-radius: 6px;
+}
+
+.app-form__title {
+  font-family: "HelveticaBold";
+  font-size: 18px;
+}
+
+.app-form__inner {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 309fr 177fr;
+  margin: 24px 0px 0px 0px;
+  column-gap: 16px;
+}
+
+.app-form__note {
+  font-size: 9px;
+  margin: 4px 0px 0px 0px;
+  line-height: 105%;
+  color: #BBBBBB;
 }
 
 .guaranty__title {
@@ -2088,9 +2125,21 @@ html {
     box-shadow: 0.0693481276vw 0.0693481276vw 0.2773925104vw rgba(0,0,0,0.25);
   }
 
+  .manifest {
+    border-radius: 0.4160887656vw;
+    border-left: #001437 solid 0.8321775312vw;
+    box-shadow: 0.0693481276vw 0.0693481276vw 0.2773925104vw rgba(0,0,0,0.25);
+  }
+
   .extended-block:after,
   .feature-card {
     border-radius: 0.4160887656vw;
+    box-shadow: 0.0693481276vw 0.0693481276vw 0.2773925104vw rgba(0,0,0,0.25);
+  }
+
+  .manifest {
+    border-radius: 0.4160887656vw;
+    border-left: #001437 solid 0.8321775312vw;
     box-shadow: 0.0693481276vw 0.0693481276vw 0.2773925104vw rgba(0,0,0,0.25);
   }
 
@@ -2114,10 +2163,26 @@ html {
     font-size: 0.9708737864vw;
   }
 
+  .button--submit {
+    font-size: 0.9708737864vw;
+  }
+
+  .button--contract {
+    font-size: 0.9708737864vw;
+  }
+
   .button {
     box-shadow: 0.0693481276vw 0.0693481276vw 0.2773925104vw rgba(0,0,0,0.25);
     border-radius: 1.6643550624vw;
     padding: 0.8321775312vw;
+  }
+
+  .button--quiz {
+    border: 0.0693481276vw solid rgba(51,51,51,0.6);
+  }
+
+  .button--contract {
+    border-radius: 0.4160887656vw;
   }
 
   .img-frame__labels {
@@ -2295,282 +2360,542 @@ html {
   .quiz__quote:before {
     font-size: 6.6574202497vw;
   }
+
+  .promo__title {
+    font-size: 2.4965325936vw;
+  }
+
+  .promo__title {
+    padding-top: 0vw;
+    padding-right: 19.4174757282vw;
+    padding-bottom: 0vw;
+    padding-left: 0vw;
+  }
+
+  .promo__content {
+    margin: 1.6643550624vw 0vw 0vw 0vw;
+  }
+
+  .promo__footer {
+    padding-top: 2.4965325936vw;
+    padding-right: 0vw;
+    padding-bottom: 2.4965325936vw;
+    padding-left: 0vw;
+  }
+
+  .promo__footer {
+    margin-top: 6.241331484vw;
+  }
+
+  .manifest {
+    padding-top: 0.8321775312vw;
+    padding-right: 0.346740638vw;
+    padding-bottom: 1.386962552vw;
+    padding-left: 1.4563106796vw;
+  }
+
+  .manifest__title {
+    font-size: 0.9708737864vw;
+  }
+
+  .manifest__text {
+    font-size: 0.9708737864vw;
+  }
+
+  .manifest__text:not(:first-child) {
+    padding-top: 1.2482662968vw;
+    padding-right: 0vw;
+    padding-bottom: 0vw;
+    padding-left: 0vw;
+  }
+
+  .trailer__description {
+    font-size: 0.9708737864vw;
+  }
+
+  .trailer__description {
+    margin: 1.1095700416vw 0vw 0vw 0vw;
+  }
+
+  .trailer__form {
+    margin: 1.1095700416vw 0vw 0vw 0vw;
+  }
+
+  .app-form__input {
+    font-size: 0.9708737864vw;
+  }
+
+  .app-form__input {
+    padding-top: 0.693481276vw;
+    padding-right: 1.386962552vw;
+    padding-bottom: 0.693481276vw;
+    padding-left: 1.386962552vw;
+  }
+
+  .app-form__input {
+    border: 0.0693481276vw solid rgba(0,0,0,0.3);
+    border-radius: 0.4160887656vw;
+  }
+
+  .app-form__title {
+    font-size: 1.2482662968vw;
+  }
+
+  .app-form__inner {
+    margin: 1.6643550624vw 0vw 0vw 0vw;
+  }
+
+  .app-form__inner {
+    column-gap: 1.1095700416vw;
+  }
+
+  .app-form__note {
+    font-size: 0.6241331484vw;
+  }
+
+  .app-form__note {
+    margin: 0.2773925104vw 0vw 0vw 0vw;
+  }
 }
 
-@media (max-width:940px) {
+@media (max-width:979px) {
   .extended-block:after,
   .feature-card {
-    border-radius: 0.6382978723vw;
-    box-shadow: 0.1063829787vw 0.1063829787vw 0.4255319149vw rgba(0,0,0,0.25);
+    border-radius: 0.6128702758vw;
+    box-shadow: 0.102145046vw 0.102145046vw 0.4085801839vw rgba(0,0,0,0.25);
+  }
+
+  .manifest {
+    border-radius: 0.6128702758vw;
+    border-left: #001437 solid 1.2257405516vw;
+    box-shadow: 0.102145046vw 0.102145046vw 0.4085801839vw rgba(0,0,0,0.25);
   }
 
   .extended-block:after,
   .feature-card {
-    border-radius: 0.6382978723vw;
-    box-shadow: 0.1063829787vw 0.1063829787vw 0.4255319149vw rgba(0,0,0,0.25);
+    border-radius: 0.6128702758vw;
+    box-shadow: 0.102145046vw 0.102145046vw 0.4085801839vw rgba(0,0,0,0.25);
+  }
+
+  .manifest {
+    border-radius: 0.6128702758vw;
+    border-left: #001437 solid 1.2257405516vw;
+    box-shadow: 0.102145046vw 0.102145046vw 0.4085801839vw rgba(0,0,0,0.25);
   }
 
   a,
   button,
   p,
   span {
-    font-size: 1.2765957447vw;
+    font-size: 1.2257405516vw;
   }
 
   .container {
-    max-width: 113.936170213vw;
-    padding: 0 2.1276595745vw;
+    max-width: 109.397344229vw;
+    padding: 0 2.0429009193vw;
   }
 
   .button {
-    font-size: 1.914893617vw;
+    font-size: 1.8386108274vw;
   }
 
   .button--quiz {
-    font-size: 1.4893617021vw;
+    font-size: 1.4300306435vw;
+  }
+
+  .button--submit {
+    font-size: 1.4300306435vw;
+  }
+
+  .button--contract {
+    font-size: 1.4300306435vw;
   }
 
   .button {
-    box-shadow: 0.1063829787vw 0.1063829787vw 0.4255319149vw rgba(0,0,0,0.25);
-    border-radius: 2.5531914894vw;
-    padding: 1.2765957447vw;
+    box-shadow: 0.102145046vw 0.102145046vw 0.4085801839vw rgba(0,0,0,0.25);
+    border-radius: 2.4514811032vw;
+    padding: 1.2257405516vw;
+  }
+
+  .button--quiz {
+    border: 0.102145046vw solid rgba(51,51,51,0.6);
+  }
+
+  .button--contract {
+    border-radius: 0.6128702758vw;
   }
 
   .img-frame__labels {
-    font-size: 1.0638297872vw;
+    font-size: 1.0214504597vw;
   }
 
   .feature-card {
-    padding: 3.1914893617vw 2.5531914894vw 5.1063829787vw 1.8085106383vw;
+    padding: 3.064351379vw 2.4514811032vw 4.9029622063vw 1.7364657814vw;
   }
 
   .feature-card__title {
-    font-size: 5.1063829787vw;
+    font-size: 4.9029622063vw;
   }
 
   .feature-card__text {
-    font-size: 1.2765957447vw;
+    font-size: 1.2257405516vw;
   }
 
   .feature-card__text {
-    margin-top: 0.4255319149vw;
+    margin-top: 0.4085801839vw;
   }
 
   .feature-card+.feature-card {
-    margin-left: 9.0425531915vw;
+    margin-left: 8.682328907vw;
   }
 
   .quizlet__question {
-    padding: 0.8510638298vw 1.2765957447vw;
-    border-radius: 0.6382978723vw;
+    padding: 0.8171603677vw 1.2257405516vw;
+    border-radius: 0.6128702758vw;
   }
 
   .quizlet__question {
-    font-size: 1.4893617021vw;
+    font-size: 1.4300306435vw;
   }
 
   .quizlet__answers {
-    padding: 2.1276595745vw 0;
-    row-gap: 2.1276595745vw;
-    column-gap: 2.1276595745vw;
-    margin-top: 2.1276595745vw;
+    padding: 2.0429009193vw 0;
+    row-gap: 2.0429009193vw;
+    column-gap: 2.0429009193vw;
+    margin-top: 2.0429009193vw;
   }
 
   .progress-bar__title {
-    font-size: 1.4893617021vw;
+    font-size: 1.4300306435vw;
   }
 
   .consultation__logo-title {
-    font-size: 1.170212766vw;
+    font-size: 1.1235955056vw;
   }
 
   .consultation__btn {
-    font-size: 1.4893617021vw;
+    font-size: 1.4300306435vw;
   }
 
   .consultation__text {
-    font-size: 1.2765957447vw;
+    font-size: 1.2257405516vw;
   }
 
   .header__logo {
-    height: 16.2765957447vw;
-    width: 10.2127659574vw;
+    height: 15.6281920327vw;
+    width: 9.8059244127vw;
     transform: translateX(-50%);
   }
 
   .header__logo-container {
-    transform: translateX(0.5319148936vw);
+    transform: translateX(0.5107252298vw);
   }
 
   .header__logo-img {
-    width: 8.2978723404vw;
-    margin-top: 2.3404255319vw;
+    width: 7.9673135853vw;
+    margin-top: 2.2471910112vw;
   }
 
   .cost__main {
-    padding: 4.2553191489vw 2.1276595745vw;
+    padding: 4.0858018386vw 2.0429009193vw;
   }
 
   .cost__title {
-    font-size: 2.5531914894vw;
+    font-size: 2.4514811032vw;
   }
 
   .cost__text {
-    font-size: 1.914893617vw;
+    font-size: 1.8386108274vw;
   }
 
   .cost__text {
-    padding-right: 5.3191489362vw;
+    padding-right: 5.1072522983vw;
   }
 
   .quiz__title {
-    font-size: 3.829787234vw;
+    font-size: 3.6772216547vw;
   }
 
   .quiz__subtitle {
-    font-size: 1.4893617021vw;
+    font-size: 1.4300306435vw;
   }
 
   .quiz__subtitle {
-    padding-top: 0.7446808511vw;
-    padding-right: 6.8085106383vw;
-    padding-bottom: 0.7446808511vw;
-    padding-left: 8.7234042553vw;
+    padding-top: 0.7150153218vw;
+    padding-right: 6.5372829418vw;
+    padding-bottom: 0.7150153218vw;
+    padding-left: 8.3758937692vw;
   }
 
   .quiz__content {
     padding-top: 0vw;
-    padding-right: 6.8085106383vw;
-    padding-bottom: 6.3829787234vw;
-    padding-left: 8.7234042553vw;
+    padding-right: 6.5372829418vw;
+    padding-bottom: 6.1287027579vw;
+    padding-left: 8.3758937692vw;
   }
 
   .quiz__quote {
     padding-top: 0vw;
-    padding-right: 6.8085106383vw;
+    padding-right: 6.5372829418vw;
     padding-bottom: 0vw;
-    padding-left: 8.7234042553vw;
+    padding-left: 8.3758937692vw;
   }
 
   .quiz__quote-text {
-    font-size: 1.914893617vw;
+    font-size: 1.8386108274vw;
   }
 
   .quiz__quote-text {
     padding-top: 0vw;
-    padding-right: 2.1276595745vw;
+    padding-right: 2.0429009193vw;
     padding-bottom: 0vw;
-    padding-left: 2.1276595745vw;
+    padding-left: 2.0429009193vw;
   }
 
   .quiz__quote:after,
   .quiz__quote:before {
-    font-size: 10.2127659574vw;
+    font-size: 9.8059244127vw;
+  }
+
+  .promo__title {
+    font-size: 3.6772216547vw;
+  }
+
+  .promo__title {
+    padding-top: 0vw;
+    padding-right: 28.6006128703vw;
+    padding-bottom: 0vw;
+    padding-left: 0vw;
+  }
+
+  .promo__column {
+    background-color: #9278aa;
+  }
+
+  .promo__column:first-child {
+    width: calc(43.3559650824% + 7.953443259% / 4);
+  }
+
+  .promo__column:nth-child(2) {
+    width: calc(48.6905916586% + 7.953443259% / 4);
+  }
+
+  .promo__footer {
+    padding-top: 3.6772216547vw;
+    padding-right: 0vw;
+    padding-bottom: 3.6772216547vw;
+    padding-left: 0vw;
+  }
+
+  .promo__footer {
+    margin-top: 5.1072522983vw;
+  }
+
+  .manifest {
+    padding-top: 1.2257405516vw;
+    padding-right: 0.5107252298vw;
+    padding-bottom: 2.0429009193vw;
+    padding-left: 2.1450459653vw;
+  }
+
+  .manifest__title {
+    font-size: 1.4300306435vw;
+  }
+
+  .manifest__text {
+    font-size: 1.4300306435vw;
+  }
+
+  .manifest__text:not(:first-child) {
+    padding-top: 1.8386108274vw;
+    padding-right: 0vw;
+    padding-bottom: 0vw;
+    padding-left: 0vw;
+  }
+
+  .trailer__description {
+    font-size: 1.4300306435vw;
+  }
+
+  .app-form__input {
+    font-size: 1.4300306435vw;
+  }
+
+  .app-form__input {
+    padding-top: 1.0214504597vw;
+    padding-right: 2.0429009193vw;
+    padding-bottom: 1.0214504597vw;
+    padding-left: 2.0429009193vw;
+  }
+
+  .app-form__input {
+    border: 0.102145046vw solid rgba(0,0,0,0.3);
+    border-radius: 0.6128702758vw;
+  }
+
+  .app-form__title {
+    font-size: 1.8386108274vw;
+  }
+
+  .app-form__inner {
+    column-gap: 1.6343207354vw;
+  }
+
+  .app-form__note {
+    font-size: 0.9193054137vw;
   }
 }
 
-@media (max-width:520px) {
+@media (max-width:576px) {
   .extended-block:after,
   .feature-card {
-    border-radius: 1.1538461538vw;
-    box-shadow: 0.1923076923vw 0.1923076923vw 0.7692307692vw rgba(0,0,0,0.25);
+    border-radius: 1.0416666667vw;
+    box-shadow: 0.1736111111vw 0.1736111111vw 0.6944444444vw rgba(0,0,0,0.25);
+  }
+
+  .manifest {
+    border-radius: 1.0416666667vw;
+    border-left: #001437 solid 2.0833333333vw;
+    box-shadow: 0.1736111111vw 0.1736111111vw 0.6944444444vw rgba(0,0,0,0.25);
   }
 
   .extended-block:after,
   .feature-card {
-    border-radius: 1.1538461538vw;
-    box-shadow: 0.1923076923vw 0.1923076923vw 0.7692307692vw rgba(0,0,0,0.25);
+    border-radius: 1.0416666667vw;
+    box-shadow: 0.1736111111vw 0.1736111111vw 0.6944444444vw rgba(0,0,0,0.25);
+  }
+
+  .manifest {
+    border-radius: 1.0416666667vw;
+    border-left: #001437 solid 2.0833333333vw;
+    box-shadow: 0.1736111111vw 0.1736111111vw 0.6944444444vw rgba(0,0,0,0.25);
   }
 
   a,
   button,
   p,
   span {
-    font-size: 2.3076923077vw;
+    font-size: 2.0833333333vw;
   }
 
   .container {
-    max-width: 205.961538462vw;
-    padding: 0 3.8461538462vw;
+    max-width: 185.9375vw;
+    padding: 0 3.4722222222vw;
   }
 
   .button {
-    font-size: 3.4615384615vw;
+    font-size: 3.125vw;
   }
 
   .button--quiz {
-    font-size: 2.6923076923vw;
+    font-size: 2.4305555556vw;
+  }
+
+  .button--submit {
+    font-size: 2.4305555556vw;
+  }
+
+  .button--contract {
+    font-size: 2.4305555556vw;
   }
 
   .img-frame__labels {
-    font-size: 1.9230769231vw;
+    font-size: 1.7361111111vw;
   }
 
   .feature-card__title {
-    font-size: 9.2307692308vw;
+    font-size: 8.3333333333vw;
   }
 
   .feature-card__text {
-    font-size: 2.3076923077vw;
+    font-size: 2.0833333333vw;
   }
 
   .quizlet__question {
-    font-size: 2.6923076923vw;
+    font-size: 2.4305555556vw;
   }
 
   .progress-bar__title {
-    font-size: 2.6923076923vw;
+    font-size: 2.4305555556vw;
   }
 
   .consultation__logo-title {
-    font-size: 2.1153846154vw;
+    font-size: 1.9097222222vw;
   }
 
   .consultation__btn {
-    font-size: 2.6923076923vw;
+    font-size: 2.4305555556vw;
   }
 
   .consultation__text {
-    font-size: 2.3076923077vw;
+    font-size: 2.0833333333vw;
   }
 
   .header__logo {
-    height: 29.4230769231vw;
-    width: 18.4615384615vw;
+    height: 26.5625vw;
+    width: 16.6666666667vw;
     transform: translateX(-50%);
   }
 
   .header__logo-container {
-    transform: translateX(0.9615384615vw);
+    transform: translateX(0.8680555556vw);
   }
 
   .header__logo-img {
-    width: 15vw;
-    margin-top: 4.2307692308vw;
+    width: 13.5416666667vw;
+    margin-top: 3.8194444444vw;
   }
 
   .cost__title {
-    font-size: 4.6153846154vw;
+    font-size: 4.1666666667vw;
   }
 
   .cost__text {
-    font-size: 3.4615384615vw;
+    font-size: 3.125vw;
   }
 
   .quiz__title {
-    font-size: 6.9230769231vw;
+    font-size: 6.25vw;
   }
 
   .quiz__subtitle {
-    font-size: 2.6923076923vw;
+    font-size: 2.4305555556vw;
   }
 
   .quiz__quote-text {
-    font-size: 3.4615384615vw;
+    font-size: 3.125vw;
   }
 
   .quiz__quote:after,
   .quiz__quote:before {
-    font-size: 18.4615384615vw;
+    font-size: 16.6666666667vw;
+  }
+
+  .promo__title {
+    font-size: 6.25vw;
+  }
+
+  .manifest__title {
+    font-size: 2.4305555556vw;
+  }
+
+  .manifest__text {
+    font-size: 2.4305555556vw;
+  }
+
+  .trailer__description {
+    font-size: 2.4305555556vw;
+  }
+
+  .app-form__input {
+    font-size: 2.4305555556vw;
+  }
+
+  .app-form__title {
+    font-size: 3.125vw;
+  }
+
+  .app-form__note {
+    font-size: 1.5625vw;
   }
 }

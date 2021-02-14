@@ -7,18 +7,18 @@ $maxWidthContainer: $maxWidthContainer + 2 * $p-side;
   margin: 0 auto;
   padding: 0 $p-side;
 
-  @include _more-than($bp-large) {
-    max-width: #{get-vw($maxWidthContainer, $bp-large)};
-    padding: 0 #{get-vw($p-side, $bp-large)};
+  @include _more-than($bp-xxl-1442) {
+    max-width: #{get-vw($maxWidthContainer, $bp-xxl-1442)};
+    padding: 0 #{get-vw($p-side, $bp-xxl-1442)};
   }
 
-  @include _less-than($bp-tablet) {
-    max-width: #{get-vw($maxWidthContainer, $bp-tablet)};
-    padding: 0 #{get-vw($p-side, $bp-tablet)};
+  @include _less-than($bp-lg-979) {
+    max-width: #{get-vw($maxWidthContainer, $bp-lg-979)};
+    padding: 0 #{get-vw($p-side, $bp-lg-979)};
   }
 
-  @include _less-than($bp-mobile) {
-    max-width: #{get-vw($maxWidthContainer, $bp-mobile)};
-    padding: 0 #{get-vw($p-side, $bp-mobile)};
+  @include _less-than($bp-sm-576) {
+    max-width: #{get-vw($maxWidthContainer, $bp-sm-576)};
+    padding: 0 #{get-vw($p-side, $bp-sm-576)};
   }
 }

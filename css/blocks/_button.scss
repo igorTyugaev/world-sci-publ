@@ -16,20 +16,50 @@
     border: 1px solid rgba(51, 51, 51, 0.6);
   }
 
-
-  @include _more-than($bp-large) {
-    box-shadow: #{get-vw(1px, $bp-large)} #{get-vw(1px, $bp-large)} #{get-vw(4px, $bp-large)} $colorShadow;
-    border-radius: #{get-vw(24px, $bp-large)};
-    padding: #{get-vw(12px, $bp-large)};
+  &--submit {
+    font-family: $fontFamilyPrimary;
+    @include text-size(14px);
   }
 
-  @include _less-than($bp-tablet) {
-    box-shadow: #{get-vw(1px, $bp-tablet)} #{get-vw(1px, $bp-tablet)} #{get-vw(4px, $bp-tablet)} $colorShadow;
-    border-radius: #{get-vw(24px, $bp-tablet)};
-    padding: #{get-vw(12px, $bp-tablet)};
+  &--contract {
+    font-family: $fontFamilyPrimary;
+    @include text-size(14px);
+    background: $popupBackground;
+    color: $textColorPrimary;
+    border-radius: 6px;
   }
 
-  @include _less-than($bp-mobile) {
+
+  @include _more-than($bp-xxl-1442) {
+    box-shadow: #{get-vw(1px, $bp-xxl-1442)} #{get-vw(1px, $bp-xxl-1442)} #{get-vw(4px, $bp-xxl-1442)} $colorShadow;
+    border-radius: #{get-vw(24px, $bp-xxl-1442)};
+    padding: #{get-vw(12px, $bp-xxl-1442)};
+
+    &--quiz {
+      border: #{get-vw(1px, $bp-xxl-1442)} solid rgba(51, 51, 51, 0.6);
+    }
+
+    &--contract {
+      border-radius: #{get-vw(6px, $bp-xxl-1442)};
+    }
+  }
+
+  @include _less-than($bp-lg-979) {
+    box-shadow: #{get-vw(1px, $bp-lg-979)} #{get-vw(1px, $bp-lg-979)} #{get-vw(4px, $bp-lg-979)} $colorShadow;
+    border-radius: #{get-vw(24px, $bp-lg-979)};
+    padding: #{get-vw(12px, $bp-lg-979)};
+
+    &--quiz {
+      border: #{get-vw(1px, $bp-lg-979)} solid rgba(51, 51, 51, 0.6);
+    }
+
+
+    &--contract {
+      border-radius: #{get-vw(6px, $bp-lg-979)};
+    }
+  }
+
+  @include _less-than($bp-sm-576) {
 
   }
 }

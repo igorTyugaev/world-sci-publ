@@ -15,11 +15,11 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    @include margin-size(36px);
+    @include margin(36px);
   }
 
   &__header {
-    @include margin-size(12px);
+    @include margin(12px);
 
     &-logo {
       object-fit: contain;
@@ -38,20 +38,20 @@
 
   &__content {
     @include padding(0px, 64px, 60px, 82px);
-    @include margin-size(20px);
+    @include margin(20px);
   }
 
   &__poster {
     width: 30%;
     position: relative;
-    @include margin-size(0px, 0px, 0px, 24px);
+    @include margin(0px, 0px, 0px, 24px);
   }
 
   &__quote {
     display: flex;
     flex-direction: row;
 
-    @include margin-size(28px);
+    @include margin(28px);
     @include padding(0px, 64px, 0px, 82px);
 
     width: 100%;

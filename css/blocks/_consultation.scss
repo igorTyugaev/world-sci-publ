@@ -81,20 +81,20 @@
   }
 }
 
-@media (min-width: $bp-large) {
+@media (min-width: $bp-xxl-1442) {
   .consultation {
     &__logo {
-      height: get-vw(153px, $bp-large);
-      width: get-vw(96px, $bp-large);
+      height: get-vw(153px, $bp-xxl-1442);
+      width: get-vw(96px, $bp-xxl-1442);
       transform: translateX(-50%);
 
       &-container {
-        transform: translateX(#{get-vw(5px, $bp-large)});
+        transform: translateX(#{get-vw(5px, $bp-xxl-1442)});
       }
 
       &-img {
-        width: get-vw(78px, $bp-large);
-        margin-top: get-vw(22px, $bp-large);
+        width: get-vw(78px, $bp-xxl-1442);
+        margin-top: get-vw(22px, $bp-xxl-1442);
       }
 
       &-title {
@@ -104,20 +104,20 @@
   }
 }
 
-@media (max-width: $bp-tablet) {
+@media (max-width: $bp-lg-979) {
   .header {
     &__logo {
-      height: get-vw(153px, $bp-tablet);
-      width: get-vw(96px, $bp-tablet);
+      height: get-vw(153px, $bp-lg-979);
+      width: get-vw(96px, $bp-lg-979);
       transform: translateX(-50%);
 
       &-container {
-        transform: translateX(#{get-vw(5px, $bp-tablet)});
+        transform: translateX(#{get-vw(5px, $bp-lg-979)});
       }
 
       &-img {
-        width: get-vw(78px, $bp-tablet);
-        margin-top: get-vw(22px, $bp-tablet);
+        width: get-vw(78px, $bp-lg-979);
+        margin-top: get-vw(22px, $bp-lg-979);
       }
 
       &-title {
@@ -126,20 +126,20 @@
   }
 }
 
-@media (max-width: $bp-mobile) {
+@media (max-width: $bp-sm-576) {
   .header {
     &__logo {
-      height: get-vw(153px, $bp-mobile);
-      width: get-vw(96px, $bp-mobile);
+      height: get-vw(153px, $bp-sm-576);
+      width: get-vw(96px, $bp-sm-576);
       transform: translateX(-50%);
 
       &-container {
-        transform: translateX(#{get-vw(5px, $bp-mobile)});
+        transform: translateX(#{get-vw(5px, $bp-sm-576)});
       }
 
       &-img {
-        width: get-vw(78px, $bp-mobile);
-        margin-top: get-vw(22px, $bp-mobile);
+        width: get-vw(78px, $bp-sm-576);
+        margin-top: get-vw(22px, $bp-sm-576);
       }
 
       &-title {

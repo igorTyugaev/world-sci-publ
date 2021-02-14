@@ -6,17 +6,17 @@
   color: $textColorSecondary;
   background: $colorAccent;
 
-  @media (min-width: $bp-large) {
-    padding: #{get-vw(8px, $bp-large)} #{get-vw(12px, $bp-large)};
-    border-radius: #{get-vw(6px, $bp-large)};
+  @media (min-width: $bp-xxl-1442) {
+    padding: #{get-vw(8px, $bp-xxl-1442)} #{get-vw(12px, $bp-xxl-1442)};
+    border-radius: #{get-vw(6px, $bp-xxl-1442)};
   }
 
-  @media (max-width: #{$bp-tablet}) {
-    padding: #{get-vw(8px, $bp-tablet)} #{get-vw(12px, $bp-tablet)};
-    border-radius: #{get-vw(6px, $bp-tablet)};
+  @media (max-width: #{$bp-lg-979}) {
+    padding: #{get-vw(8px, $bp-lg-979)} #{get-vw(12px, $bp-lg-979)};
+    border-radius: #{get-vw(6px, $bp-lg-979)};
   }
 
-  @media (max-width: #{$bp-mobile}) {
+  @media (max-width: #{$bp-sm-576}) {
   }
 }
 
@@ -31,7 +31,7 @@
 
   &__question {
     @include text-size(14px);
-    @include margin-size(20px);
+    @include margin(20px);
     @extend %highlighter;
   }
 
@@ -46,21 +46,21 @@
     column-gap: 20px;
     margin-top: 20px;
 
-    @media (min-width: $bp-large) {
-      padding: #{get-vw(20px, $bp-large)} 0;
-      row-gap: #{get-vw(20px, $bp-large)};
-      column-gap: #{get-vw(20px, $bp-large)};
-      margin-top: #{get-vw(20px, $bp-large)};
+    @media (min-width: $bp-xxl-1442) {
+      padding: #{get-vw(20px, $bp-xxl-1442)} 0;
+      row-gap: #{get-vw(20px, $bp-xxl-1442)};
+      column-gap: #{get-vw(20px, $bp-xxl-1442)};
+      margin-top: #{get-vw(20px, $bp-xxl-1442)};
     }
 
-    @media (max-width: #{$bp-tablet}) {
-      padding: #{get-vw(20px, $bp-tablet)} 0;
-      row-gap: #{get-vw(20px, $bp-tablet)};
-      column-gap: #{get-vw(20px, $bp-tablet)};
-      margin-top: #{get-vw(20px, $bp-tablet)};
+    @media (max-width: #{$bp-lg-979}) {
+      padding: #{get-vw(20px, $bp-lg-979)} 0;
+      row-gap: #{get-vw(20px, $bp-lg-979)};
+      column-gap: #{get-vw(20px, $bp-lg-979)};
+      margin-top: #{get-vw(20px, $bp-lg-979)};
     }
 
-    @media (max-width: #{$bp-mobile}) {
+    @media (max-width: #{$bp-sm-576}) {
 
     }
 
