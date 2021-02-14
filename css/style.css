@@ -1046,75 +1046,80 @@ html {
   position: relative;
 }
 
+.component__img {
+  position: absolute;
+  object-fit: cover;
+  object-position: right;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
 .component__title {
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 41px;
+  font-family: "HelveticaBold";
   color: #FFFFFF;
+  font-size: 36px;
+}
+
+.component__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  padding-top: 60px;
+  padding-right: 20px;
+  padding-bottom: 60px;
+  padding-left: 20px;
 }
 
 .component__inner {
-  padding: 100px 120px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
+  margin-top: 56px;
+  width: 50%;
 }
 
 .component__text {
-  width: 50%;
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: normal;
   font-size: 18px;
-  line-height: 140%;
   color: #FFFFFF;
 }
 
 .component__text:not(:first-child) {
   padding-top: 20px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
 }
 
-.component__quote {
+.quote {
   display: flex;
   flex-direction: row;
-  padding: 45px 0;
-  width: 100%;
+  margin: 50px 0px 0px 0px;
+  width: 34%;
   height: 100%;
 }
 
-.component__quote-text {
-  font-family: Helvetica;
-  font-style: italic;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 120%;
+.quote__text {
   display: flex;
   align-items: center;
-  padding: 0 5px;
+  font-style: italic;
   color: #FFFFFF;
+  font-size: 14px;
 }
 
-.component__quote:before {
+.quote:before {
   content: "“";
 }
 
-.component__quote:after {
+.quote:after {
   content: "“";
   transform: rotateZ(180deg);
 }
 
-.component__quote:after,
-.component__quote:before {
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 72px;
-  line-height: 120%;
+.quote:after,
+.quote:before {
+  font-family: "Helvetica";
   color: #FFFFFF;
+  font-size: 72px;
 }
 
 .slider {
@@ -2504,11 +2509,54 @@ html {
   .protection__form {
     margin: 2.773925104vw 0vw 0vw 0vw;
   }
+
+  .component__title {
+    font-size: 2.4965325936vw;
+  }
+
+  .component__content {
+    padding-top: 4.160887656vw;
+    padding-right: 1.386962552vw;
+    padding-bottom: 4.160887656vw;
+    padding-left: 1.386962552vw;
+  }
+
+  .component__inner {
+    margin-top: 3.8834951456vw;
+  }
+
+  .component__text {
+    font-size: 1.2482662968vw;
+  }
+
+  .component__text:not(:first-child) {
+    padding-top: 1.386962552vw;
+    padding-right: 0vw;
+    padding-bottom: 0vw;
+    padding-left: 0vw;
+  }
+
+  .quote {
+    margin: 3.46740638vw 0vw 0vw 0vw;
+  }
+
+  .quote__text {
+    font-size: 0.9708737864vw;
+  }
+
+  .quote:after,
+  .quote:before {
+    font-size: 4.9930651872vw;
+  }
 }
 
 @media (max-width:1170px) {
   .promo__title {
     padding-right: 15.3846153846vw;
+  }
+
+  .component__inner {
+    margin-top: 4.7863247863vw;
   }
 }
 
@@ -2820,6 +2868,61 @@ html {
   .protection__text {
     font-size: 1.8386108274vw;
   }
+
+  .component__title {
+    font-size: 3.6772216547vw;
+  }
+
+  .component__content {
+    padding-top: 6.1287027579vw;
+    padding-right: 2.0429009193vw;
+    padding-bottom: 6.1287027579vw;
+    padding-left: 2.0429009193vw;
+  }
+
+  .component__content {
+    background-color: rgba(0,0,0,0.4);
+    height: 100vh;
+  }
+
+  .component__inner {
+    margin-top: 3.6772216547vw;
+  }
+
+  .component__text {
+    font-size: 1.8386108274vw;
+  }
+
+  .component__text:not(:first-child) {
+    padding-top: 2.0429009193vw;
+    padding-right: 0vw;
+    padding-bottom: 0vw;
+    padding-left: 0vw;
+  }
+
+  .quote {
+    width: 50%;
+  }
+
+  .quote__text {
+    font-size: 1.4300306435vw;
+  }
+
+  .quote:after,
+  .quote:before {
+    font-size: 7.3544433095vw;
+  }
+}
+
+@media (max-width:768px) {
+  .component__inner {
+    margin-top: 2.0833333333vw;
+    width: 100%;
+  }
+
+  .quote {
+    width: 70%;
+  }
 }
 
 @media (max-width:576px) {
@@ -2987,5 +3090,22 @@ html {
 
   .protection__text {
     font-size: 3.125vw;
+  }
+
+  .component__title {
+    font-size: 6.25vw;
+  }
+
+  .component__text {
+    font-size: 3.125vw;
+  }
+
+  .quote__text {
+    font-size: 2.4305555556vw;
+  }
+
+  .quote:after,
+  .quote:before {
+    font-size: 12.5vw;
   }
 }

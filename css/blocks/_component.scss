@@ -2,77 +2,102 @@
   position: relative;
 
   &__img {
+    position: absolute;
+    object-fit: cover;
+    object-position: right;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
   }
 
   &__title {
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 41px;
+    font-family: $fontFamilySecondary;
+    color: $textColorSecondary;
+    @include font-size(36px);
+  }
 
-    color: #FFFFFF;
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: $z-index-content;
+    @include padding(60px, 20px, 60px, 20px);
+
+    @include _less-than($bp-lg-979) {
+      background-color: rgba(0, 0, 0, 0.4);
+      height: 100vh;
+    }
   }
 
   &__inner {
-    padding: 100px 120px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
+    margin-top: 56px;
+    width: 50%;
+
+    @include _more-than($bp-xxl-1442) {
+      margin-top: #{get-vw(56px, $bp-xxl-1442)};
+    }
+
+    @include _less-than($bp-xl-1170) {
+      margin-top: #{get-vw(56px, $bp-xl-1170)};
+    }
+
+    @include _less-than($bp-lg-979) {
+      margin-top: #{get-vw(36px, $bp-lg-979)};
+    }
+
+    @include _less-than($bp-md-768) {
+      margin-top: #{get-vw(16px, $bp-md-768)};
+      width: 100%;
+    }
   }
 
   &__text {
-    width: 50%;
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 140%;
-    color: #FFFFFF;
+    @include font-size(18px);
+    color: $textColorSecondary;
 
     &:not(:first-child) {
-      padding-top: 20px;
+      @include padding(20px);
     }
   }
+}
 
-  &__quote {
+.quote {
+  display: flex;
+  flex-direction: row;
+  @include margin(50px);
+  width: 34%;
+  height: 100%;
+
+  @include _less-than($bp-lg-979) {
+    width: 50%;
+  }
+
+  @include _less-than($bp-md-768) {
+    width: 70%;
+  }
+
+  &__text {
     display: flex;
-    flex-direction: row;
-    padding: 45px 0;
-    width: 100%;
-    height: 100%;
+    align-items: center;
 
-    &-text {
-      font-family: Helvetica;
-      font-style: italic;
-      font-weight: 300;
-      font-size: 14px;
-      line-height: 120%;
-      display: flex;
-      align-items: center;
-      padding: 0 5px;
+    font-style: italic;
+    color: $textColorSecondary;
+    @include font-size(14px);
+  }
 
-      color: #FFFFFF;
-    }
+  &::before {
+    content: "“";
+  }
 
-    &::before {
-      content: "“";
-    }
+  &::after {
+    content: "“";
+    transform: rotateZ(180deg);
+  }
 
-    &::after {
-      content: "“";
-      transform: rotateZ(180deg);
-    }
-
-    &::before, &::after {
-      font-family: Helvetica;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 72px;
-      line-height: 120%;
-      color: #FFFFFF;
-    }
+  &::before, &::after {
+    font-family: $fontFamilyPrimary;
+    color: $textColorSecondary;
+    @include font-size(72px);
   }
 }
