@@ -846,10 +846,7 @@ html {
   font-family: "HelveticaBold";
   text-align: left;
   font-size: 36px;
-  padding-top: 0px;
   padding-right: 280px;
-  padding-bottom: 0px;
-  padding-left: 0px;
 }
 
 .promo__content {
@@ -2366,10 +2363,7 @@ html {
   }
 
   .promo__title {
-    padding-top: 0vw;
     padding-right: 19.4174757282vw;
-    padding-bottom: 0vw;
-    padding-left: 0vw;
   }
 
   .promo__content {
@@ -2455,6 +2449,12 @@ html {
 
   .app-form__note {
     margin: 0.2773925104vw 0vw 0vw 0vw;
+  }
+}
+
+@media (max-width:1170px) {
+  .promo__title {
+    padding-right: 15.3846153846vw;
   }
 }
 
@@ -2662,14 +2662,7 @@ html {
   }
 
   .promo__title {
-    padding-top: 0vw;
-    padding-right: 28.6006128703vw;
-    padding-bottom: 0vw;
-    padding-left: 0vw;
-  }
-
-  .promo__column {
-    background-color: #9278aa;
+    padding-right: 8.1716036772vw;
   }
 
   .promo__column:first-child {
