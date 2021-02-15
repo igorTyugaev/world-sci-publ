@@ -9,6 +9,9 @@
 }
 
 .audit-cart,
+.card-profile,
+.card-rating,
+.card-txt,
 .extended-block:after,
 .feature-card,
 .manifest,
@@ -34,6 +37,9 @@
 }
 
 .audit-cart,
+.card-profile,
+.card-rating,
+.card-txt,
 .extended-block:after,
 .feature-card,
 .manifest,
@@ -1671,7 +1677,6 @@ html {
 
 .foreign {
   margin-top: 40px;
-  width: 100%;
 }
 
 .foreign__title {
@@ -1685,26 +1690,172 @@ html {
   color: #161616;
 }
 
-.cards-gird {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "single single single single" "single double single single";
+.foreign__cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.cards-gird__item {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-area: single;
-  background-color: #9278aa;
+.foreign__column {
+  width: 23.56%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.cards-gird__item--double {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: double;
+.foreign__footer {
+  width: 100%;
+  background: #001437;
+  text-align: center;
+  padding-top: 36px;
+  padding-right: 0px;
+  padding-bottom: 36px;
+  padding-left: 0px;
+  margin-top: 90px;
+}
+
+.foreign__footer-title {
+  font-family: "HelveticaBold";
+  color: #FFFFFF;
+  font-size: 24px;
+}
+
+.card-txt {
+  background-color: #FFFFFF;
+  padding-top: 28px;
+  padding-right: 38px;
+  padding-bottom: 14px;
+  padding-left: 24px;
+}
+
+.card-txt__title {
+  font-family: "HelveticaBold";
+  font-size: 48px;
+  text-align: left;
+}
+
+.card-txt__text {
+  font-family: "HelveticaBold";
+  font-size: 18px;
+  text-align: left;
+}
+
+.card-txt+.card-txt {
+  margin: 24px 0px 0px 0px;
+}
+
+.card-profile {
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
+.card-profile__header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 28px;
+  padding-right: 38px;
+  padding-bottom: 14px;
+  padding-left: 24px;
+  border-bottom: 2px solid #EDEDED;
+}
+
+.card-profile__logo {
+  align-self: center;
+}
+
+.card-profile__logo-img {
+  box-sizing: border-box;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 5px solid #DEDEDE;
+  filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.4));
+}
+
+.card-profile__title {
+  margin: 22px 0px 0px 0px;
+  font-family: "Helvetica";
+  font-size: 14px;
+}
+
+.card-profile__about {
+  margin: 31px 0px 0px 0px;
+}
+
+.card-profile__option {
+  font-family: "Helvetica";
+  font-size: 14px;
+  padding-top: 3px;
+  padding-right: 22px;
+  padding-bottom: 3px;
+  padding-left: 7px;
+  background: #E9E9E9;
+}
+
+.card-profile__option:not(:first-child) {
+  margin: 10px 0px 0px 0px;
+}
+
+.card-profile__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 8px;
+  padding-right: 16px;
+  padding-bottom: 23px;
+  padding-left: 24px;
+}
+
+.card-profile__rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-profile__country {
+  font-family: "Helvetica";
+  font-size: 12px;
+}
+
+.card-profile__btn {
+  font-family: "Helvetica";
+  font-size: 14px;
+  width: 60%;
+  align-self: center;
+}
+
+.card-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #219653;
+}
+
+.card-rating__title {
+  font-family: "HelveticaBold";
+  color: #FFFFFF;
+  font-size: 48px;
+}
+
+.card-rating__stars {
+  font-family: "HelveticaBold";
+  color: #FFFFFF;
+}
+
+.card-rating__text {
+  font-family: "HelveticaBold";
+  color: #FFFFFF;
+  font-size: 18px;
+  text-transform: lowercase;
+}
+
+.card-rating--without {
+  background-color: #001437;
+}
+
+.card-rating--without .card-rating__stars {
+  display: none;
 }
 
 .reviews {
@@ -2104,6 +2255,9 @@ html {
 
 @media (min-width:1442px) {
   .audit-cart,
+  .card-profile,
+  .card-rating,
+  .card-txt,
   .extended-block:after,
   .feature-card,
   .manifest,
@@ -2121,6 +2275,9 @@ html {
   }
 
   .audit-cart,
+  .card-profile,
+  .card-rating,
+  .card-txt,
   .extended-block:after,
   .feature-card,
   .manifest,
@@ -2737,6 +2894,97 @@ html {
     padding-bottom: 0vw;
     padding-left: 0vw;
   }
+
+  .foreign__footer {
+    padding-top: 2.4965325936vw;
+    padding-right: 0vw;
+    padding-bottom: 2.4965325936vw;
+    padding-left: 0vw;
+  }
+
+  .foreign__footer-title {
+    font-size: 1.6643550624vw;
+  }
+
+  .foreign__footer {
+    margin-top: 6.241331484vw;
+  }
+
+  .card-txt {
+    padding-top: 1.9417475728vw;
+    padding-right: 2.6352288488vw;
+    padding-bottom: 0.9708737864vw;
+    padding-left: 1.6643550624vw;
+  }
+
+  .card-txt__title {
+    font-size: 3.3287101248vw;
+  }
+
+  .card-txt__text {
+    font-size: 1.2482662968vw;
+  }
+
+  .card-txt+.card-txt {
+    margin: 1.6643550624vw 0vw 0vw 0vw;
+  }
+
+  .card-profile__header {
+    padding-top: 1.9417475728vw;
+    padding-right: 2.6352288488vw;
+    padding-bottom: 0.9708737864vw;
+    padding-left: 1.6643550624vw;
+  }
+
+  .card-profile__title {
+    margin: 1.5256588072vw 0vw 0vw 0vw;
+  }
+
+  .card-profile__title {
+    font-size: 0.9708737864vw;
+  }
+
+  .card-profile__about {
+    margin: 2.1497919556vw 0vw 0vw 0vw;
+  }
+
+  .card-profile__option {
+    font-size: 0.9708737864vw;
+  }
+
+  .card-profile__option {
+    padding-top: 0.2080443828vw;
+    padding-right: 1.5256588072vw;
+    padding-bottom: 0.2080443828vw;
+    padding-left: 0.4854368932vw;
+  }
+
+  .card-profile__option:not(:first-child) {
+    margin: 0.693481276vw 0vw 0vw 0vw;
+  }
+
+  .card-profile__body {
+    padding-top: 0.5547850208vw;
+    padding-right: 1.1095700416vw;
+    padding-bottom: 1.5950069348vw;
+    padding-left: 1.6643550624vw;
+  }
+
+  .card-profile__country {
+    font-size: 0.8321775312vw;
+  }
+
+  .card-profile__btn {
+    font-size: 0.9708737864vw;
+  }
+
+  .card-rating__title {
+    font-size: 3.3287101248vw;
+  }
+
+  .card-rating__text {
+    font-size: 1.2482662968vw;
+  }
 }
 
 @media (max-width:1170px) {
@@ -2766,6 +3014,9 @@ html {
 
 @media (max-width:979px) {
   .audit-cart,
+  .card-profile,
+  .card-rating,
+  .card-txt,
   .extended-block:after,
   .feature-card,
   .manifest,
@@ -2783,6 +3034,9 @@ html {
   }
 
   .audit-cart,
+  .card-profile,
+  .card-rating,
+  .card-txt,
   .extended-block:after,
   .feature-card,
   .manifest,
@@ -3308,6 +3562,81 @@ html {
     padding-bottom: 0vw;
     padding-left: 0vw;
   }
+
+  .foreign__footer {
+    padding-top: 3.6772216547vw;
+    padding-right: 0vw;
+    padding-bottom: 3.6772216547vw;
+    padding-left: 0vw;
+  }
+
+  .foreign__footer-title {
+    font-size: 2.4514811032vw;
+  }
+
+  .foreign__footer {
+    margin-top: 5.1072522983vw;
+  }
+
+  .card-txt {
+    padding-top: 2.860061287vw;
+    padding-right: 3.8815117467vw;
+    padding-bottom: 1.4300306435vw;
+    padding-left: 2.4514811032vw;
+  }
+
+  .card-txt__title {
+    font-size: 4.9029622063vw;
+  }
+
+  .card-txt__text {
+    font-size: 1.8386108274vw;
+  }
+
+  .card-profile__header {
+    padding-top: 2.860061287vw;
+    padding-right: 3.8815117467vw;
+    padding-bottom: 1.4300306435vw;
+    padding-left: 2.4514811032vw;
+  }
+
+  .card-profile__title {
+    font-size: 1.4300306435vw;
+  }
+
+  .card-profile__option {
+    font-size: 1.4300306435vw;
+  }
+
+  .card-profile__option {
+    padding-top: 0.3064351379vw;
+    padding-right: 2.2471910112vw;
+    padding-bottom: 0.3064351379vw;
+    padding-left: 0.7150153218vw;
+  }
+
+  .card-profile__body {
+    padding-top: 0.8171603677vw;
+    padding-right: 1.6343207354vw;
+    padding-bottom: 2.3493360572vw;
+    padding-left: 2.4514811032vw;
+  }
+
+  .card-profile__country {
+    font-size: 1.2257405516vw;
+  }
+
+  .card-profile__btn {
+    font-size: 1.4300306435vw;
+  }
+
+  .card-rating__title {
+    font-size: 4.9029622063vw;
+  }
+
+  .card-rating__text {
+    font-size: 1.8386108274vw;
+  }
 }
 
 @media (max-width:768px) {
@@ -3342,6 +3671,9 @@ html {
 
 @media (max-width:576px) {
   .audit-cart,
+  .card-profile,
+  .card-rating,
+  .card-txt,
   .extended-block:after,
   .feature-card,
   .manifest,
@@ -3359,6 +3691,9 @@ html {
   }
 
   .audit-cart,
+  .card-profile,
+  .card-rating,
+  .card-txt,
   .extended-block:after,
   .feature-card,
   .manifest,
@@ -3623,5 +3958,41 @@ html {
 
   .slider-team__text {
     font-size: 2.4305555556vw;
+  }
+
+  .foreign__footer-title {
+    font-size: 4.1666666667vw;
+  }
+
+  .card-txt__title {
+    font-size: 8.3333333333vw;
+  }
+
+  .card-txt__text {
+    font-size: 3.125vw;
+  }
+
+  .card-profile__title {
+    font-size: 2.4305555556vw;
+  }
+
+  .card-profile__option {
+    font-size: 2.4305555556vw;
+  }
+
+  .card-profile__country {
+    font-size: 2.0833333333vw;
+  }
+
+  .card-profile__btn {
+    font-size: 2.4305555556vw;
+  }
+
+  .card-rating__title {
+    font-size: 8.3333333333vw;
+  }
+
+  .card-rating__text {
+    font-size: 3.125vw;
   }
 }
