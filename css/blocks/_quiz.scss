@@ -1,5 +1,6 @@
 .quiz {
   &__title {
+    font-family: $fontFamilySecondary;
     @include font-size(36px);
   }
 

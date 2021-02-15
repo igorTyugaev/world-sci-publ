@@ -7,112 +7,162 @@
 </head>
 <body>
 
- @import "header.html"
+@import "header.html"
 
- @import "consultation.html"
+@import "consultation.html"
 
- @import "cost.html"
+@import "cost.html"
 
- @import "advantages.html"
+@import "advantages.html"
 
- @import "quiz.html"
+@import "quiz.html"
 
- @import "promo.html"
+@import "promo.html"
 
- @import "guaranty.html"
+@import "guaranty.html"
 
- @import "component.html"
+@import "component.html"
 
-<section class="stages container">
+@import "stages.html"
 
-    <div class="stages__header extended-subtitle">
-        <h2 class="stages__title">
-            Процесс публикации полностью прозрачен для <br>
-            Автора: каждый этап работы отражается <br>
-            в личном кабинете
-        </h2>
-    </div>
+TODO:profile
+@import "profile.html"
 
-    <div class="stages__content">
+<section class="audit container">
 
-        <div class="stages__column slider">
+    <h2 class="audit__title">
+        Предлагаем бесплатно проанализировать Вашу статью
+        и рассчитать стоимость необходимых услуг
+    </h2>
 
-            <div class="slider__nav navbar-slider">
-                <button class="navbar-slider__btn"> <</button>
-                <h3 class="navbar-slider__title">4 этап</h3>
-                <button class="navbar-slider__btn"> ></button>
+    <div class="audit__inner">
+
+        <div class="audit__main extended-block">
+
+            <div class="audit__header extended-header">
+                <h3 class="audit__subtitle">
+                    Проведем бесплатный технический аудит, чтобы оценить
+                    возможность публикации Вашей рукописи в журнале с
+                    необходимыми характеристиками, а также сформировать
+                    перечень требующихся доработок и рассчитать их стоимость
+                </h3>
             </div>
 
-            <h3 class="slider__title">
-                Предварительная экспертная оценка действующим
-                рецензентом международного журнала
-            </h3>
+            <div class="audit__content">
 
-            <p class="slider__text">
-                Действующий рецензент проводит предварительную экспертную оценку рукописи
-                (pre-submission peer review).
-            </p>
+                <form class="audit__form audit-form" action="#" method="get">
 
-            <p class="slider__text">
-                Экспертная оценка от англоязычного специалиста позволяет точно определить
-                степень соответствия статьи уровню журнала, в котором необходима публикация.
-                Даёт возможность получить от действующего рецензента, специализирующегося в
-                Вашей научной области, ценные рекомендации по научной составляющей статьи,
-                правильности подачи материала и многим другим пунктам. Все это позволяет
-                заранее
-                внести исправления и повысить качество статьи, что значительно снизит
-                вероятность отказа и, таким образом, сократит время публикации.
-            </p>
+                    <div class="audit-form__inputs">
+                        <input class="audit-form__input"
+                               type="text"
+                               name="last_name"
+                               placeholder="Фамилия">
+                        <input class="audit-form__input"
+                               type="text"
+                               name="first_name"
+                               placeholder="Имя">
+                        <input class="audit-form__input"
+                               type="tel"
+                               name="phone_number"
+                               pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                               placeholder="Номер телефона">
+                        <input class="audit-form__input"
+                               type="email"
+                               name="email"
+                               placeholder="Электронная почта">
+                    </div>
 
-            <a class="slider__link" href="#">
-                Посмотреть пример
-            </a>
+                    <div class="audit-form__inputs audit-form__inputs--file">
+                        <div class="uploader">
+                            <label for="file-upload" class="uploader__choose">
+                                <img class="uploader__img" src="/media/folder.png"
+                                     alt="uploader-img">
+                            </label>
+                            <span class="uploader__text">
+                                Нажмите на квадрат,
+                                чтобы загрузить с компьютера
+                                статью для аудита
+                            </span>
+                            <input id="file-upload" type="file"/>
+                        </div>
 
-            <button type="button" class="slider__submit button">
-                Отправить заявку на публикацию
-            </button>
+                        <button class="button audit-form__btn" name="submit">
+                            Отправить заявку на бесплатный аудит
+                        </button>
+                    </div>
+
+                </form>
+
+                <div class="audit__instruction">
+                    <h4 class="audit__instruction-title">
+                        На электронную почту Вам поступит
+                        следующая информация:
+                    </h4>
+                    <ol class="audit__instruction-text">
+                        <li>1) Результат проверки текста на наличие заимствований</li>
+                        <li>2) Технический аудит разделов статьи</li>
+                        <li>3) Перечень и стоимость работ</li>
+                    </ol>
+                </div>
+
+            </div>
 
         </div>
 
-        <div class="stages__column stage-gird">
-            <h3 class="stage-gird__title">
-                Этапы публикации:
-            </h3>
-            <div class="stage-gird__inner">
-                <a class="stage-gird__item" href="#1">1</a>
-                <a class="stage-gird__item" href="#2">2</a>
-                <a class="stage-gird__item" href="#3">3</a>
-                <a class="stage-gird__item" href="#4">4</a>
-                <a class="stage-gird__item" href="#5">5</a>
-                <a class="stage-gird__item" href="#6">6</a>
-                <a class="stage-gird__item" href="#7">7</a>
-                <a class="stage-gird__item" href="#8">8</a>
-                <a class="stage-gird__item" href="#9">9</a>
-                <a class="stage-gird__item" href="#10">10</a>
-                <a class="stage-gird__item" href="#11">11</a>
+        <div class="audit__items">
+            <div class="audit__item audit-cart">
+                <div class="audit-cart__inner">
+                    <h3 class="audit-cart__title">Технический аудит</h3>
+                    <p class="audit-cart__text">
+                        Заранее определим необходимые доработки
+                        и их последовательность для
+                        успешной публикации Вашей рукописи
+                    </p>
+                    <a href="" class="button audit-cart__link">Открыть пример</a>
+                </div>
+                <img src="/media/human_a.svg" alt="human_a" class="audit-cart__img">
+            </div>
+            <div class="audit__item audit-cart">
+                <div class="audit-cart__inner">
+                    <h3 class="audit-cart__title">Технический аудит</h3>
+                    <p class="audit-cart__text">
+                        Заранее определим необходимые доработки
+                        и их последовательность для
+                        успешной публикации Вашей рукописи
+                    </p>
+                    <a href="" class="button audit-cart__link">Открыть пример</a>
+                </div>
+                <img src="/media/human_a.svg" alt="human_a" class="audit-cart__img">
+            </div>
+            <div class="audit__item audit-cart">
+                <div class="audit-cart__inner">
+                    <h3 class="audit-cart__title">Технический аудит</h3>
+                    <p class="audit-cart__text">
+                        Заранее определим необходимые доработки
+                        и их последовательность для
+                        успешной публикации Вашей рукописи
+                    </p>
+                    <a href="" class="button audit-cart__link">Открыть пример</a>
+                </div>
+                <img src="/media/human_a.svg" alt="human_a" class="audit-cart__img">
             </div>
         </div>
 
     </div>
 
 </section>
- TODO:profile
- @import "profile.html"
+@import "team.html"
 
- @import "audit.html"
+TODO:foreign
+@import "foreign.html"
 
- @import "team.html"
+@import "reviews.html"
 
- TODO:foreign
- @import "foreign.html"
+@import "geography.html"
 
- @import "reviews.html"
+@import "faq.html"
 
- @import "geography.html"
-
- @import "faq.html"
-
- @import "footer.html"
+@import "footer.html"
 
 </body>
 </html>
