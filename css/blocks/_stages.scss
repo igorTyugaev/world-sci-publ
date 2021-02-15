@@ -1,36 +1,99 @@
 @import 'slider';
-@import 'stage-gird';
 
 .stages {
   display: flex;
   flex-direction: column;
 
   &__header {
-    background: #001437;
+
   }
 
   &__title {
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 41px;
-
-    color: #FFFFFF;
-
+    font-family: $textColorSecondary;
+    color: $textColorSecondary;
+    @include font-size(36px);
+    @include padding(13px, 33px, 13px, 0px);
   }
 
-  &__inner {
+  &__content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @include margin(18px);
   }
 
-  &__slider {
-    width: 50%;
+  &__column {
+    &:nth-child(1) {
+      width: 58.9147286822%;
+    }
+
+    &:nth-child(2) {
+      width: 39.0503875969%;
+    }
+  }
+}
+
+.stage-gird {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &__title {
+    font-family: $fontFamilySecondary;
+    @include font-size(24px);
+    color: #161616;
   }
 
-  &__stage-gird {
-    width: 50%;
+  &__inner {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    margin-top: 13px;
+    row-gap: 16px;
+    column-gap: 16px;
+
+    @include _more-than($bp-xxl-1442) {
+      margin-top: #{get-vw(13px, $bp-xxl-1442)};
+      row-gap: #{get-vw(16px, $bp-xxl-1442)};
+      column-gap: #{get-vw(16px, $bp-xxl-1442)};
+    }
+
+    @include _less-than($bp-xl-1170) {
+      margin-top: #{get-vw(13px, $bp-xl-1170)};
+      row-gap: #{get-vw(16px, $bp-xl-1170)};
+      column-gap: #{get-vw(16px, $bp-xl-1170)};
+    }
+
+    @include _less-than($bp-lg-979) {
+      margin-top: #{get-vw(13px, $bp-lg-979)};
+      row-gap: #{get-vw(16px, $bp-lg-979)};
+      column-gap: #{get-vw(16px, $bp-lg-979)};
+    }
+
+    @include _less-than($bp-md-768) {
+      margin-top: #{get-vw(13px, $bp-md-768)};
+      row-gap: #{get-vw(16px, $bp-md-768)};
+      column-gap: #{get-vw(16px, $bp-md-768)};
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    background: $popupBackground;
+    @extend %s-border;
+
+    @include font-size(36px);
+    @include padding(20px, 20px, 20px, 20px);
+
+    &:hover {
+      background-color: #001437;
+      color: $textColorSecondary;
+    }
+
+
   }
 }

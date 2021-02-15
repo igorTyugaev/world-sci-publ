@@ -1,77 +1,31 @@
 .slider {
   width: 100%;
-  background: #FFFFFF;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 6px;
-  padding: 28px;
+  background: $popupBackground;
+  @extend %s-border;
+  @include padding(38px, 28px, 28px, 28px);
 
   &__nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
 
-    &-btn {
-      background: #F0F0F0;
-      border-radius: 20px;
-
-      font-family: Helvetica;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 24px;
-      line-height: 120%;
-      padding: 6px 20px;
-      color: #000000;
-    }
-
-    &-title {
-      width: 100%;
-      font-family: Helvetica;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 24px;
-      line-height: 120%;
-      text-align: left;
-      color: #161616;
-      padding: 0 12px;
-    }
   }
 
   &__title {
-    margin-top: 20px;
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 21px;
-
-    color: #000000;
+    font-family: $fontFamilySecondary;
+    @include font-size(18px);
+    @include margin(40px);
   }
 
   &__text {
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 140%;
-
-    color: #000000;
+    @include font-size(14px);
 
     &:not(:first-child) {
-      padding-top: 20px;
+      @include padding(20px);
     }
   }
 
   &__link {
     display: block;
-    margin-top: 46px;
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 120%;
-
+    @include margin(46px);
+    @include font-size(14px);
     text-decoration-line: underline;
 
     color: #36ADE0;
@@ -81,19 +35,93 @@
     margin: 0 auto;
     display: block;
     width: 50%;
-    background: #219653;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 34px;
+
+    font-family: $fontFamilyPrimary;
+    @include font-size(14px);
     margin-top: 50px;
 
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 120%;
-    padding: 12px;
-    text-align: center;
+    @include _more-than($bp-xxl-1442) {
+      margin-top: #{get-vw(50px, $bp-xxl-1442)};
+    }
 
-    color: #FFFFFF;
+    @include _less-than($bp-lg-979) {
+      margin-top: #{get-vw(50px, $bp-lg-979)};
+    }
+
+    @include _less-than($bp-md-768) {
+      margin-top: #{get-vw(50px, $bp-md-768)};
+    }
+  }
+
+}
+
+.navbar-slider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+  &__btn {
+    background: #F0F0F0;
+    border-radius: 20px;
+    padding: 6px 20px;
+
+    font-family: $fontFamilySecondary;
+    @include font-size(24px);
+  }
+
+  &__title {
+    width: 100%;
+    font-family: $fontFamilySecondary;
+    @include font-size(24px);
+    text-align: left;
+    color: #161616;
+
+    padding: 0 12px;
+  }
+
+  @include _more-than($bp-xxl-1442) {
+    &__btn {
+      border-radius: #{get-vw(20px, $bp-xxl-1442)};
+      padding: #{get-vw(6px, $bp-xxl-1442)} #{get-vw(20px, $bp-xxl-1442)};
+    }
+
+    &__title {
+      padding: 0 #{get-vw(12px, $bp-xxl-1442)};
+    }
+  }
+
+  @include _less-than($bp-xl-1170) {
+    &__btn {
+      border-radius: #{get-vw(20px, $bp-xl-1170)};
+      padding: #{get-vw(6px, $bp-xl-1170)} #{get-vw(20px, $bp-xl-1170)};
+    }
+
+    &__title {
+      padding: 0 #{get-vw(12px, $bp-xl-1170)};
+    }
+  }
+
+  @include _less-than($bp-lg-979) {
+    &__btn {
+      border-radius: #{get-vw(20px, $bp-lg-979)};
+      padding: #{get-vw(6px, $bp-lg-979)} #{get-vw(20px, $bp-lg-979)};
+    }
+
+    &__title {
+      padding: 0 #{get-vw(12px, $bp-lg-979)};
+    }
+  }
+
+  @include _less-than($bp-md-768) {
+    &__btn {
+      border-radius: #{get-vw(20px, $bp-md-768)};
+      padding: #{get-vw(6px, $bp-md-768)} #{get-vw(20px, $bp-md-768)};
+    }
+
+    &__title {
+      padding: 0 #{get-vw(12px, $bp-md-768)};
+    }
   }
 }

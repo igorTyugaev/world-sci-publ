@@ -45,3 +45,27 @@
     z-index: $z-index-content;
   }
 }
+
+%subtitle-background {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100vw;
+  background: $subtitleBackground;
+}
+
+.extended-subtitle {
+  position: relative;
+
+  &:after {
+    @extend %subtitle-background;
+  }
+
+
+  & > * {
+    position: relative;
+    z-index: $z-index-content;
+  }
+}
