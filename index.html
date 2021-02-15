@@ -28,131 +28,81 @@
 TODO:profile
 @import "profile.html"
 
-<section class="audit container">
+ @import "audit.html"
 
-    <h2 class="audit__title">
-        Предлагаем бесплатно проанализировать Вашу статью
-        и рассчитать стоимость необходимых услуг
+<section class="team container">
+
+    <h2 class="team__title">
+        Наша команда всегда готова Вам помочь
     </h2>
 
-    <div class="audit__inner">
+    <p class="team__about">
+        Команда World Sci Publ, изначально создаваясь как научно-публикационное
+        агентство, продвигающее научные статьи Авторов из РФ и стран СНГ,
+        поменяла вектор развития: мы решили создавать новые тренды в области
+        публикаций, ведь рынок был наполнен некомпетентными специалистами, зачастую
+        мошенниками. Мы, как профессионалы своего дела, поставившие перед собой цель
+        вывести наших Авторов на лидирующие позиции, берём кардинально другой курс и
+        делаем упор именно на повышение качества самой работы, которая составит
+        достойную конкуренцию европейским учёным.
+    </p>
 
-        <div class="audit__main extended-block">
+    <div class="team__inner">
 
-            <div class="audit__header extended-header">
-                <h3 class="audit__subtitle">
-                    Проведем бесплатный технический аудит, чтобы оценить
-                    возможность публикации Вашей рукописи в журнале с
-                    необходимыми характеристиками, а также сформировать
-                    перечень требующихся доработок и рассчитать их стоимость
-                </h3>
-            </div>
+        <div class="slider-team">
 
-            <div class="audit__content">
+            <div class="slider-team__body">
 
-                <form class="audit__form audit-form" action="#" method="get">
-
-                    <div class="audit-form__inputs">
-                        <input class="audit-form__input"
-                               type="text"
-                               name="last_name"
-                               placeholder="Фамилия">
-                        <input class="audit-form__input"
-                               type="text"
-                               name="first_name"
-                               placeholder="Имя">
-                        <input class="audit-form__input"
-                               type="tel"
-                               name="phone_number"
-                               pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                               placeholder="Номер телефона">
-                        <input class="audit-form__input"
-                               type="email"
-                               name="email"
-                               placeholder="Электронная почта">
-                    </div>
-
-                    <div class="audit-form__inputs audit-form__inputs--file">
-                        <div class="uploader">
-                            <label for="file-upload" class="uploader__choose">
-                                <img class="uploader__img" src="/media/folder.png"
-                                     alt="uploader-img">
-                            </label>
-                            <span class="uploader__text">
-                                Нажмите на квадрат,
-                                чтобы загрузить с компьютера
-                                статью для аудита
-                            </span>
-                            <input id="file-upload" type="file"/>
-                        </div>
-
-                        <button class="button audit-form__btn" name="submit">
-                            Отправить заявку на бесплатный аудит
-                        </button>
-                    </div>
-
-                </form>
-
-                <div class="audit__instruction">
-                    <h4 class="audit__instruction-title">
-                        На электронную почту Вам поступит
-                        следующая информация:
-                    </h4>
-                    <ol class="audit__instruction-text">
-                        <li>1) Результат проверки текста на наличие заимствований</li>
-                        <li>2) Технический аудит разделов статьи</li>
-                        <li>3) Перечень и стоимость работ</li>
-                    </ol>
+                <div class="slider-team__column">
                 </div>
 
+                <div class="slider-team__column">
+                    <img class="slider-team__img"
+                         src="./media/Marcel_Kadyrov.jpg"
+                         alt="slider_img">
+                </div>
+
+                <div class="slider-team__column">
+                    <div class="slider-team__inner">
+                        <p class="slider-team__text">
+                            Понимая всю ответственность, смело могу заявить, что выбранный
+                            путь развития компании единственно верный вариант. Мы хотим
+                            развивать отечественную науку открыто и по честным правилам. Для
+                            этого мы привлекли зарубежного партнера из Нидерланд (родины
+                            Эльзевир), компанию “Peerwith”, имеющую большой опыт работы в
+                            данной сфере.
+                        </p>
+                        <p class="slider-team__text">
+                            Вместе мы разработали абсолютно новый рабочий механизм
+                            публикаций в международных журналах, входящих в базы данных
+                            Scopus и Web Of Science.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="slider-team__header">
+                <a href="#user_1" class="slider-team__tab">
+                    Новикова София
+                    <span>Ведущий специалист</span>
+                </a>
+                <a href="#user_2" class="slider-team__tab">
+                    Кадыров Марсель<br>
+                    <span>Сооснователь компании</span>
+                </a>
+                <a href="#user_3" class="slider-team__tab">
+                    Самойлова Юлия
+                    <span>Ведущий специалист</span>
+                </a>
             </div>
 
         </div>
 
-        <div class="audit__items">
-            <div class="audit__item audit-cart">
-                <div class="audit-cart__inner">
-                    <h3 class="audit-cart__title">Технический аудит</h3>
-                    <p class="audit-cart__text">
-                        Заранее определим необходимые доработки
-                        и их последовательность для
-                        успешной публикации Вашей рукописи
-                    </p>
-                    <a href="" class="button audit-cart__link">Открыть пример</a>
-                </div>
-                <img src="/media/human_a.svg" alt="human_a" class="audit-cart__img">
-            </div>
-            <div class="audit__item audit-cart">
-                <div class="audit-cart__inner">
-                    <h3 class="audit-cart__title">Технический аудит</h3>
-                    <p class="audit-cart__text">
-                        Заранее определим необходимые доработки
-                        и их последовательность для
-                        успешной публикации Вашей рукописи
-                    </p>
-                    <a href="" class="button audit-cart__link">Открыть пример</a>
-                </div>
-                <img src="/media/human_a.svg" alt="human_a" class="audit-cart__img">
-            </div>
-            <div class="audit__item audit-cart">
-                <div class="audit-cart__inner">
-                    <h3 class="audit-cart__title">Технический аудит</h3>
-                    <p class="audit-cart__text">
-                        Заранее определим необходимые доработки
-                        и их последовательность для
-                        успешной публикации Вашей рукописи
-                    </p>
-                    <a href="" class="button audit-cart__link">Открыть пример</a>
-                </div>
-                <img src="/media/human_a.svg" alt="human_a" class="audit-cart__img">
-            </div>
-        </div>
-
+        <img src="media/human_b.svg" alt="human_b" class="team__background">
     </div>
 
 </section>
-@import "team.html"
-
 TODO:foreign
 @import "foreign.html"
 
