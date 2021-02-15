@@ -2117,13 +2117,9 @@ html {
 }
 
 .faq__title {
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: bold;
+  font-family: "HelveticaBold";
   font-size: 36px;
-  line-height: 122%;
   text-align: left;
-  color: #000000;
 }
 
 .your-question {
@@ -2132,49 +2128,42 @@ html {
 }
 
 .your-question__description {
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: normal;
+  font-family: "Helvetica";
   font-size: 24px;
-  line-height: 28px;
-  color: #000000;
+  margin: 36px 0px 0px 0px;
 }
 
 .your-question__textarea {
   width: 100%;
-  min-height: 200px;
-  border: 1px solid rgba(0,0,0,0.49);
-  box-sizing: border-box;
-  border-radius: 6px;
-  margin-top: 20px;
-  padding: 10px;
   text-align: left;
+  min-height: 12vw;
+  margin: 20px 0px 0px 0px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  border: 1px solid rgba(0,0,0,0.49);
+  border-radius: 6px;
 }
 
 .your-question__email {
-  padding: 10px;
-  border: 1px solid rgba(0,0,0,0.49);
-  box-sizing: border-box;
-  border-radius: 6px;
   width: 30%;
-  margin-top: 20px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin: 20px 0px 0px 0px;
+  border: 1px solid rgba(0,0,0,0.49);
+  border-radius: 6px;
 }
 
 .your-question__submit {
   background: #FFFFFF;
   border: 1px solid #000000;
-  box-sizing: border-box;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
-  border-radius: 50px;
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 120%;
-  padding: 12px;
-  width: 30%;
-  margin-top: 20px;
   color: #000000;
+  border-radius: 50px;
+  width: 30%;
+  margin: 20px 0px 0px 0px;
 }
 
 .footer {
@@ -3082,6 +3071,44 @@ html {
   .geography__title {
     font-size: 2.3578363384vw;
   }
+
+  .faq__title {
+    font-size: 2.4965325936vw;
+  }
+
+  .your-question__description {
+    font-size: 1.6643550624vw;
+  }
+
+  .your-question__description {
+    margin: 2.4965325936vw 0vw 0vw 0vw;
+  }
+
+  .your-question__textarea {
+    margin: 1.386962552vw 0vw 0vw 0vw;
+  }
+
+  .your-question__textarea {
+    padding-top: 0.693481276vw;
+    padding-right: 0.693481276vw;
+    padding-bottom: 0.693481276vw;
+    padding-left: 0.693481276vw;
+  }
+
+  .your-question__email {
+    padding-top: 0.693481276vw;
+    padding-right: 0.693481276vw;
+    padding-bottom: 0.693481276vw;
+    padding-left: 0.693481276vw;
+  }
+
+  .your-question__email {
+    margin: 1.386962552vw 0vw 0vw 0vw;
+  }
+
+  .your-question__submit {
+    margin: 1.386962552vw 0vw 0vw 0vw;
+  }
 }
 
 @media (max-width:1170px) {
@@ -3836,6 +3863,28 @@ html {
   .geography__title {
     font-size: 3.4729315628vw;
   }
+
+  .faq__title {
+    font-size: 3.6772216547vw;
+  }
+
+  .your-question__description {
+    font-size: 2.4514811032vw;
+  }
+
+  .your-question__textarea {
+    padding-top: 1.0214504597vw;
+    padding-right: 1.0214504597vw;
+    padding-bottom: 1.0214504597vw;
+    padding-left: 1.0214504597vw;
+  }
+
+  .your-question__email {
+    padding-top: 1.0214504597vw;
+    padding-right: 1.0214504597vw;
+    padding-bottom: 1.0214504597vw;
+    padding-left: 1.0214504597vw;
+  }
 }
 
 @media (max-width:768px) {
@@ -4337,6 +4386,14 @@ html {
 
   .geography__title {
     font-size: 5.9027777778vw;
+  }
+
+  .faq__title {
+    font-size: 6.25vw;
+  }
+
+  .your-question__description {
+    font-size: 4.1666666667vw;
   }
 }
 

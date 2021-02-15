@@ -1,13 +1,8 @@
-
 .faq {
   &__title {
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 122%;
+    font-family: $fontFamilySecondary;
+    @include font-size(36px);
     text-align: left;
-    color: #000000;
   }
 
   &__inner {
@@ -23,51 +18,39 @@
   flex-direction: column;
 
   &__description {
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 28px;
-
-    color: #000000;
+    font-family: $fontFamilyPrimary;
+    @include font-size(24px);
+    @include margin(36px);
   }
 
   &__textarea {
     width: 100%;
-    min-height: 200px;
-    border: 1px solid rgba(0, 0, 0, 0.49);
-    box-sizing: border-box;
-    border-radius: 6px;
-    margin-top: 20px;
-    padding: 10px;
     text-align: left;
+    min-height: 12vw;
+    @include margin(20px);
+    @include padding(10px, 10px, 10px, 10px);
+
+    border: 1px solid rgba(0, 0, 0, 0.49);
+    border-radius: 6px;
   }
 
   &__email {
-    padding: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.49);
-    box-sizing: border-box;
-    border-radius: 6px;
     width: 30%;
-    margin-top: 20px;
+    @include padding(10px, 10px, 10px, 10px);
+    @include margin(20px);
+
+    border: 1px solid rgba(0, 0, 0, 0.49);
+    border-radius: 6px;
   }
 
   &__submit {
-    background: #FFFFFF;
+    background: $popupBackground;
+
     border: 1px solid #000000;
-    box-sizing: border-box;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    color: #000000;
     border-radius: 50px;
 
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 120%;
-    padding: 12px;
     width: 30%;
-    margin-top: 20px;
-    color: #000000;
-
+    @include margin(20px);
   }
 }
