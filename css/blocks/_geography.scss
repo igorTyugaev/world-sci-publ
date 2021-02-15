@@ -1,13 +1,9 @@
 .geography {
-  &__title {
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 120%;
-    text-align: center;
 
-    color: #000000;
+  &__title {
+    font-family: $fontFamilySecondary;
+    @include font-size(34px);
+    text-align: center;
   }
 
   &__map {
@@ -16,6 +12,7 @@
 
   &__img {
     height: 100%;
+    width: 100%;
     object-fit: contain;
   }
 }

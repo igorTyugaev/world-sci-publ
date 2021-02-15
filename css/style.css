@@ -2101,13 +2101,9 @@ html {
 }
 
 .geography__title {
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 120%;
+  font-family: "HelveticaBold";
+  font-size: 34px;
   text-align: center;
-  color: #000000;
 }
 
 .geography__map {
@@ -2116,6 +2112,7 @@ html {
 
 .geography__img {
   height: 100%;
+  width: 100%;
   object-fit: contain;
 }
 
@@ -3081,6 +3078,10 @@ html {
   .review-card__index {
     font-size: 0.6241331484vw;
   }
+
+  .geography__title {
+    font-size: 2.3578363384vw;
+  }
 }
 
 @media (max-width:1170px) {
@@ -3831,6 +3832,10 @@ html {
   .review-card__index {
     font-size: 0.9193054137vw;
   }
+
+  .geography__title {
+    font-size: 3.4729315628vw;
+  }
 }
 
 @media (max-width:768px) {
@@ -4328,6 +4333,10 @@ html {
 
   .review-card__index {
     font-size: 1.5625vw;
+  }
+
+  .geography__title {
+    font-size: 5.9027777778vw;
   }
 }
 
