@@ -1,149 +1,115 @@
+%tmp-logo {
+  width: 84px;
+
+  @include _more-than($bp-xxl-1442) {
+    width: #{get-vw(84px, $bp-xxl-1442)};
+  }
+
+  @include _less-than($bp-lg-979) {
+    width: #{get-vw(84px, $bp-lg-979)};
+  }
+
+  @include _less-than($bp-md-768) {
+    width: #{get-vw(42px, $bp-md-768)};
+  }
+}
+
 .consultation {
   background: $windowBackground;
   position: relative;
-
-  &__img {
-  }
+  height: 100vh;
 
   &__logo {
+    @extend %tmp-logo;
+    object-fit: contain;
+    object-position: top;
     position: absolute;
     top: 0;
     left: 50%;
-    height: get-vw(153px, 1440px);
-    width: get-vw(96px, 1440px);
     transform: translateX(-50%);
-    display: flex;
-    background-image: url("/media/pennant.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    align-items: center;
-
-    &-container {
-      transform: translateX(5px);
-    }
-
-    &-img {
-      object-fit: contain;
-      width: get-vw(78px, 1440px);
-      margin-top: get-vw(22px, 1440px);
-    }
-
-    &-title {
-      color: white;
-      text-align: center;
-      @include font-size(11px);
-    }
+    z-index: 1;
   }
 
-  &__inner {
-    padding: 100px 120px;
-    position: absolute;
-    left: 0;
+  &__content {
+    height: 100%;
+
+    position: relative;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__action {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    transform: translateY(-100%);
+    @include padding(34px, 0px, 34px, 0px);
+  }
+
+  &__action-col {
+    width: 33.33%;
+    display: block;
   }
 
   &__btn {
-    width: 20%;
-    padding: 10px 24px;
-    border: solid 2px $textColorPrimary;
-    border-radius: 28px;
-    color: inherit;
-    background-color: transparent;
-    cursor: pointer;
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+    background: none;
+    @include padding(15px, 24px, 15px, 24px);
 
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: normal;
+    font-family: $fontFamilyPrimary;
+    color: $textColorSecondary;
     @include font-size(14px);
 
-    text-align: center;
-
-    color: #FFFFFF;
+    border: 1px solid $textColorSecondary;
+    box-shadow: 1px 1px 4px $colorShadow;
+    border-radius: 34px;
   }
 
   &__text {
-    width: 40%;
+    font-family: $fontFamilyPrimary;
+    color: $textColorSecondary;
     @include font-size(12px);
 
-    &-left {
+    &--left {
       text-align: left;
     }
 
-    &-right {
+    &--right {
       text-align: right;
     }
   }
-}
 
-@media (min-width: $bp-xxl-1442) {
-  .consultation {
-    &__logo {
-      height: get-vw(153px, $bp-xxl-1442);
-      width: get-vw(96px, $bp-xxl-1442);
-      transform: translateX(-50%);
+  &__scroll-bar {
 
-      &-container {
-        transform: translateX(#{get-vw(5px, $bp-xxl-1442)});
-      }
+  }
 
-      &-img {
-        width: get-vw(78px, $bp-xxl-1442);
-        margin-top: get-vw(22px, $bp-xxl-1442);
-      }
-
-      &-title {
-
-      }
-    }
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 
-@media (max-width: $bp-lg-979) {
-  .header {
-    &__logo {
-      height: get-vw(153px, $bp-lg-979);
-      width: get-vw(96px, $bp-lg-979);
-      transform: translateX(-50%);
+.scroll-bar {
+  text-align: center;
+  @include padding(8px, 24px, 8px, 24px);
 
-      &-container {
-        transform: translateX(#{get-vw(5px, $bp-lg-979)});
-      }
-
-      &-img {
-        width: get-vw(78px, $bp-lg-979);
-        margin-top: get-vw(22px, $bp-lg-979);
-      }
-
-      &-title {
-      }
-    }
+  &__btn {
+    background: none;
+    border: none;
   }
-}
 
-@media (max-width: $bp-sm-576) {
-  .header {
-    &__logo {
-      height: get-vw(153px, $bp-sm-576);
-      width: get-vw(96px, $bp-sm-576);
-      transform: translateX(-50%);
-
-      &-container {
-        transform: translateX(#{get-vw(5px, $bp-sm-576)});
-      }
-
-      &-img {
-        width: get-vw(78px, $bp-sm-576);
-        margin-top: get-vw(22px, $bp-sm-576);
-      }
-
-      &-title {
-      }
-    }
+  &__img {
+    object-fit: contain;
+    object-position: bottom;
   }
 }

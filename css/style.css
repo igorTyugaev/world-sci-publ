@@ -681,81 +681,109 @@ html {
   bottom: -0.5547850208vw;
 }
 
+.consultation__logo {
+  width: 84px;
+}
+
 .consultation {
   background: #F5F5F5;
   position: relative;
+  height: 100vh;
 }
 
 .consultation__logo {
+  object-fit: contain;
+  object-position: top;
   position: absolute;
   top: 0;
   left: 50%;
-  height: 10.625vw;
-  width: 6.6666666667vw;
   transform: translateX(-50%);
+  z-index: 1;
+}
+
+.consultation__content {
+  height: 100%;
+  position: relative;
+  z-index: 30;
   display: flex;
-  background-image: url("/media/pennant.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-.consultation__logo-container {
-  transform: translateX(5px);
-}
-
-.consultation__logo-img {
-  object-fit: contain;
-  width: 5.4166666667vw;
-  margin-top: 1.5277777778vw;
-}
-
-.consultation__logo-title {
-  color: white;
-  text-align: center;
-  font-size: 11px;
-}
-
-.consultation__inner {
-  padding: 100px 120px;
-  position: absolute;
-  left: 0;
+.consultation__action {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  transform: translateY(-100%);
+  padding-top: 34px;
+  padding-right: 0px;
+  padding-bottom: 34px;
+  padding-left: 0px;
+}
+
+.consultation__action-col {
+  width: 33.33%;
+  display: block;
 }
 
 .consultation__btn {
-  width: 20%;
-  padding: 10px 24px;
-  border: solid 2px #000000;
-  border-radius: 28px;
-  color: inherit;
-  background-color: transparent;
-  cursor: pointer;
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  text-align: center;
+  display: block;
+  width: 75%;
+  margin: 0 auto;
+  background: none;
+  padding-top: 15px;
+  padding-right: 24px;
+  padding-bottom: 15px;
+  padding-left: 24px;
+  font-family: "Helvetica";
   color: #FFFFFF;
+  font-size: 14px;
+  border: 1px solid #FFFFFF;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
+  border-radius: 34px;
 }
 
 .consultation__text {
-  width: 40%;
+  font-family: "Helvetica";
+  color: #FFFFFF;
   font-size: 12px;
 }
 
-.consultation__text-left {
+.consultation__text--left {
   text-align: left;
 }
 
-.consultation__text-right {
+.consultation__text--right {
   text-align: right;
+}
+
+.consultation__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.scroll-bar {
+  text-align: center;
+  padding-top: 8px;
+  padding-right: 24px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+}
+
+.scroll-bar__btn {
+  background: none;
+  border: none;
+}
+
+.scroll-bar__img {
+  object-fit: contain;
+  object-position: bottom;
 }
 
 .cost__inner {
@@ -2423,8 +2451,22 @@ html {
     padding-left: 0vw;
   }
 
-  .consultation__logo-title {
-    font-size: 0.7628294036vw;
+  .consultation__logo {
+    width: 5.8252427184vw;
+  }
+
+  .consultation__action {
+    padding-top: 2.3578363384vw;
+    padding-right: 0vw;
+    padding-bottom: 2.3578363384vw;
+    padding-left: 0vw;
+  }
+
+  .consultation__btn {
+    padding-top: 1.040221914vw;
+    padding-right: 1.6643550624vw;
+    padding-bottom: 1.040221914vw;
+    padding-left: 1.6643550624vw;
   }
 
   .consultation__btn {
@@ -2435,19 +2477,11 @@ html {
     font-size: 0.8321775312vw;
   }
 
-  .consultation__logo {
-    height: 10.6102635229vw;
-    width: 6.6574202497vw;
-    transform: translateX(-50%);
-  }
-
-  .consultation__logo-container {
-    transform: translateX(0.346740638vw);
-  }
-
-  .consultation__logo-img {
-    width: 5.4091539528vw;
-    margin-top: 1.5256588072vw;
+  .scroll-bar {
+    padding-top: 0.5547850208vw;
+    padding-right: 1.6643550624vw;
+    padding-bottom: 0.5547850208vw;
+    padding-left: 1.6643550624vw;
   }
 
   .cost__main {
@@ -3357,8 +3391,22 @@ html {
     padding-left: 0vw;
   }
 
-  .consultation__logo-title {
-    font-size: 1.1235955056vw;
+  .consultation__logo {
+    width: 8.5801838611vw;
+  }
+
+  .consultation__action {
+    padding-top: 3.4729315628vw;
+    padding-right: 0vw;
+    padding-bottom: 3.4729315628vw;
+    padding-left: 0vw;
+  }
+
+  .consultation__btn {
+    padding-top: 1.5321756895vw;
+    padding-right: 2.4514811032vw;
+    padding-bottom: 1.5321756895vw;
+    padding-left: 2.4514811032vw;
   }
 
   .consultation__btn {
@@ -3369,19 +3417,11 @@ html {
     font-size: 1.2257405516vw;
   }
 
-  .header__logo {
-    height: 15.6281920327vw;
-    width: 9.8059244127vw;
-    transform: translateX(-50%);
-  }
-
-  .header__logo-container {
-    transform: translateX(0.5107252298vw);
-  }
-
-  .header__logo-img {
-    width: 7.9673135853vw;
-    margin-top: 2.2471910112vw;
+  .scroll-bar {
+    padding-top: 0.8171603677vw;
+    padding-right: 2.4514811032vw;
+    padding-bottom: 0.8171603677vw;
+    padding-left: 2.4514811032vw;
   }
 
   .cost__main {
@@ -3984,6 +4024,10 @@ html {
     border-radius: 3.6458333333vw;
   }
 
+  .consultation__logo {
+    width: 5.46875vw;
+  }
+
   .component__inner {
     margin-top: 2.0833333333vw;
     width: 100%;
@@ -4205,31 +4249,12 @@ html {
     font-size: 2.0833333333vw;
   }
 
-  .consultation__logo-title {
-    font-size: 1.9097222222vw;
-  }
-
   .consultation__btn {
     font-size: 2.4305555556vw;
   }
 
   .consultation__text {
     font-size: 2.0833333333vw;
-  }
-
-  .header__logo {
-    height: 26.5625vw;
-    width: 16.6666666667vw;
-    transform: translateX(-50%);
-  }
-
-  .header__logo-container {
-    transform: translateX(0.8680555556vw);
-  }
-
-  .header__logo-img {
-    width: 13.5416666667vw;
-    margin-top: 3.8194444444vw;
   }
 
   .cost__title {
