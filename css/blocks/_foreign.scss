@@ -1,5 +1,9 @@
 .foreign {
-  margin-top: 40px;
+  @include margin(160px);
+
+  &__wrap {
+
+  }
 
   &__content {
 

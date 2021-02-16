@@ -1,4 +1,5 @@
 .cost {
+  @include margin(80px);
 
   &__inner {
     display: flex;

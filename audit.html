@@ -1,121 +1,124 @@
-<section class="audit container">
+<section class="audit">
 
-    <h2 class="audit__title">
-        Предлагаем бесплатно проанализировать Вашу статью
-        и рассчитать стоимость необходимых услуг
-    </h2>
+    <div class="audit__wrap container">
+        <h2 class="audit__title">
+            Предлагаем бесплатно проанализировать Вашу статью
+            и рассчитать стоимость необходимых услуг
+        </h2>
 
-    <div class="audit__inner">
+        <div class="audit__inner">
 
-        <div class="audit__main extended-block">
+            <div class="audit__main extended-block">
 
-            <div class="audit__header extended-header">
-                <h3 class="audit__subtitle">
-                    Проведем бесплатный технический аудит, чтобы оценить
-                    возможность публикации Вашей рукописи в журнале с
-                    необходимыми характеристиками, а также сформировать
-                    перечень требующихся доработок и рассчитать их стоимость
-                </h3>
-            </div>
+                <div class="audit__header extended-header">
+                    <h3 class="audit__subtitle">
+                        Проведем бесплатный технический аудит, чтобы оценить
+                        возможность публикации Вашей рукописи в журнале с
+                        необходимыми характеристиками, а также сформировать
+                        перечень требующихся доработок и рассчитать их стоимость
+                    </h3>
+                </div>
 
-            <div class="audit__content">
+                <div class="audit__content">
 
-                <form class="audit__form audit-form" action="#" method="get">
+                    <form class="audit__form audit-form" action="#" method="get">
 
-                    <div class="audit-form__inputs">
-                        <input class="audit-form__input"
-                               type="text"
-                               name="last_name"
-                               placeholder="Фамилия">
-                        <input class="audit-form__input"
-                               type="text"
-                               name="first_name"
-                               placeholder="Имя">
-                        <input class="audit-form__input"
-                               type="tel"
-                               name="phone_number"
-                               pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                               placeholder="Номер телефона">
-                        <input class="audit-form__input"
-                               type="email"
-                               name="email"
-                               placeholder="Электронная почта">
-                    </div>
+                        <div class="audit-form__inputs">
+                            <input class="audit-form__input"
+                                   type="text"
+                                   name="last_name"
+                                   placeholder="Фамилия">
+                            <input class="audit-form__input"
+                                   type="text"
+                                   name="first_name"
+                                   placeholder="Имя">
+                            <input class="audit-form__input"
+                                   type="tel"
+                                   name="phone_number"
+                                   pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                                   placeholder="Номер телефона">
+                            <input class="audit-form__input"
+                                   type="email"
+                                   name="email"
+                                   placeholder="Электронная почта">
+                        </div>
 
-                    <div class="audit-form__inputs audit-form__inputs--file">
-                        <div class="uploader">
-                            <label for="file-upload" class="uploader__choose">
-                                <img class="uploader__img" src="/media/folder.png"
-                                     alt="uploader-img">
-                            </label>
-                            <span class="uploader__text">
+                        <div class="audit-form__inputs audit-form__inputs--file">
+                            <div class="uploader">
+                                <label for="file-upload" class="uploader__choose">
+                                    <img class="uploader__img" src="/media/folder.png"
+                                         alt="uploader-img">
+                                </label>
+                                <span class="uploader__text">
                                 Нажмите на квадрат,
                                 чтобы загрузить с компьютера
                                 статью для аудита
                             </span>
-                            <input id="file-upload" type="file"/>
+                                <input id="file-upload" type="file"/>
+                            </div>
+
+                            <button class="button audit-form__btn" name="submit">
+                                Отправить заявку на бесплатный аудит
+                            </button>
                         </div>
 
-                        <button class="button audit-form__btn" name="submit">
-                            Отправить заявку на бесплатный аудит
-                        </button>
+                    </form>
+
+                    <div class="audit__instruction">
+                        <h4 class="audit__instruction-title">
+                            На электронную почту Вам поступит
+                            следующая информация:
+                        </h4>
+                        <ol class="audit__instruction-text">
+                            <li>1) Результат проверки текста на наличие заимствований</li>
+                            <li>2) Технический аудит разделов статьи</li>
+                            <li>3) Перечень и стоимость работ</li>
+                        </ol>
                     </div>
 
-                </form>
-
-                <div class="audit__instruction">
-                    <h4 class="audit__instruction-title">
-                        На электронную почту Вам поступит
-                        следующая информация:
-                    </h4>
-                    <ol class="audit__instruction-text">
-                        <li>1) Результат проверки текста на наличие заимствований</li>
-                        <li>2) Технический аудит разделов статьи</li>
-                        <li>3) Перечень и стоимость работ</li>
-                    </ol>
                 </div>
 
             </div>
 
-        </div>
+            <div class="audit__items">
+                <div class="audit__item audit-cart">
+                    <div class="audit-cart__inner">
+                        <h3 class="audit-cart__title">Технический аудит</h3>
+                        <p class="audit-cart__text">
+                            Заранее определим необходимые доработки
+                            и их последовательность для
+                            успешной публикации Вашей рукописи
+                        </p>
+                        <a href="" class="button audit-cart__link">Открыть пример</a>
+                    </div>
+                    <img src="/media/human_a.svg" alt="human_a" class="audit-cart__img">
+                </div>
+                <div class="audit__item audit-cart">
+                    <div class="audit-cart__inner">
+                        <h3 class="audit-cart__title">Технический аудит</h3>
+                        <p class="audit-cart__text">
+                            Заранее определим необходимые доработки
+                            и их последовательность для
+                            успешной публикации Вашей рукописи
+                        </p>
+                        <a href="" class="button audit-cart__link">Открыть пример</a>
+                    </div>
+                    <img src="/media/human_a.svg" alt="human_a" class="audit-cart__img">
+                </div>
+                <div class="audit__item audit-cart">
+                    <div class="audit-cart__inner">
+                        <h3 class="audit-cart__title">Технический аудит</h3>
+                        <p class="audit-cart__text">
+                            Заранее определим необходимые доработки
+                            и их последовательность для
+                            успешной публикации Вашей рукописи
+                        </p>
+                        <a href="" class="button audit-cart__link">Открыть пример</a>
+                    </div>
+                    <img src="/media/human_a.svg" alt="human_a" class="audit-cart__img">
+                </div>
+            </div>
 
-        <div class="audit__items">
-            <div class="audit__item audit-cart">
-                <div class="audit-cart__inner">
-                    <h3 class="audit-cart__title">Технический аудит</h3>
-                    <p class="audit-cart__text">
-                        Заранее определим необходимые доработки
-                        и их последовательность для
-                        успешной публикации Вашей рукописи
-                    </p>
-                    <a href="" class="button audit-cart__link">Открыть пример</a>
-                </div>
-                <img src="/media/human_a.svg" alt="human_a" class="audit-cart__img">
-            </div>
-            <div class="audit__item audit-cart">
-                <div class="audit-cart__inner">
-                    <h3 class="audit-cart__title">Технический аудит</h3>
-                    <p class="audit-cart__text">
-                        Заранее определим необходимые доработки
-                        и их последовательность для
-                        успешной публикации Вашей рукописи
-                    </p>
-                    <a href="" class="button audit-cart__link">Открыть пример</a>
-                </div>
-                <img src="/media/human_a.svg" alt="human_a" class="audit-cart__img">
-            </div>
-            <div class="audit__item audit-cart">
-                <div class="audit-cart__inner">
-                    <h3 class="audit-cart__title">Технический аудит</h3>
-                    <p class="audit-cart__text">
-                        Заранее определим необходимые доработки
-                        и их последовательность для
-                        успешной публикации Вашей рукописи
-                    </p>
-                    <a href="" class="button audit-cart__link">Открыть пример</a>
-                </div>
-                <img src="/media/human_a.svg" alt="human_a" class="audit-cart__img">
-            </div>
         </div>
 
     </div>

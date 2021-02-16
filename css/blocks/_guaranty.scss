@@ -1,4 +1,9 @@
 .guaranty {
+  @include margin(90px);
+
+  &__wrap {
+
+  }
 
   &__title {
     font-family: $fontFamilySecondary;

@@ -1,4 +1,9 @@
 .geography {
+  @include margin(80px);
+
+  &__wrap {
+
+  }
 
   &__title {
     font-family: $fontFamilySecondary;

@@ -1,6 +1,9 @@
 .reviews {
-  position: relative;
-  margin-top: 80px;
+  @include margin(80px);
+
+  &__wrap {
+    position: relative;
+  }
 
   &__title {
     font-family: $fontFamilyPrimary;

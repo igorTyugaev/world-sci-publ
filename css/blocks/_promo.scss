@@ -1,4 +1,5 @@
 .promo {
+  @include margin(97px);
 
   &__title {
     font-family: $fontFamilySecondary;

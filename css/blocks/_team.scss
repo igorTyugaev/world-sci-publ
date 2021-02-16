@@ -1,7 +1,10 @@
 .team {
-  display: flex;
-  flex-direction: column;
-  margin-top: 40px;
+  @include margin(160px);
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+  }
 
   &__title {
     font-family: $fontFamilySecondary;
@@ -30,7 +33,6 @@
     height: 80%;
   }
 }
-
 
 .slider-team {
   display: flex;

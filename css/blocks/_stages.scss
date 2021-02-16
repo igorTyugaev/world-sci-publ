@@ -1,8 +1,12 @@
 @import 'slider';
 
 .stages {
-  display: flex;
-  flex-direction: column;
+  @include margin(150px);
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+  }
 
   &__header {
 

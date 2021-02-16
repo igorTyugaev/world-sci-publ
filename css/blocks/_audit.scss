@@ -1,4 +1,9 @@
 .audit {
+  @include margin(170px);
+
+  &__wrap {
+
+  }
 
   &__title {
     font-family: $fontFamilySecondary;

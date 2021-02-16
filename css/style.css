@@ -786,6 +786,10 @@ html {
   object-position: bottom;
 }
 
+.cost {
+  margin: 80px 0px 0px 0px;
+}
+
 .cost__inner {
   display: flex;
   flex-direction: row;
@@ -823,6 +827,10 @@ html {
 }
 
 .advantages {
+  margin: 80px 0px 0px 0px;
+}
+
+.advantages__inner {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -831,6 +839,10 @@ html {
 
 .advantages__item {
   width: 24%;
+}
+
+.quiz {
+  margin: 160px 0px 0px 0px;
 }
 
 .quiz__title {
@@ -924,6 +936,10 @@ html {
   font-family: "Helvetica";
   font-size: 96px;
   color: #219653;
+}
+
+.promo {
+  margin: 97px 0px 0px 0px;
 }
 
 .promo__title {
@@ -1069,6 +1085,10 @@ html {
   color: #BBBBBB;
 }
 
+.guaranty {
+  margin: 90px 0px 0px 0px;
+}
+
 .guaranty__title {
   font-family: "HelveticaBold";
   font-size: 36px;
@@ -1127,6 +1147,8 @@ html {
 
 .component {
   position: relative;
+  height: 100vh;
+  margin: 120px 0px 0px 0px;
 }
 
 .component__img {
@@ -1135,8 +1157,8 @@ html {
   object-position: right;
   top: 0;
   left: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 .component__title {
@@ -1275,6 +1297,10 @@ html {
 }
 
 .stages {
+  margin: 150px 0px 0px 0px;
+}
+
+.stages__wrap {
   display: flex;
   flex-direction: column;
 }
@@ -1437,6 +1463,10 @@ html {
 
 .tabs__block:target {
   display: block;
+}
+
+.audit {
+  margin: 170px 0px 0px 0px;
 }
 
 .audit__title {
@@ -1619,9 +1649,12 @@ html {
 }
 
 .team {
+  margin: 160px 0px 0px 0px;
+}
+
+.team__wrap {
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
 }
 
 .team__title {
@@ -1724,7 +1757,7 @@ html {
 }
 
 .foreign {
-  margin-top: 40px;
+  margin: 160px 0px 0px 0px;
 }
 
 .foreign__title {
@@ -1907,8 +1940,11 @@ html {
 }
 
 .reviews {
+  margin: 80px 0px 0px 0px;
+}
+
+.reviews__wrap {
   position: relative;
-  margin-top: 80px;
 }
 
 .reviews__title {
@@ -2144,6 +2180,10 @@ html {
   font-size: 9px;
 }
 
+.geography {
+  margin: 80px 0px 0px 0px;
+}
+
 .geography__title {
   font-family: "HelveticaBold";
   font-size: 34px;
@@ -2158,6 +2198,10 @@ html {
   height: 100%;
   width: 100%;
   object-fit: contain;
+}
+
+.faq {
+  margin: 80px 0px 0px 0px;
 }
 
 .faq__title {
@@ -2211,11 +2255,19 @@ html {
 }
 
 .footer {
+  margin: 80px 0px 0px 0px;
+  padding-top: 16px;
+  padding-right: 0px;
+  padding-bottom: 16px;
+  padding-left: 0px;
+  background: #001437;
+}
+
+.footer__wrap {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: #001437;
-  width: 100%;
+  height: 100%;
 }
 
 .footer__col {
@@ -2224,27 +2276,24 @@ html {
   width: 33%;
 }
 
-.footer__text {
-  font-family: Helvetica;
-  font-style: italic;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 120%;
-  color: #FFFFFF;
-}
-
-.footer__text:not(:first-child) {
-  padding-top: 12px;
-}
-
 .footer__about {
   width: 75%;
 }
 
+.footer__about-text {
+  font-family: "Helvetica";
+  font-style: italic;
+  font-size: 12px;
+  color: #FFFFFF;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 18px;
+  padding-left: 0px;
+}
+
 .footer__logo {
-  display: flex;
   object-fit: contain;
-  width: 50%;
+  height: 100%;
   margin: auto;
 }
 
@@ -2259,6 +2308,22 @@ html {
 .contact-us {
   display: flex;
   flex-direction: column;
+}
+
+.contact-us__tel {
+  font-family: "Helvetica";
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+.contact-us__address {
+  font-family: "Helvetica";
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+.social {
+  height: 100%;
 }
 
 .social__img {
@@ -2484,6 +2549,10 @@ html {
     padding-left: 1.6643550624vw;
   }
 
+  .cost {
+    margin: 5.547850208vw 0vw 0vw 0vw;
+  }
+
   .cost__main {
     padding: 3.8834951456vw 6.5880721221vw 4.7850208044vw 0vw;
   }
@@ -2510,6 +2579,14 @@ html {
 
   .cost__btn {
     margin: 1.6643550624vw 0vw 0vw 0vw;
+  }
+
+  .advantages {
+    margin: 5.547850208vw 0vw 0vw 0vw;
+  }
+
+  .quiz {
+    margin: 11.0957004161vw 0vw 0vw 0vw;
   }
 
   .quiz__title {
@@ -2575,6 +2652,10 @@ html {
   .quiz__quote:after,
   .quiz__quote:before {
     font-size: 6.6574202497vw;
+  }
+
+  .promo {
+    margin: 6.7267683773vw 0vw 0vw 0vw;
   }
 
   .promo__title {
@@ -2684,6 +2765,10 @@ html {
     margin: 0.2773925104vw 0vw 0vw 0vw;
   }
 
+  .guaranty {
+    margin: 6.241331484vw 0vw 0vw 0vw;
+  }
+
   .guaranty__title {
     font-size: 2.4965325936vw;
   }
@@ -2698,6 +2783,10 @@ html {
 
   .protection__form {
     margin: 2.773925104vw 0vw 0vw 0vw;
+  }
+
+  .component {
+    margin: 8.3217753121vw 0vw 0vw 0vw;
   }
 
   .component__title {
@@ -2798,6 +2887,10 @@ html {
     padding: 0 0.8321775312vw;
   }
 
+  .stages {
+    margin: 10.4022191401vw 0vw 0vw 0vw;
+  }
+
   .stages__title {
     font-size: 2.4965325936vw;
   }
@@ -2832,6 +2925,10 @@ html {
     padding-right: 1.386962552vw;
     padding-bottom: 1.386962552vw;
     padding-left: 1.386962552vw;
+  }
+
+  .audit {
+    margin: 11.7891816921vw 0vw 0vw 0vw;
   }
 
   .audit__title {
@@ -2907,6 +3004,10 @@ html {
     font-size: 0.8321775312vw;
   }
 
+  .team {
+    margin: 11.0957004161vw 0vw 0vw 0vw;
+  }
+
   .team__title {
     font-size: 2.4965325936vw;
   }
@@ -2958,6 +3059,10 @@ html {
     padding-right: 0vw;
     padding-bottom: 0vw;
     padding-left: 0vw;
+  }
+
+  .foreign {
+    margin: 11.0957004161vw 0vw 0vw 0vw;
   }
 
   .foreign__footer {
@@ -3049,6 +3154,10 @@ html {
 
   .card-rating__text {
     font-size: 1.2482662968vw;
+  }
+
+  .reviews {
+    margin: 5.547850208vw 0vw 0vw 0vw;
   }
 
   .reviews__title {
@@ -3157,8 +3266,16 @@ html {
     font-size: 0.6241331484vw;
   }
 
+  .geography {
+    margin: 5.547850208vw 0vw 0vw 0vw;
+  }
+
   .geography__title {
     font-size: 2.3578363384vw;
+  }
+
+  .faq {
+    margin: 5.547850208vw 0vw 0vw 0vw;
   }
 
   .faq__title {
@@ -3197,6 +3314,36 @@ html {
 
   .your-question__submit {
     margin: 1.386962552vw 0vw 0vw 0vw;
+  }
+
+  .footer {
+    margin: 5.547850208vw 0vw 0vw 0vw;
+  }
+
+  .footer {
+    padding-top: 1.1095700416vw;
+    padding-right: 0vw;
+    padding-bottom: 1.1095700416vw;
+    padding-left: 0vw;
+  }
+
+  .footer__about-text {
+    font-size: 0.8321775312vw;
+  }
+
+  .footer__about-text {
+    padding-top: 0vw;
+    padding-right: 0vw;
+    padding-bottom: 1.2482662968vw;
+    padding-left: 0vw;
+  }
+
+  .contact-us__tel {
+    font-size: 0.8321775312vw;
+  }
+
+  .contact-us__address {
+    font-size: 0.8321775312vw;
   }
 }
 
@@ -4015,6 +4162,32 @@ html {
     padding-bottom: 1.0214504597vw;
     padding-left: 1.0214504597vw;
   }
+
+  .footer {
+    padding-top: 1.6343207354vw;
+    padding-right: 0vw;
+    padding-bottom: 1.6343207354vw;
+    padding-left: 0vw;
+  }
+
+  .footer__about-text {
+    font-size: 1.2257405516vw;
+  }
+
+  .footer__about-text {
+    padding-top: 0vw;
+    padding-right: 0vw;
+    padding-bottom: 1.8386108274vw;
+    padding-left: 0vw;
+  }
+
+  .contact-us__tel {
+    font-size: 1.2257405516vw;
+  }
+
+  .contact-us__address {
+    font-size: 1.2257405516vw;
+  }
 }
 
 @media (max-width:768px) {
@@ -4523,6 +4696,18 @@ html {
 
   .your-question__description {
     font-size: 4.1666666667vw;
+  }
+
+  .footer__about-text {
+    font-size: 2.0833333333vw;
+  }
+
+  .contact-us__tel {
+    font-size: 2.0833333333vw;
+  }
+
+  .contact-us__address {
+    font-size: 2.0833333333vw;
   }
 }
 
