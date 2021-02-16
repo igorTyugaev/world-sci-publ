@@ -1,6 +1,4 @@
-<section class="quiz">
-
-    <div class="quiz__wrap container">
+   <div class="quiz__wrap container">
 
         <h2 class="quiz__title">Поможем рассчитать стоимость публикации Вашей рукописи,
             исходя
@@ -24,18 +22,25 @@
 
                     <div class="quizlet__progress progress-bar">
                         <h4 class="progress-bar__title">Вопрос 1 из 5</h4>
-                        <div class="progress-bar__inner">
-                            <img class="progress-bar__img"
-                                 src="./media/progress-bar.svg"
-                                 alt="progress-bar">
+                        <div id="steps"class="progress-bar_step-0">
+                            <div class="progress-bar__inner ">
+                                <div class="progress-bar__bar">
+                                    <div class="progress-bar__bar-inner"></div>
+                                </div>
+                                <div class="progress-bar__circle progress-bar__circle_1">1</div>
+                                <div class="progress-bar__circle progress-bar__circle_2">2</div>
+                                <div class="progress-bar__circle progress-bar__circle_3">3</div>
+                                <div class="progress-bar__circle progress-bar__circle_4">4</div>
+                                <div class="progress-bar__circle progress-bar__circle_5">5</div>
+                            </div>
                         </div>
                     </div>
 
                     <h3 class="quizlet__question">1. В какие сроки Вам необходима
                         публикация?</h3>
 
-                    <div class="quizlet__answers">
-                        <button class="quizlet__option button button--quiz">
+                    <div id="quizlet__answers" class="quizlet__answers">
+                        <!-- <button class="quizlet__option button button--quiz">
                             До 6 месяцев
                         </button>
                         <button class="quizlet__option button button--quiz">
@@ -46,10 +51,10 @@
                         </button>
                         <button class="quizlet__option button button--quiz">
                             Еще не знаю
-                        </button>
+                        </button> -->
                     </div>
 
-                    <button class="quizlet__option button button--quiz">
+                    <button class="quizlet__option button button--quiz quiz__button-next">
                         Пропустить вопрос
                     </button>
 
@@ -76,4 +81,3 @@
         </div>
 
     </div>
-</section>

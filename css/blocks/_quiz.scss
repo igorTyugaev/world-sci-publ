@@ -77,10 +77,12 @@
       transform: rotateZ(180deg) translateX(15%) translateY(40%);
     }
 
-    &::before, &::after {
+    &::before,
+    &::after {
       font-family: $fontFamilyPrimary;
       @include font-size(96px);
       color: $colorAccent;
     }
   }
+
 }
