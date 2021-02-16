@@ -16,8 +16,7 @@
     border-radius: #{get-vw(6px, $bp-lg-979)};
   }
 
-  @media (max-width: #{$bp-sm-576}) {
-  }
+  @media (max-width: #{$bp-sm-576}) {}
 }
 
 .quizlet {
@@ -25,9 +24,7 @@
   flex-direction: column;
   width: 100%;
 
-  &__progress {
-
-  }
+  &__progress {}
 
   &__question {
     @include font-size(14px);
@@ -39,7 +36,6 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50%;
 
     padding: 20px 0;
     row-gap: 20px;
@@ -60,9 +56,7 @@
       margin-top: #{get-vw(20px, $bp-lg-979)};
     }
 
-    @media (max-width: #{$bp-sm-576}) {
-
-    }
+    @media (max-width: #{$bp-sm-576}) {}
 
   }
 
