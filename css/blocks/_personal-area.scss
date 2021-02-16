@@ -1,14 +1,23 @@
 .profile {
+  @include margin(80px);
   position: relative;
   display: flex;
   flex-direction: column;
+
+  &__wrap {
+    z-index: $z-index-content;
+  }
+
+  &__content {
+
+  }
 
   &__background {
     position: absolute;
     left: 0;
     bottom: 0;
     object-fit: contain;
-    height: 80%;
+    height: 34%;
   }
 
   &__header {
@@ -16,7 +25,10 @@
   }
 
   &__footer {
-
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @include padding(24px, 0px, 12px, 0px);
   }
 
   &__title {
@@ -32,6 +44,22 @@
     justify-content: space-between;
     width: 100%;
   }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__nav-slider {
+    position: absolute;
+    top: 3.5vw;
+    left: -6vw;
+    @include _less-than($bp-xl-1170) {
+      left: 0;
+    }
+  }
+}
+
+.p-slider {
 }
 
 .p-footer {
@@ -51,14 +79,23 @@
   }
 
   &__text {
+    font-family: $fontFamilyPrimary;
+    font-style: italic;
+    @include font-size(18px);
     @include padding(0px, 80px, 0px, 0px);
   }
 }
 
 .profile-nav {
+  //width: 286px;
+  width: 27.59%;
+  @extend %s-border;
+  background-color: $popupBackground;
+  @include padding(14px, 0px, 0px, 0px);
 
   &__header {
     background: #191847;
+    @include padding(14px, 18px, 14px, 18px);
   }
 
   &__title {
@@ -68,6 +105,52 @@
   }
 
   &__body {
+    @include padding(12px, 18px, 6px, 18px);
+  }
+}
 
+.accordion {
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    vertical-align: center;
+
+    width: 100%;
+    border-radius: 4px;
+    background: none;
+    cursor: pointer;
+
+    padding: 5px;
+
+    border: none;
+    text-align: left;
+    outline: none;
+
+    transition: 0.5s;
+
+    &--active, &:hover {
+      background-color: #E1F1FE;
+    }
+  }
+
+  &__item-title {
+    font-family: $fontFamilyPrimary;
+    @include font-size(14px);
+    @include margin(0px, 0px, 0px, 15px);
+  }
+
+  &__item-inner {
+    max-height: 0;
+    @include padding(0px, 0px, 0px, 22px);
+    @include margin(0px, 0px, 15px, 12px);
+    overflow: hidden;
+    border-left: 2px solid #E1F1FE;
+    transition: max-height 0.3s ease-out;
+
+    ol > li {
+      padding: 8px 0;
+    }
   }
 }

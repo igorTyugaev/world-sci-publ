@@ -30,6 +30,11 @@
   left: 0;
   top: 0;
 
+  height: 100vh;
+  width: 30%;
+  background-color: #031435;
+  @include padding(0px, 50px, 0px, 50px);
+
   &__header {
     display: flex;
     flex-direction: row-reverse;
@@ -46,11 +51,6 @@
   &--show {
     display: block;
   }
-
-  height: 100vh;
-  width: 30%;
-  background-color: #031435;
-  @include padding(0px, 50px, 0px, 50px);
 
   &__links {
     display: flex;
