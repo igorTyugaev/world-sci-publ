@@ -1802,6 +1802,7 @@ html {
   padding-right: 38px;
   padding-bottom: 14px;
   padding-left: 24px;
+  height: 46.77419%;
 }
 
 .card-txt__title {
@@ -1828,15 +1829,18 @@ html {
 .card-profile__header {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding-top: 28px;
-  padding-right: 38px;
-  padding-bottom: 14px;
-  padding-left: 24px;
+  padding-right: 28px;
+  padding-bottom: 28px;
+  padding-left: 28px;
   border-bottom: 2px solid #EDEDED;
+  height: 73%;
 }
 
 .card-profile__logo {
   align-self: center;
+  margin: 12px 0px 0px 0px;
 }
 
 .card-profile__logo-img {
@@ -1849,17 +1853,18 @@ html {
 }
 
 .card-profile__title {
-  margin: 22px 0px 0px 0px;
+  margin: 12px 0px 0px 0px;
   font-family: "Helvetica";
   font-size: 14px;
 }
 
 .card-profile__about {
-  margin: 31px 0px 0px 0px;
+  margin: 12px 0px 0px 0px;
 }
 
 .card-profile__option {
   font-family: "Helvetica";
+  margin: 12px 0px 0px 0px;
   font-size: 14px;
   padding-top: 3px;
   padding-right: 22px;
@@ -1874,12 +1879,13 @@ html {
 
 .card-profile__body {
   display: flex;
+  height: 27%;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 8px;
-  padding-right: 16px;
-  padding-bottom: 23px;
-  padding-left: 24px;
+  padding-top: 15px;
+  padding-right: 28px;
+  padding-bottom: 20px;
+  padding-left: 28px;
 }
 
 .card-profile__rating {
@@ -1887,6 +1893,13 @@ html {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.card-profile__stars-img {
+  display: block;
+  height: 30%;
+  object-fit: contain;
+  text-align: left;
 }
 
 .card-profile__country {
@@ -1897,7 +1910,11 @@ html {
 .card-profile__btn {
   font-family: "Helvetica";
   font-size: 14px;
-  width: 60%;
+  padding-top: 4px;
+  padding-right: 10px;
+  padding-bottom: 4px;
+  padding-left: 10px;
+  width: 80%;
   align-self: center;
 }
 
@@ -1905,7 +1922,16 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 46.77419%;
   background-color: #219653;
+}
+
+.card-rating__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  margin: auto 0;
 }
 
 .card-rating__title {
@@ -1919,10 +1945,18 @@ html {
   color: #FFFFFF;
 }
 
+.card-rating__stars-img {
+  display: block;
+  width: 70%;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
 .card-rating__text {
   font-family: "HelveticaBold";
   color: #FFFFFF;
   font-size: 18px;
+  margin: 12px 0px 0px 0px;
   text-transform: lowercase;
 }
 
@@ -3092,13 +3126,17 @@ html {
 
   .card-profile__header {
     padding-top: 1.9417475728vw;
-    padding-right: 2.6352288488vw;
-    padding-bottom: 0.9708737864vw;
-    padding-left: 1.6643550624vw;
+    padding-right: 1.9417475728vw;
+    padding-bottom: 1.9417475728vw;
+    padding-left: 1.9417475728vw;
+  }
+
+  .card-profile__logo {
+    margin: 0.8321775312vw 0vw 0vw 0vw;
   }
 
   .card-profile__title {
-    margin: 1.5256588072vw 0vw 0vw 0vw;
+    margin: 0.8321775312vw 0vw 0vw 0vw;
   }
 
   .card-profile__title {
@@ -3106,7 +3144,11 @@ html {
   }
 
   .card-profile__about {
-    margin: 2.1497919556vw 0vw 0vw 0vw;
+    margin: 0.8321775312vw 0vw 0vw 0vw;
+  }
+
+  .card-profile__option {
+    margin: 0.8321775312vw 0vw 0vw 0vw;
   }
 
   .card-profile__option {
@@ -3125,10 +3167,10 @@ html {
   }
 
   .card-profile__body {
-    padding-top: 0.5547850208vw;
-    padding-right: 1.1095700416vw;
-    padding-bottom: 1.5950069348vw;
-    padding-left: 1.6643550624vw;
+    padding-top: 1.040221914vw;
+    padding-right: 1.9417475728vw;
+    padding-bottom: 1.386962552vw;
+    padding-left: 1.9417475728vw;
   }
 
   .card-profile__country {
@@ -3139,12 +3181,23 @@ html {
     font-size: 0.9708737864vw;
   }
 
+  .card-profile__btn {
+    padding-top: 0.2773925104vw;
+    padding-right: 0.693481276vw;
+    padding-bottom: 0.2773925104vw;
+    padding-left: 0.693481276vw;
+  }
+
   .card-rating__title {
     font-size: 3.3287101248vw;
   }
 
   .card-rating__text {
     font-size: 1.2482662968vw;
+  }
+
+  .card-rating__text {
+    margin: 0.8321775312vw 0vw 0vw 0vw;
   }
 
   .reviews {
@@ -3987,9 +4040,9 @@ html {
 
   .card-profile__header {
     padding-top: 2.860061287vw;
-    padding-right: 3.8815117467vw;
-    padding-bottom: 1.4300306435vw;
-    padding-left: 2.4514811032vw;
+    padding-right: 2.860061287vw;
+    padding-bottom: 2.860061287vw;
+    padding-left: 2.860061287vw;
   }
 
   .card-profile__title {
@@ -4008,10 +4061,10 @@ html {
   }
 
   .card-profile__body {
-    padding-top: 0.8171603677vw;
-    padding-right: 1.6343207354vw;
-    padding-bottom: 2.3493360572vw;
-    padding-left: 2.4514811032vw;
+    padding-top: 1.5321756895vw;
+    padding-right: 2.860061287vw;
+    padding-bottom: 2.0429009193vw;
+    padding-left: 2.860061287vw;
   }
 
   .card-profile__country {
@@ -4020,6 +4073,13 @@ html {
 
   .card-profile__btn {
     font-size: 1.4300306435vw;
+  }
+
+  .card-profile__btn {
+    padding-top: 0.4085801839vw;
+    padding-right: 1.0214504597vw;
+    padding-bottom: 0.4085801839vw;
+    padding-left: 1.0214504597vw;
   }
 
   .card-rating__title {
