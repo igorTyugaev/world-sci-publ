@@ -2,13 +2,27 @@
   @include margin(80px);
 
   &__inner {
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
   &__item {
-    width: 24%;
+    width: 18.9263565891%;
+  }
+
+  @include _less-than($bp-sm-576) {
+    &__inner {
+      //flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 48%;
+
+      &:nth-child(n + 3) {
+        margin-top: 20px;
+      }
+    }
   }
 }

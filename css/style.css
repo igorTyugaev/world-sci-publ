@@ -542,10 +542,6 @@ html {
   margin-top: 4px;
 }
 
-.feature-card+.feature-card {
-  margin-left: 85px;
-}
-
 .quizlet__question {
   padding: 8px 12px;
   border-radius: 6px;
@@ -831,14 +827,13 @@ html {
 }
 
 .advantages__inner {
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
 .advantages__item {
-  width: 24%;
+  width: 18.9263565891%;
 }
 
 .quiz {
@@ -2445,10 +2440,6 @@ html {
     margin-top: 0.2773925104vw;
   }
 
-  .feature-card+.feature-card {
-    margin-left: 5.894590846vw;
-  }
-
   .quizlet__question {
     padding: 0.5547850208vw 0.8321775312vw;
     border-radius: 0.4160887656vw;
@@ -3479,10 +3470,6 @@ html {
     margin-top: 0.4085801839vw;
   }
 
-  .feature-card+.feature-card {
-    margin-left: 8.682328907vw;
-  }
-
   .quizlet__question {
     padding: 0.8171603677vw 1.2257405516vw;
     border-radius: 0.6128702758vw;
@@ -4436,6 +4423,18 @@ html {
 
   .cost__text {
     font-size: 3.125vw;
+  }
+
+  .advantages__inner {
+    flex-wrap: wrap;
+  }
+
+  .advantages__item {
+    width: 48%;
+  }
+
+  .advantages__item:nth-child(n+3) {
+    margin-top: 20px;
   }
 
   .quiz__title {

@@ -45,20 +45,4 @@
 
     }
   }
-
-  & + & {
-    margin-left: 85px;
-
-    @include _more-than($bp-xxl-1442) {
-      margin-left: #{get-vw(85px, $bp-xxl-1442)};
-    }
-
-    @include _less-than($bp-lg-979) {
-      margin-left: #{get-vw(85px, $bp-lg-979)};
-    }
-
-    @include _less-than($bp-sm-576) {
-
-    }
-  }
 }
