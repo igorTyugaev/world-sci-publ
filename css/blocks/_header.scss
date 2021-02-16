@@ -1,28 +1,4 @@
-%tmp-button--call {
-  @include padding(4px, 25px, 4px, 25px);
-
-  border: 2px solid $textColorSecondary;
-  box-shadow: 1px 1px 4px $colorShadow;
-  border-radius: 28px;
-
-  @include _more-than($bp-xxl-1442) {
-    border: #{get-vw(2px, $bp-xxl-1442)} solid $textColorSecondary;
-    box-shadow: #{get-vw(1px, $bp-xxl-1442)} #{get-vw(1px, $bp-xxl-1442)} #{get-vw(4px, $bp-xxl-1442)} $colorShadow;
-    border-radius: #{get-vw(28px, $bp-xxl-1442)};
-  }
-
-  @include _less-than($bp-lg-979) {
-    border: #{get-vw(2px, $bp-lg-979)} solid $textColorSecondary;
-    box-shadow: #{get-vw(1px, $bp-lg-979)} #{get-vw(1px, $bp-lg-979)} #{get-vw(4px, $bp-lg-979)} $colorShadow;
-    border-radius: #{get-vw(28px, $bp-lg-979)};
-  }
-
-  @include _less-than($bp-md-768) {
-    border: #{get-vw(2px, $bp-md-768)} solid $textColorSecondary;
-    box-shadow: #{get-vw(1px, $bp-md-768)} #{get-vw(1px, $bp-md-768)} #{get-vw(4px, $bp-md-768)} $colorShadow;
-    border-radius: #{get-vw(28px, $bp-md-768)};
-  }
-}
+@import "nav";
 
 .header {
   z-index: $z-index-menu;
@@ -42,7 +18,7 @@
     align-items: center;
     text-decoration: none;
 
-    @extend %tmp-button--call;
+    @extend %tmp-button--nav;
 
     &-text {
       font-family: $fontFamilyPrimary;
@@ -81,8 +57,9 @@
     position: relative;
     display: block;
 
-    width: #{get-vw(30px, $bp-xxl-1442)};
-    height: #{get-vw(2px, $bp-xxl-1442)};
+    width: 30px;
+    height: 2px;
+    z-index: $z-index-menu;
 
     background-color: #FFFFFF;
     font-size: 0;
@@ -94,7 +71,6 @@
       width: 100%;
       height: 100%;
       left: 0;
-      z-index: 1;
       background-color: #fff;
     }
 
@@ -104,6 +80,23 @@
 
     &:after {
       bottom: -#{get-vw(8px, $bp-xxl-1442)};
+    }
+  }
+
+  &--close {
+
+    &__item {
+      height: 0;
+
+      &:after {
+        transform: rotate(-45deg);
+        margin-top: 0;
+      }
+
+      &:before {
+        transform: rotate(45deg);
+        margin-top: 0;
+      }
     }
   }
 }

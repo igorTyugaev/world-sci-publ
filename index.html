@@ -11,15 +11,42 @@
 
     <div class="header__menu menu">
 
-        <button class="menu__burger burger"
-                type="button"
-                id="navToggle">
-            <span class="burger__item">-</span>
-        </button>
+        <div class="menu__burger" id="navToggle">
+            <button class=" burger"
+                    type="button">
+                <span class="burger__item"></span>
+            </button>
+        </div>
 
         <p class="menu__title">
             МЕНЮ
         </p>
+
+        <nav class="header__nav nav" id="navBar">
+
+            <div class="nav__header">
+                <img class="nav__header-logo"
+                     src="./media/logo-white.svg"
+                     alt="logo">
+            </div>
+
+            <div class="nav__links">
+                <a href="#" class="nav__link" data-scroll="#features">Сайт</a>
+                <a href=" #" class="nav__link" data-scroll="#works">Личный кабинет</a>
+                <a href="#" class="nav__link" data-scroll="#team">Блог “Кафедра WSP”</a>
+                <a href="#" class="nav__link" data-scroll="#reviews">F.A.Q.</a>
+                <a href="#" class="nav__link" data-scroll="#download">Контакты</a>
+                <a href="#" class="nav__link" data-scroll="#download">Соцсети</a>
+                <a href="#" class="nav__link" data-scroll="#download">Оставить
+                    заявку</a>
+            </div>
+
+            <div class="nav__footer">
+                <img class="nav__logo" src="./media/logo.svg" alt="logo">
+                <p class="nav__date">2021 г.</p>
+            </div>
+
+        </nav>
 
     </div>
 
@@ -152,7 +179,7 @@
 </section>
 
 <section id="quiz-0" class="quiz">
-    <div class="quiz__wrap container">
+       <div class="quiz__wrap container">
 
         <h2 class="quiz__title">Поможем рассчитать стоимость публикации Вашей рукописи,
             исходя
@@ -555,72 +582,53 @@
 </section>
 
 <!--TODO:profile-->
-<!--<section class="profile">-->
-<!--    <div class="profile__header">-->
-<!--        <h2 class="profile__title">-->
-<!--            Личный кабинет позволяет отслеживать<br>-->
-<!--            процесс публикации на всех этапах работы-->
-<!--        </h2>-->
-<!--    </div>-->
+<section class="profile">
 
-<!--    <div class="profile__inner profile-slider">-->
+    <div class="profile__wrap container">
 
-<!--        <div class="profile-slider__hint">-->
-<!--            <img src="./media/max_character.svg" alt="max_character"-->
-<!--                 class="profile-slider__hint-img">-->
-<!--        </div>-->
+        <div class="profile__header extended-subtitle">
+            <h2 class="profile__title">
+                Личный кабинет позволяет отслеживать
+                процесс публикации на всех этапах работы
+            </h2>
+        </div>
 
-<!--        <div class="profile-slider__nav slider-menu">-->
-<!--            <div class="slider-menu__header">-->
-<!--                <h3 class="slider-menu__title">-->
-<!--                    Ознакомьтесь с<br>-->
-<!--                    личным кабинетом-->
-<!--                </h3>-->
-<!--                <div class="slider-menu__tabs tabs">-->
-<!--                    <nav class="tabs__items">-->
-<!--                        <a href="#tab_01" class="tabs__item"><span>Первая вкладка</span></a>-->
-<!--                        <a href="#tab_02" class="tabs__item"><span>Вторая вкладка</span></a>-->
-<!--                        <a href="#tab_03" class="tabs__item"><span>Третья вкладка</span></a>-->
-<!--                    </nav>-->
-<!--                    <div class="tabs__body">-->
-<!--                        <div id="tab_01" class="tabs__block">-->
-<!--                            Первая вкладка. Lorem ipsum, dolor sit amet consectetur-->
-<!--                            adipisicing elit. Enim laudantium esse modi aut in-->
-<!--                            recusandae explicabo, doloremque animi sapiente hic nobis-->
-<!--                            ducimus minima distinctio deleniti tempora deserunt cumque-->
-<!--                            amet consequatur.-->
-<!--                        </div>-->
-<!--                        <div id="tab_02" class="tabs__block">-->
-<!--                            Вторая вкладка. Lorem ipsum, dolor sit amet consectetur-->
-<!--                            adipisicing elit. Enim laudantium esse modi aut in-->
-<!--                            recusandae explicabo, doloremque animi sapiente hic nobis-->
-<!--                            ducimus minima distinctio deleniti tempora deserunt cumque-->
-<!--                            amet consequatur. Lorem ipsum, dolor sit amet consectetur-->
-<!--                            adipisicing elit. Enim laudantium esse modi aut in-->
-<!--                            recusandae explicabo, doloremque animi sapiente hic nobis-->
-<!--                            ducimus minima distinctio deleniti tempora deserunt cumque-->
-<!--                            amet consequatur.-->
-<!--                        </div>-->
-<!--                        <div id="tab_03" class="tabs__block">-->
-<!--                            Третья вкладка. Lorem ipsum, dolor sit amet consectetur-->
-<!--                            adipisicing elit. Enim laudantium esse modi aut in-->
-<!--                            recusandae explicabo, doloremque animi sapiente hic nobis-->
-<!--                            ducimus minima distinctio deleniti tempora deserunt cumque-->
-<!--                            amet consequatur.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+        <div class="profile__content">
 
-<!--        <div class="profile-slider__inner">-->
-<!--            <div class="profile-slider__slide"></div>-->
-<!--            <div class="profile-slider__footer"></div>-->
+            <div class="profile_navbar profile-nav">
+                <div class="profile-nav__header">
+                    <h3 class="profile-nav__title">
+                        Ознакомьтесь с
+                        личным кабинетом
+                    </h3>
+                </div>
+                <div class="profile-nav__body">
 
-<!--        </div>-->
+                </div>
+            </div>
 
-<!--    </div>-->
-<!--</section>-->
+        </div>
+
+        <div class="profile__footer p-footer">
+            <div class="p-footer__column">
+                <p class="p-footer__text">
+                    Публиковать научные труды
+                    стало намного легче и надежнее
+                </p>
+            </div>
+            <div class="p-footer__column">
+                <a class="button p-footer__btn" href="#">
+                    Зарегистрироваться в ЛК
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <img class="profile__background"
+         src="./media/max_character.svg"
+         alt="max_character">
+
+</section>
 
 <section class="audit">
 
@@ -1385,8 +1393,9 @@
                 Если Вашего вопроса нет в списке, задайте его в форме расположенной ниже.
                 Ответ будет направлен на электронную почту.
             </h3>
-            <input type="text" class="your-question__textarea">
-            <input type="text" class="your-question__email" placeholder="email">
+            <textarea class="your-question__textarea" rows="10" cols="45" name="text">
+            </textarea>
+            <input type="text" class="your-question__email" placeholder="email"/>
             <button type="submit" class="button your-question__submit">Задать
                 свой
                 вопрос
@@ -1464,5 +1473,6 @@
 </footer>
 
 <script src="/js/quiz.js"></script>
+<script type="text/javascript" src="./js/header.js"></script>
 </body>
 </html>

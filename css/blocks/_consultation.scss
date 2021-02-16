@@ -34,7 +34,7 @@
     height: 100%;
 
     position: relative;
-    z-index: 30;
+    z-index: $z-index-content;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
