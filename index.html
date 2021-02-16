@@ -11,15 +11,42 @@
 
     <div class="header__menu menu">
 
-        <button class="menu__burger burger"
-                type="button"
-                id="navToggle">
-            <span class="burger__item">-</span>
-        </button>
+        <div class="menu__burger" id="navToggle">
+            <button class=" burger"
+                    type="button">
+                <span class="burger__item"></span>
+            </button>
+        </div>
 
         <p class="menu__title">
             МЕНЮ
         </p>
+
+        <nav class="header__nav nav" id="navBar">
+
+            <div class="nav__header">
+                <img class="nav__header-logo"
+                     src="./media/logo-white.svg"
+                     alt="logo">
+            </div>
+
+            <div class="nav__links">
+                <a href="#" class="nav__link" data-scroll="#features">Сайт</a>
+                <a href=" #" class="nav__link" data-scroll="#works">Личный кабинет</a>
+                <a href="#" class="nav__link" data-scroll="#team">Блог “Кафедра WSP”</a>
+                <a href="#" class="nav__link" data-scroll="#reviews">F.A.Q.</a>
+                <a href="#" class="nav__link" data-scroll="#download">Контакты</a>
+                <a href="#" class="nav__link" data-scroll="#download">Соцсети</a>
+                <a href="#" class="nav__link" data-scroll="#download">Оставить
+                    заявку</a>
+            </div>
+
+            <div class="nav__footer">
+                <img class="nav__logo" src="./media/logo.svg" alt="logo">
+                <p class="nav__date">2021 г.</p>
+            </div>
+
+        </nav>
 
     </div>
 
@@ -1357,8 +1384,9 @@
                 Если Вашего вопроса нет в списке, задайте его в форме расположенной ниже.
                 Ответ будет направлен на электронную почту.
             </h3>
-            <input type="text" class="your-question__textarea">
-            <input type="text" class="your-question__email" placeholder="email">
+            <textarea class="your-question__textarea" rows="10" cols="45" name="text">
+            </textarea>
+            <input type="text" class="your-question__email" placeholder="email"/>
             <button type="submit" class="button your-question__submit">Задать
                 свой
                 вопрос
@@ -1433,5 +1461,6 @@
     </div>
 
 </footer>
+<script type="text/javascript" src="./js/header.js"></script>
 </body>
 </html>

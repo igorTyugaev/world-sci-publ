@@ -1,0 +1,95 @@
+%tmp-button--nav {
+  @include padding(4px, 25px, 4px, 25px);
+
+  border: 2px solid $textColorSecondary;
+  box-shadow: 1px 1px 4px $colorShadow;
+  border-radius: 28px;
+
+  @include _more-than($bp-xxl-1442) {
+    border: #{get-vw(2px, $bp-xxl-1442)} solid $textColorSecondary;
+    box-shadow: #{get-vw(1px, $bp-xxl-1442)} #{get-vw(1px, $bp-xxl-1442)} #{get-vw(4px, $bp-xxl-1442)} $colorShadow;
+    border-radius: #{get-vw(28px, $bp-xxl-1442)};
+  }
+
+  @include _less-than($bp-lg-979) {
+    border: #{get-vw(2px, $bp-lg-979)} solid $textColorSecondary;
+    box-shadow: #{get-vw(1px, $bp-lg-979)} #{get-vw(1px, $bp-lg-979)} #{get-vw(4px, $bp-lg-979)} $colorShadow;
+    border-radius: #{get-vw(28px, $bp-lg-979)};
+  }
+
+  @include _less-than($bp-md-768) {
+    border: #{get-vw(2px, $bp-md-768)} solid $textColorSecondary;
+    box-shadow: #{get-vw(1px, $bp-md-768)} #{get-vw(1px, $bp-md-768)} #{get-vw(4px, $bp-md-768)} $colorShadow;
+    border-radius: #{get-vw(28px, $bp-md-768)};
+  }
+}
+
+.nav {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  &__header {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    align-items: flex-end;
+    transform: translateX(12%);
+
+    &-logo {
+      align-self: flex-end;
+      object-fit: contain;
+    }
+  }
+
+  &--show {
+    display: block;
+  }
+
+  height: 100vh;
+  width: 30%;
+  background-color: #031435;
+  @include padding(0px, 50px, 0px, 50px);
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 58%;
+    @include margin(20px);
+  }
+
+  &__link {
+    @extend %tmp-button--nav;
+    font-family: $fontFamilyPrimary;
+    color: $textColorSecondary;
+    @include font-size(18px);
+    @include padding(6px, 15px, 6px, 15px);
+
+    &:last-child {
+      @include margin(30px);
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include margin(20px);
+  }
+
+  &__logo {
+    display: flex;
+    width: 25%;
+    align-self: center;
+    object-fit: contain;
+  }
+
+  &__date {
+    font-family: $fontFamilyPrimary;
+    color: $textColorSecondary;
+    @include font-size(12px);
+    text-align: center;
+  }
+}
