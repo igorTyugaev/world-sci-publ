@@ -98,6 +98,8 @@ function initQuiz(quiz) {
     insertAnswers(buttons[step].answers);
 }
 
-const _quiz1 = document.getElementById('quiz-1');
+const _quiz1 = document.getElementById('quiz-1'),
+    _quiz0 = document.getElementById('quiz-0');
 
 initQuiz(_quiz1);
+initQuiz(_quiz0);
