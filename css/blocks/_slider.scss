@@ -1,8 +1,20 @@
-.slider {
+.stages-slider {
   width: 100%;
-  background: $popupBackground;
-  @extend %s-border;
-  @include padding(38px, 28px, 28px, 28px);
+
+  overflow: hidden;
+  height: 100%;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.6s ease;
+    width: 100%;
+  }
+
+  &__item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 
   &__nav {
 

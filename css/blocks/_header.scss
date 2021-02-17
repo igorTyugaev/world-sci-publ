@@ -34,7 +34,13 @@
   align-items: center;
 
   &__burger {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
+    cursor: pointer;
+    z-index: $z-index-menu;
   }
 
   &__title {
@@ -46,57 +52,57 @@
 }
 
 .burger {
-  display: block;
+  position: relative;
   background: none;
   border: none;
   cursor: pointer;
   outline: none;
-  @include padding(15px, 0px, 15px, 0px);
+  @include margin(15px, 0px, 15px, 0px);
 
-  &__item {
-    position: relative;
+  width: 30px;
+  height: 2px;
+  background-color: $textColorSecondary;
+
+  &:after {
     display: block;
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    margin-top: 7px;
     width: 30px;
     height: 2px;
-    z-index: $z-index-menu;
-
     background-color: #FFFFFF;
-    font-size: 0;
-    color: transparent;
-
-    &:before, &:after {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 100%;
-      left: 0;
-      background-color: #fff;
-    }
-
-    &:before {
-      top: -#{get-vw(8px, $bp-xxl-1442)};
-    }
-
-    &:after {
-      bottom: -#{get-vw(8px, $bp-xxl-1442)};
-    }
+    border: none;
+    transition: transform 0.2s;
   }
 
-  &--close {
+  &:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    margin-top: -7px;
+    width: 30px;
+    height: 2px;
+    background-color: #FFFFFF;
+    border: none;
+    transition: transform 0.2s;
+  }
 
-    &__item {
-      height: 0;
+  &-active:after {
+    transform: rotate(-45deg);
+    margin-top: 0;
+  }
 
-      &:after {
-        transform: rotate(-45deg);
-        margin-top: 0;
-      }
+  &-active {
+    height: 0;
+  }
 
-      &:before {
-        transform: rotate(45deg);
-        margin-top: 0;
-      }
-    }
+  &-active:before {
+    transform: rotate(45deg);
+    margin-top: 0;
   }
 }
+

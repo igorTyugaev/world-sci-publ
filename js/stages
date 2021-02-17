@@ -1,0 +1,71 @@
+const _slider = document.getElementById('stages-slider');
+const _sliderNav = document.getElementById('stages-slider-nav');
+
+(function initSlider(_slider, _sliderNav) {
+    const _sliderInner = _slider.querySelector('.stages-slider__wrapper');
+    const _sliderControls = _sliderNav.querySelector('.stage-gird__inner');
+    const _leftArrow = _slider.querySelector('.stages-slider__control-left');
+    const _rightArrow = _slider.querySelector('.stages-slider__control-right');
+    const _sliderTitle = _slider.querySelector('.navbar-slider__title');
+
+    const sliderNodes = _sliderInner.children;
+    const countSliders = sliderNodes.length;
+    const slideWidth = sliderNodes[0].clientWidth;
+
+    let step = 0;
+    const controls = [];
+
+    const initSlider = () => {
+        changeTitle(step + 1);
+
+        for (let i = 0; i < countSliders; i++) {
+            const a = document.createElement('a');
+
+            a.className = 'stage-gird__item';
+            a.innerText = i + 1;
+            if (i === step) setActiveControl(a);
+            a.addEventListener('click', (e) => {
+                setActiveControl(e.target);
+                setActiveSlide(i);
+            });
+
+            controls.push(a);
+            _sliderControls.append(a);
+        }
+    };
+
+    const setOffset = (index) => {
+        _sliderInner.style.transform = `translateX(-${index * slideWidth}px)`;
+    };
+
+    const changeTitle = (newSliderIndex) => {
+        _sliderTitle.innerText = `${newSliderIndex} этап`;
+    };
+
+    const setActiveControl = (activeControl) => {
+        controls.forEach((item) => {
+            item.classList.remove('stage-gird__item--active');
+        });
+        activeControl.classList.add('stage-gird__item--active');
+    };
+
+    const setActiveControlByIndex = (index) => {
+        controls.forEach((item) => {
+            item.classList.remove('stage-gird__item--active');
+        });
+        controls[index].classList.add('stage-gird__item--active');
+    };
+
+    const setActiveSlide = (newSlideIndex) => {
+        step = newSlideIndex;
+        if (newSlideIndex > countSliders - 1) step = 0;
+        if (newSlideIndex < 0) step = countSliders - 1;
+        changeTitle(step + 1);
+        setActiveControlByIndex(step);
+        setOffset(step);
+    };
+
+    _leftArrow.addEventListener('click', () => setActiveSlide(step - 1));
+    _rightArrow.addEventListener('click', () => setActiveSlide(step + 1));
+    initSlider(sliderNodes);
+})(_slider, _sliderNav);

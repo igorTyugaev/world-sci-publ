@@ -22,7 +22,6 @@
   }
 
   &__slider {
-
   }
 
   &__background {
@@ -68,11 +67,15 @@
   }
 
   &__body {
+    width: 100%;
+    @include margin(-5px);
+  }
+
+  &__item {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    @include margin(-5px);
   }
 
   &__column {
@@ -88,6 +91,7 @@
     object-fit: cover;
     object-position: center;
   }
+
 
   &__inner {
     background-color: $popupBackground;

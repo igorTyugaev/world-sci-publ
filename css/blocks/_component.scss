@@ -68,21 +68,10 @@
   display: flex;
   flex-direction: row;
   @include margin(50px);
-  width: 34%;
   height: 100%;
 
-  @include _less-than($bp-lg-979) {
-    width: 50%;
-  }
-
-  @include _less-than($bp-md-768) {
-    width: 70%;
-  }
-
   &__text {
-    display: flex;
     align-items: center;
-
     font-style: italic;
     color: $textColorSecondary;
     @include font-size(14px);
@@ -98,6 +87,8 @@
   }
 
   &::before, &::after {
+    height: 10px;
+    line-height: 0%;
     font-family: $fontFamilyPrimary;
     color: $textColorSecondary;
     @include font-size(72px);

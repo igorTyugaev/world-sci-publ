@@ -7,5 +7,162 @@
 
   &__inner {
     @include margin(3px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__circle {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    background: #C4C4C4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #FFFFFF;
+
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+
+    transition: background-color 0.3s 0s;
+  }
+
+  &__bar {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background-color: #C4C4C4;
+  }
+
+  &__bar-inner {
+    height: 100%;
+    width: 0%;
+    background: #FFC700;
+    transition: width 0.6s;
+  }
+
+  &_step {
+
+    &-0 {
+      .progress-bar {
+        &__circle_1 {
+          background: #FFC700;
+          transition: background-color 0.3s 0.6s;
+        }
+
+        &__bar-inner {
+          width: 0%;
+        }
+      }
+    }
+
+    &-1 {
+      .progress-bar {
+        &__circle_1 {
+          background: #FFC700;
+          transition: background-color 0.3s 0.6s;
+        }
+
+        &__circle_2 {
+          background: #FFC700;
+          transition: background-color 0.3s 0.6s;
+        }
+
+        &__bar-inner {
+          width: 25%;
+        }
+      }
+    }
+
+    &-2 {
+      .progress-bar {
+        &__circle_1 {
+          background: #FFC700;
+          transition: background-color 0.3s 0.6s;
+        }
+
+        &__circle_2 {
+          background: #FFC700;
+          transition: background-color 0.3s 0.6s;
+        }
+
+        &__circle_3 {
+          background: #FFC700;
+          transition: background-color 0.3s 0.6s;
+        }
+
+        &__bar-inner {
+          width: 50%;
+        }
+      }
+    }
+
+    &-3 {
+      .progress-bar {
+        &__circle_1 {
+          background: #FFC700;
+          transition: background-color 0.3s 0.6s;
+        }
+
+        &__circle_2 {
+          background: #FFC700;
+          transition: background-color 0.3s 0.6s;
+        }
+
+        &__circle_3 {
+          background: #FFC700;
+          transition: background-color 0.3s 0.6s;
+        }
+
+        &__circle_4 {
+          background: #FFC700;
+          transition: background-color 0.3s 0.6s;
+        }
+
+        &__bar-inner {
+          width: 75%;
+        }
+      }
+    }
+
+    &-4 {
+      .progress-bar {
+        &__circle_1 {
+          background: #FFC700;
+          transition: background-color 0.3s 0.6s;
+        }
+
+        &__circle_2 {
+          background: #FFC700;
+          transition: background-color 0.3s 0.6s;
+        }
+
+        &__circle_3 {
+          background: #FFC700;
+          transition: background-color 0.3s 0.6s;
+        }
+
+        &__circle_4 {
+          background: #FFC700;
+          transition: background-color 0.3s 0.6s;
+        }
+
+        &__circle_5 {
+          background: #FFC700;
+        }
+
+        &__bar-inner {
+          width: 100%;
+        }
+      }
+    }
   }
 }

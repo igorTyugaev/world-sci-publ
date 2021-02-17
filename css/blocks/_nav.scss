@@ -25,10 +25,19 @@
 }
 
 .nav {
-  display: none;
+  //display: none;
+  transform: translateX(-100%);
+
   position: fixed;
   left: 0;
   top: 0;
+
+  transition: 0.6s;
+
+  height: 100vh;
+  width: 30%;
+  background-color: #031435;
+  @include padding(0px, 50px, 0px, 50px);
 
   &__header {
     display: flex;
@@ -44,13 +53,8 @@
   }
 
   &--show {
-    display: block;
+    transform: translateX(0%);
   }
-
-  height: 100vh;
-  width: 30%;
-  background-color: #031435;
-  @include padding(0px, 50px, 0px, 50px);
 
   &__links {
     display: flex;
@@ -66,6 +70,15 @@
     color: $textColorSecondary;
     @include font-size(18px);
     @include padding(6px, 15px, 6px, 15px);
+    @include margin(10px);
+
+
+    &:hover {
+      //border: 2px solid $textColorSecondary;
+      //box-shadow: 1px 1px 4px $colorShadow;
+      background: $textColorSecondary;
+      color: $textColorPrimary;
+    }
 
     &:last-child {
       @include margin(30px);
@@ -81,7 +94,7 @@
 
   &__logo {
     display: flex;
-    width: 25%;
+    height: 25%;
     align-self: center;
     object-fit: contain;
   }
