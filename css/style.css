@@ -777,6 +777,12 @@ html {
   padding-right: 15px;
   padding-bottom: 6px;
   padding-left: 15px;
+  margin: 10px 0px 0px 0px;
+}
+
+.nav__link:hover {
+  background: #FFFFFF;
+  color: #000000;
 }
 
 .nav__link:last-child {
@@ -792,7 +798,7 @@ html {
 
 .nav__logo {
   display: flex;
-  width: 25%;
+  height: 25%;
   align-self: center;
   object-fit: contain;
 }
@@ -844,7 +850,7 @@ html {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  z-index: 222;
+  z-index: 2;
 }
 
 .menu__title {
@@ -2873,6 +2879,10 @@ html {
     padding-right: 1.040221914vw;
     padding-bottom: 0.4160887656vw;
     padding-left: 1.040221914vw;
+  }
+
+  .nav__link {
+    margin: 0.693481276vw 0vw 0vw 0vw;
   }
 
   .nav__link:last-child {

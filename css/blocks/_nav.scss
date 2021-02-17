@@ -70,6 +70,15 @@
     color: $textColorSecondary;
     @include font-size(18px);
     @include padding(6px, 15px, 6px, 15px);
+    @include margin(10px);
+
+
+    &:hover {
+      //border: 2px solid $textColorSecondary;
+      //box-shadow: 1px 1px 4px $colorShadow;
+      background: $textColorSecondary;
+      color: $textColorPrimary;
+    }
 
     &:last-child {
       @include margin(30px);
@@ -85,7 +94,7 @@
 
   &__logo {
     display: flex;
-    width: 25%;
+    height: 25%;
     align-self: center;
     object-fit: contain;
   }
