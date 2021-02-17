@@ -1425,12 +1425,10 @@ html {
   display: flex;
   flex-direction: row;
   margin: 50px 0px 0px 0px;
-  width: 34%;
   height: 100%;
 }
 
 .quote__text {
-  display: flex;
   align-items: center;
   font-style: italic;
   color: #FFFFFF;
@@ -1448,6 +1446,8 @@ html {
 
 .quote:after,
 .quote:before {
+  height: 10px;
+  line-height: 0%;
   font-family: "Helvetica";
   color: #FFFFFF;
   font-size: 72px;
@@ -4272,10 +4272,6 @@ html {
     padding-left: 0vw;
   }
 
-  .quote {
-    width: 50%;
-  }
-
   .quote__text {
     font-size: 1.4300306435vw;
   }
@@ -4775,10 +4771,6 @@ html {
   .component__inner {
     margin-top: 2.0833333333vw;
     width: 100%;
-  }
-
-  .quote {
-    width: 70%;
   }
 
   .stages-slider__submit {
