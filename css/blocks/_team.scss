@@ -82,15 +82,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
-    &:nth-child(1) {
-      width: 32.2674418605%;
-    }
-
-
-    &:nth-child(2) {
-      width: 66.0523763337%;
-    }
+    width: 32.2674418605%;
   }
 
   &__img {
