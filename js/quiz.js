@@ -84,16 +84,25 @@ function initQuiz(quiz) {
     };
 
     const nextStep = (answer) => {
-        addAnswer(answer);
-        insertAnswers(buttons[++step].answers);
-        insertQuestion(buttons[step].question);
-        _stepWrapper.classList = `progress-bar_step-${step}`;
-        _number.innerText = `Вопрос ${step + 1} из 5`;
+        if (step + 1 < buttons.length) {
+            addAnswer(answer);
+            insertAnswers(buttons[++step].answers);
+            insertQuestion(buttons[step].question);
+            _stepWrapper.classList = `progress-bar_step-${step}`;
+            _number.innerText = `Вопрос ${step + 1} из ${buttons.length}`;
+        } else {
+            endQuiz();
+        }
     };
 
-    const endQuiz = () => {};
+    const endQuiz = () => {
+        //пиши сюда
 
-    const sendAnswers = () => {};
+        console.log('end');
+        sendAnswers();
+    };
+
+    const sendAnswers = (body) => {};
 
     insertAnswers(buttons[step].answers);
 }
