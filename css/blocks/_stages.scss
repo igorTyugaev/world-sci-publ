@@ -29,6 +29,9 @@
   &__column {
     &:nth-child(1) {
       width: 58.9147286822%;
+      @include padding(38px, 28px, 28px, 28px);
+      background: $popupBackground;
+      @extend %s-border;
     }
 
     &:nth-child(2) {
@@ -98,6 +101,9 @@
       color: $textColorSecondary;
     }
 
-
+    &--active {
+      background-color: #001437;
+      color: $textColorSecondary;
+    }
   }
 }

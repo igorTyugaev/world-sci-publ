@@ -18,9 +18,9 @@
 .profile-nav,
 .review-card,
 .review__header,
-.slider,
 .slider-team__tab,
-.stage-gird__item {
+.stage-gird__item,
+.stages__column:first-child {
   box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
   border-radius: 6px;
 }
@@ -49,9 +49,9 @@
 .profile-nav,
 .review-card,
 .review__header,
-.slider,
 .slider-team__tab,
-.stage-gird__item {
+.stage-gird__item,
+.stages__column:first-child {
   box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
   border-radius: 6px;
 }
@@ -1453,33 +1453,42 @@ html {
   font-size: 72px;
 }
 
-.slider {
+.stages-slider {
   width: 100%;
-  background: #FFFFFF;
-  padding-top: 38px;
-  padding-right: 28px;
-  padding-bottom: 28px;
-  padding-left: 28px;
+  overflow: hidden;
+  height: 100%;
 }
 
-.slider__title {
+.stages-slider__wrapper {
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.6s ease;
+  width: 100%;
+}
+
+.stages-slider__item {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.stages-slider__title {
   font-family: "HelveticaBold";
   font-size: 18px;
   margin: 40px 0px 0px 0px;
 }
 
-.slider__text {
+.stages-slider__text {
   font-size: 14px;
 }
 
-.slider__text:not(:first-child) {
+.stages-slider__text:not(:first-child) {
   padding-top: 20px;
   padding-right: 0px;
   padding-bottom: 0px;
   padding-left: 0px;
 }
 
-.slider__link {
+.stages-slider__link {
   display: block;
   margin: 46px 0px 0px 0px;
   font-size: 14px;
@@ -1488,7 +1497,7 @@ html {
   color: #36ADE0;
 }
 
-.slider__submit {
+.stages-slider__submit {
   margin: 0 auto;
   display: block;
   width: 50%;
@@ -1550,6 +1559,11 @@ html {
 
 .stages__column:first-child {
   width: 58.9147286822%;
+  padding-top: 38px;
+  padding-right: 28px;
+  padding-bottom: 28px;
+  padding-left: 28px;
+  background: #FFFFFF;
 }
 
 .stages__column:nth-child(2) {
@@ -1591,6 +1605,11 @@ html {
 }
 
 .stage-gird__item:hover {
+  background-color: #001437;
+  color: #FFFFFF;
+}
+
+.stage-gird__item--active {
   background-color: #001437;
   color: #FFFFFF;
 }
@@ -2665,9 +2684,9 @@ html {
   .profile-nav,
   .review-card,
   .review__header,
-  .slider,
   .slider-team__tab,
-  .stage-gird__item {
+  .stage-gird__item,
+  .stages__column:first-child {
     border-radius: 0.4160887656vw;
     box-shadow: 0.0693481276vw 0.0693481276vw 0.2773925104vw rgba(0,0,0,0.25);
   }
@@ -2688,9 +2707,9 @@ html {
   .profile-nav,
   .review-card,
   .review__header,
-  .slider,
   .slider-team__tab,
-  .stage-gird__item {
+  .stage-gird__item,
+  .stages__column:first-child {
     border-radius: 0.4160887656vw;
     box-shadow: 0.0693481276vw 0.0693481276vw 0.2773925104vw rgba(0,0,0,0.25);
   }
@@ -3179,45 +3198,38 @@ html {
     font-size: 4.9930651872vw;
   }
 
-  .slider {
-    padding-top: 2.6352288488vw;
-    padding-right: 1.9417475728vw;
-    padding-bottom: 1.9417475728vw;
-    padding-left: 1.9417475728vw;
-  }
-
-  .slider__title {
+  .stages-slider__title {
     font-size: 1.2482662968vw;
   }
 
-  .slider__title {
+  .stages-slider__title {
     margin: 2.773925104vw 0vw 0vw 0vw;
   }
 
-  .slider__text {
+  .stages-slider__text {
     font-size: 0.9708737864vw;
   }
 
-  .slider__text:not(:first-child) {
+  .stages-slider__text:not(:first-child) {
     padding-top: 1.386962552vw;
     padding-right: 0vw;
     padding-bottom: 0vw;
     padding-left: 0vw;
   }
 
-  .slider__link {
+  .stages-slider__link {
     margin: 3.1900138696vw 0vw 0vw 0vw;
   }
 
-  .slider__link {
+  .stages-slider__link {
     font-size: 0.9708737864vw;
   }
 
-  .slider__submit {
+  .stages-slider__submit {
     font-size: 0.9708737864vw;
   }
 
-  .slider__submit {
+  .stages-slider__submit {
     margin-top: 3.46740638vw;
   }
 
@@ -3255,6 +3267,13 @@ html {
 
   .stages__content {
     margin: 1.2482662968vw 0vw 0vw 0vw;
+  }
+
+  .stages__column:first-child {
+    padding-top: 2.6352288488vw;
+    padding-right: 1.9417475728vw;
+    padding-bottom: 1.9417475728vw;
+    padding-left: 1.9417475728vw;
   }
 
   .stage-gird__title {
@@ -3834,9 +3853,9 @@ html {
   .profile-nav,
   .review-card,
   .review__header,
-  .slider,
   .slider-team__tab,
-  .stage-gird__item {
+  .stage-gird__item,
+  .stages__column:first-child {
     border-radius: 0.6128702758vw;
     box-shadow: 0.102145046vw 0.102145046vw 0.4085801839vw rgba(0,0,0,0.25);
   }
@@ -3857,9 +3876,9 @@ html {
   .profile-nav,
   .review-card,
   .review__header,
-  .slider,
   .slider-team__tab,
-  .stage-gird__item {
+  .stage-gird__item,
+  .stages__column:first-child {
     border-radius: 0.6128702758vw;
     box-shadow: 0.102145046vw 0.102145046vw 0.4085801839vw rgba(0,0,0,0.25);
   }
@@ -4253,37 +4272,30 @@ html {
     font-size: 7.3544433095vw;
   }
 
-  .slider {
-    padding-top: 3.8815117467vw;
-    padding-right: 2.860061287vw;
-    padding-bottom: 2.860061287vw;
-    padding-left: 2.860061287vw;
-  }
-
-  .slider__title {
+  .stages-slider__title {
     font-size: 1.8386108274vw;
   }
 
-  .slider__text {
+  .stages-slider__text {
     font-size: 1.4300306435vw;
   }
 
-  .slider__text:not(:first-child) {
+  .stages-slider__text:not(:first-child) {
     padding-top: 2.0429009193vw;
     padding-right: 0vw;
     padding-bottom: 0vw;
     padding-left: 0vw;
   }
 
-  .slider__link {
+  .stages-slider__link {
     font-size: 1.4300306435vw;
   }
 
-  .slider__submit {
+  .stages-slider__submit {
     font-size: 1.4300306435vw;
   }
 
-  .slider__submit {
+  .stages-slider__submit {
     margin-top: 5.1072522983vw;
   }
 
@@ -4313,6 +4325,13 @@ html {
     padding-right: 3.3707865169vw;
     padding-bottom: 1.3278855975vw;
     padding-left: 0vw;
+  }
+
+  .stages__column:first-child {
+    padding-top: 3.8815117467vw;
+    padding-right: 2.860061287vw;
+    padding-bottom: 2.860061287vw;
+    padding-left: 2.860061287vw;
   }
 
   .stage-gird__title {
@@ -4749,7 +4768,7 @@ html {
     width: 70%;
   }
 
-  .slider__submit {
+  .stages-slider__submit {
     margin-top: 6.5104166667vw;
   }
 
@@ -4871,9 +4890,9 @@ html {
   .profile-nav,
   .review-card,
   .review__header,
-  .slider,
   .slider-team__tab,
-  .stage-gird__item {
+  .stage-gird__item,
+  .stages__column:first-child {
     border-radius: 1.0416666667vw;
     box-shadow: 0.1736111111vw 0.1736111111vw 0.6944444444vw rgba(0,0,0,0.25);
   }
@@ -4894,9 +4913,9 @@ html {
   .profile-nav,
   .review-card,
   .review__header,
-  .slider,
   .slider-team__tab,
-  .stage-gird__item {
+  .stage-gird__item,
+  .stages__column:first-child {
     border-radius: 1.0416666667vw;
     box-shadow: 0.1736111111vw 0.1736111111vw 0.6944444444vw rgba(0,0,0,0.25);
   }
@@ -5074,19 +5093,19 @@ html {
     font-size: 12.5vw;
   }
 
-  .slider__title {
+  .stages-slider__title {
     font-size: 3.125vw;
   }
 
-  .slider__text {
+  .stages-slider__text {
     font-size: 2.4305555556vw;
   }
 
-  .slider__link {
+  .stages-slider__link {
     font-size: 2.4305555556vw;
   }
 
-  .slider__submit {
+  .stages-slider__submit {
     font-size: 2.4305555556vw;
   }
 
