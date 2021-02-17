@@ -1674,6 +1674,19 @@ html {
   left: -6vw;
 }
 
+.p-slider {
+  min-height: 40vh;
+}
+
+.p-slider__img {
+  display: none;
+  object-fit: contain;
+}
+
+.p-slider__img--show {
+  display: block;
+}
+
 .p-footer {
   display: flex;
   flex-direction: row;

@@ -60,6 +60,16 @@
 }
 
 .p-slider {
+  min-height: 40vh;
+
+  &__img {
+    display: none;
+    object-fit: contain;
+
+    &--show {
+      display: block;
+    }
+  }
 }
 
 .p-footer {
