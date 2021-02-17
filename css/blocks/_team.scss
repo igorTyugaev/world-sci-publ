@@ -21,7 +21,8 @@
     @include margin(34px);
   }
 
-  &__slider {}
+  &__slider {
+  }
 
   &__background {
     position: absolute;
@@ -66,18 +67,30 @@
   }
 
   &__body {
+    width: 100%;
+    @include margin(-5px);
+  }
+
+  &__item {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    @include margin(-5px);
   }
 
   &__column {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    width: 32.2674418605%;
+
+    &:nth-child(1) {
+      width: 32.2674418605%;
+    }
+
+
+    &:nth-child(2) {
+      width: 66.0523763337%;
+    }
   }
 
   &__img {
@@ -86,6 +99,7 @@
     object-fit: cover;
     object-position: center;
   }
+
 
   &__inner {
     background-color: $popupBackground;

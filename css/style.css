@@ -2033,18 +2033,29 @@ html {
 }
 
 .slider-team__body {
+  width: 100%;
+  margin: -5px 0px 0px 0px;
+}
+
+.slider-team__item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  margin: -5px 0px 0px 0px;
 }
 
 .slider-team__column {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+.slider-team__column:first-child {
   width: 32.2674418605%;
+}
+
+.slider-team__column:nth-child(2) {
+  width: 66.0523763337%;
 }
 
 .slider-team__img {

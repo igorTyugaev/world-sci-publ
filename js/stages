@@ -1,160 +1,71 @@
-let map = function (x, in_min, in_max, out_min, out_max) {
-    return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-}
+const _slider = document.getElementById('stages-slider');
+const _sliderNav = document.getElementById('stages-slider-nav');
 
-let multiItemsSlider = (function () {
-    return function (selector, config) {
-        let
-            _mainElement = document.querySelector(selector), // основный элемент блока
-            _csliderWrapper = _mainElement.querySelector('.stages-slider__wrapper'), // обертка для .cslider-item
+(function initSlider(_slider, _sliderNav) {
+    const _sliderInner = _slider.querySelector('.stages-slider__wrapper');
+    const _sliderControls = _sliderNav.querySelector('.stage-gird__inner');
+    const _leftArrow = _slider.querySelector('.stages-slider__control-left');
+    const _rightArrow = _slider.querySelector('.stages-slider__control-right');
+    const _sliderTitle = _slider.querySelector('.navbar-slider__title');
 
-            _stageItems = document.getElementsByClassName('stage-gird__item'),
+    const sliderNodes = _sliderInner.children;
+    const countSliders = sliderNodes.length;
+    const slideWidth = sliderNodes[0].clientWidth;
 
-            _csliderTitle = _mainElement.querySelector('.navbar-slider__title'),
+    let step = 0;
+    const controls = [];
 
-            _csliderItems = _mainElement.querySelectorAll('.stages-slider__item'), // элементы (.cslider-item)
-            _csliderControls = _mainElement.querySelectorAll('.stages-slider__control'), // элементы управления
-            _csliderControlLeft = _mainElement.querySelector('.stages-slider__control-left'), // кнопка "LEFT"
-            _csliderControlRight = _mainElement.querySelector('.stages-slider__control-right'), // кнопка "RIGHT"
-            _wrapperWidth = parseFloat(getComputedStyle(_csliderWrapper).width), // ширина обёртки
-            _itemWidth = parseFloat(getComputedStyle(_csliderItems[0]).width), // ширина одного элемента
-            _positionLeftItem = 0, // позиция левого активного элемента
-            _transform = 0, // значение транфсофрмации .cslider_wrapper
-            _step = _itemWidth / _wrapperWidth * 100, // величина шага (для трансформации)
-            _stageItemsDict = new Map(),
-            _items = []; // массив элементов
+    const initSlider = () => {
+        changeTitle(step + 1);
 
-        Array.from(_stageItems).forEach((item) => {
-            _stageItemsDict.set(parseInt(item.innerHTML.trim()), item);
-        });
+        for (let i = 0; i < countSliders; i++) {
+            const a = document.createElement('a');
 
-        // наполнение массива _items
-        _csliderItems.forEach(function (item, index) {
-            _items.push({item: item, position: index, transform: 0});
-        });
-
-        let position = {
-            getItemMin: function () {
-                let indexItem = 0;
-                _items.forEach(function (item, index) {
-                    if (item.position < _items[indexItem].position) {
-                        indexItem = index;
-                    }
-                });
-                return indexItem;
-            },
-            getItemMax: function () {
-                let indexItem = 0;
-                _items.forEach(function (item, index) {
-                    if (item.position > _items[indexItem].position) {
-                        indexItem = index;
-                    }
-                });
-                return indexItem;
-            },
-            getMin: function () {
-                return _items[position.getItemMin()].position;
-            },
-            getMax: function () {
-                return _items[position.getItemMax()].position;
-            }
-        }
-
-        let _transformItem = function (direction) {
-            let nextItem;
-
-            if (direction === 'right') {
-                _positionLeftItem++;
-                if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) > position.getMax()) {
-                    nextItem = position.getItemMin();
-                    _items[nextItem].position = position.getMax() + 1;
-                    _items[nextItem].transform += _items.length * 100;
-                    _items[nextItem].item.style.transform = 'translateX(' + _items[nextItem].transform + '%)';
-                    console.log("Переполнение справа");
-                }
-                _transform -= _step;
-            }
-            if (direction === 'left') {
-                _positionLeftItem--;
-                if (_positionLeftItem < position.getMin()) {
-                    nextItem = position.getItemMax();
-                    _items[nextItem].position = position.getMin() - 1;
-                    _items[nextItem].transform -= _items.length * 100;
-                    _items[nextItem].item.style.transform = 'translateX(' + _items[nextItem].transform + '%)';
-                    console.log("Переполнение слева");
-                }
-                _transform += _step;
-            }
-
-            _csliderWrapper.style.transform = 'translateX(' + _transform + '%)';
-
-
-            let pos = Math.abs(_positionLeftItem) % _items.length;
-            pos = typeof nextItem !== 'undefined' ? nextItem : pos;
-            pos = map(pos, 0, (_items.length - 1), 1, _items.length)
-
-            _csliderTitle.innerHTML = (pos + ' этап');
-            if (direction === 'right') {
-                if (pos === 1) {
-                    _stageItemsDict
-                        .get(_items.length)
-                        .classList.remove("stage-gird__item--active")
-
-                    _stageItemsDict
-                        .get(pos)
-                        .classList.add("stage-gird__item--active")
-                } else {
-                    _stageItemsDict.get(pos - 1).classList.remove("stage-gird__item--active")
-                    _stageItemsDict.get(pos).classList.add("stage-gird__item--active")
-                }
-            }
-
-            if (direction === 'left') {
-                if (pos === _items.length) {
-                    _stageItemsDict
-                        .get(pos)
-                        .classList.add("stage-gird__item--active")
-
-                    _stageItemsDict
-                        .get(1)
-                        .classList.remove("stage-gird__item--active")
-                } else {
-                    _stageItemsDict.get(pos + 1).classList.remove("stage-gird__item--active")
-                    _stageItemsDict.get(pos).classList.add("stage-gird__item--active")
-                }
-            }
-
-        }
-
-        // обработчик события click для кнопок "назад" и "вперед"
-        let _controlClick = function (e) {
-            if (e.target.classList.contains('stages-slider__control')) {
-                e.preventDefault();
-                let direction = e.target.classList.contains('stages-slider__control-right') ? 'right' : 'left';
-                _transformItem(direction);
-            }
-        };
-
-        let _setUpListeners = function () {
-            // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
-            _csliderControls.forEach(function (item) {
-                item.addEventListener('click', _controlClick);
+            a.className = 'stage-gird__item';
+            a.innerText = i + 1;
+            if (i === step) setActiveControl(a);
+            a.addEventListener('click', (e) => {
+                setActiveControl(e.target);
+                setActiveSlide(i);
             });
+
+            controls.push(a);
+            _sliderControls.append(a);
         }
+    };
 
-        // инициализация
-        _setUpListeners();
+    const setOffset = (index) => {
+        _sliderInner.style.transform = `translateX(-${index * slideWidth}px)`;
+    };
 
-        return {
-            right: function () { // метод right
-                _transformItem('right');
-            },
-            left: function () { // метод left
-                _transformItem('left');
-            }
-        }
+    const changeTitle = (newSliderIndex) => {
+        _sliderTitle.innerText = `${newSliderIndex} этап`;
+    };
 
-    }
-}());
+    const setActiveControl = (activeControl) => {
+        controls.forEach((item) => {
+            item.classList.remove('stage-gird__item--active');
+        });
+        activeControl.classList.add('stage-gird__item--active');
+    };
 
-let cslider = multiItemsSlider('.stages-slider')
+    const setActiveControlByIndex = (index) => {
+        controls.forEach((item) => {
+            item.classList.remove('stage-gird__item--active');
+        });
+        controls[index].classList.add('stage-gird__item--active');
+    };
+
+    const setActiveSlide = (newSlideIndex) => {
+        step = newSlideIndex;
+        if (newSlideIndex > countSliders - 1) step = 0;
+        if (newSlideIndex < 0) step = countSliders - 1;
+        changeTitle(step + 1);
+        setActiveControlByIndex(step);
+        setOffset(step);
+    };
+
+    _leftArrow.addEventListener('click', () => setActiveSlide(step - 1));
+    _rightArrow.addEventListener('click', () => setActiveSlide(step + 1));
+    initSlider(sliderNodes);
+})(_slider, _sliderNav);
