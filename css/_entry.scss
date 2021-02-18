@@ -9,3 +9,7 @@
 html, body {
   background: $windowBackground;
 }
+
+button, a, input {
+  cursor: pointer;
+}

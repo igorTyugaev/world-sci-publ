@@ -161,6 +161,13 @@
 
     ol > li {
       padding: 8px 0;
+      font-family: $fontFamilyPrimary;
+      @include font-size(15px);
+      color: #9B9B9B;
     }
+  }
+
+  &__item-text {
+
   }
 }
