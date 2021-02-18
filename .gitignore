@@ -285,6 +285,6 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,node,phpstorm,wordpress,windows
 
-index.html
-style.css
-style.css.map
+#index.html
+#style.css
+#style.css.map
