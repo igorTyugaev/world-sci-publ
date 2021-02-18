@@ -233,3 +233,72 @@
 .popup-7 {
 
 }
+
+.pdf-reader {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    flex: 50;
+    width: 100%;
+    background-color: $popupBackground;
+  }
+
+  &__viewer {
+    flex: 508;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__footer {
+    flex: 60;
+    width: 100%;
+    background-color: $popupBackground;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+
+  &__iframe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__close {
+
+  }
+
+  &__btn {
+    border: 1px solid #000000;
+    border-radius: 300px;
+    background-color: #fff;
+    @include padding(12px, 50px, 12px, 50px);
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      color: #fff;
+      background-color: #000;
+    }
+  }
+}
+
+.pdf-download {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    @include font-size(14px);
+  }
+
+  &__img {
+    height: 10%;
+    @include padding(0px, 12px, 0px, 12px);
+  }
+}
