@@ -10,7 +10,7 @@
   }
 
   @include _less-than($bp-md-768) {
-    width: #{get-vw(42px, $bp-md-768)};
+    width: #{get-vw(84px, $bp-md-768)};
   }
 }
 
