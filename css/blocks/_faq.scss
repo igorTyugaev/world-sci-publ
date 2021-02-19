@@ -1,6 +1,7 @@
 .faq {
   @include margin(80px);
 
+
   &__title {
     font-family: $fontFamilySecondary;
     @include font-size(36px);

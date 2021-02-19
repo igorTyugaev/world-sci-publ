@@ -1,7 +1,8 @@
 const duration = 0.5;
 
 function initPopUp(button) {
-    const id = 'popup-' + button.dataset.showPopup;
+    const idNumber = button.dataset.showPopup;
+    const id = 'popup-' + idNumber;
 
     const _popUp = document.getElementById(id);
     const _closeButton = _popUp.querySelector('.pop-up__close');
