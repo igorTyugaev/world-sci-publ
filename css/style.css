@@ -4795,6 +4795,10 @@ input {
     font-size: 1.8386108274vw;
   }
 
+  .component__img {
+    object-position: left;
+  }
+
   .component__title {
     font-size: 3.6772216547vw;
   }

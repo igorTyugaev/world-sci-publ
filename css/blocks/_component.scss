@@ -11,6 +11,10 @@
     left: 0;
     height: 100%;
     width: 100%;
+
+    @include _less-than($bp-lg-979) {
+      object-position: left;
+    }
   }
 
   &__title {
