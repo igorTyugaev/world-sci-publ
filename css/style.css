@@ -450,10 +450,6 @@ input {
 .img-frame__labels {
   padding: 0px 12px 12px 12px;
   font-size: 10px;
-  font-family: Roboto;
-  font-style: italic;
-  font-weight: 300;
-  color: #141414;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -461,6 +457,10 @@ input {
 }
 
 .img-frame__label {
+  font-family: Helvetica;
+  font-style: italic;
+  font-size: 12px;
+  color: #FFFFFF;
   display: block;
 }
 
@@ -3230,6 +3230,10 @@ input {
     font-size: 0.693481276vw;
   }
 
+  .img-frame__label {
+    font-size: 0.8321775312vw;
+  }
+
   .feature-card {
     padding: 2.080443828vw 1.6643550624vw 3.3287101248vw 1.1789181692vw;
   }
@@ -4505,6 +4509,10 @@ input {
     font-size: 1.0214504597vw;
   }
 
+  .img-frame__label {
+    font-size: 1.2257405516vw;
+  }
+
   .feature-card {
     padding: 3.064351379vw 2.4514811032vw 4.9029622063vw 1.7364657814vw;
   }
@@ -5592,6 +5600,10 @@ input {
 
   .img-frame__labels {
     font-size: 1.7361111111vw;
+  }
+
+  .img-frame__label {
+    font-size: 2.0833333333vw;
   }
 
   .feature-card__title {
