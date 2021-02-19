@@ -20,6 +20,18 @@
 
     @extend %tmp-button--nav;
 
+    &:hover {
+      border: 2px solid #177840;
+      color: $textColorSecondary;
+      background: #177840;
+    }
+
+    &:active {
+      border: 2px solid #177840;
+      color: $textColorSecondary;
+      background: #0F5C30;
+    }
+
     &-text {
       font-family: $fontFamilyPrimary;
       color: $textColorSecondary;

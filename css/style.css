@@ -370,14 +370,35 @@ input {
   cursor: pointer;
 }
 
+.button--contract {
+  background: transparent;
+  color: #000000;
+}
+
 .button {
   color: #FFFFFF;
   background: #219653;
+}
+
+.button {
+  box-sizing: border-box;
   box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
   border-radius: 24px;
   font-size: 18px;
   text-align: center;
   padding: 12px;
+}
+
+.button:hover {
+  border: transparent;
+  color: #FFFFFF;
+  background: #177840;
+}
+
+.button:active {
+  border: transparent;
+  color: #FFFFFF;
+  background: #0F5C30;
 }
 
 .button--quiz {
@@ -393,11 +414,21 @@ input {
 }
 
 .button--contract {
-  font-family: "Helvetica";
-  font-size: 14px;
   background: #FFFFFF;
   color: #000000;
+  font-size: 14px;
   border-radius: 6px;
+  font-family: "Helvetica";
+}
+
+.button--consultation {
+  background: transparent;
+  color: #FFFFFF;
+  font-family: "Helvetica";
+  font-size: 14px;
+  border: 1px solid #FFFFFF;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
+  border-radius: 34px;
 }
 
 .img-frame__img {
@@ -752,7 +783,7 @@ input {
   top: 0;
   transition: 0.6s;
   height: 100vh;
-  width: 30%;
+  width: 35vw;
   background-color: #031435;
   padding-top: 0px;
   padding-right: 50px;
@@ -846,6 +877,18 @@ input {
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
+}
+
+.header__call:hover {
+  border: 2px solid #177840;
+  color: #FFFFFF;
+  background: #177840;
+}
+
+.header__call:active {
+  border: 2px solid #177840;
+  color: #FFFFFF;
+  background: #0F5C30;
 }
 
 .header__call-text {
@@ -980,17 +1023,6 @@ input {
   display: block;
   width: 75%;
   margin: 0 auto;
-  background: none;
-  padding-top: 15px;
-  padding-right: 24px;
-  padding-bottom: 15px;
-  padding-left: 24px;
-  font-family: "Helvetica";
-  color: #FFFFFF;
-  font-size: 14px;
-  border: 1px solid #FFFFFF;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
-  border-radius: 34px;
 }
 
 .consultation__text {
@@ -2039,6 +2071,7 @@ input {
 .tabs-team__bg-img {
   object-fit: contain;
   height: 80%;
+  align-self: flex-end;
 }
 
 .tabs-team__tab {
@@ -2055,10 +2088,25 @@ input {
   background: #001437;
 }
 
+.tabs-team__tab--show {
+  color: #000000;
+  background: #FFFFFF;
+}
+
+.tabs-team__tab:hover {
+  color: #000000;
+  background: #FFFFFF;
+}
+
+.tabs-team__tab:active {
+  color: #000000;
+  background: #FFFFFF;
+}
+
 .tabs-team__tab span {
   display: block;
   font-family: "HelveticaBold";
-  color: #FFFFFF;
+  color: inherit;
   font-size: 14px;
   text-align: left;
 }
@@ -2081,19 +2129,17 @@ input {
 
 .tabs-team__column {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   width: 32.2674418605%;
 }
 
 .tabs-team__img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
 .tabs-team__inner {
+  align-self: flex-end;
   background-color: #FFFFFF;
   box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
   padding-top: 58px;
@@ -3102,6 +3148,10 @@ input {
     font-size: 0.9708737864vw;
   }
 
+  .button--consultation {
+    font-size: 0.9708737864vw;
+  }
+
   .button {
     box-shadow: 0.0693481276vw 0.0693481276vw 0.2773925104vw rgba(0,0,0,0.25);
     border-radius: 1.6643550624vw;
@@ -3253,17 +3303,6 @@ input {
     padding-right: 0vw;
     padding-bottom: 2.3578363384vw;
     padding-left: 0vw;
-  }
-
-  .consultation__btn {
-    padding-top: 1.040221914vw;
-    padding-right: 1.6643550624vw;
-    padding-bottom: 1.040221914vw;
-    padding-left: 1.6643550624vw;
-  }
-
-  .consultation__btn {
-    font-size: 0.9708737864vw;
   }
 
   .consultation__text {
@@ -4281,6 +4320,10 @@ input {
 }
 
 @media (max-width:1170px) {
+  .nav {
+    width: 42vw;
+  }
+
   .promo__title {
     padding-right: 15.3846153846vw;
   }
@@ -4381,6 +4424,10 @@ input {
   }
 
   .button--contract {
+    font-size: 1.4300306435vw;
+  }
+
+  .button--consultation {
     font-size: 1.4300306435vw;
   }
 
@@ -4499,17 +4546,6 @@ input {
     padding-right: 0vw;
     padding-bottom: 3.4729315628vw;
     padding-left: 0vw;
-  }
-
-  .consultation__btn {
-    padding-top: 1.5321756895vw;
-    padding-right: 2.4514811032vw;
-    padding-bottom: 1.5321756895vw;
-    padding-left: 2.4514811032vw;
-  }
-
-  .consultation__btn {
-    font-size: 1.4300306435vw;
   }
 
   .consultation__text {
@@ -5494,6 +5530,10 @@ input {
     font-size: 2.4305555556vw;
   }
 
+  .button--consultation {
+    font-size: 2.4305555556vw;
+  }
+
   .img-frame__labels {
     font-size: 1.7361111111vw;
   }
@@ -5528,10 +5568,6 @@ input {
 
   .menu__title {
     font-size: 2.0833333333vw;
-  }
-
-  .consultation__btn {
-    font-size: 2.4305555556vw;
   }
 
   .consultation__text {

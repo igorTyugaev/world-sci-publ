@@ -58,16 +58,6 @@
     display: block;
     width: 75%;
     margin: 0 auto;
-    background: none;
-    @include padding(15px, 24px, 15px, 24px);
-
-    font-family: $fontFamilyPrimary;
-    color: $textColorSecondary;
-    @include font-size(14px);
-
-    border: 1px solid $textColorSecondary;
-    box-shadow: 1px 1px 4px $colorShadow;
-    border-radius: 34px;
   }
 
   &__text {

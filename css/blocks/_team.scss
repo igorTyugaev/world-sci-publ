@@ -47,11 +47,27 @@
   &__bg-img {
     object-fit: contain;
     height: 80%;
+    align-self: flex-end;
   }
 
   &__tab {
     width: 32.2674418605%;
     text-decoration: none;
+
+    &--show {
+      color: $textColorPrimary;
+      background: $textColorSecondary;
+    }
+
+    &:hover {
+      color: $textColorPrimary;
+      background: $textColorSecondary;
+    }
+
+    &:active {
+      color: $textColorPrimary;
+      background: $textColorSecondary;
+    }
 
     font-family: $fontFamilySecondary;
     color: $textColorSecondary;
@@ -65,7 +81,7 @@
     span {
       display: block;
       font-family: $fontFamilySecondary;
-      color: $textColorSecondary;
+      color: inherit;
       @include font-size(14px);
       text-align: left;
     }
@@ -89,23 +105,21 @@
 
   &__column {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     width: 32.2674418605%;
   }
 
   &__img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
     object-position: center;
   }
 
-
   &__inner {
+    align-self: flex-end;
     background-color: $popupBackground;
     box-shadow: 1px 1px 4px $colorShadow;
     @include padding(58px, 27px, 58px, 27px);
+    //transform: translateX(-4.92%);
   }
 
   &__text {
