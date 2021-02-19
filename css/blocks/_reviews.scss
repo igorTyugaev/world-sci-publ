@@ -27,6 +27,7 @@
     width: 100%;
     padding-top: 56.25%; /* 16:9 Aspect Ratio */
     position: relative;
+    display: none;
 
     & iframe {
       position: absolute;
@@ -37,6 +38,10 @@
 
       width: inherit;
       height: 100%;
+    }
+
+    &--show {
+      display: block;
     }
   }
 
@@ -77,6 +82,12 @@
 }
 
 .review {
+  display: none;
+
+  &--show {
+    display: block;
+  }
+
   &__header {
     background: $popupBackground;
     @extend %s-border;
@@ -92,10 +103,18 @@
   }
 
   &__avatar {
-    border-radius: 50%;
-    height: 50%;
-    overflow: hidden;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+    width: 12.5%;
+
+    &-img {
+      border-radius: 50%;
+      overflow: hidden;
+      filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+
+      display: block;
+      width: 100%;
+      object-position: center;
+      object-fit: cover;
+    }
   }
 
   &__name {
@@ -165,24 +184,38 @@
 .review-card {
   background: $popupBackground;
   @extend %s-border;
+  display: none;
+
+  &--show {
+    //display: block;
+    display: flex;
+    flex-direction: column;
+  }
 
   &__header {
+    flex: 96;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
 
     border-bottom: 2px solid #EBEBEB;
     @include padding(14px, 14px, 14px, 14px);
   }
 
   &__avatar {
-    height: 50%;
-    border-radius: 50%;
-    overflow: hidden;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+    width: 30%;
   }
 
   &__img {
+
+    border-radius: 50%;
+    overflow: hidden;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+
+    display: block;
+    width: 100%;
+    object-position: center;
     object-fit: cover;
   }
 
@@ -223,6 +256,7 @@
   }
 
   &__statistics {
+    flex: 58;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
