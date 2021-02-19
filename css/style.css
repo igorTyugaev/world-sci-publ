@@ -865,14 +865,19 @@ input {
   z-index: 2;
   position: fixed;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 12px;
   padding-right: 50px;
-  padding-bottom: 20px;
+  padding-bottom: 12px;
   padding-left: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.header--show {
+  background-color: rgba(0,20,55,0.96);
+  transition: background-color ease-in-out 1s;
 }
 
 .header__call {
@@ -3288,9 +3293,9 @@ input {
   }
 
   .header {
-    padding-top: 1.386962552vw;
+    padding-top: 0.8321775312vw;
     padding-right: 3.46740638vw;
-    padding-bottom: 1.386962552vw;
+    padding-bottom: 0.8321775312vw;
     padding-left: 3.46740638vw;
   }
 
@@ -4539,9 +4544,9 @@ input {
   }
 
   .header {
-    padding-top: 2.0429009193vw;
+    padding-top: 1.2257405516vw;
     padding-right: 5.1072522983vw;
-    padding-bottom: 2.0429009193vw;
+    padding-bottom: 1.2257405516vw;
     padding-left: 5.1072522983vw;
   }
 

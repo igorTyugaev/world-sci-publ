@@ -4,11 +4,17 @@
   z-index: $z-index-menu;
   position: fixed;
   width: 100%;
-  @include padding(20px, 50px, 20px, 50px);
+  @include padding(12px, 50px, 12px, 50px);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  &--show {
+    background-color: rgba(0, 20, 55, 0.96);
+    //background-color: rgba(33, 150, 83, 0.96);
+    transition: background-color ease-in-out 1s;
+  }
 
 
   &__call {
