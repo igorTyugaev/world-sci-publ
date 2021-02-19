@@ -1,4 +1,8 @@
-<svg width="74" height="5" viewBox="0 0 74 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.074707" y="0.973633" width="37.5207" height="1.01407" rx="0.507037" transform="rotate(4.22774 0.074707 0.973633)" fill="white"/>
-<rect width="37.5207" height="1.01407" rx="0.507037" transform="matrix(-0.997279 0.073721 0.073721 0.997279 73.9253 0.973633)" fill="white"/>
+<svg width="74" height="5" viewBox="0 0 74 5" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.074707" y="0.973633" width="37.5207" height="1.01407" rx="0.507037"
+          transform="rotate(4.22774 0.074707 0.973633)" fill="white"/>
+    <rect width="37.5207" height="1.01407" rx="0.507037"
+          transform="matrix(-0.997279 0.073721 0.073721 0.997279 73.9253 0.973633)"
+          fill="white"/>
 </svg>

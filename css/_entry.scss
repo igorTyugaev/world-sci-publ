@@ -10,6 +10,10 @@ html, body {
   background: $windowBackground;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 button, a, input {
   cursor: pointer;
 }

@@ -364,6 +364,10 @@ html {
   background: #F5F5F5;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a,
 button,
 input {
@@ -1067,6 +1071,11 @@ input {
 .scroll-bar__btn {
   background: none;
   border: none;
+  animation: eye 2.5s cubic-bezier(0.1,0.25,0.1,1) 0s infinite alternate both;
+}
+
+.scroll-bar__btn:hover {
+  transform: scale(1.5);
 }
 
 .scroll-bar__img {
