@@ -88,7 +88,7 @@
     justify-content: space-between;
     z-index: $z-index-content;
     height: 100%;
-    width: 80%;
+    width: 90%;
   }
 
   &__title {
@@ -100,6 +100,7 @@
   }
 
   &__text {
+    line-height: 100%;
     @include font-size(12px);
   }
 

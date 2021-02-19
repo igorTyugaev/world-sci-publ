@@ -1948,7 +1948,7 @@ input {
   justify-content: space-between;
   z-index: 1;
   height: 100%;
-  width: 80%;
+  width: 90%;
 }
 
 .audit-cart__title {
@@ -1960,6 +1960,7 @@ input {
 }
 
 .audit-cart__text {
+  line-height: 100%;
   font-size: 12px;
 }
 
@@ -2273,11 +2274,13 @@ input {
 .card-profile__logo {
   align-self: center;
   margin: 12px 0px 0px 0px;
+  width: 54%;
 }
 
 .card-profile__logo-img {
-  box-sizing: border-box;
+  width: 100%;
   border-radius: 50%;
+  overflow: hidden;
   object-fit: cover;
   object-position: center;
   border: 5px solid #DEDEDE;
