@@ -901,6 +901,7 @@ input {
   display: flex;
   flex-direction: row;
   align-items: center;
+  color: #FFFFFF;
 }
 
 .menu__burger {
@@ -909,14 +910,20 @@ input {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  cursor: pointer;
   z-index: 2;
 }
 
 .menu__title {
+  display: block;
   text-transform: capitalize;
-  color: #FFFFFF;
+  color: inherit;
   font-size: 12px;
   margin: 0px 0px 0px 9px;
+}
+
+.menu__title--show {
+  display: none;
 }
 
 .burger {

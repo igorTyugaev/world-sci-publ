@@ -44,22 +44,29 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  color: $textColorSecondary;
 
   &__burger {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 
     cursor: pointer;
     z-index: $z-index-menu;
   }
 
   &__title {
+    display: block;
     text-transform: capitalize;
-    color: $textColorSecondary;
+    color: inherit;
     @include font-size(12px);
     @include margin(0px, 0px, 0px, 9px);
+
+    &--show {
+      display: none;
+    }
   }
 }
 
