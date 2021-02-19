@@ -2590,9 +2590,9 @@ input {
   justify-content: space-around;
   border-bottom: 2px solid #EBEBEB;
   padding-top: 14px;
-  padding-right: 14px;
+  padding-right: 12px;
   padding-bottom: 14px;
-  padding-left: 14px;
+  padding-left: 7px;
 }
 
 .review-card__avatar {
@@ -4150,9 +4150,9 @@ input {
 
   .review-card__header {
     padding-top: 0.9708737864vw;
-    padding-right: 0.9708737864vw;
+    padding-right: 0.8321775312vw;
     padding-bottom: 0.9708737864vw;
-    padding-left: 0.9708737864vw;
+    padding-left: 0.4854368932vw;
   }
 
   .review-card__bio {
@@ -5214,9 +5214,9 @@ input {
 
   .review-card__header {
     padding-top: 1.4300306435vw;
-    padding-right: 1.4300306435vw;
+    padding-right: 1.2257405516vw;
     padding-bottom: 1.4300306435vw;
-    padding-left: 1.4300306435vw;
+    padding-left: 0.7150153218vw;
   }
 
   .review-card__bio {

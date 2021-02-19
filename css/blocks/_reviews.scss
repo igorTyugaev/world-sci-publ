@@ -200,7 +200,7 @@
     justify-content: space-around;
 
     border-bottom: 2px solid #EBEBEB;
-    @include padding(14px, 14px, 14px, 14px);
+    @include padding(14px, 12px, 14px, 7px);
   }
 
   &__avatar {
