@@ -54,7 +54,9 @@
     </a>
 
 </header>
-<section class="consultation">
+<section class="consultation scroll-indicator"
+         id="consultation"
+         data-scroll-indicator-title="First Section">
 
     <img class="consultation__logo"
          src="./media/logo_flag.svg"
@@ -100,7 +102,7 @@
          alt="group_photo">
 
 </section>
-<section class="cost" id="cost-section">
+<section class="cost scroll-indicator" id="cost-section" data-scroll-indicator-title="First Section">
     <div class="cost__inner container">
 
         <div class="cost__main extended-block">
@@ -329,7 +331,7 @@
                         цели<br>
                         публикации, а мы подберём лучшее решение</h3>
                     <form class="app-form__inner">
-                        <input class="app-form__input"
+                        <input name="phone" class="app-form__input"
                                placeholder="Введите номер телефона"
                                type="text">
                         <button class="app-form__submit button button--submit"
@@ -431,8 +433,8 @@
                         Расскажите о Ваших пожеланиях к журналу и цели
                         публикации, а мы подберём лучшее решение
                     </h3>
-                    <form class="app-form__inner">
-                        <input class="app-form__input"
+                    <form name="12" action="/" class="app-form__inner">
+                        <input name="phone" class="app-form__input"
                                placeholder="Введите номер телефона"
                                type="text">
                         <button class="app-form__submit button button--submit"
@@ -1110,7 +1112,7 @@
 
                 <div class="audit__content">
 
-                    <form class="audit__form audit-form" action="#" method="get">
+                    <form class="audit__form audit-form" action="/" method="get">
 
                         <div class="audit-form__inputs">
                             <input class="audit-form__input"
@@ -1123,7 +1125,7 @@
                                    placeholder="Имя">
                             <input class="audit-form__input"
                                    type="tel"
-                                   name="phone_number"
+                                   name="phone"
                                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                                    placeholder="Номер телефона">
                             <input class="audit-form__input"
@@ -1143,10 +1145,10 @@
                                 чтобы загрузить с компьютера
                                 статью для аудита
                             </span>
-                                <input id="file-upload" type="file"/>
+                                <input name="file" id="file-upload" type="file"/>
                             </div>
 
-                            <button class="button audit-form__btn" name="submit"
+                            <button type="submit" class="button audit-form__btn" name="submit"
                                     data-show-popup="20">
                                 Отправить заявку на бесплатный аудит
                             </button>
@@ -1207,7 +1209,7 @@
                             этапов. Посмотрите, как изменится Ваша статья перед отправкой в
                             журнал
                         </p>
-                        <a href="" class="button audit-cart__link">Открыть пример</a>
+                        <button class="button audit-cart__link" data-show-popup="300">Открыть пример</button>
                     </div>
                     <img src="./media/audit/humaaans-3.svg" alt="human_a"
                          class="audit-cart__img">
@@ -2149,17 +2151,16 @@
             </div>
         </div>
 
-        <form class="faq__form your-question" action="#">
+        <form class="faq__form your-question" action="/">
             <h3 class="your-question__description">
                 Если Вашего вопроса нет в списке, задайте его в форме расположенной ниже.
                 Ответ будет направлен на электронную почту.
             </h3>
             <textarea class="your-question__textarea" rows="10" cols="45" name="text">
             </textarea>
-            <input type="text" class="your-question__email" placeholder="email"/>
-            <button type="submit" class="button your-question__submit">Задать
-                свой
-                вопрос
+            <input name="email" type="text" class="your-question__email" placeholder="email"/>
+            <button type="submit" class="button your-question__submit">
+                Задать свой вопрос
             </button>
         </form>
     </div>
@@ -2253,15 +2254,20 @@
                     чтобы подобрать лучшее решение
                 </p>
 
-                <div class="pop-up__inputs">
-                    <input type="text" class="pop-up__input" placeholder="ФИО">
-                    <input type="text" class="pop-up__input" placeholder="Номер телефона">
-                    <input type="text" class="pop-up__input" placeholder="Промокод">
-                </div>
+                <form action="/">
+                    <div class="pop-up__inputs">
+                        <input name="name" type="text" class="pop-up__input"
+                               placeholder="ФИО">
+                        <input name="phone" class="pop-up__input"
+                               placeholder="Номер телефона">
+                        <input name="coupon" class="pop-up__input" placeholder="Промокод">
+                    </div>
 
-                <button class="pop-up__button" data-show-popup="2" data-read-popup="1">
-                    Перейти к обсуждению
-                </button>
+                    <button type="submit" class="pop-up__button" data-show-popup="2"
+                            data-read-popup="1">
+                        Перейти к обсуждению
+                    </button>
+                </form>
 
                 <p class="pop-up__super-desc">Нажимая на кнопку, вы даете согласие на
                     обработку
@@ -2306,14 +2312,20 @@
                 </p>
 
                 <div class="popup-2__form">
-                    <div class="pop-up__inputs">
-                        <input type="email" class="pop-up__input" placeholder="email">
-                        <input type="text" class="pop-up__input" placeholder="Промокод">
-                    </div>
 
-                    <button class="pop-up__button" data-show-popup="3" data-read-popup="2">
-                        Получить
-                    </button>
+                    <form action="/">
+                        <div class="pop-up__inputs">
+                            <input name="email" type="email" class="pop-up__input"
+                                   placeholder="email">
+                            <input name="coupon" type="text" class="pop-up__input"
+                                   placeholder="Промокод">
+                        </div>
+
+                        <button type="submit" class="pop-up__button" data-show-popup="3"
+                                data-read-popup="2">
+                            Получить
+                        </button>
+                    </form>
 
                     <p class="pop-up__super-desc">
                         Нажимая на кнопку, вы даете согласие на обработку
@@ -2360,25 +2372,30 @@
             </p>
 
             <div class="popup-3__form">
-                <div class="pop-up__inputs">
-                    <input type="text" class="pop-up__input"
-                           placeholder="Выберите базу (Scopus/WoS)">
-                    <input type="file" class="pop-up__input"
-                           placeholder="Загрузить статью">
-                    <input type="text" class="pop-up__input" placeholder="Промокод">
-                    <div class="p-uploader pop-up__input">
-                        <label for="file-upload" class="p-uploader__choose">
-                            <img class="p-uploader__img" src="./media/folder.png"
-                                 alt="uploader-img">
-                        </label>
-                        <span class="p-uploader__text">Загрузить статью</span>
-                        <input id="file-upload" type="file"/>
-                    </div>
-                </div>
 
-                <button class="pop-up__button" data-show-popup="4" data-read-popup="3">
-                    Отправить
-                </button>
+                <form action="/">
+                    <div class="pop-up__inputs">
+                        <input name="scopus" type="text" class="pop-up__input"
+                               placeholder="Выберите базу (Scopus/WoS)">
+                        <input name="file" type="file" class="pop-up__input"
+                               placeholder="Загрузить статью">
+                        <input name="coupon" type="text" class="pop-up__input"
+                               placeholder="Промокод">
+                        <div class="p-uploader pop-up__input">
+                            <label for="file-upload" class="p-uploader__choose">
+                                <img class="p-uploader__img" src="./media/folder.png"
+                                     alt="uploader-img">
+                            </label>
+                            <span class="p-uploader__text">Загрузить статью</span>
+                            <input name="file" id="file-upload" type="file"/>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="pop-up__button" data-show-popup="4"
+                            data-read-popup="3">
+                        Отправить
+                    </button>
+                </form>
 
                 <p class="pop-up__super-desc">
                     Нажимая на кнопку, вы даете согласие на обработку
@@ -2467,9 +2484,11 @@
                 <p class="pop-up__desc">Мы перезвоним Вам, <br>
                     чтобы подобрать лучшее решение </p>
                 <div class="pop-up__inputs">
-                    <input type="text" class="pop-up__input" placeholder="ФИО">
-                    <input type="text" class="pop-up__input" placeholder="Номер телефона">
-                    <input type="text" class="pop-up__input" placeholder="Промокод">
+                    <input name="name" type="text" class="pop-up__input" placeholder="ФИО">
+                    <input name="phone" type="text" class="pop-up__input"
+                           placeholder="Номер телефона">
+                    <input name="coupon" type="text" class="pop-up__input"
+                           placeholder="Промокод">
                 </div>
                 <button class="pop-up__button" data-show-popup="6"
                         data-read-popup="5">Перейти к обсуждению
@@ -2567,13 +2586,13 @@
                 </p>
 
                 <div class="pop-up__inputs">
-                    <input type="text" class="pop-up__input"
+                    <input name="name" type="text" class="pop-up__input"
                            placeholder="ФИО">
-                    <input type="text" class="pop-up__input"
+                    <input name="phone" type="text" class="pop-up__input"
                            placeholder="Номер телефона">
-                    <input type="email" class="pop-up__input"
+                    <input name="email" type="email" class="pop-up__input"
                            placeholder="email">
-                    <input type="text" class="pop-up__input"
+                    <input name="coupon" type="text" class="pop-up__input"
                            placeholder="Промокод">
                 </div>
 
@@ -2681,14 +2700,20 @@
                 </p>
 
                 <div class="popup-2__form">
-                    <div class="pop-up__inputs">
-                        <input type="email" class="pop-up__input" placeholder="email">
-                        <input type="text" class="pop-up__input" placeholder="Промокод">
-                    </div>
 
-                    <button class="pop-up__button" data-show-popup="10" data-read-popup="9">
-                        Получить
-                    </button>
+                    <form action="/">
+                        <div class="pop-up__inputs">
+                            <input name="email" type="email" class="pop-up__input"
+                                   placeholder="email">
+                            <input name="coupon" type="text" class="pop-up__input"
+                                    placeholder="Промокод">
+                        </div>
+
+                        <button type="submit" class="pop-up__button" data-show-popup="10"
+                                data-read-popup="9">
+                            Получить
+                        </button>
+                    </form>
 
                     <p class="pop-up__super-desc">
                         Нажимая на кнопку, вы даете согласие на обработку
@@ -2735,25 +2760,29 @@
             </p>
 
             <div class="popup-3__form">
-                <div class="pop-up__inputs">
-                    <input type="text" class="pop-up__input"
-                           placeholder="Выберите базу (Scopus/WoS)">
-                    <input type="file" class="pop-up__input"
-                           placeholder="Загрузить статью">
-                    <input type="text" class="pop-up__input" placeholder="Промокод">
-                    <div class="p-uploader pop-up__input">
-                        <label for="file-upload" class="p-uploader__choose">
-                            <img class="p-uploader__img" src="./media/folder.png"
-                                 alt="uploader-img">
-                        </label>
-                        <span class="p-uploader__text">Загрузить статью</span>
-                        <input id="file-upload" type="file"/>
-                    </div>
-                </div>
 
-                <button class="pop-up__button" data-show-popup="11" data-read-popup="10">
-                    Отправить
-                </button>
+                <form action="/">
+                    <div class="pop-up__inputs">
+                        <input name="scopus" type="text" class="pop-up__input"
+                               placeholder="Выберите базу (Scopus/WoS)">
+                        <input name="file" type="file" class="pop-up__input"
+                               placeholder="Загрузить статью">
+                        <input name="coupon" type="text" class="pop-up__input" placeholder="Промокод">
+                        <div class="p-uploader pop-up__input">
+                            <label for="file-upload" class="p-uploader__choose">
+                                <img class="p-uploader__img" src="./media/folder.png"
+                                     alt="uploader-img">
+                            </label>
+                            <span class="p-uploader__text">Загрузить статью</span>
+                            <input name="file" id="file-upload" type="file"/>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="pop-up__button" data-show-popup="11"
+                            data-read-popup="10">
+                        Отправить
+                    </button>
+                </form>
 
                 <p class="pop-up__super-desc">
                     Нажимая на кнопку, вы даете согласие на обработку
@@ -2890,9 +2919,10 @@
                 </p>
 
                 <div class="pop-up__inputs">
-                    <input type="text" class="pop-up__input" placeholder="ФИО">
-                    <input type="text" class="pop-up__input" placeholder="Номер телефона">
-                    <input type="text" class="pop-up__input" placeholder="Промокод">
+                    <input name="name" type="text" class="pop-up__input" placeholder="ФИО">
+                    <input name="phone" type="text" class="pop-up__input"
+                           placeholder="Номер телефона">
+                    <input name="coupon" type="text" class="pop-up__input" placeholder="Промокод">
                 </div>
 
                 <button class="pop-up__button" data-show-popup="18" data-read-popup="17">
@@ -3000,15 +3030,19 @@
                 </p>
 
                 <div class="popup-2__form">
-                    <div class="pop-up__inputs">
-                        <input type="email" class="pop-up__input" placeholder="email">
-                        <input type="text" class="pop-up__input" placeholder="Промокод">
-                    </div>
 
-                    <button class="pop-up__button" data-show-popup="13"
-                            data-read-popup="12">
-                        Получить
-                    </button>
+                    <form action="/">
+                        <div class="pop-up__inputs">
+                            <input name="email" type="email" class="pop-up__input" placeholder="email">
+                            <input name="coupon" type="text" class="pop-up__input"
+                                    placeholder="Промокод">
+                        </div>
+
+                        <button type="submit" class="pop-up__button" data-show-popup="13"
+                                data-read-popup="12">
+                            Получить
+                        </button>
+                    </form>
 
                     <p class="pop-up__super-desc">
                         Нажимая на кнопку, вы даете согласие на обработку
@@ -3055,25 +3089,29 @@
             </p>
 
             <div class="popup-3__form">
-                <div class="pop-up__inputs">
-                    <input type="text" class="pop-up__input"
-                           placeholder="Выберите базу (Scopus/WoS)">
-                    <input type="file" class="pop-up__input"
-                           placeholder="Загрузить статью">
-                    <input type="text" class="pop-up__input" placeholder="Промокод">
-                    <div class="p-uploader pop-up__input">
-                        <label for="file-upload" class="p-uploader__choose">
-                            <img class="p-uploader__img" src="./media/folder.png"
-                                 alt="uploader-img">
-                        </label>
-                        <span class="p-uploader__text">Загрузить статью</span>
-                        <input id="file-upload" type="file"/>
-                    </div>
-                </div>
 
-                <button class="pop-up__button" data-show-popup="14" data-read-popup="13">
-                    Отправить
-                </button>
+                <form action="/">
+                    <div class="pop-up__inputs">
+                        <input name="scopus" type="text" class="pop-up__input"
+                               placeholder="Выберите базу (Scopus/WoS)">
+                        <input name="file" type="file" class="pop-up__input"
+                               placeholder="Загрузить статью">
+                        <input name="coupon" type="text" class="pop-up__input" placeholder="Промокод">
+                        <div class="p-uploader pop-up__input">
+                            <label for="file-upload" class="p-uploader__choose">
+                                <img class="p-uploader__img" src="./media/folder.png"
+                                     alt="uploader-img">
+                            </label>
+                            <span class="p-uploader__text">Загрузить статью</span>
+                            <input name="file" id="file-upload" type="file"/>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="pop-up__button" data-show-popup="14"
+                            data-read-popup="13">
+                        Отправить
+                    </button>
+                </form>
 
                 <p class="pop-up__super-desc">
                     Нажимая на кнопку, вы даете согласие на обработку
@@ -3210,9 +3248,10 @@
                 </p>
 
                 <div class="pop-up__inputs">
-                    <input type="text" class="pop-up__input" placeholder="ФИО">
-                    <input type="text" class="pop-up__input" placeholder="Номер телефона">
-                    <input type="text" class="pop-up__input" placeholder="Промокод">
+                    <input name="name" type="text" class="pop-up__input" placeholder="ФИО">
+                    <input name="phone" type="text" class="pop-up__input"
+                           placeholder="Номер телефона">
+                    <input name="coupon" type="text" class="pop-up__input" placeholder="Промокод">
                 </div>
 
                 <button class="pop-up__button" data-show-popup="16" data-read-popup="15">
@@ -3410,9 +3449,10 @@
                 </p>
 
                 <div class="pop-up__inputs">
-                    <input type="text" class="pop-up__input" placeholder="ФИО">
-                    <input type="text" class="pop-up__input" placeholder="Номер телефона">
-                    <input type="text" class="pop-up__input" placeholder="Промокод">
+                    <input name="name" type="text" class="pop-up__input" placeholder="ФИО">
+                    <input name="phone" type="text" class="pop-up__input"
+                           placeholder="Номер телефона">
+                    <input name="coupon" type="text" class="pop-up__input" placeholder="Промокод">
                 </div>
 
                 <button class="pop-up__button" data-show-popup="20" data-read-popup="19">
@@ -3498,9 +3538,10 @@
                 </p>
 
                 <div class="pop-up__inputs">
-                    <input type="text" class="pop-up__input" placeholder="ФИО">
-                    <input type="text" class="pop-up__input" placeholder="Номер телефона">
-                    <input type="text" class="pop-up__input" placeholder="Промокод">
+                    <input name="name" type="text" class="pop-up__input" placeholder="ФИО">
+                    <input name="phone" type="text" class="pop-up__input"
+                           placeholder="Номер телефона">
+                    <input name="coupon" type="text" class="pop-up__input" placeholder="Промокод">
                 </div>
 
                 <button class="pop-up__button" data-show-popup="22" data-read-popup="21">
@@ -3578,7 +3619,7 @@
 
 </section> <!--Хорошего дня-->
 
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script type="text/javascript" src="./js/quiz.js"></script>
 <script type="text/javascript" src="./js/header.js"></script>
 <script type="text/javascript" src="./js/profile.js"></script>
@@ -3588,5 +3629,20 @@
 <script type="text/javascript" src="./js/faq.js"></script>
 <script type="text/javascript" src="./js/consultation.js"></script>
 <script type="text/javascript" src="./js/reviews.js"></script>
+<script type="text/javascript" src="./js/forms.js"></script>
+<!--<script type="text/javascript" src="./js/scrollDots.js"></script>-->
+<!--<script>-->
+<!--    easyScrollDots({-->
+<!--        'fixedNav': false,-->
+<!--        'fixedNavId': '',-->
+<!--        'fixedNavUpward': false,-->
+<!--        'offset': 0-->
+<!--    });-->
+<!--</script>-->
+
+<script>
+    var csrfToken = 228;
+</script>
+
 </body>
 </html>

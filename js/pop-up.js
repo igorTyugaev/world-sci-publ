@@ -1,56 +1,52 @@
 const duration = 0.5;
+let currentShowPopUp = 0;
 
 function initPopUp(button) {
-    const idNumber = button.dataset.showPopup;
-    const id = 'popup-' + idNumber;
+    const numberPopUp = button.dataset.showPopup;
+    const idPopUp = 'popup-' + numberPopUp;
 
-    const _popUp = document.getElementById(id);
+    const _popUp = document.getElementById(idPopUp);
     const _closeButton = _popUp.querySelector('.pop-up__close');
 
 
     button.addEventListener('click', (e) => {
-        if (e.target.hasAttribute("data-read-popup")) {
-            const currentPopUpId = e.target.getAttribute("data-read-popup");
-            scrabbleInputsForm(currentPopUpId);
-            closePopUpById(currentPopUpId, false);
-            openPopUp(_popUp, false);
-        } else {
+        // e.preventDefault();
+
+        if (currentShowPopUp == 0) {
             openPopUp(_popUp, duration);
+            currentShowPopUp = idPopUp;
+        } else {
+            console.log("currentShowPopUp: " + currentShowPopUp);
+            closePopUpById(currentShowPopUp, false);
+            openPopUp(_popUp, false);
+            currentShowPopUp = idPopUp;
         }
-        scrollRemove();
     });
 
     _closeButton.addEventListener('click', () => {
         closePopUp(_popUp, duration);
-        scrollAdd();
-    });
-}
-
-function scrabbleInputsForm(id) {
-    const idScrabble = 'popup-' + id;
-    const _popUpScrabble = document.getElementById(idScrabble);
-    const popUpInputs = _popUpScrabble.querySelectorAll('.pop-up__input');
-
-    popUpInputs.forEach((inputField) => {
-        console.log(inputField.value);
     });
 }
 
 function openPopUp(popUp, duration = false) {
     duration && addAnimation(popUp, duration);
     popUp.classList.add('pop-up_active');
+    scrollRemove();
 }
 
 function closePopUpById(id, duration = false) {
-    const idCloser = 'popup-' + id;
-    const popUpCloser = document.getElementById(idCloser);
+    const popUpCloser = document.getElementById(id);
     duration && addAnimation(popUpCloser, duration);
     popUpCloser.classList.remove('pop-up_active');
+    currentShowPopUp = 0;
+    scrollAdd();
 }
 
 function closePopUp(popUp, duration = false) {
     duration && addAnimation(popUp, duration);
     popUp.classList.remove('pop-up_active');
+    currentShowPopUp = 0;
+    scrollAdd();
 }
 
 function addAnimation(item, duration) {

@@ -1,5 +1,4 @@
 function initQuiz(quiz) {
-    console.log(quiz);
     const buttons = [
         {
             question: '1. В какие сроки Вам необходима публикация?',
@@ -65,7 +64,6 @@ function initQuiz(quiz) {
     const insertAnswers = (activeAnswers) => {
         _answers.innerHTML = '';
         activeAnswers.forEach((element) => {
-            console.log(element);
             const button = document.createElement('button');
             button.classList = 'quizlet__option button button--quiz';
             button.innerText = element;
@@ -80,7 +78,6 @@ function initQuiz(quiz) {
 
     const addAnswer = (answer) => {
         answers.push(answer);
-        console.log(answers);
     };
 
     const nextStep = (answer) => {
@@ -98,7 +95,6 @@ function initQuiz(quiz) {
     const endQuiz = () => {
         //пиши сюда
 
-        console.log('end');
         sendAnswers();
     };
 

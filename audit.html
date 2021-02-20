@@ -21,7 +21,7 @@
 
                 <div class="audit__content">
 
-                    <form class="audit__form audit-form" action="#" method="get">
+                    <form class="audit__form audit-form" action="/" method="get">
 
                         <div class="audit-form__inputs">
                             <input class="audit-form__input"
@@ -34,7 +34,7 @@
                                    placeholder="Имя">
                             <input class="audit-form__input"
                                    type="tel"
-                                   name="phone_number"
+                                   name="phone"
                                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                                    placeholder="Номер телефона">
                             <input class="audit-form__input"
@@ -54,10 +54,10 @@
                                 чтобы загрузить с компьютера
                                 статью для аудита
                             </span>
-                                <input id="file-upload" type="file"/>
+                                <input name="file" id="file-upload" type="file"/>
                             </div>
 
-                            <button class="button audit-form__btn" name="submit"
+                            <button type="submit" class="button audit-form__btn" name="submit"
                                     data-show-popup="20">
                                 Отправить заявку на бесплатный аудит
                             </button>
@@ -118,7 +118,7 @@
                             этапов. Посмотрите, как изменится Ваша статья перед отправкой в
                             журнал
                         </p>
-                        <a href="" class="button audit-cart__link">Открыть пример</a>
+                        <button class="button audit-cart__link" data-show-popup="300">Открыть пример</button>
                     </div>
                     <img src="./media/audit/humaaans-3.svg" alt="human_a"
                          class="audit-cart__img">
