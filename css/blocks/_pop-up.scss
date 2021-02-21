@@ -110,6 +110,10 @@
 
   &__social {
     @include margin(28px);
+
+    .social__link {
+      width: 8%;
+    }
   }
 
   &__iframe {

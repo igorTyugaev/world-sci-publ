@@ -2884,10 +2884,26 @@ input {
   color: #FFFFFF;
 }
 
+.social {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
+.social__link {
+  display: block;
+  padding: 4px;
+  width: 15%;
+}
+
 .social__img {
   object-fit: cover;
   border-radius: 6px;
   overflow: hidden;
+  display: block;
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
 }
 
 .pop-up {
@@ -3005,6 +3021,10 @@ input {
 
 .pop-up__social {
   margin: 28px 0px 0px 0px;
+}
+
+.pop-up__social .social__link {
+  width: 8%;
 }
 
 .pop-up__iframe {
