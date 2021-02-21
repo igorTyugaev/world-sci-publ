@@ -4,6 +4,7 @@ function initForm(_form) {
         const {currentTarget} = e;
 
         const data = scrabbleInputs(currentTarget);
+        const couponInput = currentTarget.querySelectorAll('[name="coupon"]');
         console.debug(data);
         sendForm(data);
 
@@ -23,6 +24,11 @@ function initForm(_form) {
         function sendForm(sendData) {
             axios.post('/', sendData)
                 .then((response) => {
+
+                    if (response['warning'] === "Данного купона не существует!") {
+                        couponInput.value = "Купон не существует!";
+                    }
+
                     console.debug(response);
                 }, (error) => {
                     console.debug(error);

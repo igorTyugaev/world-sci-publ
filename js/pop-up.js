@@ -11,7 +11,6 @@ function initPopUp(button) {
     const _closeBtn = _popUp.querySelector('.pop-up__button--close');
 
     if (_closeBtn) {
-        console.debug("_closeBtn");
         _closeBtn.addEventListener('click', () => {
             closePopUp(_popUp, duration);
         });

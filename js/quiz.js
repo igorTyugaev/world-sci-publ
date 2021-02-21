@@ -1,5 +1,5 @@
 function initQuiz(quiz) {
-    const buttons = [
+    const buttonsTitle = [
         {
             question: '1. В какие сроки Вам необходима публикация?',
             answers: [
@@ -81,12 +81,12 @@ function initQuiz(quiz) {
     };
 
     const nextStep = (answer) => {
-        if (step + 1 < buttons.length) {
+        if (step + 1 < buttonsTitle.length) {
             addAnswer(answer);
-            insertAnswers(buttons[++step].answers);
-            insertQuestion(buttons[step].question);
+            insertAnswers(buttonsTitle[++step].answers);
+            insertQuestion(buttonsTitle[step].question);
             _stepWrapper.classList = `progress-bar_step-${step}`;
-            _number.innerText = `Вопрос ${step + 1} из ${buttons.length}`;
+            _number.innerText = `Вопрос ${step + 1} из ${buttonsTitle.length}`;
         } else {
             endQuiz();
         }
@@ -110,7 +110,7 @@ function initQuiz(quiz) {
             });
     };
 
-    insertAnswers(buttons[step].answers);
+    insertAnswers(buttonsTitle[step].answers);
 }
 
 const _quiz1 = document.getElementById('quiz-1'),

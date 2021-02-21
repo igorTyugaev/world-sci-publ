@@ -834,6 +834,79 @@ input {
   }
 }
 
+.float-navbar {
+  position: fixed;
+  display: none;
+  top: 50vh;
+  right: 1.5em;
+  z-index: 100;
+  transform: translateY(-50%);
+}
+
+.float-navbar--show {
+  display: block;
+}
+
+.float-navbar__items {
+  position: relative;
+  padding: 0 1em;
+  list-style: none;
+}
+
+.float-navbar__items:before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  right: 0;
+  width: 2px;
+  height: 50%;
+  border-radius: 5px;
+  background-color: #c7c7c7;
+  transform: translateY(-100%);
+}
+
+.float-navbar__items:after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  right: 0;
+  width: 2px;
+  height: 50%;
+  border-radius: 5px;
+  background-color: #c7c7c7;
+  transform: translateY(100%);
+}
+
+.float-navbar__item {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.float-item__title {
+  display: block;
+  color: #c7c7c7;
+  text-decoration: none;
+  transition: all 0.1s;
+  font-family: "Helvetica";
+  font-size: 12px;
+  text-align: right;
+}
+
+.float-item__circle {
+  position: absolute;
+  bottom: 5px;
+  right: -21px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #c7c7c7;
+  transition: all 0.1s;
+}
+
+.float-item__circle--active {
+  background-color: #c7c7c7;
+}
+
 .header__call,
 .nav__link {
   padding-top: 4px;
@@ -3369,6 +3442,10 @@ input {
     margin: 0.2080443828vw 0vw 0vw 0vw;
   }
 
+  .float-item__title {
+    font-size: 0.8321775312vw;
+  }
+
   .header__call,
   .nav__link {
     padding-top: 0.2773925104vw;
@@ -4470,6 +4547,12 @@ input {
   }
 }
 
+@media (max-width:1400px) {
+  .float-navbar--show {
+    display: none;
+  }
+}
+
 @media (max-width:1170px) {
   .nav {
     width: 42vw;
@@ -4638,6 +4721,10 @@ input {
 
   .progress-bar__title {
     font-size: 1.4300306435vw;
+  }
+
+  .float-item__title {
+    font-size: 1.2257405516vw;
   }
 
   .header__call,
@@ -5715,6 +5802,10 @@ input {
 
   .progress-bar__title {
     font-size: 2.4305555556vw;
+  }
+
+  .float-item__title {
+    font-size: 2.0833333333vw;
   }
 
   .nav__link {
