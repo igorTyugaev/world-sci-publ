@@ -52,8 +52,8 @@ function initQuiz(quiz) {
 
     let step = 0;
 
-    const _answers = quiz.querySelector('#quizlet__answers'),
-        _stepWrapper = quiz.querySelector('#steps'),
+    const _answers = quiz.querySelector('.quizlet__answers'),
+        _stepWrapper = quiz.querySelector('.steps'),
         _question = quiz.querySelector('.quizlet__question'),
         _number = quiz.querySelector('.progress-bar__title');
 
@@ -98,7 +98,7 @@ function initQuiz(quiz) {
             "csrfToken": csrfToken
         }
         initPopUpById(7);
-        // sendAnswers(dataQuiz);
+        sendAnswers(dataQuiz);
     };
 
     const sendAnswers = (sendData) => {
