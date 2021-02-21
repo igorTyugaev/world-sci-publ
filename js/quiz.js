@@ -93,12 +93,22 @@ function initQuiz(quiz) {
     };
 
     const endQuiz = () => {
-        //пиши сюда
-
-        sendAnswers();
+        dataQuiz = {
+            "res": answers,
+            "csrfToken": csrfToken
+        }
+        initPopUpById(7);
+        sendAnswers(dataQuiz);
     };
 
-    const sendAnswers = (body) => {};
+    const sendAnswers = (sendData) => {
+        axios.post('/', sendData)
+            .then((response) => {
+                console.debug(response);
+            }, (error) => {
+                console.debug(error);
+            });
+    };
 
     insertAnswers(buttons[step].answers);
 }

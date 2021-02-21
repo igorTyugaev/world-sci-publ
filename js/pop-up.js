@@ -36,6 +36,28 @@ function initPopUp(button) {
     });
 }
 
+function initPopUpById(id) {
+    const idPopUp = 'popup-' + id;
+
+    const _popUp = document.getElementById(idPopUp);
+    const _closeButton = _popUp.querySelector('.pop-up__close');
+
+    const _closeBtn = _popUp.querySelector('.pop-up__button--close');
+
+    if (_closeBtn) {
+        _closeBtn.addEventListener('click', () => {
+            closePopUp(_popUp, duration);
+        });
+    }
+
+    openPopUp(_popUp, duration);
+    currentShowPopUp = idPopUp;
+
+    _closeButton.addEventListener('click', () => {
+        closePopUp(_popUp, duration);
+    });
+}
+
 function openPopUp(popUp, duration = false) {
     duration && addAnimation(popUp, duration);
     popUp.classList.add('pop-up_active');
