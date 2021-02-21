@@ -30,13 +30,16 @@
                 <button class="nav__link" data-show-popup="1">
                     Активировать промокод
                 </button>
-                <a href=" #" class="nav__link" data-scroll="#works">Личный кабинет</a>
-                <a href="#" class="nav__link" data-scroll="#team">Блог “Кафедра WSP”</a>
-                <a href="#" class="nav__link" data-scroll="#reviews">F.A.Q.</a>
-                <a href="#" class="nav__link" data-scroll="#download">Контакты</a>
-                <a href="#" class="nav__link" data-scroll="#download">Соцсети</a>
-                <a href="#" class="nav__link" data-scroll="#download">Оставить
-                    заявку</a>
+                <button class="nav__link" data-scroll="#works">Личный кабинет</button>
+                <button class="nav__link" data-scroll="#team-section">
+                    Блог “Кафедра WSP”
+                </button>
+                <button class="nav__link" data-scroll="#faq-section">F.A.Q.</button>
+                <button class="nav__link" data-scroll="#footer-section">Контакты</button>
+                <button class="nav__link" data-scroll="#footer-section">Соцсети</button>
+                <button class="nav__link" data-show-popup="1">
+                    Оставить заявку
+                </button>
             </div>
 
             <div class="nav__footer">
@@ -102,7 +105,7 @@
          alt="group_photo">
 
 </section>
-<section class="cost scroll-indicator" id="cost-section" data-scroll-indicator-title="First Section">
+<section class="cost scroll-indicator" id="cost" data-scroll-indicator-title="First Section">
     <div class="cost__inner container">
 
         <div class="cost__main extended-block">
@@ -133,7 +136,7 @@
 
     </div>
 </section>
-<section class="advantages">
+<section class="advantages" id="advantages">
 
     <div class="advantages__inner container">
         <div class="advantages__item feature-card">
@@ -262,7 +265,7 @@
 
     </div></section>
 
-<section class="promo">
+<section class="promo" id="promo" >
 
     <div class="promo__inner container">
         <h2 class="promo__title">
@@ -357,7 +360,7 @@
 
 </section>
 
-<section class="guaranty">
+<section class="guaranty" id="guaranty" >
 
     <div class="guaranty__wrap container">
         <h2 class="guaranty__title">
@@ -454,7 +457,7 @@
     </div>
 
 </section>
-<section class="component">
+<section class="component" id="component">
 
     <div class="component__content container">
 
@@ -497,7 +500,7 @@
          alt="group_photo">
 
 </section>
-<section class="stages">
+<section class="stages" id="stages">
 
     <div class="stages__wrap container">
         <div class="stages__header extended-subtitle">
@@ -981,7 +984,7 @@
     </div>
 
 </section>
-<section class="profile">
+<section class="profile" id="profile">
 
     <div class="profile__wrap container">
 
@@ -1089,7 +1092,7 @@
          alt="max_character">
 
 </section>
-<section class="audit">
+<section class="audit" id="audit">
 
     <div class="audit__wrap container">
         <h2 class="audit__title">
@@ -1221,7 +1224,7 @@
     </div>
 
 </section>
-<section class="team">
+<section class="team" id="team-section">
 
     <div class="team__wrap container">
         <h2 class="team__title">
@@ -1371,18 +1374,18 @@
                 </div>
 
                 <div class="tabs-team__header">
-                    <a href="#user_1" class="tabs-team__tab">
+                    <button class="tabs-team__tab">
                         Новикова София
                         <span>Ведущий специалист</span>
-                    </a>
-                    <a href="#user_2" class="tabs-team__tab">
+                    </button>
+                    <button class="tabs-team__tab">
                         Кадыров Марсель<br>
                         <span>Сооснователь компании</span>
-                    </a>
-                    <a href="#user_3" class="tabs-team__tab">
+                    </button>
+                    <button class="tabs-team__tab">
                         Самойлова Юлия
                         <span>Ведущий специалист</span>
-                    </a>
+                    </button>
                 </div>
 
             </div>
@@ -1390,7 +1393,7 @@
     </div>
 
 </section>
-<section class="foreign">
+<section class="foreign" id="foreign">
 
     <div class="foreign__content container">
 
@@ -1858,7 +1861,7 @@
     </div>
 
 </section>
-<section class="geography">
+<section class="geography" id="geography">
 
     <div class="geography__wrap container">
         <h2 class="geography__title">
@@ -1956,7 +1959,7 @@
 
     </div></section>
 
-<section class="faq">
+<section class="faq" id="faq-section">
 
     <div class="faq__wrap container">
         <h2 class="faq__title">
@@ -2158,7 +2161,8 @@
             </h3>
             <textarea class="your-question__textarea" rows="10" cols="45" name="text">
             </textarea>
-            <input name="email" type="text" class="your-question__email" placeholder="email"/>
+            <input name="email" type="text" class="your-question__email"
+                   placeholder="email"/>
             <button type="submit" class="button your-question__submit">
                 Задать свой вопрос
             </button>
@@ -2166,7 +2170,7 @@
     </div>
 
 </section>
-<footer class="footer">
+<footer class="footer" id="footer-section">
 
     <div class="footer__wrap container">
 
