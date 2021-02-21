@@ -98,7 +98,7 @@ function initQuiz(quiz) {
             "csrfToken": csrfToken
         }
         initPopUpById(7);
-        sendAnswers(dataQuiz);
+        // sendAnswers(dataQuiz);
     };
 
     const sendAnswers = (sendData) => {
