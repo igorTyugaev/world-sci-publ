@@ -1,3 +1,5 @@
+let answersQuizlet = null;
+
 function initQuiz(quiz) {
     const buttonsTitle = [
         {
@@ -93,21 +95,8 @@ function initQuiz(quiz) {
     };
 
     const endQuiz = () => {
-        dataQuiz = {
-            "res": answers,
-            "csrfToken": csrfToken
-        }
+        answersQuizlet = answers;
         initPopUpById(7);
-        sendAnswers(dataQuiz);
-    };
-
-    const sendAnswers = (sendData) => {
-        axios.post('/', sendData)
-            .then((response) => {
-                console.debug(response);
-            }, (error) => {
-                console.debug(error);
-            });
     };
 
     insertAnswers(buttonsTitle[step].answers);
@@ -116,5 +105,5 @@ function initQuiz(quiz) {
 const _quiz1 = document.getElementById('quiz-1'),
     _quiz0 = document.getElementById('quiz-0');
 
-initQuiz(_quiz1);
-initQuiz(_quiz0);
+quizInner0 = initQuiz(_quiz0);
+quizInner1 = initQuiz(_quiz1);

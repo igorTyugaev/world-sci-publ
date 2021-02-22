@@ -1,11 +1,14 @@
 function initForm(_form) {
+
     _form.addEventListener('submit', (e) => {
         e.preventDefault();
         const {currentTarget} = e;
-
+        const idPopup = currentTarget.hasAttribute("data-popup")
+            ? currentTarget.getAttribute("data-popup")
+            : null;
         const data = scrabbleInputs(currentTarget);
         const couponInput = currentTarget.querySelectorAll('[name="coupon"]');
-        console.debug(data);
+
         sendForm(data);
 
         function scrabbleInputs(currentForm) {
@@ -15,8 +18,15 @@ function initForm(_form) {
                 entries.set(input.name, input.value);
                 input.value = "";
             });
+
+            if (idPopup == 7 && answersQuizlet) {
+                entries.set("res", answersQuizlet);
+                answersQuizlet = null;
+            }
+
             entries.set("csrfToken", csrfToken);
             entries.set("formsended", currentForm.name);
+
             const data = Object.fromEntries(entries);
             return data;
         }
@@ -40,6 +50,6 @@ function initForm(_form) {
 const forms = document.querySelectorAll('form');
 console.log("Found forms:" + forms.length);
 
-forms.forEach((_form, index) => {
+forms.forEach((_form) => {
     initForm(_form);
 });
