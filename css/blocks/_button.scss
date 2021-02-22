@@ -11,18 +11,17 @@
 
 .button {
   @extend %btn-green;
-  box-sizing: border-box;
   box-shadow: 1px 1px 4px $colorShadow;
   border-radius: 24px;
 
   &:hover {
-    border: transparent;
+    border-color: transparent;
     color: $textColorSecondary;
     background: #177840;
   }
 
   &:active {
-    border: transparent;
+    border-color: transparent;
     color: $textColorSecondary;
     background: #0F5C30;
   }

@@ -24,7 +24,18 @@
       font-style: italic;
       @include font-size(12px);
       color: $textColorSecondary;
-      @include padding(0px, 0px, 18px, 0px);
+
+      &:not(:first-child) {
+        @include padding(18px);
+      }
+
+      &--link {
+        text-decoration: underline;
+      }
+
+      &--link {
+        text-decoration: underline;
+      }
     }
 
   }

@@ -72,6 +72,11 @@
     font-size: 14px;
     width: 100%;
     @include margin(15px);
+    cursor: text;
+
+    &--file {
+      cursor: pointer;
+    }
   }
 
   &__button {
@@ -91,15 +96,21 @@
 
   &__super-desc {
     font-weight: normal;
-    @include margin(15px);
+    @include margin(21px);
     @include font-size(10px);
     color: #BBBBBB;
+    text-align: left;
+
+    &--link {
+      text-decoration: underline;
+    }
   }
 
   &__title {
     font-weight: bold;
     font-size: 24px;
     margin-bottom: 16px;
+    line-height: 120%;
 
     color: #000000;
   }

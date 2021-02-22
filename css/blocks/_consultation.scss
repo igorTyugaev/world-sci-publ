@@ -96,7 +96,7 @@
   &__btn {
     background: none;
     border: none;
-    animation: eye 2.5s cubic-bezier(.1, .25, .1, 1) 0s infinite alternate both;
+    transition: transform 0.5s;
 
     &:hover {
       transform: scale(1.5);

@@ -212,6 +212,7 @@
 
   &__input {
     @extend %tmp-input;
+    cursor: text;
   }
 
   &__submit {
@@ -224,5 +225,9 @@
     line-height: 105%;
 
     color: #BBBBBB;
+
+    &--link {
+      text-decoration: underline;
+    }
   }
 }
