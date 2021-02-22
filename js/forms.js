@@ -25,7 +25,7 @@ function initForm(_form) {
             }
 
             entries.set("csrfToken", csrfToken);
-            entries.set("formsended", currentForm.name);
+            entries.set("formsended", currentForm.getAttribute("name"));
 
             const data = Object.fromEntries(entries);
             return data;
