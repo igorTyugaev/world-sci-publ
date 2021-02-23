@@ -16,9 +16,7 @@ function initPopUp(button) {
         });
     }
 
-    button.addEventListener('click', (e) => {
-        // e.preventDefault();
-
+    function showPopUpLogic() {
         if (currentShowPopUp == 0) {
             openPopUp(_popUp, duration);
             currentShowPopUp = idPopUp;
@@ -28,11 +26,19 @@ function initPopUp(button) {
             openPopUp(_popUp, false);
             currentShowPopUp = idPopUp;
         }
-    });
+    }
+
+    if (button.getAttribute("type") !== "submit") {
+        button.addEventListener('click', (e) => {
+            showPopUpLogic();
+        });
+    }
 
     _closeButton.addEventListener('click', () => {
         closePopUp(_popUp, duration);
     });
+
+    return showPopUpLogic;
 }
 
 function initPopUpById(id) {
@@ -106,7 +112,8 @@ function scrollRemove() {
 
 //test
 const buttons = document.querySelectorAll('[data-show-popup]');
+let popups = new Map([]);
 
 buttons.forEach((button) => {
-    initPopUp(button);
+    popups.set(button.dataset.showPopup, initPopUp(button));
 });

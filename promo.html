@@ -1,4 +1,4 @@
-<section class="promo" id="promo" >
+<section class="promo" id="promo">
 
     <div class="promo__inner container">
         <h2 class="promo__title">
@@ -66,10 +66,15 @@
                     <h3 class="app-form__title">Расскажите о Ваших пожеланиях к журналу и
                         цели<br>
                         публикации, а мы подберём лучшее решение</h3>
-                    <form name="26" class="app-form__inner">
-                        <input name="phone" class="app-form__input"
-                               placeholder="Введите номер телефона"
-                               type="text">
+                    <form novalidate name="26" class="app-form__inner">
+                        <div class="input-wrapper">
+                            <input name="phone" class="app-form__input"
+                                   placeholder="Введите номер телефона"
+                                   pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                   required
+                                   type="text">
+                            <span class="input-wrapper__error"></span>
+                        </div>
                         <button class="app-form__submit button button--submit"
                                 data-show-popup="9"
                                 type="submit">

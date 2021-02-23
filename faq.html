@@ -193,15 +193,22 @@
             </div>
         </div>
 
-        <form name="23" class="faq__form your-question" action="/">
+        <form novalidate name="23" class="faq__form your-question" action="/">
             <h3 class="your-question__description">
                 Если Вашего вопроса нет в списке, задайте его в форме расположенной ниже.
                 Ответ будет направлен на электронную почту.
             </h3>
             <textarea class="your-question__textarea" rows="10" cols="45" name="text">
             </textarea>
-            <input name="email" type="text" class="your-question__email"
-                   placeholder="email"/>
+
+            <div class="input-wrapper">
+                <input name="email" type="email" class="your-question__email"
+                       placeholder="email"
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                       required>
+                <span class="input-wrapper__error"></span>
+            </div>
+
             <button type="submit" class="button your-question__submit">
                 Задать свой вопрос
             </button>

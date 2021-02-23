@@ -20,12 +20,23 @@
                     чтобы подобрать лучшее решение
                 </p>
 
-                <form name="1" action="/">
+                <form novalidate name="1" action="/">
                     <div class="pop-up__inputs">
-                        <input name="name" type="text" class="pop-up__input"
-                               placeholder="ФИО">
-                        <input name="phone" class="pop-up__input"
-                               placeholder="Номер телефона">
+
+                        <div class="input-wrapper">
+                            <input name="name" type="text" class="pop-up__input"
+                                   placeholder="ФИО" required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <input name="phone" type="text" class="pop-up__input"
+                                   placeholder="Введите номер телефона"
+                                   pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                   required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+
                         <input name="coupon" class="pop-up__input" placeholder="Промокод">
                     </div>
 
@@ -35,12 +46,14 @@
                     </button>
                 </form>
 
-                <button class="pop-up__super-desc">
-                    Нажимая на кнопку, вы даете согласие на
+                <p class="pop-up__super-desc">Нажимая на кнопку, вы даете согласие на
                     обработку
-                    своих персональных данных и соглашаетесь с Политикой
-                    конфиденциальности
-                </button>
+                    своих персональных данных и соглашаетесь с
+                    <button class="pop-up__super-desc pop-up__super-desc--link"
+                            data-show-popup="500">
+                        Политикой конфиденциальности
+                    </button>
+                </p>
             </div>
 
         </div>
@@ -72,12 +85,22 @@
                     чтобы подобрать лучшее решение
                 </p>
 
-                <form name="1" action="/">
+                <form novalidate name="1" action="/">
                     <div class="pop-up__inputs">
-                        <input name="name" type="text" class="pop-up__input"
-                               placeholder="ФИО">
-                        <input name="phone" class="pop-up__input"
-                               placeholder="Номер телефона">
+
+                        <div class="input-wrapper">
+                            <input name="name" type="text" class="pop-up__input"
+                                   placeholder="ФИО" required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <input name="phone" type="text" class="pop-up__input"
+                                   placeholder="Введите номер телефона"
+                                   pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                   required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
                     </div>
 
                     <button type="submit" class="pop-up__button" data-show-popup="2"
@@ -134,10 +157,16 @@
 
                 <div class="popup-2__form">
 
-                    <form name="2" action="/">
+                    <form novalidate name="2" action="/">
                         <div class="pop-up__inputs">
-                            <input name="email" type="email" class="pop-up__input"
-                                   placeholder="email">
+
+                            <div class="input-wrapper">
+                                <input name="email" type="email" class="pop-up__input"
+                                       placeholder="email"
+                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                       required>
+                                <span class="input-wrapper__error"></span>
+                            </div>
                         </div>
 
                         <button type="submit" class="pop-up__button" data-show-popup="3"
@@ -195,7 +224,7 @@
 
             <div class="popup-3__form">
 
-                <form name="3" action="/">
+                <form novalidate name="3" action="/">
                     <div class="pop-up__inputs">
                         <input name="scopus" type="text" class="pop-up__input"
                                placeholder="Выберите базу (Scopus/WoS)">
@@ -318,12 +347,20 @@
                 <p class="pop-up__desc">Мы перезвоним Вам, <br>
                     чтобы подобрать лучшее решение </p>
 
-                <form name="5" action="/">
+                <form novalidate name="5" action="/">
                     <div class="pop-up__inputs">
-                        <input name="name" type="text" class="pop-up__input"
-                               placeholder="ФИО">
-                        <input name="phone" type="text" class="pop-up__input"
-                               placeholder="Номер телефона">
+                        <div class="input-wrapper">
+                            <input name="name" type="text" class="pop-up__input"
+                                   placeholder="ФИО" required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                        <div class="input-wrapper">
+                            <input name="phone" type="text" class="pop-up__input"
+                                   placeholder="Введите номер телефона"
+                                   pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                   required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
                     </div>
                     <button class="pop-up__button" type="submit" data-show-popup="6">
                         Перейти к обсуждению
@@ -437,14 +474,28 @@
                     обработки запроса
                 </p>
 
-                <form name="7" data-popup="7" action="/">
+                <form novalidate name="7" data-popup="7" action="/">
                     <div class="pop-up__inputs">
-                        <input name="name" type="text" class="pop-up__input"
-                               placeholder="ФИО">
-                        <input name="phone" type="text" class="pop-up__input"
-                               placeholder="Номер телефона">
-                        <input name="email" type="email" class="pop-up__input"
-                               placeholder="email">
+                        <div class="input-wrapper">
+                            <input name="name" type="text" class="pop-up__input"
+                                   placeholder="ФИО" required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                        <div class="input-wrapper">
+                            <input name="phone" type="text" class="pop-up__input"
+                                   placeholder="Введите номер телефона"
+                                   pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                   required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <input name="email" type="email" class="pop-up__input"
+                                   placeholder="email"
+                                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                   required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
                     </div>
 
                     <button class="pop-up__button" type="submit" data-show-popup="8">
@@ -568,10 +619,16 @@
 
                 <div class="popup-2__form">
 
-                    <form name="9" action="/">
+                    <form novalidate name="9" action="/">
                         <div class="pop-up__inputs">
-                            <input name="email" type="email" class="pop-up__input"
-                                   placeholder="email">
+
+                            <div class="input-wrapper">
+                                <input name="email" type="email" class="pop-up__input"
+                                       placeholder="email"
+                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                       required>
+                                <span class="input-wrapper__error"></span>
+                            </div>
                         </div>
 
                         <button type="submit" class="pop-up__button" data-show-popup="10"
@@ -629,7 +686,7 @@
 
             <div class="popup-3__form">
 
-                <form name="10" action="/">
+                <form novalidate name="10" action="/">
                     <div class="pop-up__inputs">
                         <input name="scopus" type="text" class="pop-up__input"
                                placeholder="Выберите базу (Scopus/WoS)">
@@ -767,10 +824,16 @@
 
                 <div class="popup-2__form">
 
-                    <form name="12" action="/">
+                    <form novalidate name="12" action="/">
                         <div class="pop-up__inputs">
-                            <input name="email" type="email" class="pop-up__input"
-                                   placeholder="email">
+
+                            <div class="input-wrapper">
+                                <input name="email" type="email" class="pop-up__input"
+                                       placeholder="email"
+                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                       required>
+                                <span class="input-wrapper__error"></span>
+                            </div>
                         </div>
 
                         <button type="submit" class="pop-up__button" data-show-popup="13"
@@ -828,7 +891,7 @@
 
             <div class="popup-3__form">
 
-                <form name="13" action="/">
+                <form novalidate name="13" action="/">
                     <div class="pop-up__inputs">
                         <input name="scopus" type="text" class="pop-up__input"
                                placeholder="Выберите базу (Scopus/WoS)">
@@ -956,12 +1019,20 @@
                     чтобы подобрать лучшее решение
                 </p>
 
-                <form name="15" action="/">
+                <form novalidate name="15" action="/">
                     <div class="pop-up__inputs">
-                        <input name="name" type="text" class="pop-up__input"
-                               placeholder="ФИО">
-                        <input name="phone" type="text" class="pop-up__input"
-                               placeholder="Номер телефона">
+                        <div class="input-wrapper">
+                            <input name="name" type="text" class="pop-up__input"
+                                   placeholder="ФИО" required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                        <div class="input-wrapper">
+                            <input name="phone" type="text" class="pop-up__input"
+                                   placeholder="Введите номер телефона"
+                                   pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                   required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
                     </div>
 
                     <button class="pop-up__button" type="submit" data-show-popup="16">
@@ -1185,12 +1256,20 @@
                     чтобы подобрать лучшее решение
                 </p>
 
-                <form name="19" action="/">
+                <form novalidate name="19" action="/">
                     <div class="pop-up__inputs">
-                        <input name="name" type="text" class="pop-up__input"
-                               placeholder="ФИО">
-                        <input name="phone" type="text" class="pop-up__input"
-                               placeholder="Номер телефона">
+                        <div class="input-wrapper">
+                            <input name="name" type="text" class="pop-up__input"
+                                   placeholder="ФИО" required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                        <div class="input-wrapper">
+                            <input name="phone" type="text" class="pop-up__input"
+                                   placeholder="Введите номер телефона"
+                                   pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                   required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
                     </div>
 
                     <button class="pop-up__button" type="submit" data-show-popup="20">
@@ -1280,12 +1359,20 @@
                     чтобы подобрать лучшее решение
                 </p>
 
-                <form name="21" action="/">
+                <form novalidate name="21" action="/">
                     <div class="pop-up__inputs">
-                        <input name="name" type="text" class="pop-up__input"
-                               placeholder="ФИО">
-                        <input name="phone" type="text" class="pop-up__input"
-                               placeholder="Номер телефона">
+                        <div class="input-wrapper">
+                            <input name="name" type="text" class="pop-up__input"
+                                   placeholder="ФИО" required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                        <div class="input-wrapper">
+                            <input name="phone" type="text" class="pop-up__input"
+                                   placeholder="Введите номер телефона"
+                                   pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                   required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
                     </div>
 
                     <button class="pop-up__button" type="submit" data-show-popup="22">
@@ -1442,12 +1529,20 @@
                     чтобы подобрать лучшее решение
                 </p>
 
-                <form name="17" action="/">
+                <form novalidate name="17" action="/">
                     <div class="pop-up__inputs">
-                        <input name="name" type="text" class="pop-up__input"
-                               placeholder="ФИО">
-                        <input name="phone" type="text" class="pop-up__input"
-                               placeholder="Номер телефона">
+                        <div class="input-wrapper">
+                            <input name="name" type="text" class="pop-up__input"
+                                   placeholder="ФИО" required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
+                        <div class="input-wrapper">
+                            <input name="phone" type="text" class="pop-up__input"
+                                   placeholder="Введите номер телефона"
+                                   pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                   required>
+                            <span class="input-wrapper__error"></span>
+                        </div>
                     </div>
 
                     <button class="pop-up__button" type="submit" data-show-popup="18">

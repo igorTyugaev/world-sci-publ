@@ -17,3 +17,38 @@ html {
 button, a, input {
   cursor: pointer;
 }
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__error {
+    display: none;
+    color: red;
+    @include font-size(12px);
+    @include padding(4px);
+
+    &--show {
+      display: block;
+    }
+  }
+}
+
+/* Это стиль для сообщений об ошибке */
+.error {
+  width: 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}

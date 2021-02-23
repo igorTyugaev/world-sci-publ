@@ -159,7 +159,12 @@
 
 
   background: $popupBackground;
-  color: $textColorInput;
+  color: $textColorPrimary;
+
+  &:placeholder {
+    color: $textColorInput;
+  }
+
   text-align: left;
 
   @include font-size(14px);
@@ -176,9 +181,6 @@
   @media (max-width: #{$bp-lg-979}) {
     border: #{get-vw(1px, $bp-lg-979)} solid $borderColorInput;
     border-radius: #{get-vw(6px, $bp-lg-979)};
-  }
-
-  @media (max-width: #{$bp-sm-576}) {
   }
 }
 
