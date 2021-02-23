@@ -8,11 +8,11 @@ function initForm(_form) {
             : null;
         const data = scrabbleInputs(currentTarget);
         const button = currentTarget.querySelector('[data-show-popup]');
-
         const showPopUpLogic = popups.get(button.dataset.showPopup);
 
 
-        if (data) {
+        if (data && idPopup != 1000) {
+            console.log("Отправка формы...")
             showPopUpLogic();
             sendForm(data, currentTarget);
         }
@@ -48,13 +48,29 @@ function initForm(_form) {
                     }
                     break;
                 case "coupon":
-                    if (input.validity.valid) {
-                        removeErrorInput(input, hint);
-                        return true;
-                    } else {
-                        setErrorInput(input, hint, "Как к Вам обращаться?");
-                        return false;
+                    const dataCoupon = {
+                        "coupon": input.value,
+                        "csrfToken": csrfToken,
+                        "formsended": 1000
                     }
+
+                    axios.post('/', dataCoupon)
+                        .then((response) => {
+                            if (response['warning'] === "Данного купона не существует!") {
+                                setErrorInput(input, hint, "Купона не существует!");
+                            }
+                            console.debug(response);
+                        }, (error) => {
+                            removeErrorInput(input, hint);
+
+                            if (data) {
+                                showPopUpLogic();
+                                sendForm(data, currentTarget);
+                            }
+
+                            console.debug(error);
+                        });
+                    return true;
                     break;
                 default:
                     return true;
@@ -74,18 +90,27 @@ function initForm(_form) {
             hint.innerHTML = "";
         }
 
+        function clearForm(inputs) {
+            inputs.forEach((input) => {
+                input.value = "";
+            });
+        }
+
         function scrabbleInputs(currentForm) {
             const entries = new Map([]);
             const inputs = currentForm.querySelectorAll('input');
-            let isValidity = false;
+            let isValidity = true;
 
-            inputs.forEach((input) => {
+            inputs.forEach((input, index) => {
                 const _isValidity = inputIsValidation(input);
-                if (isValidity) {
+                // console.log(index + ": " + _isValidity);
+
+                if (_isValidity) {
                     entries.set(input.name, input.value);
-                    input.value = "";
+                    // input.value = "";
                 }
-                isValidity *= _isValidity;
+                isValidity &= _isValidity;
+                console.log(isValidity);
             });
 
             if (!isValidity) return null;
@@ -99,6 +124,7 @@ function initForm(_form) {
             entries.set("formsended", currentForm.getAttribute("name"));
 
             const data = Object.fromEntries(entries);
+            clearForm(inputs);
             return data;
         }
 
@@ -107,7 +133,6 @@ function initForm(_form) {
 
             axios.post('/', sendData)
                 .then((response) => {
-
                     if (response['warning'] === "Данного купона не существует!") {
                         couponInput.value = "Купон не существует!";
                     }
@@ -121,8 +146,6 @@ function initForm(_form) {
 }
 
 const forms = document.querySelectorAll('form');
-console.log("Found forms:" + forms.length);
-
 forms.forEach((_form) => {
     initForm(_form);
 });
