@@ -2,6 +2,7 @@ function initForm(_form) {
 
     _form.addEventListener('submit', (e) => {
         e.preventDefault();
+        let codeStatus = true;
         const {currentTarget} = e;
         const idPopup = currentTarget.hasAttribute("data-popup")
             ? currentTarget.getAttribute("data-popup")
@@ -11,10 +12,13 @@ function initForm(_form) {
         const showPopUpLogic = popups.get(button.dataset.showPopup);
 
 
-        if (data && idPopup != 1000) {
+        if (data) {
             console.log("Отправка формы...")
-            showPopUpLogic();
             sendForm(data, currentTarget);
+            if (codeStatus) {
+                showPopUpLogic();
+                currentTarget.reset();
+            }
         }
 
         function inputIsValidation(input) {
@@ -48,29 +52,8 @@ function initForm(_form) {
                     }
                     break;
                 case "coupon":
-                    const dataCoupon = {
-                        "coupon": input.value,
-                        "csrfToken": csrfToken,
-                        "formsended": 1000
-                    }
-
-                    axios.post('/', dataCoupon)
-                        .then((response) => {
-                            if (response['warning'] === "Данного купона не существует!") {
-                                setErrorInput(input, hint, "Купона не существует!");
-                            }
-                            console.debug(response);
-                        }, (error) => {
-                            removeErrorInput(input, hint);
-
-                            if (data) {
-                                showPopUpLogic();
-                                sendForm(data, currentTarget);
-                            }
-
-                            console.debug(error);
-                        });
-                    return true;
+                    codeStatus = false;
+                    return true
                     break;
                 default:
                     return true;
@@ -90,12 +73,6 @@ function initForm(_form) {
             hint.innerHTML = "";
         }
 
-        function clearForm(inputs) {
-            inputs.forEach((input) => {
-                input.value = "";
-            });
-        }
-
         function scrabbleInputs(currentForm) {
             const entries = new Map([]);
             const inputs = currentForm.querySelectorAll('input');
@@ -103,14 +80,11 @@ function initForm(_form) {
 
             inputs.forEach((input, index) => {
                 const _isValidity = inputIsValidation(input);
-                // console.log(index + ": " + _isValidity);
 
                 if (_isValidity) {
                     entries.set(input.name, input.value);
-                    // input.value = "";
                 }
                 isValidity &= _isValidity;
-                console.log(isValidity);
             });
 
             if (!isValidity) return null;
@@ -124,22 +98,29 @@ function initForm(_form) {
             entries.set("formsended", currentForm.getAttribute("name"));
 
             const data = Object.fromEntries(entries);
-            clearForm(inputs);
             return data;
         }
 
         function sendForm(sendData, currentForm) {
-            const couponInput = currentForm.querySelectorAll('[name="coupon"]');
+            const couponInput = currentForm.querySelector('[name="coupon"]');
+            const hint = couponInput.parentNode.querySelector(".input-wrapper__error");
 
-            axios.post('/', sendData)
+            axios.post('https://worldscipubl.com/main-test/', sendData)
                 .then((response) => {
-                    if (response['warning'] === "Данного купона не существует!") {
-                        couponInput.value = "Купон не существует!";
+                    const resData = response.data;
+                    if ("warning" in resData) {
+                        setErrorInput(couponInput, hint, "Данного купона не существует!");
+                        codeStatus = false;
+                    } else {
+                        console.log("Промокод успешно активирован!");
+                        codeStatus = true;
+                        showPopUpLogic();
+                        currentForm.reset();
+                        removeErrorInput(couponInput, hint);
                     }
-
-                    console.debug(response);
+                    console.log(response);
                 }, (error) => {
-                    console.debug(error);
+                    console.log(error);
                 });
         }
     });
