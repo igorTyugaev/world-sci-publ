@@ -108,8 +108,13 @@ function initForm(_form) {
             axios.post('https://worldscipubl.com/main-test/', sendData)
                 .then((response) => {
                     const resData = response.data;
-                    if ("warning" in resData) {
-                        setErrorInput(couponInput, hint, "Данного купона не существует!");
+                    if (resData['warning']) {
+                        const resDataWarning = resData['warning'];
+                        if (resDataWarning['coupon'])
+                            setErrorInput(couponInput, hint, resDataWarning['coupon']);
+                        else if (resDataWarning['time'])
+                            setErrorInput(couponInput, hint, resDataWarning['time']);
+
                         codeStatus = false;
                     } else {
                         console.log("Промокод успешно активирован!");
