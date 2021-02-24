@@ -54,7 +54,15 @@
 
   &__img {
     align-self: center;
-    width: 57%;
+    height: 421px;
+
+    @include _more-than($bp-xxl-1442) {
+      height: #{get-vw(421px, $bp-xxl-1442)};
+    }
+
+    @include _less-than($bp-lg-979) {
+      height: #{get-vw(421px, $bp-lg-979)};
+    }
   }
 
   &__text {
@@ -68,6 +76,6 @@
   }
 
   &__form {
-    @include margin(40px);
+    @include margin(38px);
   }
 }

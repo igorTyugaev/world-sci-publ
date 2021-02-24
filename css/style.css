@@ -1489,7 +1489,7 @@ input {
 .manifest--logo {
   padding-top: 50px;
   padding-right: 16px;
-  padding-bottom: 20px;
+  padding-bottom: 60px;
   padding-left: 28px;
 }
 
@@ -1639,7 +1639,7 @@ input {
 
 .protection__img {
   align-self: center;
-  width: 57%;
+  height: 421px;
 }
 
 .protection__text {
@@ -1653,7 +1653,7 @@ input {
 }
 
 .protection__form {
-  margin: 40px 0px 0px 0px;
+  margin: 38px 0px 0px 0px;
 }
 
 .component {
@@ -3824,7 +3824,7 @@ input {
   .manifest--logo {
     padding-top: 3.46740638vw;
     padding-right: 1.1095700416vw;
-    padding-bottom: 1.386962552vw;
+    padding-bottom: 4.160887656vw;
     padding-left: 1.9417475728vw;
   }
 
@@ -3910,12 +3910,16 @@ input {
     margin: 1.6643550624vw 0vw 0vw 0vw;
   }
 
+  .protection__img {
+    height: 29.1955617198vw;
+  }
+
   .protection__text {
     font-size: 1.2482662968vw;
   }
 
   .protection__form {
-    margin: 2.773925104vw 0vw 0vw 0vw;
+    margin: 2.6352288488vw 0vw 0vw 0vw;
   }
 
   .component {
@@ -5080,7 +5084,7 @@ input {
   .manifest--logo {
     padding-top: 5.1072522983vw;
     padding-right: 1.6343207354vw;
-    padding-bottom: 2.0429009193vw;
+    padding-bottom: 6.1287027579vw;
     padding-left: 2.860061287vw;
   }
 
@@ -5148,6 +5152,10 @@ input {
 
   .guaranty__column:nth-child(2) {
     width: calc(48.6905916586% + 7.953443259% / 4);
+  }
+
+  .protection__img {
+    height: 43.0030643514vw;
   }
 
   .protection__text {
