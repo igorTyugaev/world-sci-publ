@@ -3,6 +3,7 @@ function initForm(_form) {
     _form.addEventListener('submit', (e) => {
         e.preventDefault();
         let codeStatus = true;
+        let hasFileInput = false;
         const {currentTarget} = e;
         const idPopup = currentTarget.hasAttribute("data-popup")
             ? currentTarget.getAttribute("data-popup")
@@ -54,6 +55,10 @@ function initForm(_form) {
                     codeStatus = false;
                     return true
                     break;
+                case "file":
+                    hasFileInput = true;
+                    return true;
+                    break;
                 default:
                     return true;
                     break;
@@ -75,6 +80,7 @@ function initForm(_form) {
 
         function scrabbleInputs(currentForm) {
             const entries = new Map([]);
+            let fo = new FormData();
             const inputs = currentForm.querySelectorAll('input');
             let isValidity = true;
 
@@ -83,6 +89,11 @@ function initForm(_form) {
 
                 if (_isValidity) {
                     entries.set(input.name, input.value);
+                    if (input.getAttribute("type") === "file") {
+                        fo.append("file", input.files[0]);
+                    } else {
+                        fo.append(input.name, input.value);
+                    }
                 }
                 isValidity &= _isValidity;
             });
@@ -94,16 +105,43 @@ function initForm(_form) {
                 answersQuizlet = null;
             }
 
-            entries.set("csrfToken", csrfToken);
-            entries.set("formsended", currentForm.getAttribute("name"));
+            // entries.set("csrfToken", csrfToken);
+            // entries.set("formsended", currentForm.getAttribute("name"));
 
-            const data = Object.fromEntries(entries);
-            return data;
+            fo.append("csrfToken", csrfToken);
+            fo.append("formsended", currentForm.getAttribute("name"));
+
+            // const data = Object.fromEntries(entries);
+            // return data;
+            return fo;
         }
 
         function sendForm(sendData, currentForm) {
+            const headers = {
+                'Accept': 'application/json',
+                'Content-Type': 'multipart/form-data'
+            }
+
+            // const data = JSON.stringify(sendData);
+            // let fo = new FormData();
+            // fo.append("csrfToken", csrfToken);
+            // fo.append("formsended", currentForm.getAttribute("name"));
+            // // fo.append("data", data);
+
+            // /main-test - все формы
+            // /main-test/is-exists - проверка зареган ли емаил
+            // /main-test/add-file - загрузка файла
+
             // axios.post('https://worldscipubl.com/main-test/', sendData)
-            axios.post('https://worldscipubl.com/main-test/add-file', sendData)
+            const base_url = 'https://worldscipubl.com/main-test/';
+            const file_ep = 'add-file/';
+            let url = base_url;
+            if (hasFileInput) {
+                url += file_ep;
+                hasFileInput = false;
+            }
+
+            axios.post(url, sendData, {withCredentials: true}, {headers: headers})
                 .then((response) => {
                     const inputs = currentForm.querySelectorAll('input');
                     const input = inputs[inputs.length - 1];
