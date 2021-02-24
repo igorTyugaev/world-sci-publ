@@ -11,7 +11,6 @@ function initForm(_form) {
         const button = currentTarget.querySelector('[data-show-popup]');
         const showPopUpLogic = popups.get(button.dataset.showPopup);
 
-
         if (data) {
             console.log("Отправка формы...")
             sendForm(data, currentTarget);
@@ -68,7 +67,8 @@ function initForm(_form) {
         }
 
         function removeErrorInput(input, hint) {
-            input.removeAttribute("style");
+            if (input.hasAttribute("style"))
+                input.removeAttribute("style");
             hint.classList.remove("input-wrapper__error--show");
             hint.innerHTML = "";
         }
@@ -102,26 +102,28 @@ function initForm(_form) {
         }
 
         function sendForm(sendData, currentForm) {
-            const couponInput = currentForm.querySelector('[name="coupon"]');
-            const hint = couponInput.parentNode.querySelector(".input-wrapper__error");
-
             axios.post('https://worldscipubl.com/main-test/', sendData)
                 .then((response) => {
+                    const inputs = currentForm.querySelectorAll('input');
+                    const input = inputs[inputs.length - 1];
+                    const hint = input.parentNode.querySelector(".input-wrapper__error");
                     const resData = response.data;
+
                     if (resData['warning']) {
                         const resDataWarning = resData['warning'];
+
                         if (resDataWarning['coupon'])
-                            setErrorInput(couponInput, hint, resDataWarning['coupon']);
+                            setErrorInput(input, hint, resDataWarning['coupon']);
                         else if (resDataWarning['time'])
-                            setErrorInput(couponInput, hint, resDataWarning['time']);
+                            setErrorInput(input, hint, resDataWarning['time']);
 
                         codeStatus = false;
-                    } else {
+                    } else if (resData['coupon']) {
                         console.log("Промокод успешно активирован!");
                         codeStatus = true;
                         showPopUpLogic();
                         currentForm.reset();
-                        removeErrorInput(couponInput, hint);
+                        removeErrorInput(input, hint);
                     }
                     console.log(response);
                 }, (error) => {
