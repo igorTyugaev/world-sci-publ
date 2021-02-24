@@ -456,7 +456,12 @@ input {
 .button--contract {
   background: #FFFFFF;
   color: #000000;
-  font-size: 14px;
+  font-size: 18px;
+  padding-top: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  line-height: 116.666667%;
   border-radius: 6px;
   font-family: "Helvetica";
 }
@@ -1540,7 +1545,7 @@ input {
 }
 
 .trailer__form {
-  margin: 16px 0px 0px 0px;
+  margin: 10px 0px 0px 0px;
 }
 
 .app-form__input,
@@ -1571,7 +1576,7 @@ input {
   width: 100%;
   display: grid;
   grid-template-columns: 309fr 177fr;
-  margin: 24px 0px 0px 0px;
+  margin: 10px 0px 0px 0px;
   column-gap: 16px;
 }
 
@@ -1582,6 +1587,7 @@ input {
 .app-form__note {
   font-size: 9px;
   margin: 4px 0px 0px 0px;
+  max-width: 65%;
   line-height: 105%;
   color: #BBBBBB;
 }
@@ -3465,7 +3471,14 @@ input {
   }
 
   .button--contract {
-    font-size: 0.9708737864vw;
+    font-size: 1.2482662968vw;
+  }
+
+  .button--contract {
+    padding-top: 1.1095700416vw;
+    padding-right: 1.1095700416vw;
+    padding-bottom: 1.1095700416vw;
+    padding-left: 1.1095700416vw;
   }
 
   .button--consultation {
@@ -3843,7 +3856,7 @@ input {
   }
 
   .trailer__form {
-    margin: 1.1095700416vw 0vw 0vw 0vw;
+    margin: 0.693481276vw 0vw 0vw 0vw;
   }
 
   .app-form__input,
@@ -3870,7 +3883,7 @@ input {
   }
 
   .app-form__inner {
-    margin: 1.6643550624vw 0vw 0vw 0vw;
+    margin: 0.693481276vw 0vw 0vw 0vw;
   }
 
   .app-form__inner {
@@ -4794,7 +4807,14 @@ input {
   }
 
   .button--contract {
-    font-size: 1.4300306435vw;
+    font-size: 1.8386108274vw;
+  }
+
+  .button--contract {
+    padding-top: 1.6343207354vw;
+    padding-right: 1.6343207354vw;
+    padding-bottom: 1.6343207354vw;
+    padding-left: 1.6343207354vw;
   }
 
   .button--consultation {
@@ -5938,7 +5958,7 @@ input {
   }
 
   .button--contract {
-    font-size: 2.4305555556vw;
+    font-size: 3.125vw;
   }
 
   .button--consultation {

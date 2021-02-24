@@ -149,7 +149,7 @@
   }
 
   &__form {
-    @include margin(16px);
+    @include margin(10px);
   }
 }
 
@@ -195,7 +195,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 309fr 177fr;
-    @include margin(24px);
+    @include margin(10px);
 
     column-gap: 16px;
 
@@ -224,6 +224,7 @@
   &__note {
     @include font-size(9px);
     @include margin(4px);
+    max-width: 65%;
     line-height: 105%;
 
     color: #BBBBBB;

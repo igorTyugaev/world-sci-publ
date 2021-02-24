@@ -47,7 +47,9 @@
     background: $textColorSecondary;
     color: $textColorPrimary;
     @extend %btn-white;
-    @include font-size(14px);
+    @include font-size(18px);
+    @include padding(16px, 16px, 16px, 16px);
+    line-height: 116.666667%;
     border-radius: 6px;
     font-family: $fontFamilyPrimary;
   }
