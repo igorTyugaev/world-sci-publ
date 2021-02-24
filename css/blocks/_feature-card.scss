@@ -2,7 +2,7 @@
   background: $popupBackground;
   @extend %s-border;
 
-  padding: 30px 24px 48px 17px;
+  padding: 30px 24px 30px 17px;
 
   @include _more-than($bp-xxl-1442) {
     padding: #{get-vw(30px, $bp-xxl-1442)}
