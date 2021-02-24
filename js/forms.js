@@ -91,6 +91,7 @@ function initForm(_form) {
                     entries.set(input.name, input.value);
                     if (input.getAttribute("type") === "file") {
                         fo.append("file", input.files[0]);
+                        fo.append("db", 1);
                     } else {
                         fo.append(input.name, input.value);
                     }
