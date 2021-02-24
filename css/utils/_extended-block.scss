@@ -54,6 +54,20 @@
   height: 100%;
   width: 100vw;
   background: $subtitleBackground;
+  border-radius: 6px;
+
+  @include _more-than($bp-xxl-1442) {
+    border-radius: #{get-vw(6px, $bp-xxl-1442)};
+  }
+
+  @include _less-than($bp-lg-979) {
+    border-radius: #{get-vw(6px, $bp-lg-979)};
+  }
+
+  @include _less-than($bp-md-768) {
+    border-radius: #{get-vw(6px, $bp-md-768)};
+  }
+
 }
 
 .extended-subtitle {
