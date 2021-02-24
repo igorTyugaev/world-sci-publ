@@ -2,8 +2,9 @@
   position: fixed;
   display: none;
   top: 50vh;
-  right: 1.5em;
-  z-index: 100;
+  right: 0;
+  @include margin(0px, 28px, 0px, 0px);
+  z-index: $z-index-menu;
   transform: translateY(-50%);
 
   &--show {

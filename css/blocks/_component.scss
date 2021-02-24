@@ -1,39 +1,35 @@
 .component {
   position: relative;
-  height: 100vh;
+  //height: 100vh;
   @include margin(120px);
+  z-index: #{$z-index-menu + 1};
 
   &__img {
     position: absolute;
-    object-fit: cover;
-    object-position: right;
+    object-fit: contain;
+    object-position: top;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
 
-    @include _less-than($bp-lg-979) {
+    @include _less-than(1372px) {
       object-position: left;
+      object-fit: cover;
+      height: 100%;
     }
   }
 
   &__title {
     font-family: $fontFamilySecondary;
     color: $textColorSecondary;
-    @include font-size(36px);
+    @include font-size(35px);
   }
 
   &__content {
     position: relative;
     display: flex;
     flex-direction: column;
-    z-index: $z-index-content;
+    z-index: #{$z-index-menu + 2};
     @include padding(60px, 20px, 60px, 20px);
-
-    @include _less-than($bp-lg-979) {
-      background-color: rgba(0, 0, 0, 0.4);
-      height: 100vh;
-    }
   }
 
   &__inner {
@@ -50,11 +46,11 @@
 
     @include _less-than($bp-lg-979) {
       margin-top: #{get-vw(36px, $bp-lg-979)};
+      width: 64%;
     }
 
     @include _less-than($bp-md-768) {
       margin-top: #{get-vw(16px, $bp-md-768)};
-      width: 100%;
     }
   }
 

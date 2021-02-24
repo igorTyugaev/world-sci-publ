@@ -880,8 +880,9 @@ input {
   position: fixed;
   display: none;
   top: 50vh;
-  right: 1.5em;
-  z-index: 100;
+  right: 0;
+  margin: 0px 28px 0px 0px;
+  z-index: 2;
   transform: translateY(-50%);
 }
 
@@ -1066,7 +1067,6 @@ input {
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
-  max-width: calc((100vw - 1031px) / 2);
 }
 
 .header__call:hover {
@@ -1658,31 +1658,29 @@ input {
 
 .component {
   position: relative;
-  height: 100vh;
   margin: 120px 0px 0px 0px;
+  z-index: 3;
 }
 
 .component__img {
   position: absolute;
-  object-fit: cover;
-  object-position: right;
+  object-fit: contain;
+  object-position: top;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
 }
 
 .component__title {
   font-family: "HelveticaBold";
   color: #FFFFFF;
-  font-size: 36px;
+  font-size: 35px;
 }
 
 .component__content {
   position: relative;
   display: flex;
   flex-direction: column;
-  z-index: 1;
+  z-index: 4;
   padding-top: 60px;
   padding-right: 20px;
   padding-bottom: 60px;
@@ -3566,6 +3564,10 @@ input {
     margin: 0.2080443828vw 0vw 0vw 0vw;
   }
 
+  .float-navbar {
+    margin: 0vw 1.9417475728vw 0vw 0vw;
+  }
+
   .float-item__title {
     font-size: 0.8321775312vw;
   }
@@ -3927,7 +3929,7 @@ input {
   }
 
   .component__title {
-    font-size: 2.4965325936vw;
+    font-size: 2.427184466vw;
   }
 
   .component__content {
@@ -4695,6 +4697,14 @@ input {
   }
 }
 
+@media (max-width:1372px) {
+  .component__img {
+    object-position: left;
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
 @media (max-width:1170px) {
   .nav {
     width: 42vw;
@@ -5162,12 +5172,8 @@ input {
     font-size: 1.8386108274vw;
   }
 
-  .component__img {
-    object-position: left;
-  }
-
   .component__title {
-    font-size: 3.6772216547vw;
+    font-size: 3.5750766088vw;
   }
 
   .component__content {
@@ -5177,13 +5183,9 @@ input {
     padding-left: 2.0429009193vw;
   }
 
-  .component__content {
-    background-color: rgba(0,0,0,0.4);
-    height: 100vh;
-  }
-
   .component__inner {
     margin-top: 3.6772216547vw;
+    width: 64%;
   }
 
   .component__text {
@@ -5776,7 +5778,6 @@ input {
 
   .component__inner {
     margin-top: 2.0833333333vw;
-    width: 100%;
   }
 
   .stages-slider__submit {
@@ -6100,7 +6101,7 @@ input {
   }
 
   .component__title {
-    font-size: 6.25vw;
+    font-size: 6.0763888889vw;
   }
 
   .component__text {
