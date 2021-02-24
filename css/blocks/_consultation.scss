@@ -32,7 +32,7 @@
 
   &__content {
     height: 100%;
-
+    @include padding(0px, 28px, 0px, 28px);
     position: relative;
     z-index: $z-index-content;
     display: flex;
@@ -78,7 +78,7 @@
 
   }
 
-  &__img {
+  &__bg {
     height: 100%;
     width: 100%;
     object-fit: cover;

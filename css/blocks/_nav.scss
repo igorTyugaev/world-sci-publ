@@ -1,24 +1,24 @@
 %tmp-button--nav {
-  @include padding(4px, 25px, 4px, 25px);
+  @include padding(4px, 27px, 4px, 27px);
 
-  border: 2px solid $textColorSecondary;
+  border: 1px solid $textColorSecondary;
   box-shadow: 1px 1px 4px $colorShadow;
   border-radius: 28px;
 
   @include _more-than($bp-xxl-1442) {
-    border: #{get-vw(2px, $bp-xxl-1442)} solid $textColorSecondary;
+    border: #{get-vw(1px, $bp-xxl-1442)} solid $textColorSecondary;
     box-shadow: #{get-vw(1px, $bp-xxl-1442)} #{get-vw(1px, $bp-xxl-1442)} #{get-vw(4px, $bp-xxl-1442)} $colorShadow;
     border-radius: #{get-vw(28px, $bp-xxl-1442)};
   }
 
   @include _less-than($bp-lg-979) {
-    border: #{get-vw(2px, $bp-lg-979)} solid $textColorSecondary;
+    border: #{get-vw(1px, $bp-lg-979)} solid $textColorSecondary;
     box-shadow: #{get-vw(1px, $bp-lg-979)} #{get-vw(1px, $bp-lg-979)} #{get-vw(4px, $bp-lg-979)} $colorShadow;
     border-radius: #{get-vw(28px, $bp-lg-979)};
   }
 
   @include _less-than($bp-md-768) {
-    border: #{get-vw(2px, $bp-md-768)} solid $textColorSecondary;
+    border: #{get-vw(1px, $bp-md-768)} solid $textColorSecondary;
     box-shadow: #{get-vw(1px, $bp-md-768)} #{get-vw(1px, $bp-md-768)} #{get-vw(4px, $bp-md-768)} $colorShadow;
     border-radius: #{get-vw(28px, $bp-md-768)};
   }

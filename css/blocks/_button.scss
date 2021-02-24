@@ -56,12 +56,21 @@
     background: transparent;
     color: $textColorSecondary;
     font-family: $fontFamilyPrimary;
-
+    @include padding(10px, 24px, 10px, 24px);
     @include font-size(14px);
 
     border: 1px solid $textColorSecondary;
     box-shadow: 1px 1px 4px $colorShadow;
     border-radius: 34px;
+
+    @include _more-than($bp-xxl-1442) {
+      border-radius: #{get-vw(34px, $bp-xxl-1442)};
+    }
+
+    @include _less-than($bp-lg-979) {
+      border-radius: #{get-vw(34px, $bp-lg-979)};
+    }
+
   }
 
 

@@ -4,11 +4,12 @@
   z-index: $z-index-menu;
   position: fixed;
   width: 100%;
-  @include padding(12px, 50px, 12px, 50px);
+  @include padding(12px, 28px, 12px, 28px);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
 
   &--show {
     background-color: $subtitleBackground;
@@ -23,6 +24,7 @@
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
+    max-width: calc((100vw - 1031px) / 2);
 
     @extend %tmp-button--nav;
 
@@ -38,11 +40,14 @@
       background: #0F5C30;
     }
 
-    &-text {
-      font-family: $fontFamilyPrimary;
-      color: $textColorSecondary;
-      @include font-size(12px);
-    }
+  }
+
+  &__call-text {
+    font-family: $fontFamilyPrimary;
+    color: $textColorSecondary;
+    @include font-size(12px);
+    font-size: 12px;
+    line-height: 116.6666%;
   }
 }
 
