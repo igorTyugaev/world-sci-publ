@@ -9,7 +9,7 @@
   }
 
   &__content {
-
+    @include margin(23px);
   }
 
   &__background {
@@ -21,7 +21,7 @@
   }
 
   &__header {
-    
+
   }
 
   &__footer {
@@ -60,7 +60,27 @@
 }
 
 .p-slider {
-  min-height: 40vh;
+  //min-height: 40vh;
+
+  &__img-wrapper {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+
+    border-radius: 6px;
+
+    @include _more-than($bp-xxl-1442) {
+      border-radius: #{get-vw(6px, $bp-xxl-1442)};
+    }
+
+    @include _less-than($bp-lg-979) {
+      border-radius: #{get-vw(6px, $bp-lg-979)};
+    }
+
+    @include _less-than($bp-md-768) {
+      border-radius: #{get-vw(6px, $bp-md-768)};
+    }
+  }
 
   &__img {
     display: none;
