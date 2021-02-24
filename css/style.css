@@ -1293,6 +1293,10 @@ input {
   margin: 0px 0px 0px 24px;
 }
 
+.cost__poster-label {
+  color: #373737;
+}
+
 .cost__title {
   font-size: 24px;
 }
@@ -1300,13 +1304,18 @@ input {
 .cost__text {
   margin: 24px 0px 0px 0px;
   font-size: 18px;
-  padding-right: 100px;
+  padding-right: 95px;
   text-align: left;
   flex-grow: 1;
 }
 
 .cost__btn {
   margin: 24px 0px 0px 0px;
+  padding-top: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  line-height: 117%;
   width: 60%;
 }
 
@@ -3678,11 +3687,18 @@ input {
   }
 
   .cost__text {
-    padding-right: 6.9348127601vw;
+    padding-right: 6.5880721221vw;
   }
 
   .cost__btn {
     margin: 1.6643550624vw 0vw 0vw 0vw;
+  }
+
+  .cost__btn {
+    padding-top: 0.8321775312vw;
+    padding-right: 0.8321775312vw;
+    padding-bottom: 0.8321775312vw;
+    padding-left: 0.8321775312vw;
   }
 
   .advantages {
@@ -4953,6 +4969,13 @@ input {
 
   .cost__text {
     padding-right: 5.1072522983vw;
+  }
+
+  .cost__btn {
+    padding-top: 1.2257405516vw;
+    padding-right: 1.2257405516vw;
+    padding-bottom: 1.2257405516vw;
+    padding-left: 1.2257405516vw;
   }
 
   .quiz__title {

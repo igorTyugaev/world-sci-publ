@@ -36,6 +36,10 @@
     @include margin(0px, 0px, 0px, 24px);
   }
 
+  &__poster-label {
+    color: $textColorAccent;
+  }
+
   &__title {
     @include font-size(24px);
   }
@@ -43,12 +47,12 @@
   &__text {
     @include margin(24px);
     @include font-size(18px);
-    padding-right: 100px;
+    padding-right: 95px;
     text-align: left;
     flex-grow: 1;
 
     @include _more-than($bp-xxl-1442) {
-      padding-right: #{get-vw(100px, $bp-xxl-1442)};
+      padding-right: #{get-vw(95px, $bp-xxl-1442)};
     }
 
     @include _less-than($bp-lg-979) {
@@ -62,6 +66,8 @@
 
   &__btn {
     @include margin(24px);
+    @include padding(12px, 12px, 12px, 12px);
+    line-height: 117%;
     width: 60%;
   }
 }
