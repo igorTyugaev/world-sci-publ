@@ -102,7 +102,8 @@ function initForm(_form) {
         }
 
         function sendForm(sendData, currentForm) {
-            axios.post('https://worldscipubl.com/main-test/', sendData)
+            // axios.post('https://worldscipubl.com/main-test/', sendData)
+            axios.post('https://worldscipubl.com/main-test/add-file', sendData)
                 .then((response) => {
                     const inputs = currentForm.querySelectorAll('input');
                     const input = inputs[inputs.length - 1];

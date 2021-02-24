@@ -21,26 +21,44 @@
 
                 <div class="audit__content">
 
-                    <form novalidate name="24" class="audit__form audit-form" action="/" method="get">
+                    <form novalidate name="24" class="audit__form audit-form" action="/"
+                          method="get">
 
                         <div class="audit-form__inputs">
-                            <input class="audit-form__input"
-                                   type="text"
-                                   name="last_name"
-                                   placeholder="Фамилия">
-                            <input class="audit-form__input"
-                                   type="text"
-                                   name="first_name"
-                                   placeholder="Имя">
-                            <input class="audit-form__input"
-                                   type="tel"
-                                   name="phone"
-                                   pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                                   placeholder="Номер телефона">
-                            <input class="audit-form__input"
-                                   type="email"
-                                   name="email"
-                                   placeholder="Электронная почта">
+
+                            <div class="input-wrapper">
+                                <input class="audit-form__input"
+                                       type="text"
+                                       name="last_name"
+                                       placeholder="Фамилия">
+                                <span class="input-wrapper__error"></span>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <input class="audit-form__input"
+                                       type="text"
+                                       name="first_name"
+                                       placeholder="Имя">
+                                <span class="input-wrapper__error"></span>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <input class="audit-form__input"
+                                       type="tel"
+                                       name="phone"
+                                       pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                                       placeholder="Номер телефона">
+                                <span class="input-wrapper__error"></span>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <input class="audit-form__input"
+                                       type="email"
+                                       name="email"
+                                       placeholder="Электронная почта">
+                                <span class="input-wrapper__error"></span>
+                            </div>
+
                         </div>
 
                         <div class="audit-form__inputs audit-form__inputs--file">
@@ -54,7 +72,10 @@
                                 чтобы загрузить с компьютера
                                 статью для аудита
                             </span>
-                                <input name="file" id="file-upload-4" type="file"/>
+                                <div class="input-wrapper">
+                                    <input name="file" id="file-upload-4" type="file"/>
+                                    <span class="input-wrapper__error"></span>
+                                </div>
                             </div>
 
                             <button type="submit" class="button audit-form__btn"
@@ -122,9 +143,9 @@
                             этапов. Посмотрите, как изменится Ваша статья перед отправкой в
                             журнал
                         </p>
-<!--                        <button class="button audit-cart__link" data-show-popup="206">-->
-<!--                            Открыть пример-->
-<!--                        </button>-->
+                        <!--                        <button class="button audit-cart__link" data-show-popup="206">-->
+                        <!--                            Открыть пример-->
+                        <!--                        </button>-->
                     </div>
                     <img src="./media/audit/humaaans-3.svg" alt="human_a"
                          class="audit-cart__img">

@@ -2453,7 +2453,7 @@ input {
   padding-right: 0px;
   padding-bottom: 36px;
   padding-left: 0px;
-  margin-top: 90px;
+  margin-top: 160px;
 }
 
 .foreign__footer-title {
@@ -2910,7 +2910,7 @@ input {
 }
 
 .geography {
-  margin: 80px 0px 0px 0px;
+  margin: 140px 0px 0px 0px;
 }
 
 .geography__title {
@@ -2953,14 +2953,15 @@ input {
 .your-question__textarea {
   width: 100%;
   text-align: left;
-  min-height: 12vw;
   margin: 20px 0px 0px 0px;
   padding-top: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
+  background-color: #FFFEFE;
   border: 1px solid rgba(0,0,0,0.49);
   border-radius: 6px;
+  min-height: 93px;
 }
 
 .your-question__email {
@@ -2970,6 +2971,7 @@ input {
   padding-bottom: 10px;
   padding-left: 10px;
   margin: 20px 0px 0px 0px;
+  background-color: #FFFEFE;
   border: 1px solid rgba(0,0,0,0.49);
   border-radius: 6px;
 }
@@ -2984,7 +2986,7 @@ input {
 }
 
 .footer {
-  margin: 80px 0px 0px 0px;
+  margin: 160px 0px 0px 0px;
   padding-top: 16px;
   padding-right: 0px;
   padding-bottom: 16px;
@@ -4344,7 +4346,7 @@ input {
   }
 
   .foreign__footer {
-    margin-top: 6.241331484vw;
+    margin-top: 11.0957004161vw;
   }
 
   .card-txt {
@@ -4553,7 +4555,7 @@ input {
   }
 
   .geography {
-    margin: 5.547850208vw 0vw 0vw 0vw;
+    margin: 9.7087378641vw 0vw 0vw 0vw;
   }
 
   .geography__title {
@@ -4587,6 +4589,11 @@ input {
     padding-left: 0.693481276vw;
   }
 
+  .your-question__textarea {
+    border-radius: 0.4160887656vw;
+    min-height: 6.4493758669vw;
+  }
+
   .your-question__email {
     padding-top: 0.693481276vw;
     padding-right: 0.693481276vw;
@@ -4603,7 +4610,7 @@ input {
   }
 
   .footer {
-    margin: 5.547850208vw 0vw 0vw 0vw;
+    margin: 11.0957004161vw 0vw 0vw 0vw;
   }
 
   .footer {
@@ -5532,7 +5539,7 @@ input {
   }
 
   .foreign__footer {
-    margin-top: 5.1072522983vw;
+    margin-top: 9.1930541369vw;
   }
 
   .card-txt {
@@ -5713,6 +5720,11 @@ input {
     padding-right: 1.0214504597vw;
     padding-bottom: 1.0214504597vw;
     padding-left: 1.0214504597vw;
+  }
+
+  .your-question__textarea {
+    border-radius: 0.6128702758vw;
+    min-height: 9.4994892748vw;
   }
 
   .your-question__email {
@@ -5903,6 +5915,11 @@ input {
 
   .review-card__index {
     font-size: 14px;
+  }
+
+  .your-question__textarea {
+    border-radius: 0.6128702758vw;
+    min-height: 9.4994892748vw;
   }
 }
 

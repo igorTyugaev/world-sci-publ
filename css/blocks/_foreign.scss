@@ -43,7 +43,7 @@
     background: #001437;
     text-align: center;
     @include padding(36px, 0px, 36px, 0px);
-    margin-top: 90px;
+    margin-top: 160px;
 
     &-title {
       font-family: $fontFamilySecondary;
@@ -52,11 +52,11 @@
     }
 
     @include _more-than($bp-xxl-1442) {
-      margin-top: #{get-vw(90px, $bp-xxl-1442)};
+      margin-top: #{get-vw(160px, $bp-xxl-1442)};
     }
 
     @include _less-than($bp-lg-979) {
-      margin-top: #{get-vw(50px, $bp-lg-979)};
+      margin-top: #{get-vw(90px, $bp-lg-979)};
     }
   }
 }

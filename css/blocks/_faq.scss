@@ -27,18 +27,36 @@
   &__textarea {
     width: 100%;
     text-align: left;
-    min-height: 12vw;
     @include margin(20px);
     @include padding(10px, 10px, 10px, 10px);
-
+    background-color: #FFFEFE;
     border: 1px solid rgba(0, 0, 0, 0.49);
+
     border-radius: 6px;
+    min-height: 93px;
+
+    @include _more-than($bp-xxl-1442) {
+      border-radius: #{get-vw(6px, $bp-xxl-1442)};
+      min-height: #{get-vw(93px, $bp-xxl-1442)};
+    }
+
+    @include _less-than($bp-lg-979) {
+      border-radius: #{get-vw(6px, $bp-lg-979)};
+      min-height: #{get-vw(93px, $bp-lg-979)};
+    }
+
+    @include _less-than($bp-md-768) {
+      border-radius: #{get-vw(6px, $bp-lg-979)};
+      min-height: #{get-vw(93px, $bp-lg-979)};
+    }
+
   }
 
   &__email {
     width: 30%;
     @include padding(10px, 10px, 10px, 10px);
     @include margin(20px);
+    background-color: #FFFEFE;
 
     border: 1px solid rgba(0, 0, 0, 0.49);
     border-radius: 6px;
