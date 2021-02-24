@@ -2388,10 +2388,11 @@ input {
 }
 
 .tabs-team__inner {
+  position: relative;
   align-self: flex-end;
   background-color: #FFFFFF;
   box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
-  padding-top: 58px;
+  padding-top: 68px;
   padding-right: 27px;
   padding-bottom: 58px;
   padding-left: 27px;
@@ -2406,6 +2407,14 @@ input {
   padding-right: 0px;
   padding-bottom: 0px;
   padding-left: 0px;
+}
+
+.tabs-team__logo {
+  position: absolute;
+  left: 5%;
+  top: -3.124999889%;
+  object-fit: contain;
+  height: 80px;
 }
 
 .foreign {
@@ -4298,7 +4307,7 @@ input {
   }
 
   .tabs-team__inner {
-    padding-top: 4.0221914008vw;
+    padding-top: 4.7156726768vw;
     padding-right: 1.8723994452vw;
     padding-bottom: 4.0221914008vw;
     padding-left: 1.8723994452vw;
@@ -4313,6 +4322,10 @@ input {
     padding-right: 0vw;
     padding-bottom: 0vw;
     padding-left: 0vw;
+  }
+
+  .tabs-team__logo {
+    height: 5.547850208vw;
   }
 
   .foreign {
@@ -5486,7 +5499,7 @@ input {
   }
 
   .tabs-team__inner {
-    padding-top: 5.924412666vw;
+    padding-top: 6.9458631256vw;
     padding-right: 2.7579162411vw;
     padding-bottom: 5.924412666vw;
     padding-left: 2.7579162411vw;
@@ -5501,6 +5514,10 @@ input {
     padding-right: 0vw;
     padding-bottom: 0vw;
     padding-left: 0vw;
+  }
+
+  .tabs-team__logo {
+    height: 8.1716036772vw;
   }
 
   .foreign__footer {
@@ -6276,6 +6293,10 @@ input {
 
   .tabs-team__text {
     font-size: 2.4305555556vw;
+  }
+
+  .tabs-team__logo {
+    height: 13.8888888889vw;
   }
 
   .foreign__footer-title {

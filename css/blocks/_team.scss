@@ -115,11 +115,11 @@
   }
 
   &__inner {
+    position: relative;
     align-self: flex-end;
     background-color: $popupBackground;
     box-shadow: 1px 1px 4px $colorShadow;
-    @include padding(58px, 27px, 58px, 27px);
-    //transform: translateX(-4.92%);
+    @include padding(68px, 27px, 58px, 27px);
   }
 
   &__text {
@@ -127,6 +127,28 @@
 
     &:not(:first-child) {
       @include padding(20px);
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    left: 5%;
+    top: -3.124999889%;
+    object-fit: contain;
+
+    $h-logo: 80px;
+    height: $h-logo;
+
+    @include _more-than($bp-xxl-1442) {
+      height: #{get-vw($h-logo, $bp-xxl-1442)};
+    }
+
+    @include _less-than($bp-lg-979) {
+      height: #{get-vw($h-logo, $bp-lg-979)};
+    }
+
+    @include _less-than($bp-sm-576) {
+      height: #{get-vw($h-logo, $bp-sm-576)};
     }
   }
 }
