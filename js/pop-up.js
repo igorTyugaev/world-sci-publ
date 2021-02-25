@@ -115,5 +115,9 @@ const buttons = document.querySelectorAll('[data-show-popup]');
 let popups = new Map([]);
 
 buttons.forEach((button) => {
-    popups.set(button.dataset.showPopup, initPopUp(button));
+    const idShowPopUp = button.dataset.showPopup;
+    if (idShowPopUp == 0)
+        popups.set(idShowPopUp, null);
+    else
+        popups.set(idShowPopUp, initPopUp(button));
 });

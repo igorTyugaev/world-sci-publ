@@ -19,7 +19,8 @@ function initForm(_form) {
             console.log("Отправка формы...")
             sendForm(data, currentTarget);
             if (codeStatus) {
-                if (idShowPopUp != 0) showPopUpLogic();
+                if (idShowPopUp != 0)
+                    showPopUpLogic();
                 currentTarget.reset();
             }
         }
@@ -109,7 +110,6 @@ function initForm(_form) {
         }
 
         function scrabbleInputs(currentForm) {
-            // const entries = new Map([]);
             let fo = new FormData();
             const inputs = currentForm.querySelectorAll('input, textarea');
             let isValidity = true;
@@ -118,7 +118,6 @@ function initForm(_form) {
                 const _isValidity = inputIsValidation(input);
 
                 if (_isValidity) {
-                    // entries.set(input.name, input.value);
                     if (input.getAttribute("type") === "file") {
                         fo.append("file", input.files[0]);
                         fo.append("db", 1);
@@ -132,21 +131,13 @@ function initForm(_form) {
             if (!isValidity) return null;
 
             if (idPopup == 7) {
-                // entries.set("res", answersQuizlet);
-                console.log("answersQuizlet: ");
-                console.log(answersQuizlet);
                 fo.append("res", JSON.stringify(answersQuizlet));
                 answersQuizlet = null;
             }
 
-            // entries.set("csrfToken", csrfToken);
-            // entries.set("formsended", currentForm.getAttribute("name"));
-
             fo.append("csrfToken", csrfToken);
             fo.append("formsended", currentForm.getAttribute("name"));
 
-            // const data = Object.fromEntries(entries);
-            // return data;
             return fo;
         }
 
@@ -165,7 +156,6 @@ function initForm(_form) {
             // /main-test/add-file - загрузка файла
             // /main-test/letter -
 
-            // axios.post('https://worldscipubl.com/main-test/', sendData)
             const base_url = 'https://worldscipubl.com/main-test/';
             const file_ep = 'add-file/';
             const letter_ep = 'letter/';
