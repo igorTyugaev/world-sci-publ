@@ -4,19 +4,22 @@ function initForm(_form) {
         e.preventDefault();
         let codeStatus = true;
         let hasFileInput = false;
+        let hasLatterInput = false;
         const {currentTarget} = e;
         const idPopup = currentTarget.hasAttribute("data-popup")
             ? currentTarget.getAttribute("data-popup")
             : null;
         const data = scrabbleInputs(currentTarget);
         const button = currentTarget.querySelector('[data-show-popup]');
-        const showPopUpLogic = popups.get(button.dataset.showPopup);
+        const idShowPopUp = button.dataset.showPopup;
+        const showPopUpLogic = popups.get(idShowPopUp);
+        console.log(idPopup);
 
         if (data) {
             console.log("Отправка формы...")
             sendForm(data, currentTarget);
             if (codeStatus) {
-                showPopUpLogic();
+                if (idShowPopUp != 0) showPopUpLogic();
                 currentTarget.reset();
             }
         }
@@ -27,6 +30,7 @@ function initForm(_form) {
                 case "phone":
                     if (input.validity.valid) {
                         removeErrorInput(input, hint);
+                        console.log("phone");
                         return true;
                     } else {
                         setErrorInput(input, hint, "Недопустимый номер телефона!");
@@ -36,6 +40,7 @@ function initForm(_form) {
                 case "email":
                     if (input.validity.valid) {
                         removeErrorInput(input, hint);
+                        console.log("email");
                         return true;
                     } else {
                         setErrorInput(input, hint, "Недопустимый email!");
@@ -45,6 +50,27 @@ function initForm(_form) {
                 case "name":
                     if (input.validity.valid) {
                         removeErrorInput(input, hint);
+                        console.log("name");
+                        return true;
+                    } else {
+                        setErrorInput(input, hint, "Как к Вам обращаться?");
+                        return false;
+                    }
+                    break;
+                case "firstname":
+                    if (input.validity.valid) {
+                        removeErrorInput(input, hint);
+                        console.log("firstname");
+                        return true;
+                    } else {
+                        setErrorInput(input, hint, "Как к Вам обращаться?");
+                        return false;
+                    }
+                    break;
+                case "lastname":
+                    if (input.validity.valid) {
+                        removeErrorInput(input, hint);
+                        console.log("lastname");
                         return true;
                     } else {
                         setErrorInput(input, hint, "Как к Вам обращаться?");
@@ -57,6 +83,10 @@ function initForm(_form) {
                     break;
                 case "file":
                     hasFileInput = true;
+                    return true;
+                    break;
+                case "text":
+                    hasLatterInput = true;
                     return true;
                     break;
                 default:
@@ -79,16 +109,16 @@ function initForm(_form) {
         }
 
         function scrabbleInputs(currentForm) {
-            const entries = new Map([]);
+            // const entries = new Map([]);
             let fo = new FormData();
-            const inputs = currentForm.querySelectorAll('input');
+            const inputs = currentForm.querySelectorAll('input, textarea');
             let isValidity = true;
 
             inputs.forEach((input, index) => {
                 const _isValidity = inputIsValidation(input);
 
                 if (_isValidity) {
-                    entries.set(input.name, input.value);
+                    // entries.set(input.name, input.value);
                     if (input.getAttribute("type") === "file") {
                         fo.append("file", input.files[0]);
                         fo.append("db", 1);
@@ -101,8 +131,11 @@ function initForm(_form) {
 
             if (!isValidity) return null;
 
-            if (idPopup == 7 && answersQuizlet) {
-                entries.set("res", answersQuizlet);
+            if (idPopup == 7) {
+                // entries.set("res", answersQuizlet);
+                console.log("answersQuizlet: ");
+                console.log(answersQuizlet);
+                fo.append("res", JSON.stringify(answersQuizlet));
                 answersQuizlet = null;
             }
 
@@ -120,26 +153,30 @@ function initForm(_form) {
         function sendForm(sendData, currentForm) {
             const headers = {
                 'Accept': 'application/json',
-                'Content-Type': 'multipart/form-data'
+                'Content-Type': 'multipart/form-data',
+                'Access-Control-Allow-Origin': "http://localhost:8848",
+                'Access-Control-Allow-Credentials': true,
+                'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type,' + ' Accept'
             }
 
-            // const data = JSON.stringify(sendData);
-            // let fo = new FormData();
-            // fo.append("csrfToken", csrfToken);
-            // fo.append("formsended", currentForm.getAttribute("name"));
-            // // fo.append("data", data);
 
             // /main-test - все формы
             // /main-test/is-exists - проверка зареган ли емаил
             // /main-test/add-file - загрузка файла
+            // /main-test/letter -
 
             // axios.post('https://worldscipubl.com/main-test/', sendData)
             const base_url = 'https://worldscipubl.com/main-test/';
             const file_ep = 'add-file/';
+            const letter_ep = 'letter/';
             let url = base_url;
+
             if (hasFileInput) {
                 url += file_ep;
                 hasFileInput = false;
+            } else if (hasLatterInput) {
+                url += letter_ep;
+                hasLatterInput = false;
             }
 
             axios.post(url, sendData, {withCredentials: true}, {headers: headers})

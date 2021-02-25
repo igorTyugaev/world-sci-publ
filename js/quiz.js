@@ -65,7 +65,8 @@ function initQuiz(quiz) {
         nextStep('Пропустить')
     );
 
-    const insertAnswers = (activeAnswers) => {
+    const insertAnswers = (activeStep) => {
+        const activeAnswers = buttonsTitle[activeStep].answers
         _answers.innerHTML = '';
         activeAnswers.forEach((element) => {
             const button = document.createElement('button');
@@ -76,19 +77,24 @@ function initQuiz(quiz) {
         });
     };
 
-    const insertQuestion = (activeQuestion) => {
+    const insertQuestion = (activeStep) => {
+        const activeQuestion = buttonsTitle[activeStep].question
         _question.innerHTML = activeQuestion;
     };
 
-    const addAnswer = (answer) => {
+    const addAnswer = (stepActive, answerActive) => {
+        const answer = {
+            "question": buttonsTitle[stepActive].question,
+            "answer": answerActive
+        }
         answers.push(answer);
     };
 
     const nextStep = (answer) => {
         if (step + 1 < buttonsTitle.length) {
-            addAnswer(answer);
-            insertAnswers(buttonsTitle[++step].answers);
-            insertQuestion(buttonsTitle[step].question);
+            addAnswer(step, answer);
+            insertAnswers(++step);
+            insertQuestion(step);
             _stepWrapper.classList = `progress-bar_step-${step}`;
             _number.innerText = `Вопрос ${step + 1} из ${buttonsTitle.length}`;
 
@@ -112,6 +118,7 @@ function initQuiz(quiz) {
 
 
         } else {
+            addAnswer(step, answer);
             endQuiz();
         }
     };
@@ -121,7 +128,7 @@ function initQuiz(quiz) {
         initPopUpById(7);
     };
 
-    insertAnswers(buttonsTitle[step].answers);
+    insertAnswers(step);
 }
 
 const _quiz1 = document.getElementById('quiz-1'),

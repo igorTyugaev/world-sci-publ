@@ -138,12 +138,14 @@
     }
   }
 
-  &__input {
-    @extend %tmp-input;
-
+  &__input-wrapper {
     &:not(:first-child) {
       @include margin(12px);
     }
+  }
+
+  &__input {
+    @extend %tmp-input;
 
     &:focus {
       border: 2px solid $colorAccent;
