@@ -14,7 +14,7 @@ function initQuiz(quiz) {
         {
             question: '2. Для каких целей Вам нужна публикация?',
             answers: [
-                'Для защиты диссертации и/или получения получение учёного звания и защита учёной степени',
+                'Для защиты диссертации/ученой степени, получения учёного звания',
                 'Для подачи заявки на стипендию и/или грант',
                 'Для сдачи отчётности в вузе и/или продления контракта',
                 'Для карьерного роста',
@@ -69,7 +69,7 @@ function initQuiz(quiz) {
         _answers.innerHTML = '';
         activeAnswers.forEach((element) => {
             const button = document.createElement('button');
-            button.classList = 'quizlet__option button button--quiz';
+            button.classList = 'quizlet__option button-quiz';
             button.innerText = element;
             button.addEventListener('click', () => nextStep(element));
             _answers.append(button);

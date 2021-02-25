@@ -30,17 +30,16 @@
   text-align: center;
   padding: 12px;
 
+  @include _more-than($bp-xxl-1442) {
+    box-shadow: #{get-vw(1px, $bp-xxl-1442)} #{get-vw(1px, $bp-xxl-1442)} #{get-vw(4px, $bp-xxl-1442)} $colorShadow;
+    border-radius: #{get-vw(24px, $bp-xxl-1442)};
+    padding: #{get-vw(12px, $bp-xxl-1442)};
+  }
 
-  &--quiz {
-    background: $textColorSecondary;
-    color: $textColorPrimary;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    @include font-size(14px);
-    line-height: 100%;
-    text-align: center;
-    border: 1px solid rgba(51, 51, 51, 0.6);
+  @include _less-than($bp-lg-979) {
+    box-shadow: #{get-vw(1px, $bp-lg-979)} #{get-vw(1px, $bp-lg-979)} #{get-vw(4px, $bp-lg-979)} $colorShadow;
+    border-radius: #{get-vw(24px, $bp-lg-979)};
+    padding: #{get-vw(12px, $bp-lg-979)};
   }
 
   &--submit {
@@ -57,6 +56,14 @@
     line-height: 116.666667%;
     border-radius: 6px;
     font-family: $fontFamilyPrimary;
+
+    @include _more-than($bp-xxl-1442) {
+      border-radius: #{get-vw(6px, $bp-xxl-1442)};
+    }
+
+    @include _less-than($bp-lg-979) {
+      border-radius: #{get-vw(6px, $bp-lg-979)};
+    }
   }
 
   &--consultation {
@@ -79,38 +86,60 @@
     }
 
   }
+}
 
+.button-quiz {
+  @extend %btn-green;
+
+  &:hover {
+    border-color: transparent;
+    color: $textColorSecondary;
+    background: #177840;
+  }
+
+  &:active {
+    border-color: transparent;
+    color: $textColorSecondary;
+    background: #0F5C30;
+  }
+
+  background: $textColorSecondary;
+  color: $textColorPrimary;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 100%;
+  text-align: center;
+
+  border: 1px solid rgba(51, 51, 51, 0.6);
+  box-shadow: 1px 1px 4px $colorShadow;
+  border-radius: 24px;
+  padding: 10px;
+  @include font-size(14px);
 
   @include _more-than($bp-xxl-1442) {
+    border: #{get-vw(1px, $bp-xxl-1442)} solid rgba(51, 51, 51, 0.6);
     box-shadow: #{get-vw(1px, $bp-xxl-1442)} #{get-vw(1px, $bp-xxl-1442)} #{get-vw(4px, $bp-xxl-1442)} $colorShadow;
     border-radius: #{get-vw(24px, $bp-xxl-1442)};
-    padding: #{get-vw(12px, $bp-xxl-1442)};
 
-    &--quiz {
-      border: #{get-vw(1px, $bp-xxl-1442)} solid rgba(51, 51, 51, 0.6);
-    }
-
-    &--contract {
-      border-radius: #{get-vw(6px, $bp-xxl-1442)};
-    }
+    padding: #{get-vw(10px, $bp-xxl-1442)};
   }
 
   @include _less-than($bp-lg-979) {
+    border: #{get-vw(1px, $bp-lg-979)} solid rgba(51, 51, 51, 0.6);
     box-shadow: #{get-vw(1px, $bp-lg-979)} #{get-vw(1px, $bp-lg-979)} #{get-vw(4px, $bp-lg-979)} $colorShadow;
     border-radius: #{get-vw(24px, $bp-lg-979)};
-    padding: #{get-vw(12px, $bp-lg-979)};
 
-    &--quiz {
-      border: #{get-vw(1px, $bp-lg-979)} solid rgba(51, 51, 51, 0.6);
-    }
-
-
-    &--contract {
-      border-radius: #{get-vw(6px, $bp-lg-979)};
-    }
+    padding: #{get-vw(10px, $bp-lg-979)};
   }
 
-  @include _less-than($bp-sm-576) {
 
+  @include _less-than($bp-md-768) {
+    border: #{get-vw(1px, $bp-md-768)} solid rgba(51, 51, 51, 0.6);
+    box-shadow: #{get-vw(1px, $bp-md-768)} #{get-vw(1px, $bp-md-768)} #{get-vw(4px, $bp-md-768)} $colorShadow;
+    border-radius: #{get-vw(24px, $bp-md-768)};
+
+    padding: #{get-vw(10px, $bp-md-768)};
   }
 }
