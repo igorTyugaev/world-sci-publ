@@ -1,6 +1,11 @@
 .faq {
   @include margin(80px);
 
+  &__wrap {
+    position: relative;
+    z-index: $z-index-content;
+  }
+
   &__title {
     font-family: $fontFamilySecondary;
     @include font-size(36px);

@@ -2933,6 +2933,11 @@ input {
   margin: 80px 0px 0px 0px;
 }
 
+.faq__wrap {
+  position: relative;
+  z-index: 1;
+}
+
 .faq__title {
   font-family: "HelveticaBold";
   font-size: 36px;
@@ -2986,6 +2991,7 @@ input {
 }
 
 .footer {
+  position: relative;
   margin: 160px 0px 0px 0px;
   padding-top: 16px;
   padding-right: 0px;
@@ -3049,6 +3055,15 @@ input {
   align-items: flex-end;
   text-align: right;
   height: 100%;
+}
+
+.footer__bg {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  object-fit: contain;
+  object-position: right bottom;
+  height: 496px;
 }
 
 .contact-us {
@@ -4631,6 +4646,10 @@ input {
     padding-left: 0vw;
   }
 
+  .footer__bg {
+    height: 33.9805825243vw;
+  }
+
   .contact-us__tel {
     font-size: 0.8321775312vw;
   }
@@ -4745,6 +4764,12 @@ input {
   }
 }
 
+@media (max-width:1440px) {
+  .footer__bg {
+    height: 24.8571428571vw;
+  }
+}
+
 @media (max-width:1400px) {
   .float-navbar--show {
     display: none;
@@ -4789,6 +4814,10 @@ input {
 
   .profile__nav-slider {
     left: 0;
+  }
+
+  .footer__bg {
+    height: 22.905982906vw;
   }
 }
 
@@ -5752,6 +5781,10 @@ input {
     padding-left: 0vw;
   }
 
+  .footer__bg {
+    height: 25.3319713994vw;
+  }
+
   .contact-us__tel {
     font-size: 1.2257405516vw;
   }
@@ -5920,6 +5953,10 @@ input {
   .your-question__textarea {
     border-radius: 0.6128702758vw;
     min-height: 9.4994892748vw;
+  }
+
+  .footer__bg {
+    height: 32.2916666667vw;
   }
 }
 
