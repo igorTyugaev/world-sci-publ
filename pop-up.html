@@ -264,8 +264,39 @@
                 <form novalidate name="3" enctype="multipart/form-data" method="post"
                       action="/">
                     <div class="pop-up__inputs">
-                        <input name="scopus" type="text" class="pop-up__input"
-                               placeholder="Выберите базу (Scopus/WoS)">
+
+                        <!--                        <input name="scopus" type="text" class="pop-up__input"-->
+                        <!--                               placeholder="Выберите базу (Scopus/WoS)">-->
+
+
+                        <div class="selector" data-state="">
+                            <div class="selector__title" data-default="Option 0">
+                                Выберите базу (Scopus/WoS)
+                            </div>
+                            <div class="selector__content">
+
+                                <input id="singleSelect0" class="selector__input"
+                                       type="radio" name="singleSelect"/>
+                                <label for="singleSelect0" class="selector__label">
+                                    Выберите базу (Scopus/WoS)
+                                </label>
+
+                                <input id="singleSelect1" class="selector__input"
+                                       type="radio" name="singleSelect"/>
+                                <label for="singleSelect1" class="selector__label">
+                                    Scopus
+                                </label>
+
+                                <input id="singleSelect2" class="selector__input"
+                                       type="radio" name="singleSelect"/>
+                                <label for="singleSelect2" class="selector__label">
+                                    Web of Science
+                                </label>
+
+                            </div>
+                        </div>
+
+
                         <input name="file" type="file" class="pop-up__input">
                         <div class="p-uploader pop-up__input pop-up__input--file">
                             <label for="file-upload-1" class="p-uploader__choose">

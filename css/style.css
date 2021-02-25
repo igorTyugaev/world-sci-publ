@@ -3229,14 +3229,17 @@ input {
 }
 
 .pop-up__input {
-  border: 1px solid rgba(0,0,0,0.49);
-  border-radius: 6px;
-  padding: 12px;
-  font-weight: normal;
-  font-size: 14px;
   width: 100%;
-  margin: 15px 0px 0px 0px;
+  font-weight: normal;
   cursor: text;
+  margin: 15px 0px 0px 0px;
+  font-size: 14px;
+  padding-top: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.49);
 }
 
 .pop-up__input--file {
@@ -3477,6 +3480,103 @@ input {
   padding-right: 12px;
   padding-bottom: 0px;
   padding-left: 12px;
+}
+
+.selector {
+  position: relative;
+  width: 100%;
+}
+
+.selector__title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFEFE;
+  color: #b7b7b7;
+  font-size: 14px;
+  padding-top: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  border: 1px solid rgba(0,0,0,0.49);
+  border-radius: 6px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.selector__title:hover {
+  border-color: #D8093A;
+  color: #202020;
+}
+
+.selector__content {
+  position: absolute;
+  top: calc(100% - 6px);
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #c7ccd1;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  z-index: 1;
+}
+
+.selector__input {
+  display: none;
+}
+
+.selector__input:checked+label {
+  background-color: #219653;
+  overflow: hidden;
+}
+
+.selector__label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  max-height: 0;
+  padding: 0 16px;
+  transition: all 0.2s ease-out;
+  background-color: #ececec;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.selector__label+input+.selector__label {
+  border-top: 0 solid #C7CCD160;
+}
+
+.selector__label:hover {
+  background-color: #cecece;
+}
+
+.selector__label:active {
+  background-color: #219653;
+}
+
+.selector[data-state=active] .selector__title:before {
+  transform: translate(-3px,-50%) rotate(-45deg);
+}
+
+.selector[data-state=active] .selector__title:after {
+  transform: translate(3px,-50%) rotate(45deg);
+}
+
+.selector[data-state=active] .selector__content {
+  opacity: 1;
+}
+
+.selector[data-state=active] .selector__label+.selector__input+.selector__label {
+  max-height: 40px;
+  border-top-width: 1px;
 }
 
 /*# sourceMappingURL=style.css.map */
@@ -4765,6 +4865,17 @@ input {
     margin: 1.040221914vw 0vw 0vw 0vw;
   }
 
+  .pop-up__input {
+    font-size: 0.9708737864vw;
+  }
+
+  .pop-up__input {
+    padding-top: 0.8321775312vw;
+    padding-right: 0.8321775312vw;
+    padding-bottom: 0.8321775312vw;
+    padding-left: 0.8321775312vw;
+  }
+
   .pop-up__button {
     padding-top: 0.8321775312vw;
     padding-right: 3.46740638vw;
@@ -4852,6 +4963,17 @@ input {
     padding-top: 0vw;
     padding-right: 0.8321775312vw;
     padding-bottom: 0vw;
+    padding-left: 0.8321775312vw;
+  }
+
+  .selector__title {
+    font-size: 0.9708737864vw;
+  }
+
+  .selector__title {
+    padding-top: 0.8321775312vw;
+    padding-right: 0.8321775312vw;
+    padding-bottom: 0.8321775312vw;
     padding-left: 0.8321775312vw;
   }
 }
@@ -5937,6 +6059,17 @@ input {
     padding-left: 5.3115423902vw;
   }
 
+  .pop-up__input {
+    font-size: 1.4300306435vw;
+  }
+
+  .pop-up__input {
+    padding-top: 1.2257405516vw;
+    padding-right: 1.2257405516vw;
+    padding-bottom: 1.2257405516vw;
+    padding-left: 1.2257405516vw;
+  }
+
   .pop-up__button {
     padding-top: 1.2257405516vw;
     padding-right: 5.1072522983vw;
@@ -6004,6 +6137,17 @@ input {
     padding-top: 0vw;
     padding-right: 1.2257405516vw;
     padding-bottom: 0vw;
+    padding-left: 1.2257405516vw;
+  }
+
+  .selector__title {
+    font-size: 1.4300306435vw;
+  }
+
+  .selector__title {
+    padding-top: 1.2257405516vw;
+    padding-right: 1.2257405516vw;
+    padding-bottom: 1.2257405516vw;
     padding-left: 1.2257405516vw;
   }
 }
@@ -6631,6 +6775,10 @@ input {
     height: 27.7777777778vw;
   }
 
+  .pop-up__input {
+    font-size: 2.4305555556vw;
+  }
+
   .pop-up__super-desc {
     font-size: 1.7361111111vw;
   }
@@ -6656,6 +6804,10 @@ input {
   }
 
   .pdf-download__title {
+    font-size: 2.4305555556vw;
+  }
+
+  .selector__title {
     font-size: 2.4305555556vw;
   }
 }
