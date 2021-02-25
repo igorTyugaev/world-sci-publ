@@ -37,6 +37,23 @@
     display: flex;
     flex-direction: column;
     width: 70%;
+    height: 476px;
+
+    @include _more-than($bp-xxl-1442) {
+      height: #{get-vw(476px, $bp-xxl-1442)};
+    }
+
+    @include _less-than($bp-xl-1170) {
+      height: #{get-vw(476px, $bp-xl-1170)};
+    }
+
+    @include _less-than($bp-lg-979) {
+      height: #{get-vw(476px, $bp-lg-979)};
+    }
+
+    @include _less-than($bp-md-768) {
+      height: #{get-vw(476px, $bp-md-768)};
+    }
   }
 
   &__content {

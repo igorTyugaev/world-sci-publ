@@ -1,5 +1,78 @@
 .progress-bar {
 
+  &__bar {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+
+    width: 100%;
+    background-color: #C4C4C4;
+
+    height: 5px;
+
+    @include _more-than($bp-xxl-1442) {
+      height: #{get-vw(5px, $bp-xxl-1442)};
+    }
+
+    @include _less-than($bp-xl-1170) {
+      height: #{get-vw(5px, $bp-xl-1170)};
+    }
+
+    @include _less-than($bp-lg-979) {
+      height: #{get-vw(5px, $bp-lg-979)};
+    }
+
+    @include _less-than($bp-md-768) {
+      height: #{get-vw(5px, $bp-md-768)};
+    }
+  }
+
+  &__circle {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+
+    border-radius: 50%;
+
+    background: #C4C4C4;
+    transition: background-color 0.3s 0s;
+
+    width: 22px;
+    height: 22px;
+
+    @include _more-than($bp-xxl-1442) {
+      width: #{get-vw(22px, $bp-xxl-1442)};
+      height: #{get-vw(22px, $bp-xxl-1442)};
+    }
+
+    @include _less-than($bp-xl-1170) {
+      width: #{get-vw(22px, $bp-xl-1170)};
+      height: #{get-vw(22px, $bp-xl-1170)};
+    }
+
+    @include _less-than($bp-lg-979) {
+      width: #{get-vw(22px, $bp-lg-979)};
+      height: #{get-vw(22px, $bp-lg-979)};
+    }
+
+    @include _less-than($bp-md-768) {
+      width: #{get-vw(22px, $bp-md-768)};
+      height: #{get-vw(22px, $bp-md-768)};
+    }
+  }
+
+  &__circle-text {
+    display: block;
+    text-align: center;
+    font-family: $fontFamilySecondary;
+    @include font-size(14px);
+    transform: translateY(10%);
+    color: #FFFFFF;
+  }
+
   &__title {
     font-family: $fontFamilySecondary;
     @include font-size(14px);
@@ -13,40 +86,11 @@
     position: relative;
   }
 
-  &__circle {
-    position: relative;
-    width: 22px;
-    height: 22px;
-    background: #C4C4C4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color: #FFFFFF;
-
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 16px;
-
-    transition: background-color 0.3s 0s;
-  }
-
-  &__bar {
-    top: 50%;
-    transform: translateY(-50%);
-    position: absolute;
-    height: 5px;
-    width: 100%;
-    background-color: #C4C4C4;
-  }
-
   &__bar-inner {
     height: 100%;
     width: 0%;
-    background: #FFC700;
-    transition: width 0.6s;
+    background: $colorAccent;
+    transition: width 0.3s 0.6s;
   }
 
   &_step {
@@ -67,7 +111,7 @@
     &-1 {
       .progress-bar {
         &__circle_1 {
-          background: #FFC700;
+          background: $colorAccent;
           transition: background-color 0.3s 0.6s;
         }
 
@@ -85,12 +129,12 @@
     &-2 {
       .progress-bar {
         &__circle_1 {
-          background: #FFC700;
+          background: $colorAccent;
           transition: background-color 0.3s 0.6s;
         }
 
         &__circle_2 {
-          background: #FFC700;
+          background: $colorAccent;
           transition: background-color 0.3s 0.6s;
         }
 
@@ -108,17 +152,17 @@
     &-3 {
       .progress-bar {
         &__circle_1 {
-          background: #FFC700;
+          background: $colorAccent;
           transition: background-color 0.3s 0.6s;
         }
 
         &__circle_2 {
-          background: #FFC700;
+          background: $colorAccent;
           transition: background-color 0.3s 0.6s;
         }
 
         &__circle_3 {
-          background: #FFC700;
+          background: $colorAccent;
           transition: background-color 0.3s 0.6s;
         }
 
@@ -136,27 +180,28 @@
     &-4 {
       .progress-bar {
         &__circle_1 {
-          background: #FFC700;
+          background: $colorAccent;
           transition: background-color 0.3s 0.6s;
         }
 
         &__circle_2 {
-          background: #FFC700;
+          background: $colorAccent;
           transition: background-color 0.3s 0.6s;
         }
 
         &__circle_3 {
-          background: #FFC700;
+          background: $colorAccent;
           transition: background-color 0.3s 0.6s;
         }
 
         &__circle_4 {
-          background: #FFC700;
+          background: $colorAccent;
           transition: background-color 0.3s 0.6s;
         }
 
         &__circle_5 {
           background: #FFC700;
+          transition: background-color 0.3s 0.6s;
         }
 
         &__bar-inner {

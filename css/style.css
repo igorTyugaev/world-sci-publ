@@ -674,6 +674,37 @@ input {
   width: 100%;
 }
 
+.progress-bar__bar {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  width: 100%;
+  background-color: #C4C4C4;
+  height: 5px;
+}
+
+.progress-bar__circle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  border-radius: 50%;
+  background: #C4C4C4;
+  transition: background-color 0.3s 0s;
+  width: 22px;
+  height: 22px;
+}
+
+.progress-bar__circle-text {
+  display: block;
+  text-align: center;
+  font-family: "HelveticaBold";
+  font-size: 14px;
+  transform: translateY(10%);
+  color: #FFFFFF;
+}
+
 .progress-bar__title {
   font-family: "HelveticaBold";
   font-size: 14px;
@@ -687,38 +718,11 @@ input {
   position: relative;
 }
 
-.progress-bar__circle {
-  position: relative;
-  width: 22px;
-  height: 22px;
-  background: #C4C4C4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  color: #FFFFFF;
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  transition: background-color 0.3s 0s;
-}
-
-.progress-bar__bar {
-  top: 50%;
-  transform: translateY(-50%);
-  position: absolute;
-  height: 5px;
-  width: 100%;
-  background-color: #C4C4C4;
-}
-
 .progress-bar__bar-inner {
   height: 100%;
   width: 0%;
-  background: #FFC700;
-  transition: width 0.6s;
+  background: #219653;
+  transition: width 0.3s 0.6s;
 }
 
 .progress-bar_step-0 .progress-bar__circle_1 {
@@ -731,7 +735,7 @@ input {
 }
 
 .progress-bar_step-1 .progress-bar__circle_1 {
-  background: #FFC700;
+  background: #219653;
   transition: background-color 0.3s 0.6s;
 }
 
@@ -745,12 +749,12 @@ input {
 }
 
 .progress-bar_step-2 .progress-bar__circle_1 {
-  background: #FFC700;
+  background: #219653;
   transition: background-color 0.3s 0.6s;
 }
 
 .progress-bar_step-2 .progress-bar__circle_2 {
-  background: #FFC700;
+  background: #219653;
   transition: background-color 0.3s 0.6s;
 }
 
@@ -764,17 +768,17 @@ input {
 }
 
 .progress-bar_step-3 .progress-bar__circle_1 {
-  background: #FFC700;
+  background: #219653;
   transition: background-color 0.3s 0.6s;
 }
 
 .progress-bar_step-3 .progress-bar__circle_2 {
-  background: #FFC700;
+  background: #219653;
   transition: background-color 0.3s 0.6s;
 }
 
 .progress-bar_step-3 .progress-bar__circle_3 {
-  background: #FFC700;
+  background: #219653;
   transition: background-color 0.3s 0.6s;
 }
 
@@ -788,27 +792,28 @@ input {
 }
 
 .progress-bar_step-4 .progress-bar__circle_1 {
-  background: #FFC700;
+  background: #219653;
   transition: background-color 0.3s 0.6s;
 }
 
 .progress-bar_step-4 .progress-bar__circle_2 {
-  background: #FFC700;
+  background: #219653;
   transition: background-color 0.3s 0.6s;
 }
 
 .progress-bar_step-4 .progress-bar__circle_3 {
-  background: #FFC700;
+  background: #219653;
   transition: background-color 0.3s 0.6s;
 }
 
 .progress-bar_step-4 .progress-bar__circle_4 {
-  background: #FFC700;
+  background: #219653;
   transition: background-color 0.3s 0.6s;
 }
 
 .progress-bar_step-4 .progress-bar__circle_5 {
   background: #FFC700;
+  transition: background-color 0.3s 0.6s;
 }
 
 .progress-bar_step-4 .progress-bar__bar-inner {
@@ -1381,6 +1386,7 @@ input {
   display: flex;
   flex-direction: column;
   width: 70%;
+  height: 476px;
 }
 
 .quiz__content {
@@ -3605,6 +3611,19 @@ input {
     margin-top: 1.386962552vw;
   }
 
+  .progress-bar__bar {
+    height: 0.346740638vw;
+  }
+
+  .progress-bar__circle {
+    width: 1.5256588072vw;
+    height: 1.5256588072vw;
+  }
+
+  .progress-bar__circle-text {
+    font-size: 0.9708737864vw;
+  }
+
   .progress-bar__title {
     font-size: 0.9708737864vw;
   }
@@ -3794,6 +3813,10 @@ input {
 
   .quiz__header {
     margin: 0.8321775312vw 0vw 0vw 0vw;
+  }
+
+  .quiz__main {
+    height: 33.0097087379vw;
   }
 
   .quiz__content {
@@ -4785,8 +4808,21 @@ input {
 }
 
 @media (max-width:1170px) {
+  .progress-bar__bar {
+    height: 0.4273504274vw;
+  }
+
+  .progress-bar__circle {
+    width: 1.8803418803vw;
+    height: 1.8803418803vw;
+  }
+
   .nav {
     width: 42vw;
+  }
+
+  .quiz__main {
+    height: 40.6837606838vw;
   }
 
   .promo__title {
@@ -4987,6 +5023,19 @@ input {
     margin-top: 2.0429009193vw;
   }
 
+  .progress-bar__bar {
+    height: 0.5107252298vw;
+  }
+
+  .progress-bar__circle {
+    width: 2.2471910112vw;
+    height: 2.2471910112vw;
+  }
+
+  .progress-bar__circle-text {
+    font-size: 1.4300306435vw;
+  }
+
   .progress-bar__title {
     font-size: 1.4300306435vw;
   }
@@ -5112,6 +5161,10 @@ input {
     padding-right: 6.5372829418vw;
     padding-bottom: 0.7150153218vw;
     padding-left: 8.3758937692vw;
+  }
+
+  .quiz__main {
+    height: 48.6210418795vw;
   }
 
   .quiz__content {
@@ -5876,6 +5929,15 @@ input {
     border-radius: 0.78125vw;
   }
 
+  .progress-bar__bar {
+    height: 0.6510416667vw;
+  }
+
+  .progress-bar__circle {
+    width: 2.8645833333vw;
+    height: 2.8645833333vw;
+  }
+
   .header__call,
   .nav__link {
     border: 0.1302083333vw solid #FFFFFF;
@@ -5885,6 +5947,10 @@ input {
 
   .consultation__logo {
     width: 10.9375vw;
+  }
+
+  .quiz__main {
+    height: 61.9791666667vw;
   }
 
   .component__inner {
@@ -6111,6 +6177,10 @@ input {
   }
 
   .quizlet__question {
+    font-size: 2.4305555556vw;
+  }
+
+  .progress-bar__circle-text {
     font-size: 2.4305555556vw;
   }
 
