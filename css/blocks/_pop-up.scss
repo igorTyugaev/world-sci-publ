@@ -19,7 +19,54 @@
   }
 
   &__poster {
+    position: relative;
     flex: 1;
+  }
+
+  &__labels {
+    @include padding-size(0px, 12px, 12px, 12px);
+    @include font-size(10px);
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+
+  &__label {
+    font-family: $fontFamilyPrimary;
+    @include font-size(14px);
+
+    color: #FFFFFF;
+
+    display: block;
+
+    &--black {
+      color: $textColorAccent;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    left: 0;
+    top: -2.85%;
+    object-fit: contain;
+
+    $h-logo: 160px;
+    height: $h-logo;
+
+    @include _more-than($bp-xxl-1442) {
+      height: #{get-vw($h-logo, $bp-xxl-1442)};
+    }
+
+    @include _less-than($bp-lg-979) {
+      height: #{get-vw($h-logo, $bp-lg-979)};
+    }
+
+    @include _less-than($bp-sm-576) {
+      height: #{get-vw($h-logo, $bp-sm-576)};
+    }
   }
 
   &__img {

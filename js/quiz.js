@@ -47,6 +47,7 @@ function initQuiz(quiz) {
                 'Q4 / проценитль < 24 Scopus ',
                 'WoS без импакт – фактора  / ESCI, AHCI',
                 'WoS с импакт – фактором / SSCI, SCI',
+                'Пропустить вопрос',
             ],
         },
     ];
@@ -57,7 +58,8 @@ function initQuiz(quiz) {
     const _answers = quiz.querySelector('.quizlet__answers'),
         _stepWrapper = quiz.querySelector('.steps'),
         _question = quiz.querySelector('.quizlet__question'),
-        _number = quiz.querySelector('.progress-bar__title');
+        _number = quiz.querySelector('.progress-bar__title'),
+        _buttonNext = quiz.querySelector('.quiz__button-next');
 
     quiz.querySelector('.quiz__button-next').addEventListener('click', () =>
         nextStep('Пропустить')
@@ -89,6 +91,26 @@ function initQuiz(quiz) {
             insertQuestion(buttonsTitle[step].question);
             _stepWrapper.classList = `progress-bar_step-${step}`;
             _number.innerText = `Вопрос ${step + 1} из ${buttonsTitle.length}`;
+
+            if (_buttonNext.hasAttribute("style"))
+                _buttonNext.removeAttribute("style");
+
+            switch (step) {
+                case 2:
+                    _buttonNext.innerHTML = "Другое";
+                    break;
+                case 3:
+                    _buttonNext.style.display = "none";
+                    break;
+                case 4:
+                    _buttonNext.style.display = "none";
+                    break;
+                default:
+                    _buttonNext.innerHTML = "Пропустить вопрос";
+                    break;
+            }
+
+
         } else {
             endQuiz();
         }

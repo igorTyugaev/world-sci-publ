@@ -445,7 +445,12 @@ input {
 .button--quiz {
   background: #FFFFFF;
   color: #000000;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
   font-size: 14px;
+  line-height: 100%;
+  text-align: center;
   border: 1px solid rgba(51,51,51,0.6);
 }
 
@@ -3133,7 +3138,36 @@ input {
 }
 
 .pop-up__poster {
+  position: relative;
   flex: 1;
+}
+
+.pop-up__labels {
+  padding: 0px 12px 12px 12px;
+  font-size: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.pop-up__label {
+  font-family: "Helvetica";
+  font-size: 14px;
+  color: #FFFFFF;
+  display: block;
+}
+
+.pop-up__label--black {
+  color: #373737;
+}
+
+.pop-up__logo {
+  position: absolute;
+  left: 0;
+  top: -2.85%;
+  object-fit: contain;
+  height: 160px;
 }
 
 .pop-up__img {
@@ -4681,6 +4715,22 @@ input {
     font-size: 0.8321775312vw;
   }
 
+  .pop-up__labels {
+    padding: 0vw 0.8321775312vw 0.8321775312vw 0.8321775312vw;
+  }
+
+  .pop-up__labels {
+    font-size: 0.693481276vw;
+  }
+
+  .pop-up__label {
+    font-size: 0.9708737864vw;
+  }
+
+  .pop-up__logo {
+    height: 11.0957004161vw;
+  }
+
   .pop-up__main {
     padding-top: 1.6643550624vw;
     padding-right: 3.6061026352vw;
@@ -5846,6 +5896,18 @@ input {
     font-size: 1.2257405516vw;
   }
 
+  .pop-up__labels {
+    font-size: 1.0214504597vw;
+  }
+
+  .pop-up__label {
+    font-size: 1.4300306435vw;
+  }
+
+  .pop-up__logo {
+    height: 16.3432073544vw;
+  }
+
   .pop-up__main {
     padding-top: 2.4514811032vw;
     padding-right: 5.3115423902vw;
@@ -6526,6 +6588,18 @@ input {
 
   .contact-us__address {
     font-size: 2.0833333333vw;
+  }
+
+  .pop-up__labels {
+    font-size: 1.7361111111vw;
+  }
+
+  .pop-up__label {
+    font-size: 2.4305555556vw;
+  }
+
+  .pop-up__logo {
+    height: 27.7777777778vw;
   }
 
   .pop-up__super-desc {
