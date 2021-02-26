@@ -12,6 +12,10 @@
 
     @include font-size(14px);
     @include padding(7px, 64px, 7px, 82px);
+
+    @include _less-than(720px) {
+      @include padding(7px, 28px, 7px, 0px);
+    }
   }
 
   &__inner {
@@ -30,6 +34,10 @@
       left: 0;
       top: 0;
       transform: translateY(-14.41048%);
+
+      @include _less-than(720px) {
+        display: none;
+      }
     }
   }
 
@@ -43,22 +51,26 @@
       height: #{get-vw(476px, $bp-xxl-1442)};
     }
 
-    @include _less-than($bp-xl-1170) {
-      height: #{get-vw(476px, $bp-xl-1170)};
+    @include _less-than(900px) {
+      height: #{get-vw(500px, 900px)};
     }
 
     @include _less-than($bp-lg-979) {
-      height: #{get-vw(476px, $bp-lg-979)};
+      height: #{get-vw(500px, $bp-lg-979)};
     }
 
     @include _less-than($bp-md-768) {
-      height: #{get-vw(476px, $bp-md-768)};
+      height: #{get-vw(520px, $bp-md-768)};
     }
   }
 
   &__content {
     @include padding(0px, 64px, 60px, 82px);
     @include margin(20px);
+
+    @include _less-than(720px) {
+      @include padding(0px, 28px, 0px, 0px);
+    }
   }
 
   &__poster {

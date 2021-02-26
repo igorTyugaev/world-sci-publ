@@ -116,21 +116,24 @@
   box-shadow: 1px 1px 4px $colorShadow;
   border-radius: 24px;
   padding: 10px;
-  @include font-size(14px);
+  font-size: 14px;
 
   @include _more-than($bp-xxl-1442) {
     border: #{get-vw(1px, $bp-xxl-1442)} solid rgba(51, 51, 51, 0.6);
     box-shadow: #{get-vw(1px, $bp-xxl-1442)} #{get-vw(1px, $bp-xxl-1442)} #{get-vw(4px, $bp-xxl-1442)} $colorShadow;
     border-radius: #{get-vw(24px, $bp-xxl-1442)};
-
+    font-size: #{get-vw(14px, $bp-xxl-1442)};
     padding: #{get-vw(10px, $bp-xxl-1442)};
+  }
+
+  @include _less-than(999px) {
+    font-size: 13px;
   }
 
   @include _less-than($bp-lg-979) {
     border: #{get-vw(1px, $bp-lg-979)} solid rgba(51, 51, 51, 0.6);
     box-shadow: #{get-vw(1px, $bp-lg-979)} #{get-vw(1px, $bp-lg-979)} #{get-vw(4px, $bp-lg-979)} $colorShadow;
     border-radius: #{get-vw(24px, $bp-lg-979)};
-
     padding: #{get-vw(10px, $bp-lg-979)};
   }
 
