@@ -17,7 +17,7 @@ function initForm(_form) {
 
         if (data) {
             console.log("Отправка формы...")
-            sendForm(data, currentTarget);
+            // sendForm(data, currentTarget);
             if (codeStatus) {
                 if (idShowPopUp != 0)
                     showPopUpLogic();
@@ -27,6 +27,7 @@ function initForm(_form) {
 
         function inputIsValidation(input) {
             const hint = input.parentNode.querySelector(".input-wrapper__error");
+
             switch (input.getAttribute("name")) {
                 case "phone":
                     if (input.validity.valid) {
@@ -120,7 +121,9 @@ function initForm(_form) {
                 if (_isValidity) {
                     if (input.getAttribute("type") === "file") {
                         fo.append("file", input.files[0]);
-                        fo.append("db", 1);
+                    } else if (input.getAttribute("type") === "radio") {
+                        if (input.checked)
+                            fo.append(input.name, input.value);
                     } else {
                         fo.append(input.name, input.value);
                     }
