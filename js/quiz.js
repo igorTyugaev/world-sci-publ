@@ -95,6 +95,7 @@ function initQuiz(quiz) {
             addAnswer(step, answer);
             insertAnswers(++step);
             insertQuestion(step);
+
             _stepWrapper.classList = `progress-bar_step-${step}`;
             _number.innerText = `Вопрос ${step + 1} из ${buttonsTitle.length}`;
 

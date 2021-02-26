@@ -9,8 +9,9 @@ const _sliderNav = document.getElementById('stages-slider-nav');
     const _sliderTitle = _slider.querySelector('.navbar-slider__title');
 
     const sliderNodes = _sliderInner.children;
-    const countSliders = sliderNodes.length;
-    const slideWidth = sliderNodes[0].clientWidth;
+    let countSliders = sliderNodes.length;
+    let slideWidth = sliderNodes[0].clientWidth;
+    let currentIndex = 0;
 
     let step = 0;
     const controls = [];
@@ -36,6 +37,7 @@ const _sliderNav = document.getElementById('stages-slider-nav');
 
     const setOffset = (index) => {
         _sliderInner.style.transform = `translateX(-${index * slideWidth}px)`;
+        currentIndex = index;
     };
 
     const changeTitle = (newSliderIndex) => {
@@ -64,6 +66,12 @@ const _sliderNav = document.getElementById('stages-slider-nav');
         setActiveControlByIndex(step);
         setOffset(step);
     };
+
+    window.addEventListener('resize', function () {
+        countSliders = sliderNodes.length;
+        slideWidth = sliderNodes[0].clientWidth;
+        setOffset(currentIndex);
+    }, true);
 
     _leftArrow.addEventListener('click', () => setActiveSlide(step - 1));
     _rightArrow.addEventListener('click', () => setActiveSlide(step + 1));
