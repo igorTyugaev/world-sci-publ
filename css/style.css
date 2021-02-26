@@ -995,7 +995,7 @@ input {
   top: 0;
   transition: 0.6s;
   height: 100vh;
-  width: 35vw;
+  width: 30vw;
   background-color: #031435;
   padding-top: 0px;
   padding-right: 50px;
@@ -1023,7 +1023,6 @@ input {
 .nav__links {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 58%;
   margin: 20px 0px 0px 0px;
 }
@@ -1032,11 +1031,11 @@ input {
   font-family: "Helvetica";
   color: #FFFFFF;
   font-size: 18px;
-  padding-top: 6px;
-  padding-right: 15px;
-  padding-bottom: 6px;
-  padding-left: 15px;
-  margin: 10px 0px 0px 0px;
+  padding-top: 8px;
+  padding-right: 20px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  margin: 17px 0px 0px 0px;
 }
 
 .nav__link:hover {
@@ -1044,8 +1043,8 @@ input {
   color: #000000;
 }
 
-.nav__link:last-child {
-  margin: 30px 0px 0px 0px;
+.nav__link--special {
+  margin: 36px 0px 0px 0px;
 }
 
 .nav__footer {
@@ -3852,18 +3851,18 @@ input {
   }
 
   .nav__link {
-    padding-top: 0.4160887656vw;
-    padding-right: 1.040221914vw;
-    padding-bottom: 0.4160887656vw;
-    padding-left: 1.040221914vw;
+    padding-top: 0.5547850208vw;
+    padding-right: 1.386962552vw;
+    padding-bottom: 0.5547850208vw;
+    padding-left: 1.386962552vw;
   }
 
   .nav__link {
-    margin: 0.693481276vw 0vw 0vw 0vw;
+    margin: 1.1789181692vw 0vw 0vw 0vw;
   }
 
-  .nav__link:last-child {
-    margin: 2.080443828vw 0vw 0vw 0vw;
+  .nav__link--special {
+    margin: 2.4965325936vw 0vw 0vw 0vw;
   }
 
   .nav__footer {
@@ -5320,10 +5319,10 @@ input {
   }
 
   .nav__link {
-    padding-top: 0.6128702758vw;
-    padding-right: 1.5321756895vw;
-    padding-bottom: 0.6128702758vw;
-    padding-left: 1.5321756895vw;
+    padding-top: 0.8171603677vw;
+    padding-right: 2.0429009193vw;
+    padding-bottom: 0.8171603677vw;
+    padding-left: 2.0429009193vw;
   }
 
   .nav__date {

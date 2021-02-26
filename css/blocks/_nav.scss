@@ -35,7 +35,7 @@
   transition: 0.6s;
 
   height: 100vh;
-  width: 35vw;
+  width: 30vw;
   background-color: #031435;
   @include padding(0px, 50px, 0px, 50px);
 
@@ -63,7 +63,6 @@
   &__links {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 58%;
     @include margin(20px);
   }
@@ -73,8 +72,8 @@
     font-family: $fontFamilyPrimary;
     color: $textColorSecondary;
     @include font-size(18px);
-    @include padding(6px, 15px, 6px, 15px);
-    @include margin(10px);
+    @include padding(8px, 20px, 8px, 20px);
+    @include margin(17px);
 
 
     &:hover {
@@ -82,8 +81,8 @@
       color: $textColorPrimary;
     }
 
-    &:last-child {
-      @include margin(30px);
+    &--special {
+      @include margin(36px);
     }
   }
 
