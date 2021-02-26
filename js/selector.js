@@ -15,6 +15,7 @@ _selectorTitle.addEventListener('click', () => {
 for (let i = 0; i < _selectorLabels.length; i++) {
     _selectorLabels[i].addEventListener('click', (evt) => {
         _selectorTitle.textContent = evt.target.textContent;
+        _selectorTitle.classList.add("selector__title--show");
         _selector.setAttribute('data-state', '');
     });
 }

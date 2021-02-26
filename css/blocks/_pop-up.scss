@@ -101,8 +101,7 @@
 
   &__desc {
     font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
+    @include font-size(14px);
     display: block;
     width: 80%;
 
@@ -194,15 +193,24 @@
 
   &__close {
     position: absolute;
-    width: 30px;
-    height: 30px;
     opacity: 0.5;
     cursor: pointer;
     transition: opacity 0.3s;
 
     right: 20px;
     top: 20px;
+    width: 30px;
+    height: 30px;
     margin-right: 12px;
+
+    @include _more-than($bp-xxl-1442) {
+      right: #{get-vw(20px, $bp-xxl-1442)};
+      top: #{get-vw(20px, $bp-xxl-1442)};
+      width: #{get-vw(30px, $bp-xxl-1442)};
+      height: #{get-vw(30px, $bp-xxl-1442)};
+      margin-right: #{get-vw(12px, $bp-xxl-1442)};
+
+    }
 
     &:hover {
       opacity: 1;
@@ -269,23 +277,35 @@
   width: 100%;
 
   &__choose {
-    width: 7%;
+    width: 100%;
+    height: 100%;
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__img {
+    display: block;
     object-fit: contain;
-    height: 100%;
-    width: 100%;
+    width: 5.2%;
   }
 
   &__text {
+    display: block;
+    text-align: left;
     font-family: $fontFamilyPrimary;
     width: 70%;
+    line-height: 0%;
     @include font-size(14px);
-    text-align: left;
-    color: rgba(0, 0, 0, 0.49);
     padding-left: 2%;
+
+    color: rgba(183, 183, 183, 1);
+
+    &:hover {
+      color: rgba(32, 32, 32, 1);
+    }
   }
 }
 
@@ -382,8 +402,10 @@
     width: 100%;
     height: 100%;
     background-color: #FFFEFE;
+    @include margin(15px);
 
     color: rgba(183, 183, 183, 1);
+    font-style: $fontFamilyPrimary;
     @include font-size(14px);
     @include padding(12px, 12px, 12px, 12px);
     border: 1px solid rgba(0, 0, 0, 0.49);
@@ -393,8 +415,17 @@
     cursor: pointer;
 
     &:hover {
-      border-color: #D8093A;
       color: rgba(32, 32, 32, 1);
+    }
+
+    &--show {
+      border: 1px solid $colorAccent;
+      background-color: $colorAccent;
+      color: #FFFEFE;
+
+      &:hover {
+        color: #FFFEFE;
+      }
     }
   }
 
@@ -436,6 +467,9 @@
     height: 40px;
     max-height: 0;
     padding: 0 16px;
+
+    font-style: $fontFamilyPrimary;
+    @include font-size(14px);
 
     transition: all 0.2s ease-out;
     background-color: rgba(236, 236, 236, 1);
