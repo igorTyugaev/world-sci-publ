@@ -97,6 +97,19 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    max-height: 430px;
+
+    @include _more-than($bp-xxl-1442) {
+      max-height: #{get-vw(430px, $bp-xxl-1442)};
+    }
+
+    @include _less-than($bp-lg-979) {
+      max-height: #{get-vw(430px, $bp-lg-979)};
+    }
+
+    @include _less-than($bp-md-768) {
+      max-height: #{get-vw(430px, $bp-md-768)};
+    }
 
     &--show {
       display: flex;
