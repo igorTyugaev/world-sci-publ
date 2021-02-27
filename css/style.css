@@ -444,6 +444,9 @@ input {
 }
 
 .button--submit {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   font-family: "Helvetica";
   font-size: 14px;
 }

@@ -43,6 +43,7 @@
   }
 
   &--submit {
+    height: fit-content;
     font-family: $fontFamilyPrimary;
     @include font-size(14px);
   }
