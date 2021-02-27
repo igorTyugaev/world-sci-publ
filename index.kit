@@ -5,11 +5,213 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--    <base href="/landing-test/">-->
-    <link rel="preload" href="../fonts/HelveticaRegular/HelveticaRegular" as="font"/>
-    <link rel="preload" href="../fonts/HelveticaBold/HelveticaBold" as="font"/>
     <link rel="stylesheet" href="css/style.css">
     <link href="./media/incons/favicon.ico" rel="shortcut icon">
     <title>WorldSciPubl</title>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NF7Q6BJ');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- VK Pixel Code -->
+    <script type="text/javascript">
+        !(function () {
+            var t = document.createElement('script');
+            (t.type = 'text/javascript'),
+                (t.async = !0),
+                (t.src = 'https://vk.com/js/api/openapi.js?162'),
+                (t.onload = function () {
+                    VK.Retargeting.Init('VK-RTRG-391973-cXaZw'),
+                        VK.Retargeting.Hit();
+                }),
+                document.head.appendChild(t);
+        })();
+    </script>
+    <!-- End VK Pixel Code -->
+    <!-- Facebook Pixel Code -->
+    <script>
+        !(function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod
+                    ? n.callMethod.apply(n, arguments)
+                    : n.queue.push(arguments);
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+        })(
+            window,
+            document,
+            'script',
+            'https://connect.facebook.net/en_US/fbevents.js'
+        );
+        fbq('init', '2365479983546227');
+        fbq('track', 'PageView');
+    </script>
+    <!-- End Facebook Pixel Code -->
+    <!-- Yandex.Metrika counter -->
+    <script>
+        var yaParams = {
+            ip: "<?=$_SERVER['REMOTE_ADDR'];?>",
+        };
+    </script>
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    w.yaCounter50181778 = new Ya.Metrika2({
+                        id: 50181778,
+                        params: window.yaParams,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true,
+                        webvisor: true,
+                    });
+                } catch (e) {}
+            });
+
+            var n = d.getElementsByTagName('script')[0],
+                s = d.createElement('script'),
+                f = function () {
+                    n.parentNode.insertBefore(s, n);
+                };
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'https://mc.yandex.ru/metrika/tag.js';
+
+            if (w.opera == '[object Opera]') {
+                d.addEventListener('DOMContentLoaded', f, false);
+            } else {
+                f();
+            }
+        })(document, window, 'yandex_metrika_callbacks2');
+    </script>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-125087961-1"
+    ></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-125087961-1');
+    </script>
+    <!-- Start for Saving cookie -->
+    <script>
+        var utmCookie = {
+            cookieNamePrefix: '_uc_',
+            utmParams: [
+                'utm_source',
+                'utm_medium',
+                'utm_campaign',
+                'utm_term',
+                'utm_content',
+            ],
+            cookieExpiryDays: 365,
+            createCookie: function (c, d, e) {
+                if (e) {
+                    var b = new Date();
+                    b.setTime(b.getTime() + e * 24 * 60 * 60 * 1000);
+                    var a = '; expires=' + b.toGMTString();
+                } else {
+                    var a = '';
+                }
+                document.cookie =
+                    this.cookieNamePrefix + c + '=' + d + a + '; path=/';
+            },
+            readCookie: function (b) {
+                var e = this.cookieNamePrefix + b + '=';
+                var a = document.cookie.split(';');
+                for (var d = 0; d < a.length; d++) {
+                    var f = a[d];
+                    while (f.charAt(0) == ' ') {
+                        f = f.substring(1, f.length);
+                    }
+                    if (f.indexOf(e) == 0) {
+                        return f.substring(e.length, f.length);
+                    }
+                }
+                return null;
+            },
+            eraseCookie: function (a) {
+                this.createCookie(a, '', -1);
+            },
+            getParameterByName: function (b) {
+                b = b.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var a = '[\\?&]' + b + '=([^&#]*)';
+                var d = new RegExp(a);
+                var c = d.exec(window.location.search);
+                if (c == null) {
+                    return '';
+                } else {
+                    return decodeURIComponent(c[1].replace(/\+/g, ' '));
+                }
+            },
+            utmPresentInUrl: function () {
+                var d = false;
+                for (var a = 0; a < this.utmParams.length; a++) {
+                    var c = this.utmParams[a];
+                    var b = this.getParameterByName(c);
+                    if (b != '' && b != undefined) {
+                        d = true;
+                    }
+                }
+                return d;
+            },
+            writeUtmCookieFromParams: function () {
+                for (var a = 0; a < this.utmParams.length; a++) {
+                    var c = this.utmParams[a];
+                    var b = this.getParameterByName(c);
+                    this.createCookie(c, b, this.cookieExpiryDays);
+                }
+            },
+            writeCookieOnce: function (a, c) {
+                var b = this.readCookie(a);
+                if (!b) {
+                    this.createCookie(a, c, this.cookieExpiryDays);
+                }
+            },
+            writeReferrerOnce: function () {
+                value = document.referrer;
+                if (value === '' || value === undefined) {
+                    this.writeCookieOnce('referrer', 'direct');
+                } else {
+                    this.writeCookieOnce('referrer', value);
+                }
+            },
+            referrer: function () {
+                return this.readCookie('referrer');
+            },
+        };
+        utmCookie.writeReferrerOnce();
+        if (utmCookie.utmPresentInUrl()) {
+            utmCookie.writeUtmCookieFromParams();
+        }
+    </script>
+    <!-- End for saving cookie -->
+
 </head>
 <body>
 
@@ -57,6 +259,41 @@
 
 <!--@import "pop-up.html"-->
 
+<noscript>
+    <img
+            src="https://vk.com/rtrg?p=VK-RTRG-391973-cXaZw"
+            style="position: fixed; left: -999px"
+            alt=""
+    />
+</noscript>
+<noscript>
+    <img
+            height="1"
+            width="1"
+            style="display: none"
+            src="https://www.facebook.com/tr?id=2365479983546227&ev=PageView&noscript=1"
+    />
+</noscript>
+<noscript>
+    <div>
+        <img
+                src="https://mc.yandex.ru/watch/50181778"
+                style="position: absolute; left: -9999px"
+                alt=""
+        />
+    </div>
+</noscript>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NF7Q6BJ"
+            height="0"
+            width="0"
+            style="display: none; visibility: hidden"
+    ></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <script>
     // var csrfToken = '<?=$_SESSION['
     // csrf - token
@@ -76,6 +313,31 @@
 <script src="./js/forms.js"></script>
 <script src="./js/quiz.js"></script>
 <script src="./js/float-navbar.js"></script>
+
+<!-- Roistat -->
+<script>
+    (function (w, d, s, h, id) {
+        w.roistatProjectId = id;
+        w.roistatHost = h;
+        var p = d.location.protocol == 'https:' ? 'https://' : 'http://';
+        var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie)
+            ? '/dist/module.js'
+            : '/api/site/1.0/' + id + '/init';
+        var js = d.createElement(s);
+        js.charset = 'UTF-8';
+        js.async = 1;
+        js.src = p + h + u;
+        var js2 = d.getElementsByTagName(s)[0];
+        js2.parentNode.insertBefore(js, js2);
+    })(
+        window,
+        document,
+        'script',
+        'cloud.roistat.com',
+        '3637cf6d91e2208e61bad15f7e17651d'
+    );
+</script>
+<!-- /Roistat -->
 
 </body>
 </html>

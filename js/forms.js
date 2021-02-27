@@ -25,6 +25,9 @@ function initForm(_form) {
             }
         }
 
+        if (typeof yaCounter50181778 !== 'undefined')
+            yaCounter50181778.reachGoal('form');
+
         function inputIsValidation(input) {
             const hint = input.parentNode.querySelector(".input-wrapper__error");
 
