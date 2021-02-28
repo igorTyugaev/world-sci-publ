@@ -3,7 +3,7 @@
   display: none;
   top: 50vh;
   right: 0;
-  @include margin(0px, 28px, 0px, 0px);
+  @include margin(0px, 22px, 0px, 0px);
   z-index: $z-index-menu;
   transform: translateY(-50%);
 
@@ -17,14 +17,13 @@
 
   &__items {
     position: relative;
-    padding: 0 1em;
     list-style: none;
 
     &:before {
       content: "";
       position: absolute;
       top: -12px;
-      right: 0;
+      right: 5px;
       width: 2px;
       height: 50%;
       border-radius: 5px;
@@ -36,7 +35,7 @@
       content: "";
       position: absolute;
       bottom: -12px;
-      right: 0;
+      right: 5px;
       width: 2px;
       height: 50%;
       border-radius: 5px;
@@ -53,12 +52,18 @@
 }
 
 .float-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
 
   &__title {
     display: block;
     color: rgba(199, 199, 199, 1);
     text-decoration: none;
     transition: all 0.1s;
+    padding-right: 1em;
 
     font-family: $fontFamilyPrimary;
     @include font-size(12px);
@@ -66,7 +71,6 @@
   }
 
   &__circle {
-    position: absolute;
     bottom: 5px;
     right: -21px;
     width: 12px;

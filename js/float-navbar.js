@@ -11,17 +11,16 @@ const section_8 = document.getElementById("footer-section");
 
 const _floatNavBar = document.getElementById("float_navbar");
 
-const item_1 = _floatNavBar.querySelector('[href="#cost"]').querySelector('.float-item__circle');
-const item_2 = _floatNavBar.querySelector('[href="#quiz-0"]').querySelector('.float-item__circle');
-const item_3 = _floatNavBar.querySelector('[href="#promo"]').querySelector('.float-item__circle');
-const item_4 = _floatNavBar.querySelector('[href="#component"]').querySelector('.float-item__circle');
-const item_5 = _floatNavBar.querySelector('[href="#team-section"]').querySelector('.float-item__circle');
-const item_6 = _floatNavBar.querySelector('[href="#geography"]').querySelector('.float-item__circle');
-const item_7 = _floatNavBar.querySelector('[href="#faq-section"]').querySelector('.float-item__circle');
-const item_8 = _floatNavBar.querySelector('[href="#footer-section"]').querySelector('.float-item__circle');
+const item_1 = _floatNavBar.querySelector('[data-scroll="#cost"]').querySelector('.float-item__circle');
+const item_2 = _floatNavBar.querySelector('[data-scroll="#quiz-0"]').querySelector('.float-item__circle');
+const item_3 = _floatNavBar.querySelector('[data-scroll="#promo"]').querySelector('.float-item__circle');
+const item_4 = _floatNavBar.querySelector('[data-scroll="#component"]').querySelector('.float-item__circle');
+const item_5 = _floatNavBar.querySelector('[data-scroll="#team-section"]').querySelector('.float-item__circle');
+const item_6 = _floatNavBar.querySelector('[data-scroll="#geography"]').querySelector('.float-item__circle');
+const item_7 = _floatNavBar.querySelector('[data-scroll="#faq-section"]').querySelector('.float-item__circle');
+const item_8 = _floatNavBar.querySelector('[data-scroll="#footer-section"]').querySelector('.float-item__circle');
 
 const active_class = "float-item__circle--active";
-
 let currentItem = null;
 
 function getScrollPosition() {

@@ -15,13 +15,23 @@ function toggleMenu() {
     _menuTitle.classList.toggle("menu__title--show");
 }
 
+function hideMenu() {
+    _navBurger.classList.remove("burger-active");
+    _navBar.classList.remove("nav--show");
+    _menuTitle.classList.remove("menu__title--show");
+}
+
 
 const scrollItems = document.querySelectorAll('[data-scroll]');
 scrollItems.forEach((item) => {
     item.addEventListener("click", () => {
-        toggleMenu();
+        hideMenu();
         const anchor = item.getAttribute("data-scroll")
         const anchorElement = document.querySelector(anchor);
-        anchorElement.scrollIntoView();
+        let yOffset = 0.99;
+            if (anchor === "#cost" || anchor === "#quiz-0" || anchor === "#promo")
+                yOffset = 0.96;
+        const y = (anchorElement.getBoundingClientRect().top + window.pageYOffset) * yOffset;
+        window.scrollTo({top: y, behavior: 'smooth'});
     });
 });

@@ -70,6 +70,7 @@
   &__link {
     @extend %tmp-button--nav;
     font-family: $fontFamilyPrimary;
+    text-align: center;
     color: $textColorSecondary;
     @include font-size(18px);
     @include padding(8px, 20px, 8px, 20px);

@@ -1,7 +1,7 @@
 @import "nav";
 
 .header {
-  z-index: $z-index-menu;
+  z-index: #{$z-index-menu + 2};
   position: fixed;
   width: 100%;
   @include padding(12px, 28px, 12px, 28px);

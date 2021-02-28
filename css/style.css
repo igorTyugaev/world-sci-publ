@@ -911,7 +911,7 @@ input {
   display: none;
   top: 50vh;
   right: 0;
-  margin: 0px 28px 0px 0px;
+  margin: 0px 22px 0px 0px;
   z-index: 2;
   transform: translateY(-50%);
 }
@@ -922,7 +922,6 @@ input {
 
 .float-navbar__items {
   position: relative;
-  padding: 0 1em;
   list-style: none;
 }
 
@@ -930,7 +929,7 @@ input {
   content: "";
   position: absolute;
   top: -12px;
-  right: 0;
+  right: 5px;
   width: 2px;
   height: 50%;
   border-radius: 5px;
@@ -942,7 +941,7 @@ input {
   content: "";
   position: absolute;
   bottom: -12px;
-  right: 0;
+  right: 5px;
   width: 2px;
   height: 50%;
   border-radius: 5px;
@@ -955,18 +954,26 @@ input {
   margin-bottom: 1em;
 }
 
+.float-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
 .float-item__title {
   display: block;
   color: #c7c7c7;
   text-decoration: none;
   transition: all 0.1s;
+  padding-right: 1em;
   font-family: "Helvetica";
   font-size: 12px;
   text-align: right;
 }
 
 .float-item__circle {
-  position: absolute;
   bottom: 5px;
   right: -21px;
   width: 12px;
@@ -1032,6 +1039,7 @@ input {
 
 .nav__link {
   font-family: "Helvetica";
+  text-align: center;
   color: #FFFFFF;
   font-size: 18px;
   padding-top: 8px;
@@ -1072,7 +1080,7 @@ input {
 }
 
 .header {
-  z-index: 2;
+  z-index: 4;
   position: fixed;
   width: 100%;
   padding-top: 12px;
@@ -2960,7 +2968,7 @@ input {
 }
 
 .faq {
-  margin: 80px 0px 0px 0px;
+  margin: 40px 0px 0px 0px;
 }
 
 .faq__wrap {
@@ -3814,7 +3822,7 @@ input {
   }
 
   .float-navbar {
-    margin: 0vw 1.9417475728vw 0vw 0vw;
+    margin: 0vw 1.5256588072vw 0vw 0vw;
   }
 
   .float-item__title {
@@ -4786,7 +4794,7 @@ input {
   }
 
   .faq {
-    margin: 5.547850208vw 0vw 0vw 0vw;
+    margin: 2.773925104vw 0vw 0vw 0vw;
   }
 
   .faq__title {
