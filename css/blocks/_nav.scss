@@ -5,22 +5,58 @@
   box-shadow: 1px 1px 4px $colorShadow;
   border-radius: 28px;
 
+  &:hover {
+    border: 1px solid #177840;
+    color: $textColorSecondary;
+    background: #177840;
+  }
+
+  &:active {
+    border: 1px solid #177840;
+    color: $textColorSecondary;
+    background: #0F5C30;
+  }
+
   @include _more-than($bp-xxl-1442) {
     border: #{get-vw(1px, $bp-xxl-1442)} solid $textColorSecondary;
     box-shadow: #{get-vw(1px, $bp-xxl-1442)} #{get-vw(1px, $bp-xxl-1442)} #{get-vw(4px, $bp-xxl-1442)} $colorShadow;
     border-radius: #{get-vw(28px, $bp-xxl-1442)};
+
+    &:hover {
+      border: #{get-vw(1px, $bp-xxl-1442)} solid #177840;
+    }
+
+    &:active {
+      border: #{get-vw(1px, $bp-xxl-1442)} solid #177840;
+    }
   }
 
   @include _less-than($bp-lg-979) {
     border: #{get-vw(1px, $bp-lg-979)} solid $textColorSecondary;
     box-shadow: #{get-vw(1px, $bp-lg-979)} #{get-vw(1px, $bp-lg-979)} #{get-vw(4px, $bp-lg-979)} $colorShadow;
     border-radius: #{get-vw(28px, $bp-lg-979)};
+
+    &:hover {
+      border: #{get-vw(1px, $bp-lg-979)} solid #177840;
+    }
+
+    &:active {
+      border: #{get-vw(1px, $bp-lg-979)} solid #177840;
+    }
   }
 
   @include _less-than($bp-md-768) {
     border: #{get-vw(1px, $bp-md-768)} solid $textColorSecondary;
     box-shadow: #{get-vw(1px, $bp-md-768)} #{get-vw(1px, $bp-md-768)} #{get-vw(4px, $bp-md-768)} $colorShadow;
     border-radius: #{get-vw(28px, $bp-md-768)};
+
+    &:hover {
+      border: #{get-vw(1px, $bp-md-768)} solid #177840;
+    }
+
+    &:active {
+      border: #{get-vw(1px, $bp-md-768)} solid #177840;
+    }
   }
 }
 

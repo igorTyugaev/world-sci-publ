@@ -198,7 +198,7 @@
                             <div class="input-wrapper">
                                 <input name="email" type="email" class="pop-up__input"
                                        placeholder="Email"
-                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                       pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                                        required>
                                 <span class="input-wrapper__error"></span>
                             </div>
@@ -272,10 +272,6 @@
                       action="/">
                     <div class="pop-up__inputs">
 
-                        <!--                        <input name="scopus" type="text" class="pop-up__input"-->
-                        <!--                               placeholder="Выберите базу (Scopus/WoS)">-->
-
-
                         <div class="selector" data-state="">
                             <div class="selector__title" data-default="Option 0">
                                 Выберите базу (Scopus/WoS)
@@ -304,13 +300,13 @@
                         </div>
 
                         <div class="p-uploader pop-up__input pop-up__input--file">
-                            <label for="file-upload-1" class="p-uploader__choose">
+                            <label for="file-upload-3" class="p-uploader__choose">
                                 <span class="p-uploader__text">Загрузить статью</span>
                                 <img loading="lazy" class="p-uploader__img"
                                      src="./media/folder.png"
                                      alt="uploader-img">
                             </label>
-                            <input name="file" id="file-upload-1" type="file"/>
+                            <input name="file" id="file-upload-3" type="file"/>
                         </div>
                     </div>
 
@@ -616,7 +612,7 @@
                         <div class="input-wrapper">
                             <input name="email" type="email" class="pop-up__input"
                                    placeholder="Email"
-                                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                   pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                                    required>
                             <span class="input-wrapper__error"></span>
                         </div>
@@ -774,7 +770,7 @@
                             <div class="input-wrapper">
                                 <input name="email" type="email" class="pop-up__input"
                                        placeholder="Email"
-                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                       pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                                        required>
                                 <span class="input-wrapper__error"></span>
                             </div>
@@ -844,24 +840,50 @@
 
             <div class="popup-3__form">
 
-                <form novalidate name="10" action="/">
+                <form novalidate name="10" enctype="multipart/form-data" method="post"
+                      action="/">
                     <div class="pop-up__inputs">
-                        <input name="scopus" type="text" class="pop-up__input"
-                               placeholder="Выберите базу (Scopus/WoS)">
-                        <input name="file" type="file" class="pop-up__input">
+
+                        <div class="selector" data-state="">
+                            <div class="selector__title" data-default="Option 0">
+                                Выберите базу (Scopus/WoS)
+                            </div>
+                            <div class="selector__content">
+
+                                <input id="singleSelect10" class="selector__input"
+                                       type="radio" name="db" value="0" required/>
+                                <label for="singleSelect10" class="selector__label">
+                                    Выберите базу (Scopus/WoS)
+                                </label>
+
+                                <input id="singleSelect11" class="selector__input"
+                                       type="radio" name="db" value="1" required/>
+                                <label for="singleSelect11" class="selector__label">
+                                    Scopus
+                                </label>
+
+                                <input id="singleSelect12" class="selector__input"
+                                       type="radio" name="db" value="0" required/>
+                                <label for="singleSelect12" class="selector__label">
+                                    Web of Science
+                                </label>
+
+                            </div>
+                        </div>
+
                         <div class="p-uploader pop-up__input pop-up__input--file">
-                            <label for="file-upload-2" class="p-uploader__choose">
+                            <label for="file-upload-10" class="p-uploader__choose">
+                                <span class="p-uploader__text">Загрузить статью</span>
                                 <img loading="lazy" class="p-uploader__img"
                                      src="./media/folder.png"
                                      alt="uploader-img">
                             </label>
-                            <span class="p-uploader__text">Загрузить статью</span>
-                            <input name="file" id="file-upload-2" type="file"/>
+                            <input name="file" id="file-upload-10" type="file"/>
                         </div>
                     </div>
 
-                    <button type="submit" class="pop-up__button" data-show-popup="11"
-                            data-read-popup="10">
+                    <button type="submit" class="pop-up__button" data-show-popup="4"
+                            data-read-popup="3">
                         Отправить
                     </button>
                 </form>
@@ -1014,7 +1036,7 @@
                             <div class="input-wrapper">
                                 <input name="email" type="email" class="pop-up__input"
                                        placeholder="Email"
-                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                       pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                                        required>
                                 <span class="input-wrapper__error"></span>
                             </div>
@@ -1084,24 +1106,50 @@
 
             <div class="popup-3__form">
 
-                <form novalidate name="13" action="/">
+                <form novalidate name="13" enctype="multipart/form-data" method="post"
+                      action="/">
                     <div class="pop-up__inputs">
-                        <input name="scopus" type="text" class="pop-up__input"
-                               placeholder="Выберите базу (Scopus/WoS)">
-                        <input name="file" type="file" class="pop-up__input">
+
+                        <div class="selector" data-state="">
+                            <div class="selector__title" data-default="Option 0">
+                                Выберите базу (Scopus/WoS)
+                            </div>
+                            <div class="selector__content">
+
+                                <input id="singleSelect130" class="selector__input"
+                                       type="radio" name="db" value="0" required/>
+                                <label for="singleSelect130" class="selector__label">
+                                    Выберите базу (Scopus/WoS)
+                                </label>
+
+                                <input id="singleSelect131" class="selector__input"
+                                       type="radio" name="db" value="1" required/>
+                                <label for="singleSelect131" class="selector__label">
+                                    Scopus
+                                </label>
+
+                                <input id="singleSelect132" class="selector__input"
+                                       type="radio" name="db" value="0" required/>
+                                <label for="singleSelect132" class="selector__label">
+                                    Web of Science
+                                </label>
+
+                            </div>
+                        </div>
+
                         <div class="p-uploader pop-up__input pop-up__input--file">
-                            <label for="file-upload-3" class="p-uploader__choose">
+                            <label for="file-upload-13" class="p-uploader__choose">
+                                <span class="p-uploader__text">Загрузить статью</span>
                                 <img loading="lazy" class="p-uploader__img"
                                      src="./media/folder.png"
                                      alt="uploader-img">
                             </label>
-                            <span class="p-uploader__text">Загрузить статью</span>
-                            <input name="file" id="file-upload-3" type="file"/>
+                            <input name="file" id="file-upload-13" type="file"/>
                         </div>
                     </div>
 
-                    <button type="submit" class="pop-up__button" data-show-popup="14"
-                            data-read-popup="13">
+                    <button type="submit" class="pop-up__button" data-show-popup="4"
+                            data-read-popup="3">
                         Отправить
                     </button>
                 </form>
@@ -1445,49 +1493,6 @@
 
 </section> <!-- Хорошего дня после отправки-->
 
-<section id='popup-300' class="pop-up pdf-reader">
-
-    <div class="pdf-reader__header">
-        <div class="pop-up__close pdf-reader__close">
-            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
-        </div>
-    </div>
-
-    <div class="pdf-reader__viewer">
-        <iframe loading="lazy" class="pdf-reader__iframe"
-                src="http://docs.google.com/viewer?url=http%3A%2F%2Fwww.apsolyamov.ru%2Ffiles%2Fpdf_test.pdf&embedded=true"
-                width="700" height="500"
-                style="border: none;">
-
-        </iframe>
-    </div>
-
-    <div class="pdf-reader__footer">
-        <div class="pdf-reader__column">
-            <h2 class="pdf-reader__title">
-                Договор о сотрудничестве с World Sci Publ
-            </h2>
-        </div>
-
-        <div class="pdf-reader__column">
-            <button class="pdf-reader__btn" data-show-popup="19">
-                Перейти к обсуждению
-            </button>
-        </div>
-
-        <div class="pdf-reader__column">
-
-            <a href="" class="pdf-reader__download pdf-download">
-                <span class="pdf-download__title">Cкачать в PDF</span>
-                <img loading="lazy" class="pdf-download__img"
-                     src="./media/download_icon.svg" alt="">
-            </a>
-        </div>
-
-    </div>
-
-</section> <!-- PDF-reader -->
-
 <section id='popup-19' class="pop-up">
 
     <div class="pop-up__poster">
@@ -1558,49 +1563,6 @@
 
 
 <!-- Работаем с зарубежными экспертами -->
-<section id='popup-400' class="pop-up pdf-reader">
-
-    <div class="pdf-reader__header">
-        <div class="pop-up__close pdf-reader__close">
-            <img loading="lazy" src="./media/X.svg" alt="" class="close_btn">
-        </div>
-    </div>
-
-    <div class="pdf-reader__viewer">
-        <iframe loading="lazy" class="pdf-reader__iframe"
-                src="http://docs.google.com/viewer?url=http%3A%2F%2Fwww.apsolyamov.ru%2Ffiles%2Fpdf_test.pdf&embedded=true"
-                width="700" height="500"
-                style="border: none;">
-
-        </iframe>
-    </div>
-
-    <div class="pdf-reader__footer">
-        <div class="pdf-reader__column">
-            <h2 class="pdf-reader__title">
-                Договор о сотрудничестве с World Sci Publ
-            </h2>
-        </div>
-
-        <div class="pdf-reader__column">
-            <button class="pdf-reader__btn" data-show-popup="21">
-                Перейти к обсуждению
-            </button>
-        </div>
-
-        <div class="pdf-reader__column">
-
-            <a href="" class="pdf-reader__download pdf-download">
-                <span class="pdf-download__title">Cкачать в PDF</span>
-                <img loading="lazy" class="pdf-download__img"
-                     src="./media/download_icon.svg" alt="">
-            </a>
-        </div>
-
-    </div>
-
-</section> <!-- PDF-reader -->
-
 <section id='popup-21' class="pop-up">
 
     <div class="pop-up__poster">
@@ -1988,7 +1950,6 @@
                      src="./media/download_icon.svg" alt="">
             </a>
         </div>
-
     </div>
 
 </section> <!-- Пример технического аудита -->
@@ -2230,7 +2191,6 @@
                 src="https://drive.google.com/file/d/10mCFkj6RJhnUAU9diMi2F2PP9kS517cj/preview"
                 width="700" height="500"
                 style="border: none;">
-
         </iframe>
     </div>
 
@@ -2250,7 +2210,7 @@
 
         <div class="pdf-reader__column">
 
-            <a href="https://drive.google.com/u/0/uc?id=1NgI7xbL_bN-kvvgyWtCRCxvFGzGUwk1-&export=download"
+            <a href="https://drive.google.com/u/0/uc?id=10mCFkj6RJhnUAU9diMi2F2PP9kS517cj&export=download"
                target="_blank"
                class="pdf-reader__download pdf-download">
                 <span class="pdf-download__title">Cкачать в PDF</span>
@@ -2275,7 +2235,7 @@
 
     <div class="pdf-reader__viewer">
         <iframe loading="lazy" class="pdf-reader__iframe"
-                src="https://drive.google.com/file/d/1w904xoCCq6lhLxyY_09YaA4DjuHRV7Sw/preview"
+                src="https://drive.google.com/file/d/1MF_Wx6QopTXjhBHDtE-IRUXVrxKyIZ8o/preview"
                 width="700" height="500"
                 style="border: none;">
 

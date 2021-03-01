@@ -13,6 +13,7 @@ function initForm(_form) {
         const button = currentTarget.querySelector('[data-show-popup]');
         const idShowPopUp = button.dataset.showPopup;
         const showPopUpLogic = popups.get(idShowPopUp);
+        const formName = currentTarget.getAttribute("name");
         console.log(idPopup);
 
         if (data) {
@@ -26,8 +27,12 @@ function initForm(_form) {
         }
 
         /* этот код создает цель в метрике */
-        if (typeof yaCounter50181778 !== 'undefined')
-            yaCounter50181778.reachGoal('form');
+        if (localStorage.getItem("successGoals") === null) {
+            localStorage.setItem("successGoals", formName)
+            if (typeof yaCounter50181778 !== 'undefined') yaCounter50181778.reachGoal('form');
+            if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+            if (typeof yaCounter50181778 !== 'undefined') yaCounter50181778.reachGoal(formName);
+        }
 
         function inputIsValidation(input) {
             const hint = input.parentNode.querySelector(".input-wrapper__error");
