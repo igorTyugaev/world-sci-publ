@@ -17,6 +17,7 @@ function initForm(_form) {
 
         if (data) {
             console.log("Отправка формы...")
+            sendForm(data, currentTarget);
             if (codeStatus) {
                 if (idShowPopUp != 0)
                     showPopUpLogic();
@@ -24,6 +25,7 @@ function initForm(_form) {
             }
         }
 
+        /* этот код создает цель в метрике */
         if (typeof yaCounter50181778 !== 'undefined')
             yaCounter50181778.reachGoal('form');
 
@@ -147,12 +149,15 @@ function initForm(_form) {
         }
 
         function sendForm(sendData, currentForm) {
+
             const headers = {
                 'Accept': 'application/json',
                 'Content-Type': 'multipart/form-data',
-                'Access-Control-Allow-Origin': "http://localhost:8848",
-                'Access-Control-Allow-Credentials': true,
-                'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type,' + ' Accept'
+                /* <CORS> */
+                // 'Access-Control-Allow-Origin': "http://localhost:8848",
+                // 'Access-Control-Allow-Credentials': true,
+                // 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type,' + ' Accept'
+                /* </CORS> */
             }
 
 
@@ -161,7 +166,10 @@ function initForm(_form) {
             // /main-test/add-file - загрузка файла
             // /main-test/letter -
 
-            const base_url = 'https://worldscipubl.com/main-test/';
+            /* Для отладки испольховать: */
+            // const base_url = 'https://worldscipubl.com/main-test/';
+
+            const base_url = '/main/';
             const file_ep = 'add-file/';
             const letter_ep = 'letter/';
             let url = base_url;
