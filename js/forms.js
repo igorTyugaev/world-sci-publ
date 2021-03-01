@@ -17,7 +17,6 @@ function initForm(_form) {
 
         if (data) {
             console.log("Отправка формы...")
-            // sendForm(data, currentTarget);
             if (codeStatus) {
                 if (idShowPopUp != 0)
                     showPopUpLogic();

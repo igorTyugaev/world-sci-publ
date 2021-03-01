@@ -92,15 +92,6 @@ function addAnimation(item, duration) {
     }, duration * 1000);
 }
 
-function sendForm(sendData) {
-    axios.post('/', sendData)
-        .then((response) => {
-            console.debug(response);
-        }, (error) => {
-            console.debug(error);
-        });
-}
-
 // управление скролом
 function scrollAdd() {
     document.body.style = '';

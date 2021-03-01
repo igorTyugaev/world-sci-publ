@@ -96,7 +96,7 @@
 
   &__logo {
     display: flex;
-    height: 25%;
+    width: 40%;
     align-self: center;
     object-fit: contain;
   }
@@ -104,7 +104,8 @@
   &__date {
     font-family: $fontFamilyPrimary;
     color: $textColorSecondary;
-    @include font-size(12px);
+    @include font-size(14px);
+    @include margin(20px);
     text-align: center;
   }
 }
