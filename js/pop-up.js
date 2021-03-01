@@ -4,10 +4,8 @@ let currentShowPopUp = 0;
 function initPopUp(button) {
     const numberPopUp = button.dataset.showPopup;
     const idPopUp = 'popup-' + numberPopUp;
-
     const _popUp = document.getElementById(idPopUp);
     const _closeButton = _popUp.querySelector('.pop-up__close');
-
     const _closeBtn = _popUp.querySelector('.pop-up__button--close');
 
     if (_closeBtn) {
@@ -28,11 +26,22 @@ function initPopUp(button) {
         }
     }
 
-    if (button.getAttribute("type") !== "submit") {
-        button.addEventListener('click', (e) => {
+
+    button.addEventListener('click', (e) => {
+        /* */
+        if (e.target.hasAttribute('data-formsended')) {
+            const formSender = button.getAttribute('data-formsended')
+            const _formPopUp = _popUp.querySelector('form');
+            if (_formPopUp)
+                _formPopUp.setAttribute("data-formsended", formSender);
+        }
+        /* */
+
+        if (button.getAttribute("type") !== "submit") {
             showPopUpLogic();
-        });
-    }
+        }
+    });
+
 
     _closeButton.addEventListener('click', () => {
         closePopUp(_popUp, duration);
