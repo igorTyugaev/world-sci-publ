@@ -1,102 +1,109 @@
 function initForm(_form) {
-
     _form.addEventListener('submit', (e) => {
         e.preventDefault();
         let codeStatus = true;
         let hasFileInput = false;
         let hasLatterInput = false;
-        const {currentTarget} = e;
-        const idPopup = currentTarget.hasAttribute("data-popup")
-            ? currentTarget.getAttribute("data-popup")
+        const { currentTarget } = e;
+        const idPopup = currentTarget.hasAttribute('data-popup')
+            ? currentTarget.getAttribute('data-popup')
             : null;
         const data = scrabbleInputs(currentTarget);
-        const button = currentTarget.querySelector('[data-show-popup]');
-        const idShowPopUp = button.dataset.showPopup;
+        const _button = currentTarget.querySelector('[data-show-popup]');
+        const idShowPopUp = _button.dataset.showPopup;
         const showPopUpLogic = popups.get(idShowPopUp);
-        const formName = currentTarget.getAttribute("name");
-        console.log(idPopup);
+        let formName = currentTarget.getAttribute('name');
+
+        console.log('formName: ' + formName);
 
         if (data) {
-            console.log("Отправка формы...")
+            console.log('Отправка формы...');
             sendForm(data, currentTarget);
             if (codeStatus) {
-                if (idShowPopUp != 0)
-                    showPopUpLogic();
+                if (idShowPopUp != 0) showPopUpLogic(false);
                 currentTarget.reset();
             }
         }
 
         /* этот код создает цель в метрике */
-        if (localStorage.getItem("successGoals") === null) {
-            localStorage.setItem("successGoals", formName)
-            if (typeof yaCounter50181778 !== 'undefined') yaCounter50181778.reachGoal('form');
+        if (localStorage.getItem('successGoals') === null) {
+            localStorage.setItem('successGoals', formName);
+            if (typeof yaCounter50181778 !== 'undefined')
+                yaCounter50181778.reachGoal('form');
             if (typeof fbq !== 'undefined') fbq('track', 'Lead');
-            if (typeof yaCounter50181778 !== 'undefined') yaCounter50181778.reachGoal(formName);
+            if (typeof yaCounter50181778 !== 'undefined')
+                yaCounter50181778.reachGoal(formName);
         }
 
         function inputIsValidation(input) {
-            const hint = input.parentNode.querySelector(".input-wrapper__error");
+            const hint = input.parentNode.querySelector(
+                '.input-wrapper__error'
+            );
 
-            switch (input.getAttribute("name")) {
-                case "phone":
+            switch (input.getAttribute('name')) {
+                case 'phone':
                     if (input.validity.valid) {
                         removeErrorInput(input, hint);
-                        console.log("phone");
+                        console.log('phone');
                         return true;
                     } else {
-                        setErrorInput(input, hint, "Недопустимый номер телефона!");
+                        setErrorInput(
+                            input,
+                            hint,
+                            'Недопустимый номер телефона!'
+                        );
                         return false;
                     }
                     break;
-                case "email":
+                case 'email':
                     if (input.validity.valid) {
                         removeErrorInput(input, hint);
-                        console.log("email");
+                        console.log('email');
                         return true;
                     } else {
-                        setErrorInput(input, hint, "Недопустимый email!");
+                        setErrorInput(input, hint, 'Недопустимый email!');
                         return false;
                     }
                     break;
-                case "name":
+                case 'name':
                     if (input.validity.valid) {
                         removeErrorInput(input, hint);
-                        console.log("name");
+                        console.log('name');
                         return true;
                     } else {
-                        setErrorInput(input, hint, "Как к Вам обращаться?");
+                        setErrorInput(input, hint, 'Как к Вам обращаться?');
                         return false;
                     }
                     break;
-                case "firstname":
+                case 'firstname':
                     if (input.validity.valid) {
                         removeErrorInput(input, hint);
-                        console.log("firstname");
+                        console.log('firstname');
                         return true;
                     } else {
-                        setErrorInput(input, hint, "Как к Вам обращаться?");
+                        setErrorInput(input, hint, 'Как к Вам обращаться?');
                         return false;
                     }
                     break;
-                case "lastname":
+                case 'lastname':
                     if (input.validity.valid) {
                         removeErrorInput(input, hint);
-                        console.log("lastname");
+                        console.log('lastname');
                         return true;
                     } else {
-                        setErrorInput(input, hint, "Как к Вам обращаться?");
+                        setErrorInput(input, hint, 'Как к Вам обращаться?');
                         return false;
                     }
                     break;
-                case "coupon":
+                case 'coupon':
                     codeStatus = false;
-                    return true
+                    return true;
                     break;
-                case "file":
+                case 'file':
                     hasFileInput = true;
                     return true;
                     break;
-                case "text":
+                case 'text':
                     hasLatterInput = true;
                     return true;
                     break;
@@ -107,16 +114,15 @@ function initForm(_form) {
         }
 
         function setErrorInput(input, hint, textError) {
-            input.style.borderColor = "red";
-            hint.classList.add("input-wrapper__error--show");
-            hint.innerHTML = "- " + textError;
+            input.style.borderColor = 'red';
+            hint.classList.add('input-wrapper__error--show');
+            hint.innerHTML = '- ' + textError;
         }
 
         function removeErrorInput(input, hint) {
-            if (input.hasAttribute("style"))
-                input.removeAttribute("style");
-            hint.classList.remove("input-wrapper__error--show");
-            hint.innerHTML = "";
+            if (input.hasAttribute('style')) input.removeAttribute('style');
+            hint.classList.remove('input-wrapper__error--show');
+            hint.innerHTML = '';
         }
 
         function scrabbleInputs(currentForm) {
@@ -128,11 +134,10 @@ function initForm(_form) {
                 const _isValidity = inputIsValidation(input);
 
                 if (_isValidity) {
-                    if (input.getAttribute("type") === "file") {
-                        fo.append("file", input.files[0]);
-                    } else if (input.getAttribute("type") === "radio") {
-                        if (input.checked)
-                            fo.append(input.name, input.value);
+                    if (input.getAttribute('type') === 'file') {
+                        fo.append('file', input.files[0]);
+                    } else if (input.getAttribute('type') === 'radio') {
+                        if (input.checked) fo.append(input.name, input.value);
                     } else {
                         fo.append(input.name, input.value);
                     }
@@ -143,28 +148,26 @@ function initForm(_form) {
             if (!isValidity) return null;
 
             if (idPopup == 7) {
-                fo.append("res", JSON.stringify(answersQuizlet));
+                fo.append('res', JSON.stringify(answersQuizlet));
                 answersQuizlet = null;
             }
 
-            fo.append("csrfToken", csrfToken);
-            fo.append("formsended", currentForm.getAttribute("name"));
+            fo.append('csrfToken', csrfToken);
+            fo.append('formsended', currentForm.getAttribute('name'));
 
             return fo;
         }
 
         function sendForm(sendData, currentForm) {
-
             const headers = {
-                'Accept': 'application/json',
+                Accept: 'application/json',
                 'Content-Type': 'multipart/form-data',
                 /* <CORS> */
                 // 'Access-Control-Allow-Origin': "http://localhost:8848",
                 // 'Access-Control-Allow-Credentials': true,
                 // 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type,' + ' Accept'
                 /* </CORS> */
-            }
-
+            };
 
             // /main-test - все формы
             // /main-test/is-exists - проверка зареган ли емаил
@@ -187,33 +190,52 @@ function initForm(_form) {
                 hasLatterInput = false;
             }
 
-            axios.post(url, sendData, {withCredentials: true}, {headers: headers})
-                .then((response) => {
-                    const inputs = currentForm.querySelectorAll('input');
-                    const input = inputs[inputs.length - 1];
-                    const hint = input.parentNode.querySelector(".input-wrapper__error");
-                    const resData = response.data;
+            axios
+                .post(
+                    url,
+                    sendData,
+                    { withCredentials: true },
+                    { headers: headers }
+                )
+                .then(
+                    (response) => {
+                        const inputs = currentForm.querySelectorAll('input');
+                        const input = inputs[inputs.length - 1];
+                        const hint = input.parentNode.querySelector(
+                            '.input-wrapper__error'
+                        );
+                        const resData = response.data;
 
-                    if (resData['warning']) {
-                        const resDataWarning = resData['warning'];
+                        if (resData['warning']) {
+                            const resDataWarning = resData['warning'];
 
-                        if (resDataWarning['coupon'])
-                            setErrorInput(input, hint, resDataWarning['coupon']);
-                        else if (resDataWarning['time'])
-                            setErrorInput(input, hint, resDataWarning['time']);
+                            if (resDataWarning['coupon'])
+                                setErrorInput(
+                                    input,
+                                    hint,
+                                    resDataWarning['coupon']
+                                );
+                            else if (resDataWarning['time'])
+                                setErrorInput(
+                                    input,
+                                    hint,
+                                    resDataWarning['time']
+                                );
 
-                        codeStatus = false;
-                    } else if (resData['coupon']) {
-                        console.log("Промокод успешно активирован!");
-                        codeStatus = true;
-                        showPopUpLogic();
-                        currentForm.reset();
-                        removeErrorInput(input, hint);
+                            codeStatus = false;
+                        } else if (resData['coupon']) {
+                            console.log('Промокод успешно активирован!');
+                            codeStatus = true;
+                            showPopUpLogic();
+                            currentForm.reset();
+                            removeErrorInput(input, hint);
+                        }
+                        console.log(response);
+                    },
+                    (error) => {
+                        console.log(error);
                     }
-                    console.log(response);
-                }, (error) => {
-                    console.log(error);
-                });
+                );
         }
     });
 }

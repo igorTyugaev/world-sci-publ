@@ -19,29 +19,37 @@ function initPopUp(button) {
             openPopUp(_popUp, duration);
             currentShowPopUp = idPopUp;
         } else {
-            console.log("currentShowPopUp: " + currentShowPopUp);
+            console.log('currentShowPopUp: ' + currentShowPopUp);
             closePopUpById(currentShowPopUp, false);
             openPopUp(_popUp, false);
             currentShowPopUp = idPopUp;
         }
     }
 
-
     button.addEventListener('click', (e) => {
-        /* */
-        if (e.target.hasAttribute('data-formsended')) {
-            const formSender = button.getAttribute('data-formsended')
-            const _formPopUp = _popUp.querySelector('form');
-            if (_formPopUp)
-                _formPopUp.setAttribute("data-formsended", formSender);
-        }
-        /* */
+        const _currentBtn = e.target;
 
-        if (button.getAttribute("type") !== "submit") {
+        if (_currentBtn.hasAttribute('data-formsended')) {
+            const formSender = _currentBtn.getAttribute('data-formsended');
+
+            if (_currentBtn.hasAttribute('data-show-popup')) {
+                const id = 'popup-' + e.target.getAttribute('data-show-popup');
+                const popUp = document.getElementById(id);
+
+                /* Меняем значение formsended у формы */
+                const _form = _popUp.querySelector('form');
+                _form.setAttribute('name', formSender);
+
+                /* Меняем значение formsended для кнопки */
+                const _btn = _popUp.querySelector('[data-show-popup]');
+                _btn.setAttribute('data-formsended', formSender);
+            }
+        }
+
+        if (button.getAttribute('type') !== 'submit') {
             showPopUpLogic();
         }
     });
-
 
     _closeButton.addEventListener('click', () => {
         closePopUp(_popUp, duration);
@@ -116,8 +124,6 @@ let popups = new Map([]);
 
 buttons.forEach((button) => {
     const idShowPopUp = button.dataset.showPopup;
-    if (idShowPopUp == 0)
-        popups.set(idShowPopUp, null);
-    else
-        popups.set(idShowPopUp, initPopUp(button));
+    if (idShowPopUp == 0) popups.set(idShowPopUp, null);
+    else popups.set(idShowPopUp, initPopUp(button));
 });
