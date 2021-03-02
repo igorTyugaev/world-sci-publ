@@ -28,26 +28,39 @@ function initPopUp(button) {
 
     button.addEventListener('click', (e) => {
         const _currentBtn = e.target;
+        let goal = null;
 
         if (_currentBtn.hasAttribute('data-formsended')) {
+            /* Считываем название цели */
             const formSender = _currentBtn.getAttribute('data-formsended');
 
             if (_currentBtn.hasAttribute('data-show-popup')) {
+                /* Получаем доступ к открываемому popup-у */
                 const id = 'popup-' + e.target.getAttribute('data-show-popup');
                 const popUp = document.getElementById(id);
 
-                /* Меняем значение formsended у формы */
-                const _form = _popUp.querySelector('form');
-                _form.setAttribute('name', formSender);
+                /* Меняем значение formsended для кнопки открытия след. попапа */
+                const _btn = popUp.querySelector('[data-show-popup]');
+                if (_btn) _btn.setAttribute('data-formsended', formSender);
 
-                /* Меняем значение formsended для кнопки */
-                const _btn = _popUp.querySelector('[data-show-popup]');
-                _btn.setAttribute('data-formsended', formSender);
+                if (_currentBtn.hasAttribute('data-step')) {
+                    const step = _currentBtn.getAttribute('data-step');
+                    goal = formSender + step;
+                    /* Меняем значение formsended у формы */
+                    const _form = popUp.querySelector('form');
+                    if (_form) _form.setAttribute('name', formSender);
+
+                    console.log("Сработала цель: " + goal);
+                }
             }
         }
 
         if (button.getAttribute('type') !== 'submit') {
             showPopUpLogic();
+
+            if (goal) {
+                triggerGoal(goal)
+            }
         }
     });
 
@@ -58,11 +71,28 @@ function initPopUp(button) {
     return showPopUpLogic;
 }
 
-function initPopUpById(id) {
+function triggerGoal(formName) {
+    console.log("Цель зафикисрованна: " + formName)
+    /* этот код создает цель в метрике */
+    if (localStorage.getItem('successGoals') === null) {
+        localStorage.setItem('successGoals', formName);
+
+        if (typeof yaCounter50181778 !== 'undefined')
+            yaCounter50181778.reachGoal(formName);
+    }
+}
+
+function initPopUpById(id, scriptForm = null) {
     const idPopUp = 'popup-' + id;
 
     const _popUp = document.getElementById(idPopUp);
     const _closeButton = _popUp.querySelector('.pop-up__close');
+
+    if (scriptForm) {
+        /* Меняем значение formsended для кнопки открытия след. попапа */
+        const _btn = _popUp.querySelector('[data-show-popup]');
+        if (_btn) _btn.setAttribute('data-formsended', scriptForm);
+    }
 
     const _closeBtn = _popUp.querySelector('.pop-up__button--close');
 

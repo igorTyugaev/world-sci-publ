@@ -3086,6 +3086,7 @@ input {
 
 .footer__social {
   height: 100%;
+  width: 80%;
 }
 
 .footer__contacts {
@@ -3125,7 +3126,6 @@ input {
 .social {
   display: flex;
   flex-direction: row-reverse;
-  width: 100%;
 }
 
 .social__link {
@@ -3210,14 +3210,16 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 24px;
-  padding-right: 52px;
-  padding-bottom: 24px;
-  padding-left: 52px;
 }
 
 .pop-up__inner {
   height: 85%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+  padding-right: 52px;
+  padding-bottom: 24px;
+  padding-left: 52px;
 }
 
 .pop-up__inner--narrow {
@@ -3228,6 +3230,10 @@ input {
 
 .pop-up__narrow {
   width: 70%;
+}
+
+.pop-up__extended-block {
+  flex: 1;
 }
 
 .pop-up__desc {
@@ -3301,11 +3307,10 @@ input {
 }
 
 .pop-up__social {
-  margin: 28px 0px 0px 0px;
-}
-
-.pop-up__social .social__link {
-  width: 8%;
+  align-items: center;
+  width: 85%;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 
 .pop-up__iframe {
@@ -3617,6 +3622,77 @@ input {
 .selector[data-state=active] .selector__label+.selector__input+.selector__label {
   max-height: 40px;
   border-top-width: 1px;
+}
+
+.parea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 62.363%;
+}
+
+.parea__header {
+  flex: 1;
+}
+
+.parea__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+}
+
+.parea__footer {
+  width: 70%;
+  margin: 0px 0px 20px 0px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.parea__logo {
+  position: absolute;
+  object-fit: contain;
+  height: 18%;
+  right: 10px;
+  bottom: 10px;
+}
+
+.parea__title {
+  position: relative;
+  font-family: "Helvetica";
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 116%;
+  background-color: #031435;
+  padding-top: 32px;
+  padding-right: 77px;
+  padding-bottom: 32px;
+  padding-left: 15px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.parea__subtitle {
+  font-family: "HelveticaBold";
+  color: #000000;
+  font-size: 24px;
+  line-height: 116%;
+}
+
+.parea__text {
+  font-family: "Helvetica";
+  color: #000000;
+  font-size: 24px;
+}
+
+.parea__btn {
+  width: 30%;
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
@@ -4905,7 +4981,7 @@ input {
     height: 11.0957004161vw;
   }
 
-  .pop-up__main {
+  .pop-up__inner {
     padding-top: 1.6643550624vw;
     padding-right: 3.6061026352vw;
     padding-bottom: 1.6643550624vw;
@@ -4952,10 +5028,6 @@ input {
 
   .pop-up__super-desc {
     font-size: 0.693481276vw;
-  }
-
-  .pop-up__social {
-    margin: 1.9417475728vw 0vw 0vw 0vw;
   }
 
   .pop-up__close {
@@ -5057,6 +5129,29 @@ input {
 
   .selector__label {
     font-size: 0.9708737864vw;
+  }
+
+  .parea__footer {
+    margin: 0vw 0vw 1.386962552vw 0vw;
+  }
+
+  .parea__title {
+    font-size: 1.2482662968vw;
+  }
+
+  .parea__title {
+    padding-top: 2.2191400832vw;
+    padding-right: 5.3398058252vw;
+    padding-bottom: 2.2191400832vw;
+    padding-left: 1.040221914vw;
+  }
+
+  .parea__subtitle {
+    font-size: 1.6643550624vw;
+  }
+
+  .parea__text {
+    font-size: 1.6643550624vw;
   }
 }
 
@@ -6146,7 +6241,7 @@ input {
     height: 16.3432073544vw;
   }
 
-  .pop-up__main {
+  .pop-up__inner {
     padding-top: 2.4514811032vw;
     padding-right: 5.3115423902vw;
     padding-bottom: 2.4514811032vw;
@@ -6258,6 +6353,25 @@ input {
 
   .selector__label {
     font-size: 1.4300306435vw;
+  }
+
+  .parea__title {
+    font-size: 1.8386108274vw;
+  }
+
+  .parea__title {
+    padding-top: 3.2686414709vw;
+    padding-right: 7.8651685393vw;
+    padding-bottom: 3.2686414709vw;
+    padding-left: 1.5321756895vw;
+  }
+
+  .parea__subtitle {
+    font-size: 2.4514811032vw;
+  }
+
+  .parea__text {
+    font-size: 2.4514811032vw;
   }
 }
 
@@ -6978,6 +7092,18 @@ input {
 
   .selector__label {
     font-size: 2.4305555556vw;
+  }
+
+  .parea__title {
+    font-size: 3.125vw;
+  }
+
+  .parea__subtitle {
+    font-size: 4.1666666667vw;
+  }
+
+  .parea__text {
+    font-size: 4.1666666667vw;
   }
 }
 

@@ -50,6 +50,7 @@
 
   &__social {
     height: 100%;
+    width: 80%;
   }
 
   &__contacts {
@@ -111,8 +112,6 @@
 .social {
   display: flex;
   flex-direction: row-reverse;
-
-  width: 100%;
 
   &__link {
     display: block;

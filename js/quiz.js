@@ -126,7 +126,14 @@ function initQuiz(quiz) {
 
     const endQuiz = () => {
         answersQuizlet = answers;
-        initPopUpById(7);
+        if (quiz.getAttribute('id') === 'quiz-0') {
+            triggerGoal("quiz_1_1");
+            initPopUpById(7, "quiz_1_");
+        }
+        else if (quiz.getAttribute('id') === 'quiz-1') {
+            triggerGoal("quiz_2_1");
+            initPopUpById(7, "quiz_2_");
+        }
     };
 
     insertAnswers(step);

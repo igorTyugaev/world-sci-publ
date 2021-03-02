@@ -4,18 +4,19 @@ function initForm(_form) {
         let codeStatus = true;
         let hasFileInput = false;
         let hasLatterInput = false;
-        const { currentTarget } = e;
+        const {currentTarget} = e;
         const idPopup = currentTarget.hasAttribute('data-popup')
             ? currentTarget.getAttribute('data-popup')
             : null;
-        const data = scrabbleInputs(currentTarget);
         const _button = currentTarget.querySelector('[data-show-popup]');
         const idShowPopUp = _button.dataset.showPopup;
         const showPopUpLogic = popups.get(idShowPopUp);
-        let formName = currentTarget.getAttribute('name');
 
-        console.log('formName: ' + formName);
+        const step = _button.getAttribute('data-step');
+        const formSender = _button.getAttribute('data-formsended');
+        const formName = formSender + step;
 
+        const data = scrabbleInputs(currentTarget);
         if (data) {
             console.log('Отправка формы...');
             sendForm(data, currentTarget);
@@ -25,14 +26,16 @@ function initForm(_form) {
             }
         }
 
-        /* этот код создает цель в метрике */
-        if (localStorage.getItem('successGoals') === null) {
-            localStorage.setItem('successGoals', formName);
-            if (typeof yaCounter50181778 !== 'undefined')
-                yaCounter50181778.reachGoal('form');
-            if (typeof fbq !== 'undefined') fbq('track', 'Lead');
-            if (typeof yaCounter50181778 !== 'undefined')
-                yaCounter50181778.reachGoal(formName);
+        function triggerGoal(currentGoal) {
+            /* этот код создает цель в метрике */
+            if (localStorage.getItem('successGoals') === null) {
+                localStorage.setItem('successGoals', currentGoal);
+                if (typeof yaCounter50181778 !== 'undefined')
+                    yaCounter50181778.reachGoal('form');
+
+                if (typeof yaCounter50181778 !== 'undefined')
+                    yaCounter50181778.reachGoal(currentGoal);
+            }
         }
 
         function inputIsValidation(input) {
@@ -44,7 +47,6 @@ function initForm(_form) {
                 case 'phone':
                     if (input.validity.valid) {
                         removeErrorInput(input, hint);
-                        console.log('phone');
                         return true;
                     } else {
                         setErrorInput(
@@ -58,7 +60,6 @@ function initForm(_form) {
                 case 'email':
                     if (input.validity.valid) {
                         removeErrorInput(input, hint);
-                        console.log('email');
                         return true;
                     } else {
                         setErrorInput(input, hint, 'Недопустимый email!');
@@ -68,7 +69,6 @@ function initForm(_form) {
                 case 'name':
                     if (input.validity.valid) {
                         removeErrorInput(input, hint);
-                        console.log('name');
                         return true;
                     } else {
                         setErrorInput(input, hint, 'Как к Вам обращаться?');
@@ -78,7 +78,6 @@ function initForm(_form) {
                 case 'firstname':
                     if (input.validity.valid) {
                         removeErrorInput(input, hint);
-                        console.log('firstname');
                         return true;
                     } else {
                         setErrorInput(input, hint, 'Как к Вам обращаться?');
@@ -88,7 +87,6 @@ function initForm(_form) {
                 case 'lastname':
                     if (input.validity.valid) {
                         removeErrorInput(input, hint);
-                        console.log('lastname');
                         return true;
                     } else {
                         setErrorInput(input, hint, 'Как к Вам обращаться?');
@@ -153,19 +151,23 @@ function initForm(_form) {
             }
 
             fo.append('csrfToken', csrfToken);
-            fo.append('formsended', currentForm.getAttribute('name'));
+            // fo.append('formsended', currentForm.getAttribute('name'));
+            fo.append('formsended', formName);
 
             return fo;
         }
 
         function sendForm(sendData, currentForm) {
+            triggerGoal(formName);
+            console.log("Цель из формы: " + formName);
+
             const headers = {
                 Accept: 'application/json',
                 'Content-Type': 'multipart/form-data',
                 /* <CORS> */
-                // 'Access-Control-Allow-Origin': "http://localhost:8848",
-                // 'Access-Control-Allow-Credentials': true,
-                // 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type,' + ' Accept'
+                'Access-Control-Allow-Origin': "http://localhost:8848",
+                'Access-Control-Allow-Credentials': true,
+                'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type,' + ' Accept'
                 /* </CORS> */
             };
 
@@ -175,9 +177,9 @@ function initForm(_form) {
             // /main-test/letter -
 
             /* Для отладки испольховать: */
-            // const base_url = 'https://worldscipubl.com/main-test/';
+            const base_url = 'https://worldscipubl.com/main-test/';
 
-            const base_url = '/main/';
+            // const base_url = '/main/';
             const file_ep = 'add-file/';
             const letter_ep = 'letter/';
             let url = base_url;
@@ -194,8 +196,8 @@ function initForm(_form) {
                 .post(
                     url,
                     sendData,
-                    { withCredentials: true },
-                    { headers: headers }
+                    {withCredentials: true},
+                    {headers: headers}
                 )
                 .then(
                     (response) => {
