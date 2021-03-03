@@ -111,8 +111,14 @@ function initForm(_form) {
                     }
                     break;
                 case 'coupon':
-                    codeStatus = false;
-                    return true;
+                    if (input.validity.valid) {
+                        removeErrorInput(input, hint);
+                        codeStatus = false;
+                        return true;
+                    } else {
+                        setErrorInput(input, hint, 'Введите купон!');
+                        return false;
+                    }
                     break;
                 case 'file':
                     if (input.validity.valid) {
