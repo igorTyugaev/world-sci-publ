@@ -309,7 +309,7 @@
                                 </label>
 
                                 <input id="singleSelect2" class="selector__input"
-                                       type="radio" name="db" value="0"
+                                       type="radio" name="db" value="2"
                                        required/>
                                 <label for="singleSelect2" class="selector__label">
                                     Web of Science
@@ -317,17 +317,21 @@
                             </div>
                         </div>
 
-                        <div class="p-uploader pop-up__input pop-up__input--file">
-                            <label for="file-upload-3" class="p-uploader__choose">
+                        <div class="input-wrapper">
+                            <div class="p-uploader pop-up__input pop-up__input--file">
+                                <label for="file-upload-3" class="p-uploader__choose">
                                 <span class="p-uploader__text">
                                     Загрузить статью
                                 </span>
-                                <img loading="lazy" class="p-uploader__img"
-                                     src="./media/folder.png"
-                                     alt="uploader-img"/>
-                            </label>
-                            <input name="file" id="file-upload-3" type="file"/>
+                                    <img loading="lazy" class="p-uploader__img"
+                                         src="./media/folder.png"
+                                         alt="uploader-img"/>
+                                </label>
+                                <input name="file" id="file-upload-3" type="file" required>
+                            </div>
+                            <span class="input-wrapper__error"></span>
                         </div>
+
                     </div>
 
                     <button type="submit" class="pop-up__button" data-show-popup="4"
@@ -382,7 +386,7 @@
 
                 <p class="parea__text">
                     Мы отправили письмо с паролем на указанную Вами почту:<br>
-                    {Email Автора}
+                    <span class="parea__text parea__email">{Email Автора}</span>
                 </p>
 
                 <button class="pop-up__button parea__btn">

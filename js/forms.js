@@ -4,7 +4,7 @@ function initForm(_form) {
         let codeStatus = true;
         let hasFileInput = false;
         let hasLatterInput = false;
-        const { currentTarget } = e;
+        const {currentTarget} = e;
         const idPopup = currentTarget.hasAttribute('data-popup')
             ? currentTarget.getAttribute('data-popup')
             : null;
@@ -28,20 +28,32 @@ function initForm(_form) {
 
         function triggerGoal(currentGoal) {
             /* этот код создает цель в метрике */
+            console.log("Сработала метрика: " + currentGoal);
             if (localStorage.getItem('successGoals') === null) {
                 localStorage.setItem('successGoals', currentGoal);
-                if (typeof yaCounter50181778 !== 'undefined')
-                    yaCounter50181778.reachGoal('form');
 
-                if (typeof yaCounter50181778 !== 'undefined')
+                if (typeof yaCounter50181778 !== 'undefined') {
+                    yaCounter50181778.reachGoal('form');
+                    console.log("reachGoal: form")
+                }
+
+                if (typeof yaCounter50181778 !== 'undefined') {
                     yaCounter50181778.reachGoal(currentGoal);
+                    console.log("reachGoal: " + currentGoal)
+                }
             }
         }
 
         function inputIsValidation(input) {
-            const hint = input.parentNode.querySelector(
+            let hint = input.parentNode.querySelector(
                 '.input-wrapper__error'
             );
+
+            if (!hint) {
+                hint = input.parentNode.parentNode.querySelector(
+                    '.input-wrapper__error'
+                );
+            }
 
             switch (input.getAttribute('name')) {
                 case 'phone':
@@ -111,6 +123,7 @@ function initForm(_form) {
                     hasLatterInput = true;
                     return true;
                     break;
+
                 default:
                     return true;
                     break;
@@ -141,9 +154,15 @@ function initForm(_form) {
                     if (input.getAttribute('type') === 'file') {
                         fo.append('file', input.files[0]);
                     } else if (input.getAttribute('type') === 'radio') {
-                        if (input.checked) fo.append(input.name, input.value);
+                        if (input.checked) {
+                            fo.append(input.name, input.value);
+                        }
                     } else {
                         fo.append(input.name, input.value);
+                    }
+
+                    if (input.getAttribute('type') === 'email') {
+                        _button.setAttribute("data-email", input.value);
                     }
                 }
                 isValidity &= _isValidity;
@@ -164,8 +183,8 @@ function initForm(_form) {
         }
 
         function sendForm(sendData, currentForm) {
-            triggerGoal(formName);
-            console.log("Цель из формы: " + formName);
+            if (currentForm.getAttribute('name') != "question_1")
+                triggerGoal(formName);
 
             const headers = {
                 Accept: 'application/json',
@@ -202,8 +221,8 @@ function initForm(_form) {
                 .post(
                     url,
                     sendData,
-                    { withCredentials: true },
-                    { headers: headers }
+                    {withCredentials: true},
+                    {headers: headers}
                 )
                 .then(
                     (response) => {

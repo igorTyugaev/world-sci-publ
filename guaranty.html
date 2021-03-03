@@ -223,16 +223,20 @@
                             </div>
                         </div>
 
-                        <div class="p-uploader pop-up__input pop-up__input--file">
-                            <label for="file-upload-13" class="p-uploader__choose">
+                            <div class="p-uploader pop-up__input pop-up__input--file">
+                                <div class="input-wrapper">
+                                    <label for="file-upload-13" class="p-uploader__choose">
                                 <span class="p-uploader__text">
                                     Загрузить статью
                                 </span>
-                                <img loading="lazy" class="p-uploader__img" src="./media/folder.png"
-                                    alt="uploader-img" />
-                            </label>
-                            <input name="file" id="file-upload-13" type="file" />
-                        </div>
+                                        <img loading="lazy" class="p-uploader__img" src="./media/folder.png"
+                                             alt="uploader-img" />
+                                    </label>
+                                    <input name="file" id="file-upload-13" type="file" required>
+                                </div>
+                                <span class="input-wrapper__error"></span>
+                            </div>
+
                     </div>
 
                     <button type="submit" class="pop-up__button" data-show-popup="4" data-step="3">

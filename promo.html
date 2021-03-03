@@ -236,17 +236,21 @@
                             </div>
                         </div>
 
-                        <div class="p-uploader pop-up__input pop-up__input--file">
-                            <label for="file-upload-10" class="p-uploader__choose">
+                        <div class="input-wrapper">
+                            <div class="p-uploader pop-up__input pop-up__input--file">
+                                <label for="file-upload-10" class="p-uploader__choose">
                                 <span class="p-uploader__text">
                                     Загрузить статью
                                 </span>
-                                <img loading="lazy" class="p-uploader__img"
-                                     src="./media/folder.png"
-                                     alt="uploader-img"/>
-                            </label>
-                            <input name="file" id="file-upload-10" type="file"/>
+                                    <img loading="lazy" class="p-uploader__img"
+                                         src="./media/folder.png"
+                                         alt="uploader-img"/>
+                                </label>
+                                <input name="file" id="file-upload-10" type="file" required>
+                            </div>
+                            <span class="input-wrapper__error"></span>
                         </div>
+
                     </div>
 
                     <button type="submit" class="pop-up__button" data-show-popup="4"
@@ -381,7 +385,8 @@
         </div>
 
         <div class="pdf-reader__column">
-            <a href="https://drive.google.com/u/0/uc?id=1lsS4x17tt1xZep4yBPbFOfCZ2YnWnQpu&export=download" class="pdf-reader__download pdf-download">
+            <a href="https://drive.google.com/u/0/uc?id=1lsS4x17tt1xZep4yBPbFOfCZ2YnWnQpu&export=download"
+               class="pdf-reader__download pdf-download">
                 <span class="pdf-download__title">Cкачать в PDF</span>
                 <img loading="lazy" class="pdf-download__img"
                      src="./media/download_icon.svg" alt=""/>

@@ -8,6 +8,13 @@ function initPopUp(button) {
     const _closeButton = _popUp.querySelector('.pop-up__close');
     const _closeBtn = _popUp.querySelector('.pop-up__button--close');
 
+    if (button.hasAttribute("data-email")) {
+        const _email = _popUp.querySelector('.parea__email');
+        if (_email) {
+            _email.innerHTML = button.getAttribute("data-email");
+        }
+    }
+
     if (_closeBtn) {
         _closeBtn.addEventListener('click', () => {
             closePopUp(_popUp, duration);
@@ -49,8 +56,6 @@ function initPopUp(button) {
                     /* Меняем значение formsended у формы */
                     const _form = popUp.querySelector('form');
                     if (_form) _form.setAttribute('name', formSender);
-
-                    console.log("Сработала цель: " + goal);
                 }
             }
         }
@@ -72,13 +77,15 @@ function initPopUp(button) {
 }
 
 function triggerGoal(formName) {
-    console.log("Цель зафикисрованна: " + formName)
     /* этот код создает цель в метрике */
+    console.log("Сработала метрика: " + formName);
     if (localStorage.getItem('successGoals') === null) {
         localStorage.setItem('successGoals', formName);
 
-        if (typeof yaCounter50181778 !== 'undefined')
+        if (typeof yaCounter50181778 !== 'undefined') {
             yaCounter50181778.reachGoal(formName);
+            console.log("reachGoal: " + formName)
+        }
     }
 }
 

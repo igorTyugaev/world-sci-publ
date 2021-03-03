@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--    <base href="/landing-test/">-->
+    <base href="/landing-test/">
     <link rel="stylesheet" href="css/style.css">
     <link href="./media/incons/favicon.ico" rel="shortcut icon">
     <title>WorldSciPubl</title>
@@ -13,7 +13,7 @@
     <script>
         (function (w, d, s, l, i) {
             w[l] = w[l] || [];
-            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
             var f = d.getElementsByTagName(s)[0],
                 j = d.createElement(s),
                 dl = l != 'dataLayer' ? '&l=' + l : '';
@@ -85,7 +85,8 @@
                         accurateTrackBounce: true,
                         webvisor: true,
                     });
-                } catch (e) {}
+                } catch (e) {
+                }
             });
 
             var n = d.getElementsByTagName('script')[0],
@@ -112,9 +113,11 @@
     ></script>
     <script>
         window.dataLayer = window.dataLayer || [];
+
         function gtag() {
             dataLayer.push(arguments);
         }
+
         gtag('js', new Date());
         gtag('config', 'UA-125087961-1');
     </script>
@@ -295,8 +298,8 @@
 <!-- End Google Tag Manager (noscript) -->
 
 <script>
-    // var csrfToken = '<?=$_SESSION['csrf - token']?>';
-    var csrfToken = 228;
+    var csrfToken = '<?=$_SESSION['csrf-token']?>';
+    // var csrfToken = 228;
 </script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="./js/selector.js"></script>
