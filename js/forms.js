@@ -4,7 +4,7 @@ function initForm(_form) {
         let codeStatus = true;
         let hasFileInput = false;
         let hasLatterInput = false;
-        const { currentTarget } = e;
+        const {currentTarget} = e;
         const idPopup = currentTarget.hasAttribute('data-popup')
             ? currentTarget.getAttribute('data-popup')
             : null;
@@ -231,8 +231,8 @@ function initForm(_form) {
                 .post(
                     url,
                     sendData,
-                    { withCredentials: true },
-                    { headers: headers }
+                    {withCredentials: true},
+                    {headers: headers}
                 )
                 .then(
                     (response) => {
@@ -260,12 +260,14 @@ function initForm(_form) {
                                 );
 
                             codeStatus = false;
-                        } else if (resData['coupon']) {
-                            console.log('Промокод успешно активирован!');
-                            codeStatus = true;
-                            showPopUpLogic();
-                            currentForm.reset();
-                            removeErrorInput(input, hint);
+                        } else {
+                            if (!codeStatus) {
+                                console.log('Промокод успешно активирован!');
+                                codeStatus = true;
+                                showPopUpLogic();
+                                currentForm.reset();
+                                removeErrorInput(input, hint);
+                            }
                         }
                         console.log(response);
                     },
