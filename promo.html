@@ -246,7 +246,8 @@
                                          src="./media/folder.png"
                                          alt="uploader-img"/>
                                 </label>
-                                <input name="file" id="file-upload-10" type="file" accept=".pdf, .doc, .docx"
+                                <input name="file" id="file-upload-10" type="file"
+                                       accept=".pdf, .doc, .docx"
                                        required>
                             </div>
                             <span class="input-wrapper__error"></span>
@@ -305,12 +306,13 @@
 
                 <p class="parea__text">
                     Мы отправили письмо с паролем на указанную Вами почту:<br>
-                    {Email Автора}
+<!--                    <span class="parea__text parea__email">{Email Автора}</span>-->
                 </p>
 
-                <button class="pop-up__button parea__btn">
+                <a href="https://worldscipubl.com/cabinet/login" target="_blank"
+                   class="pop-up__button parea__btn">
                     Войти
-                </button>
+                </a>
             </div>
 
             <div class="parea__footer">

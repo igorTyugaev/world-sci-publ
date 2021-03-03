@@ -8,12 +8,15 @@ function initPopUp(button) {
     const _closeButton = _popUp.querySelector('.pop-up__close');
     const _closeBtn = _popUp.querySelector('.pop-up__button--close');
 
-    if (button.hasAttribute("data-email")) {
-        const _email = _popUp.querySelector('.parea__email');
-        if (_email) {
-            _email.innerHTML = button.getAttribute("data-email");
-        }
-    }
+    // if (button.hasAttribute("data-email")) {
+    //     const _email = _popUp.querySelector('.parea__email');
+    //     const _nextBtn = _popUp.querySelector('button');
+    //     if (_email) {
+    //         _email.innerHTML = button.getAttribute("data-email");
+    //     } else {
+    //         _nextBtn.setAttribute("data-email", button.getAttribute("data-email"));
+    //     }
+    // }
 
     if (_closeBtn) {
         _closeBtn.addEventListener('click', () => {
