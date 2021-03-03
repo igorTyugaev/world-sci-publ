@@ -38,12 +38,13 @@ function initForm(_form) {
                     console.log("reachGoal: " + currentGoal)
                 }
             }
-
-            if (localStorage.getItem('form') === null) {
-                localStorage.setItem('form', 'form');
-                if (typeof yaCounter50181778 !== 'undefined') {
-                    yaCounter50181778.reachGoal('form');
-                    console.log("reachGoal: form")
+            if (currentGoal != "question_1") {
+                if (localStorage.getItem('form') === null) {
+                    localStorage.setItem('form', 'form');
+                    if (typeof yaCounter50181778 !== 'undefined') {
+                        yaCounter50181778.reachGoal('form');
+                        console.log("reachGoal: form")
+                    }
                 }
             }
         }
@@ -124,8 +125,14 @@ function initForm(_form) {
                     }
                     break;
                 case 'text':
-                    hasLatterInput = true;
-                    return true;
+                    if (input.validity.valid) {
+                        removeErrorInput(input, hint);
+                        hasLatterInput = true;
+                        return true;
+                    } else {
+                        setErrorInput(input, hint, 'Заполните поле!');
+                        return false;
+                    }
                     break;
 
                 default:
@@ -187,8 +194,7 @@ function initForm(_form) {
         }
 
         function sendForm(sendData, currentForm) {
-            if (currentForm.getAttribute('name') != "question_1")
-                triggerGoal(formName);
+            triggerGoal(formName);
 
             const headers = {
                 Accept: 'application/json',
