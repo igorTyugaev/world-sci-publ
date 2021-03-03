@@ -3411,10 +3411,24 @@ input {
   padding-right: 12px;
   padding-bottom: 12px;
   padding-left: 12px;
+  color: #b7b7b7;
+}
+
+.p-uploader--active {
+  background-color: #219653;
+  border: 1px solid #219653;
+}
+
+.p-uploader--active .p-uploader__text {
+  color: #FFFEFE;
 }
 
 .p-uploader:active {
   background-color: #0F5C30;
+}
+
+.p-uploader:hover {
+  color: #202020;
 }
 
 .p-uploader__choose {
@@ -3438,11 +3452,6 @@ input {
   text-align: left;
   font-style: "Helvetica";
   font-size: 14px;
-  color: #b7b7b7;
-}
-
-.p-uploader__text:hover {
-  color: #202020;
 }
 
 .pdf-reader {

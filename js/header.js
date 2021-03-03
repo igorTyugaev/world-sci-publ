@@ -11,10 +11,6 @@ _navToggle.addEventListener("click", () => {
 })
 
 _callBtn.addEventListener('click', () => {
-
-})
-
-function triggerGoal() {
     /* этот код создает цель в метрике */
     console.log("Сработала метрика: call_1");
     if (localStorage.getItem('successGoals') === null) {
@@ -25,7 +21,7 @@ function triggerGoal() {
             console.log("reachGoal: call_1");
         }
     }
-}
+})
 
 function toggleMenu() {
     _navBurger.classList.toggle("burger-active");
