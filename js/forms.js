@@ -167,6 +167,8 @@ function initForm(_form) {
                     } else if (input.getAttribute('type') === 'radio') {
                         if (input.checked) {
                             fo.append(input.name, input.value);
+                            console.log("input.name: " + input.name);
+                            console.log("input.value: " + input.value);
                         }
                     } else {
                         fo.append(input.name, input.value);
