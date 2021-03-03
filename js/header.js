@@ -13,8 +13,8 @@ _navToggle.addEventListener("click", () => {
 _callBtn.addEventListener('click', () => {
     /* этот код создает цель в метрике */
     console.log("Сработала метрика: call_1");
-    if (localStorage.getItem('successGoals') === null) {
-        localStorage.setItem('successGoals', "call_1");
+    if (localStorage.getItem('call_1') === null) {
+        localStorage.setItem('call_1', "call_1");
 
         if (typeof yaCounter50181778 !== 'undefined') {
             yaCounter50181778.reachGoal("call_1");
@@ -46,6 +46,6 @@ scrollItems.forEach((item) => {
         if (anchor === "#cost" || anchor === "#quiz-0" || anchor === "#promo")
             yOffset = 0.96;
         const y = (anchorElement.getBoundingClientRect().top + window.pageYOffset) * yOffset;
-        window.scrollTo({top: y, behavior: 'smooth'});
+        window.scrollTo({ top: y, behavior: 'smooth' });
     });
 });

@@ -4,7 +4,7 @@ function initForm(_form) {
         let codeStatus = true;
         let hasFileInput = false;
         let hasLatterInput = false;
-        const {currentTarget} = e;
+        const { currentTarget } = e;
         const idPopup = currentTarget.hasAttribute('data-popup')
             ? currentTarget.getAttribute('data-popup')
             : null;
@@ -29,8 +29,8 @@ function initForm(_form) {
         function triggerGoal(currentGoal) {
             /* этот код создает цель в метрике */
             console.log("Сработала метрика: " + currentGoal);
-            if (localStorage.getItem('successGoals') === null) {
-                localStorage.setItem('successGoals', currentGoal);
+            if (localStorage.getItem(currentGoal) === null) {
+                localStorage.setItem(currentGoal, currentGoal);
 
                 if (typeof yaCounter50181778 !== 'undefined') {
                     yaCounter50181778.reachGoal('form');
@@ -221,8 +221,8 @@ function initForm(_form) {
                 .post(
                     url,
                     sendData,
-                    {withCredentials: true},
-                    {headers: headers}
+                    { withCredentials: true },
+                    { headers: headers }
                 )
                 .then(
                     (response) => {

@@ -79,8 +79,8 @@ function initPopUp(button) {
 function triggerGoal(formName) {
     /* этот код создает цель в метрике */
     console.log("Сработала метрика: " + formName);
-    if (localStorage.getItem('successGoals') === null) {
-        localStorage.setItem('successGoals', formName);
+    if (localStorage.getItem(formName) === null) {
+        localStorage.setItem(formName, formName);
 
         if (typeof yaCounter50181778 !== 'undefined') {
             yaCounter50181778.reachGoal(formName);
