@@ -4,7 +4,7 @@ function initForm(_form) {
         let codeStatus = true;
         let hasFileInput = false;
         let hasLatterInput = false;
-        const {currentTarget} = e;
+        const { currentTarget } = e;
         const idPopup = currentTarget.hasAttribute('data-popup')
             ? currentTarget.getAttribute('data-popup')
             : null;
@@ -98,8 +98,14 @@ function initForm(_form) {
                     return true;
                     break;
                 case 'file':
-                    hasFileInput = true;
-                    return true;
+                    if (input.validity.valid) {
+                        removeErrorInput(input, hint);
+                        hasFileInput = true;
+                        return true;
+                    } else {
+                        setErrorInput(input, hint, 'Загрузите файл!');
+                        return false;
+                    }
                     break;
                 case 'text':
                     hasLatterInput = true;
@@ -196,8 +202,8 @@ function initForm(_form) {
                 .post(
                     url,
                     sendData,
-                    {withCredentials: true},
-                    {headers: headers}
+                    { withCredentials: true },
+                    { headers: headers }
                 )
                 .then(
                     (response) => {

@@ -202,14 +202,13 @@
             <textarea class="your-question__textarea" name="text"></textarea>
 
             <div class="input-wrapper">
-                <input name="email" type="email" class="your-question__email"
-                       placeholder="Email"
-                       pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
-                       required>
+                <input name="email" type="email" class="your-question__email" placeholder="Email"
+                    pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
                 <span class="input-wrapper__error"></span>
             </div>
 
-            <button type="submit" class="button your-question__submit" data-show-popup="0">
+            <button type="submit" class="button your-question__submit" data-show-popup="0" data-formsended="question_"
+                data-step="1">
                 Задать свой вопрос
             </button>
         </form>

@@ -21,46 +21,33 @@
 
                 <div class="audit__content">
 
-                    <form novalidate name="24" class="audit__form audit-form" action="/"
-                          method="get">
+                    <form novalidate name="24" class="audit__form audit-form" action="/" method="get">
 
                         <div class="audit-form__inputs">
 
                             <div class="input-wrapper audit-form__input-wrapper">
-                                <input class="audit-form__input"
-                                       type="text"
-                                       name="lastname"
-                                       placeholder="Фамилия"
-                                       required>
+                                <input class="audit-form__input" type="text" name="lastname" placeholder="Фамилия"
+                                    required>
                                 <span class="input-wrapper__error"></span>
                             </div>
 
                             <div class="input-wrapper audit-form__input-wrapper">
-                                <input class="audit-form__input"
-                                       type="text"
-                                       name="firstname"
-                                       placeholder="Имя"
-                                       required>
+                                <input class="audit-form__input" type="text" name="firstname" placeholder="Имя"
+                                    required>
                                 <span class="input-wrapper__error"></span>
                             </div>
 
                             <div class="input-wrapper audit-form__input-wrapper">
-                                <input class="audit-form__input"
-                                       type="tel"
-                                       name="phone"
-                                       placeholder="Номер телефона"
-                                       pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
-                                       required>
+                                <input class="audit-form__input" type="tel" name="phone" placeholder="Номер телефона"
+                                    pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
                                 <span class="input-wrapper__error"></span>
                             </div>
 
                             <div class="input-wrapper audit-form__input-wrapper">
-                                <input class="audit-form__input"
-                                       type="email"
-                                       name="email"
-                                       placeholder="Электронная почта"
-                                       pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
-                                       required>
+                                <input class="audit-form__input" type="email" name="email"
+                                    placeholder="Электронная почта"
+                                    pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                                    required>
                                 <span class="input-wrapper__error"></span>
                             </div>
 
@@ -70,22 +57,21 @@
                             <div class="uploader">
                                 <label for="file-upload-4" class="uploader__choose">
                                     <img loading="lazy" class="uploader__img" src="./media/folder.png"
-                                         alt="uploader-img">
+                                        alt="uploader-img">
                                 </label>
                                 <span class="uploader__text">
-                                Нажмите на квадрат,
-                                чтобы загрузить с компьютера
-                                статью для аудита
-                            </span>
+                                    Нажмите на квадрат,
+                                    чтобы загрузить с компьютера
+                                    статью для аудита
+                                </span>
                                 <div class="input-wrapper">
-                                    <input name="file" id="file-upload-4" type="file"/>
+                                    <input name="file" id="file-upload-4" type="file" required>
                                     <span class="input-wrapper__error"></span>
                                 </div>
                             </div>
 
-                            <button type="submit" class="button audit-form__btn"
-                                    name="submit"
-                                    data-show-popup="20">
+                            <button type="submit" class="button audit-form__btn" name="submit" data-show-popup="20"
+                                data-formsended="free_audit_" data-step="1">
                                 Отправить заявку на бесплатный аудит
                             </button>
                         </div>
@@ -117,8 +103,8 @@
                             и их последовательность для
                             успешной публикации Вашей рукописи
                         </p>
-                        <button class="button audit-cart__link"
-                                data-show-popup="200">Открыть пример
+                        <button class="button audit-cart__link" data-show-popup="200" data-formsended="technical_audit_"
+                            data-step="1">Открыть пример
                         </button>
                     </div>
                     <img loading="lazy" src="./media/human_a.svg" alt="human_a" class="audit-cart__img">
@@ -131,12 +117,11 @@
                             Проверим научную составляющую и получим ценные рекомендации от
                             действующего рецензента авторитетного журнала по Вашей тематике
                         </p>
-                        <button class="button audit-cart__link"
-                                data-show-popup="202">Открыть пример
+                        <button class="button audit-cart__link" data-show-popup="202"
+                            data-formsended="expert_assessment_" data-step="1">Открыть пример
                         </button>
                     </div>
-                    <img loading="lazy" src="./media/audit/humaaans-2.svg" alt="human_a"
-                         class="audit-cart__img">
+                    <img loading="lazy" src="./media/audit/humaaans-2.svg" alt="human_a" class="audit-cart__img">
                 </div>
 
                 <div class="audit__item audit-cart">
@@ -147,12 +132,12 @@
                             этапов. Посмотрите, как изменится Ваша статья перед отправкой в
                             журнал
                         </p>
-                        <button class="button audit-cart__link" data-show-popup="206">
+                        <button class="button audit-cart__link" data-show-popup="206" data-formsended="before_after_"
+                            data-step="1">
                             Открыть пример
                         </button>
                     </div>
-                    <img loading="lazy" src="./media/audit/humaaans-3.svg" alt="human_a"
-                         class="audit-cart__img">
+                    <img loading="lazy" src="./media/audit/humaaans-3.svg" alt="human_a" class="audit-cart__img">
                 </div>
 
             </div>
