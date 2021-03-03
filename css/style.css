@@ -3308,7 +3308,6 @@ input {
 
 .pop-up__social {
   align-items: center;
-  width: 85%;
   justify-content: space-between;
   margin: 0 auto;
 }
@@ -3386,10 +3385,7 @@ input {
 .popup-3__description {
   font-family: "Helvetica";
   font-size: 24px;
-  padding-top: 0px;
-  padding-right: 140px;
-  padding-bottom: 0px;
-  padding-left: 0px;
+  padding-right: 100px;
   margin: 20px 0px 0px 0px;
   text-align: left;
 }
@@ -5155,14 +5151,8 @@ input {
   }
 
   .popup-3__description {
-    font-size: 1.6643550624vw;
-  }
-
-  .popup-3__description {
-    padding-top: 0vw;
     padding-right: 9.7087378641vw;
-    padding-bottom: 0vw;
-    padding-left: 0vw;
+    font-size: 1.6643550624vw;
   }
 
   .popup-3__description {
@@ -5316,6 +5306,23 @@ input {
 
   .footer__bg {
     height: 22.905982906vw;
+  }
+
+  .pop-up__narrow {
+    width: 100%;
+  }
+
+  .popup-2__form {
+    width: 100%;
+  }
+
+  .popup-3__description {
+    font-size: 20px;
+    padding-right: 70px;
+  }
+
+  .popup-3__form {
+    width: 100%;
   }
 }
 
@@ -6399,14 +6406,9 @@ input {
   }
 
   .popup-3__description {
-    font-size: 2.4514811032vw;
-  }
-
-  .popup-3__description {
-    padding-top: 0vw;
-    padding-right: 14.3003064351vw;
-    padding-bottom: 0vw;
-    padding-left: 0vw;
+    padding: 0;
+    width: 100%;
+    font-size: 18px;
   }
 
   .p-uploader {
@@ -7184,10 +7186,6 @@ input {
   }
 
   .popup-3__promo {
-    font-size: 4.1666666667vw;
-  }
-
-  .popup-3__description {
     font-size: 4.1666666667vw;
   }
 
