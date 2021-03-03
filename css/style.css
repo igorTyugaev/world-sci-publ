@@ -3695,6 +3695,83 @@ input {
   justify-content: center;
 }
 
+.cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  height: 100%;
+  width: 62.363%;
+}
+
+.cover__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  background-color: #031435;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.cover__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.cover__footer {
+  width: 70%;
+  margin: 0px 0px 20px 0px;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.cover__logo {
+  object-fit: contain;
+  object-position: center;
+  height: 50%;
+}
+
+.cover__subtitle {
+  font-family: "HelveticaBold";
+  color: #000000;
+  font-size: 24px;
+  line-height: 116%;
+}
+
+.cover__text {
+  font-family: "Helvetica";
+  color: #000000;
+  font-size: 24px;
+}
+
+.cover__btn {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.pop-up-cover {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: none;
+}
+
+.pop-up-cover__main {
+  height: 100%;
+}
+
 /*# sourceMappingURL=style.css.map */
 
 @media (min-width:1025px) {
@@ -5153,6 +5230,18 @@ input {
   .parea__text {
     font-size: 1.6643550624vw;
   }
+
+  .cover__footer {
+    margin: 0vw 0vw 1.386962552vw 0vw;
+  }
+
+  .cover__subtitle {
+    font-size: 1.6643550624vw;
+  }
+
+  .cover__text {
+    font-size: 1.6643550624vw;
+  }
 }
 
 @media (max-width:1440px) {
@@ -6373,6 +6462,14 @@ input {
   .parea__text {
     font-size: 2.4514811032vw;
   }
+
+  .cover__subtitle {
+    font-size: 2.4514811032vw;
+  }
+
+  .cover__text {
+    font-size: 2.4514811032vw;
+  }
 }
 
 @media (max-width:900px) {
@@ -6552,6 +6649,13 @@ input {
 
   .review-card__index {
     font-size: 2.4305555556vw;
+  }
+}
+
+@media (max-width:760px) {
+  .pop-up-cover {
+    display: block;
+    z-index: 99999;
   }
 }
 
@@ -7103,6 +7207,14 @@ input {
   }
 
   .parea__text {
+    font-size: 4.1666666667vw;
+  }
+
+  .cover__subtitle {
+    font-size: 4.1666666667vw;
+  }
+
+  .cover__text {
     font-size: 4.1666666667vw;
   }
 }
