@@ -29,17 +29,21 @@ function initForm(_form) {
         function triggerGoal(currentGoal) {
             /* этот код создает цель в метрике */
             console.log("Сработала метрика: " + currentGoal);
+
             if (localStorage.getItem(currentGoal) === null) {
                 localStorage.setItem(currentGoal, currentGoal);
 
                 if (typeof yaCounter50181778 !== 'undefined') {
-                    yaCounter50181778.reachGoal('form');
-                    console.log("reachGoal: form")
-                }
-
-                if (typeof yaCounter50181778 !== 'undefined') {
                     yaCounter50181778.reachGoal(currentGoal);
                     console.log("reachGoal: " + currentGoal)
+                }
+            }
+
+            if (localStorage.getItem('form') === null) {
+                localStorage.setItem('form', 'form');
+                if (typeof yaCounter50181778 !== 'undefined') {
+                    yaCounter50181778.reachGoal('form');
+                    console.log("reachGoal: form")
                 }
             }
         }
