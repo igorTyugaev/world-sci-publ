@@ -1221,13 +1221,30 @@ input {
 }
 
 .consultation__logo {
-  object-fit: contain;
-  object-position: top;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+}
+
+.consultation__logo-img {
+  object-fit: contain;
+  object-position: top;
+}
+
+.consultation__logo-txt {
+  font-family: "Helvetica";
+  font-size: 8px;
+  line-height: 101%;
+  text-align: center;
+  align-items: center;
+  color: #FFFFFF;
+  padding: 0;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translateX(-58%);
 }
 
 .consultation__content {
@@ -4086,6 +4103,10 @@ input {
     width: 5.8252427184vw;
   }
 
+  .consultation__logo-txt {
+    font-size: 0.5547850208vw;
+  }
+
   .consultation__content {
     padding-top: 0vw;
     padding-right: 1.9417475728vw;
@@ -5588,6 +5609,10 @@ input {
     width: 8.5801838611vw;
   }
 
+  .consultation__logo-txt {
+    font-size: 0.8171603677vw;
+  }
+
   .consultation__content {
     padding-top: 0vw;
     padding-right: 2.860061287vw;
@@ -6835,6 +6860,10 @@ input {
 
   .menu__title {
     font-size: 2.0833333333vw;
+  }
+
+  .consultation__logo-txt {
+    font-size: 1.3888888889vw;
   }
 
   .consultation__text {

@@ -21,13 +21,31 @@
 
   &__logo {
     @extend %tmp-logo;
-    object-fit: contain;
-    object-position: top;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
+  }
+
+  &__logo-img {
+    object-fit: contain;
+    object-position: top;
+  }
+
+  &__logo-txt {
+    font-family: $fontFamilyPrimary;
+    @include font-size(8px);
+    line-height: 101%;
+    text-align: center;
+    align-items: center;
+    color: $textColorSecondary;
+    padding: 0;
+
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translateX(-58%);
   }
 
   &__content {
@@ -74,9 +92,7 @@
     }
   }
 
-  &__scroll-bar {
-
-  }
+  &__scroll-bar {}
 
   &__bg {
     height: 100%;
