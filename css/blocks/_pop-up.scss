@@ -10,6 +10,10 @@
   transform: translateY(-100%);
   overflow: hidden;
 
+  &__form {
+    width: 85%;
+  }
+
   &_transition {
     transition: transform 0.5s;
   }
@@ -96,7 +100,7 @@
   }
 
   &__narrow {
-    width: 70%;
+    width: 80%;
 
     @include _less-than ($bp-xl-1170) {
       width: 100%;
@@ -162,7 +166,7 @@
 
   &__title {
     font-weight: bold;
-    font-size: 24px;
+    @include font-size(18px);
     margin-bottom: 16px;
     line-height: 120%;
 

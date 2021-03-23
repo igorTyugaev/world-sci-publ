@@ -1,17 +1,47 @@
 .audit {
   @include margin(170px);
 
-  &__wrap {
-
-  }
+  &__wrap {}
 
   &__title {
     font-family: $fontFamilySecondary;
     @include font-size(36px);
   }
 
-  &__header {
+  &__desc {
+    font-family: $fontFamilyPrimary;
+    color: $textColorPrimary;
+
+    @include font-size(18px);
+    @include padding(16px, 26px, 16px, 26px);
+    line-height: 120%
   }
+
+  &__fields {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @include padding(0px, 26px, 0px, 26px);
+  }
+
+  &__email {
+    flex: 2;
+  }
+
+  &__submit {
+    flex: 1;
+    @include margin(0px, 0px, 0px, 20px);
+    width: 100%;
+  }
+
+  &__btn {
+    font-family: $fontFamilyPrimary;
+    @include font-size(14px);
+    width: 100%;
+  }
+
+  &__header {}
 
   &__subtitle {
     font-family: $fontFamilyPrimary;
@@ -24,16 +54,22 @@
 
   &__inner {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     @include margin(22px);
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
   }
 
   &__main {
     display: flex;
     flex-direction: column;
-    width: 59.1085271318%;
-    @include padding(20px, 0px, 20px, 0px);
+    width: 100%;
+    @include padding(0px, 0px, 20px, 0px);
+    background: $popupBackground;
+    @extend %s-border;
   }
 
   &__content {
@@ -55,6 +91,7 @@
   }
 
   &__form {
+    width: 100%;
   }
 
   &__instruction {
@@ -72,6 +109,8 @@
       line-height: 200%;
     }
   }
+
+
 }
 
 .audit-cart {
@@ -164,35 +203,194 @@
 }
 
 .uploader {
+  width: 100%;
+
+  &__input-file {
+    display: none;
+  }
+
+  &__inner {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    // background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%'style='fill: none; stroke: gray; opacity: 0.5; stroke-width: 4; stroke-dasharray: 20.1 10.05'/></svg>");
+    border: 2px dashed #C4C4C4;
+    padding: 2em;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: #CBCBCB;
+      border: 2px dashed #FFFFFF;
+    }
+
+    &--drag {
+      background-color: #CBCBCB;
+      border: 2px dashed #FFFFFF;
+    }
+  }
+
+  &__inner-done {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
+    text-align: center;
+    background-color: $colorAccent;
+
+    .uploader__text {
+      color: $textColorSecondary;
+    }
+  }
+
+  &__text {
+    @include margin(10px, 0px, 10px, 0px);
+    width: 100%;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__img {
+    position: relative;
+  }
+
+  &__cloud {
+    object-fit: contain;
+    object-position: center;
+  }
+
+  &__arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    object-fit: contain;
+    object-position: center;
+    height: 50%;
+  }
+
+  &__done {
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 18%;
+    transform: translateX(-50%);
+    object-fit: contain;
+    object-position: center;
+    height: 50%;
+  }
+
+  #file-progress {
+    display: none;
+    margin: 1em auto;
+    width: 100%;
+  }
+
+  #file-upload-form {
+    margin: auto;
+    width: 40%;
+  }
+
+  progress {
+    appearance: none;
+    background: #eee;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    height: 30px;
+  }
+
+  progress[value]::-webkit-progress-value {
+    background:
+      -webkit-linear-gradient(-45deg,
+        transparent 33%,
+        rgba(0, 0, 0, .2) 33%,
+        rgba(0, 0, 0, .2) 66%,
+        transparent 66%),
+      -webkit-linear-gradient(right,
+        #005f95,
+        #07294d);
+    background:
+      linear-gradient(-45deg,
+        transparent 33%,
+        rgba(0, 0, 0, .2) 33%,
+        rgba(0, 0, 0, .2) 66%,
+        transparent 66%),
+      linear-gradient(right,
+        #005f95,
+        #07294d);
+    background-size: 60px 30px, 100% 100%, 100% 100%;
+    border-radius: 3px;
+  }
+
+  progress[value]::-moz-progress-bar {
+    background:
+      -moz-linear-gradient(-45deg,
+        transparent 33%,
+        rgba(0, 0, 0, .2) 33%,
+        rgba(0, 0, 0, .2) 66%,
+        transparent 66%),
+      -moz-linear-gradient(right,
+        #005f95,
+        #07294d);
+    background:
+      linear-gradient(-45deg,
+        transparent 33%,
+        rgba(0, 0, 0, .2) 33%,
+        rgba(0, 0, 0, .2) 66%,
+        transparent 66%),
+      linear-gradient(right,
+        #005f95,
+        #07294d);
+    background-size: 60px 30px, 100% 100%, 100% 100%;
+    border-radius: 3px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.file-cards {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  @include margin(22px, 0px, 0px, 0px);
 
-  background: rgba(21, 42, 79, 0.98);
-  height: 65%;
+  &__item {
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 151px;
+    @include padding(4px, 4px, 4px, 4px);
 
-  border-radius: 6px;
-  padding: 15px 20px;
-
-
-  &__choose {
-    width: 30%;
-    background-color: black;
-    cursor: pointer;
+    background: $popupBackground;
+    @extend %s-border;
   }
 
   &__img {
     object-fit: contain;
-    height: 100%;
-    width: 100%;
-    padding: 12%;
+    object-position: center;
   }
 
-  &__text {
-    width: 70%;
+  &__title {
+    font-family: $fontFamilyPrimary;
     @include font-size(12px);
+    @include padding(0px, 12px, 0px, 12px);
+    line-height: 110%;
     text-align: center;
-    color: $textColorSecondary;
-    padding: 2%;
+
+    color: #383838;
   }
 }
