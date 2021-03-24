@@ -67,14 +67,14 @@
 .quote {
   display: flex;
   flex-direction: row;
-  @include margin(50px);
+  @include margin(80px);
   height: 100%;
 
   &__text {
     align-items: center;
     font-style: italic;
     color: $textColorSecondary;
-    @include font-size(14px);
+    @include font-size(18px);
   }
 
   &::before {
@@ -83,10 +83,11 @@
 
   &::after {
     content: "“";
-    transform: rotateZ(180deg);
+    transform: rotateZ(180deg) translateX(200%) translateY(-200%);
   }
 
-  &::before, &::after {
+  &::before,
+  &::after {
     height: 10px;
     line-height: 0%;
     font-family: $fontFamilyPrimary;

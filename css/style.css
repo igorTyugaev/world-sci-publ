@@ -760,6 +760,11 @@ input {
   transition: background-color 0.3s 0.6s;
 }
 
+.progress-bar_step-0 .progress-bar__circle_1 .progress-bar__circle-text {
+  transition: color 0.3s 0.6s;
+  color: #000000;
+}
+
 .progress-bar_step-0 .progress-bar__bar-inner {
   width: 0%;
 }
@@ -772,6 +777,11 @@ input {
 .progress-bar_step-1 .progress-bar__circle_2 {
   background: #FFC700;
   transition: background-color 0.3s 0.6s;
+}
+
+.progress-bar_step-1 .progress-bar__circle_2 .progress-bar__circle-text {
+  transition: color 0.3s 0.6s;
+  color: #000000;
 }
 
 .progress-bar_step-1 .progress-bar__bar-inner {
@@ -791,6 +801,11 @@ input {
 .progress-bar_step-2 .progress-bar__circle_3 {
   background: #FFC700;
   transition: background-color 0.3s 0.6s;
+}
+
+.progress-bar_step-2 .progress-bar__circle_3 .progress-bar__circle-text {
+  transition: color 0.3s 0.6s;
+  color: #000000;
 }
 
 .progress-bar_step-2 .progress-bar__bar-inner {
@@ -815,6 +830,11 @@ input {
 .progress-bar_step-3 .progress-bar__circle_4 {
   background: #FFC700;
   transition: background-color 0.3s 0.6s;
+}
+
+.progress-bar_step-3 .progress-bar__circle_4 .progress-bar__circle-text {
+  transition: color 0.3s 0.6s;
+  color: #000000;
 }
 
 .progress-bar_step-3 .progress-bar__bar-inner {
@@ -844,6 +864,11 @@ input {
 .progress-bar_step-4 .progress-bar__circle_5 {
   background: #FFC700;
   transition: background-color 0.3s 0.6s;
+}
+
+.progress-bar_step-4 .progress-bar__circle_5 .progress-bar__circle-text {
+  transition: color 0.3s 0.6s;
+  color: #000000;
 }
 
 .progress-bar_step-4 .progress-bar__bar-inner {
@@ -1560,7 +1585,7 @@ input {
 .manifest__logo {
   position: absolute;
   right: 0;
-  top: 0;
+  top: -2.19214881%;
   object-fit: contain;
   height: 80px;
 }
@@ -1703,7 +1728,7 @@ input {
 
 .protection__img {
   align-self: center;
-  height: 421px;
+  height: 411px;
 }
 
 .protection__text {
@@ -1771,7 +1796,7 @@ input {
 .quote {
   display: flex;
   flex-direction: row;
-  margin: 50px 0px 0px 0px;
+  margin: 80px 0px 0px 0px;
   height: 100%;
 }
 
@@ -1779,7 +1804,7 @@ input {
   align-items: center;
   font-style: italic;
   color: #FFFFFF;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .quote:before {
@@ -1788,7 +1813,7 @@ input {
 
 .quote:after {
   content: "“";
-  transform: rotateZ(180deg);
+  transform: rotateZ(180deg) translateX(200%) translateY(-200%);
 }
 
 .quote:after,
@@ -2040,6 +2065,7 @@ input {
   overflow: hidden;
   height: 100%;
   width: 100%;
+  filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.25));
   border-radius: 6px;
 }
 
@@ -4738,7 +4764,7 @@ input {
   }
 
   .protection__img {
-    height: 29.1955617198vw;
+    height: 28.5020804438vw;
   }
 
   .protection__text {
@@ -4780,11 +4806,11 @@ input {
   }
 
   .quote {
-    margin: 3.46740638vw 0vw 0vw 0vw;
+    margin: 5.547850208vw 0vw 0vw 0vw;
   }
 
   .quote__text {
-    font-size: 0.9708737864vw;
+    font-size: 1.2482662968vw;
   }
 
   .quote:after,
@@ -4922,6 +4948,7 @@ input {
 
   .p-slider__img-wrapper {
     border-radius: 0.4160887656vw;
+    filter: drop-shadow(0.0693481276vw 0.0693481276vw 0.2773925104vw rgba(0,0,0,0.25));
   }
 
   .p-footer__text {
@@ -6321,7 +6348,7 @@ input {
   }
 
   .protection__img {
-    height: 43.0030643514vw;
+    height: 41.9816138917vw;
   }
 
   .protection__text {
@@ -6356,7 +6383,7 @@ input {
   }
 
   .quote__text {
-    font-size: 1.4300306435vw;
+    font-size: 1.8386108274vw;
   }
 
   .quote:after,
@@ -6470,6 +6497,7 @@ input {
 
   .p-slider__img-wrapper {
     border-radius: 0.6128702758vw;
+    filter: drop-shadow(0.102145046vw 0.102145046vw 0.4085801839vw rgba(0,0,0,0.25));
   }
 
   .p-footer__text {
@@ -7177,6 +7205,7 @@ input {
 
   .p-slider__img-wrapper {
     border-radius: 0.78125vw;
+    filter: drop-shadow(0.1302083333vw 0.1302083333vw 0.5208333333vw rgba(0,0,0,0.25));
   }
 
   .tabs-team__item {
@@ -7557,7 +7586,7 @@ input {
   }
 
   .quote__text {
-    font-size: 2.4305555556vw;
+    font-size: 3.125vw;
   }
 
   .quote:after,

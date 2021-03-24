@@ -86,7 +86,7 @@
   &__logo {
     position: absolute;
     right: 0;
-    top: 0;
+    top: -2.19214881%;
     object-fit: contain;
 
     $h-logo: 80px;
@@ -128,7 +128,8 @@
 .trailer {
   &__video {
     width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio */
     position: relative;
 
     & iframe {
@@ -207,9 +208,7 @@
       column-gap: #{get-vw(16px, $bp-lg-979)};
     }
 
-    @include _less-than($bp-sm-576) {
-
-    }
+    @include _less-than($bp-sm-576) {}
   }
 
   &__input {
@@ -217,9 +216,7 @@
     cursor: text;
   }
 
-  &__submit {
-
-  }
+  &__submit {}
 
   &__note {
     @include font-size(9px);

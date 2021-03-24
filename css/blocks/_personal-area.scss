@@ -20,9 +20,7 @@
     height: 34%;
   }
 
-  &__header {
-
-  }
+  &__header {}
 
   &__footer {
     display: flex;
@@ -53,6 +51,7 @@
     position: absolute;
     top: 3.5vw;
     left: -6vw;
+
     @include _less-than($bp-xl-1170) {
       left: 0;
     }
@@ -66,19 +65,22 @@
     overflow: hidden;
     height: 100%;
     width: 100%;
-
+    filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.25));
     border-radius: 6px;
 
     @include _more-than($bp-xxl-1442) {
       border-radius: #{get-vw(6px, $bp-xxl-1442)};
+      filter: drop-shadow(#{get-vw(1px, $bp-xxl-1442)} #{get-vw(1px, $bp-xxl-1442)} #{get-vw(4px, $bp-xxl-1442)} rgba(0, 0, 0, 0.25));
     }
 
     @include _less-than($bp-lg-979) {
       border-radius: #{get-vw(6px, $bp-lg-979)};
+      filter: drop-shadow(#{get-vw(1px, $bp-lg-979)} #{get-vw(1px, $bp-lg-979)} #{get-vw(4px, $bp-lg-979)} rgba(0, 0, 0, 0.25));
     }
 
     @include _less-than($bp-md-768) {
       border-radius: #{get-vw(6px, $bp-md-768)};
+      filter: drop-shadow(#{get-vw(1px, $bp-md-768)} #{get-vw(1px, $bp-md-768)} #{get-vw(4px, $bp-md-768)} rgba(0, 0, 0, 0.25));
     }
   }
 
@@ -160,7 +162,8 @@
 
     transition: 0.5s;
 
-    &--active, &:hover {
+    &--active,
+    &:hover {
       background-color: #E1F1FE;
     }
   }
@@ -179,7 +182,7 @@
     border-left: 2px solid #E1F1FE;
     transition: max-height 0.3s ease-out;
 
-    ol > li {
+    ol>li {
       padding: 8px 0;
       font-family: $fontFamilyPrimary;
       @include font-size(15px);
@@ -187,7 +190,5 @@
     }
   }
 
-  &__item-text {
-
-  }
+  &__item-text {}
 }

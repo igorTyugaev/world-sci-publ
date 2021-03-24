@@ -1,9 +1,7 @@
 .guaranty {
   @include margin(90px);
 
-  &__wrap {
-
-  }
+  &__wrap {}
 
   &__title {
     font-family: $fontFamilySecondary;
@@ -54,14 +52,14 @@
 
   &__img {
     align-self: center;
-    height: 421px;
+    height: 411px;
 
     @include _more-than($bp-xxl-1442) {
-      height: #{get-vw(421px, $bp-xxl-1442)};
+      height: #{get-vw(411px, $bp-xxl-1442)};
     }
 
     @include _less-than($bp-lg-979) {
-      height: #{get-vw(421px, $bp-lg-979)};
+      height: #{get-vw(411px, $bp-lg-979)};
     }
   }
 
