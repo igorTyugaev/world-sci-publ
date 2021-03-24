@@ -291,6 +291,7 @@
     @include font-size(18px);
     @include margin(60px);
     text-align: left;
+    cursor: default;
   }
 
   &__form {
@@ -415,6 +416,7 @@
   align-items: center;
   @include padding(32px, 4px, 32px, 4px);
   margin: 0 auto;
+  cursor: default;
 
   background: $popupBackground;
   @extend %s-border;

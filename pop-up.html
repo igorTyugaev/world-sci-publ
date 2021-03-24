@@ -82,14 +82,14 @@
                 </div>
 
                 <div class="pop-up__file">
-                    <a class="card-file" href="/">
+                    <div class="card-file">
                         <img class="card-file__img" src="./media/pdf_img.svg" alt="pdf_img">
                         <span class="card-file__title">
                             Статья<br>
                             “Финансовая безопасность
                             при публикации научных статей”
                         </span>
-                    </a>
+                    </div>
                 </div>
 
                 <p class="popup-2__description">
@@ -344,14 +344,14 @@
                 </div>
 
                 <div class="pop-up__file">
-                    <a class="card-file" href="/">
+                    <div class="card-file">
                         <img class="card-file__img" src="./media/pdf_img.svg" alt="pdf_img">
                         <span class="card-file__title">
                             Статья<br>
                             “Финансовая безопасность
                             при публикации научных статей”
                         </span>
-                    </a>
+                    </div>
                 </div>
 
                 <p class="popup-2__description">
@@ -555,6 +555,106 @@
                         </div>
 
                         <button type="submit" class="pop-up__button" data-show-popup="finished" data-step="4">
+                            Отправить
+                        </button>
+                    </form>
+
+                    <p class="pop-up__super-desc">
+                        Нажимая на кнопку, вы даете согласие на обработку своих
+                        персональных данных и соглашаетесь с
+                        <button class="pop-up__super-desc pop-up__super-desc--link" data-show-popup="500">
+                            Политикой конфиденциальности
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn" />
+    </div>
+</section>
+
+<section id="popup-file_upload-2" class="pop-up">
+    <div class="pop-up__poster">
+        <div class="pop-up__folder folder">
+            <img src="./media/folder-clip.png" alt="folder" class="folder__img">
+            <p class="folder__title">Технический аудит</p>
+        </div>
+
+        <img loading="lazy" class="pop-up__logo" src="./media/logo-min.svg" alt="pop-up__logo" />
+
+        <img loading="lazy" class="pop-up__human" src="./media/humaaans.svg" alt="pop-up__logo" />
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__inner popup-3">
+            <div class="pop-up__narrow">
+                <div class="pop-up__header">
+                    <h3 class="parea__title">
+                        Статья о финансовых рисках будет направлена на WhatsApp указанного Вами номера телефона
+                        <img src="./media/logo.svg" alt="logo" class="parea__logo">
+                    </h3>
+                </div>
+
+                <p class="popup-2__description">
+                    Проведем бесплатный технический аудит Вашей статьи.
+                    Заранее определим соответствие
+                    международным стандартам академического письма
+                </p>
+
+                <p class="pop-up__desc">
+                    Для этого выберите интересующую Вас базу
+                    и загрузите свою статью
+                </p>
+
+                <div class="popup-3__form">
+                    <form novalidate name="33" enctype="multipart/form-data" method="post" action="/">
+                        <div class="pop-up__inputs">
+                            <div class="selector" data-state="">
+                                <div class="selector__title" data-default="Option 0">
+                                    Выберите базу (Scopus/WoS)
+                                </div>
+                                <div class="selector__content">
+                                    <input id="singleSelect0" class="selector__input" type="radio" name="db" value="0"
+                                        required />
+                                    <label for="singleSelect0" class="selector__label">
+                                        Выберите базу (Scopus/WoS)
+                                    </label>
+
+                                    <input id="singleSelect1" class="selector__input" type="radio" name="db" value="1"
+                                        required />
+                                    <label for="singleSelect1" class="selector__label">
+                                        Scopus
+                                    </label>
+
+                                    <input id="singleSelect2" class="selector__input" type="radio" name="db" value="2"
+                                        required />
+                                    <label for="singleSelect2" class="selector__label">
+                                        Web of Science
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <div class="p-uploader pop-up__input pop-up__input--file">
+                                    <label for="file-upload-33" class="p-uploader__choose">
+                                        <span class="p-uploader__text">
+                                            Загрузить статью (.pdf .doc .docx)
+                                        </span>
+                                        <img loading="lazy" class="p-uploader__img" src="./media/folder.png"
+                                            alt="uploader-img" />
+                                    </label>
+                                    <input name="file" id="file-upload-33" type="file" accept=".pdf, .doc, .docx"
+                                        required>
+                                </div>
+                                <span class="input-wrapper__error"></span>
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="pop-up__button" data-show-popup="finished" data-step="3">
                             Отправить
                         </button>
                     </form>

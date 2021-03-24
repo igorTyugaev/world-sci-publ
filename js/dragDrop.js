@@ -1,13 +1,13 @@
 (function () {
   function Init() {
-    let fileSelect = document.getElementById('file-upload'),
-      fileDrag = document.getElementById('file-drag'),
-      submitButton = document.getElementById('submit-button');
+    const fileSelect = document.getElementById('file-upload');
+    const fileDrag = document.getElementById('file-drag');
+    const submitButton = document.getElementById('submit-button');
 
     fileSelect.addEventListener('change', fileSelectHandler, false);
 
     // Is XHR2 available?
-    let xhr = new XMLHttpRequest();
+    const xhr = new XMLHttpRequest();
 
     if (xhr.upload) {
       // File Drop
@@ -62,6 +62,11 @@
     _messages.innerHTML = msg;
   }
 
+  function setStatusFile(msg) {
+    const _status = document.getElementById('status');
+    _status.innerHTML = msg;
+  }
+
   function setProgressMaxValue(e) {
     let pBar = document.getElementById('file-progress');
 
@@ -71,11 +76,9 @@
   }
 
   function updateFileProgress(e) {
-    let pBar = document.getElementById('file-progress');
-
-    if (e.lengthComputable) {
-      pBar.value = e.loaded;
-    }
+    let percent = (e.loaded / e.total) * 100;
+    // _("status").innerHTML = Math.round(percent) + "% uploaded... please wait";
+    setStatusFile("Загружено " + Math.round(percent) + "%");
   }
 
   function uploadFile(file) {
@@ -83,7 +86,7 @@
     let xhr = new XMLHttpRequest(),
       fileInput = document.getElementById('class-roster-file'),
       pBar = document.getElementById('file-progress'),
-      fileSizeLimit = 1024; // In MB
+      fileSizeLimit = 2048; // In MB
 
     if (xhr.upload) {
 
@@ -102,16 +105,7 @@
             // progress.className = (xhr.status == 200 ? "success" : "failure");
             // document.location.reload(true);
           }
-        }
-
-          ;
-
-        // Start upload
-        xhr.open('POST', document.getElementById('file-upload-form').action, true);
-        xhr.setRequestHeader('X-File-Name', file.name);
-        xhr.setRequestHeader('X-File-Size', file.size);
-        xhr.setRequestHeader('Content-Type', 'multipart/form-data');
-        xhr.send(file);
+        };
       }
 
       else {
