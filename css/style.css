@@ -10,6 +10,7 @@
 
 .audit-cart,
 .audit__main,
+.card-file,
 .card-profile,
 .card-rating,
 .card-txt,
@@ -17,6 +18,7 @@
 .feature-card,
 .file-cards__item,
 .manifest,
+.pop-up__poster--white,
 .profile-nav,
 .review-card,
 .review__header,
@@ -43,6 +45,7 @@
 
 .audit-cart,
 .audit__main,
+.card-file,
 .card-profile,
 .card-rating,
 .card-txt,
@@ -50,6 +53,7 @@
 .feature-card,
 .file-cards__item,
 .manifest,
+.pop-up__poster--white,
 .profile-nav,
 .review-card,
 .review__header,
@@ -2171,7 +2175,7 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding-top: 0px;
   padding-right: 26px;
   padding-bottom: 0px;
@@ -2481,6 +2485,7 @@ input {
   justify-content: space-between;
   align-items: center;
   margin: 22px 0px 0px 0px;
+  width: 100%;
 }
 
 .file-cards__item {
@@ -3331,6 +3336,22 @@ input {
   flex-direction: row-reverse;
 }
 
+.social__web {
+  font-family: "Helvetica";
+  font-size: 14px;
+  margin: 8px 0px 0px 0px;
+  color: #000000;
+  text-align: center;
+}
+
+.social__copy {
+  font-family: "Helvetica";
+  font-size: 9px;
+  margin: 8px 0px 0px 0px;
+  color: #000000;
+  text-align: center;
+}
+
 .social__link {
   display: block;
   padding: 4px;
@@ -3375,6 +3396,11 @@ input {
 .pop-up__poster {
   position: relative;
   flex: 1;
+  background-color: #F5F5F5;
+}
+
+.pop-up__poster--white {
+  background: #FFFFFF;
 }
 
 .pop-up__labels {
@@ -3384,6 +3410,12 @@ input {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.pop-up__labels--sign {
+  top: 2.5%;
+  bottom: auto;
+  left: 2.5%;
 }
 
 .pop-up__label {
@@ -3405,6 +3437,19 @@ input {
   height: 160px;
 }
 
+.pop-up__logo--right {
+  left: auto;
+  right: 0;
+}
+
+.pop-up__human {
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+  object-fit: contain;
+  height: 30%;
+}
+
 .pop-up__img {
   height: 100%;
   width: 100%;
@@ -3423,7 +3468,8 @@ input {
   height: 85%;
   display: flex;
   flex-direction: column;
-  padding-top: 24px;
+  align-self: flex-start;
+  padding-top: 0px;
   padding-right: 52px;
   padding-bottom: 24px;
   padding-left: 52px;
@@ -3437,6 +3483,7 @@ input {
 
 .pop-up__narrow {
   width: 80%;
+  margin: 0 auto;
 }
 
 .pop-up__extended-block {
@@ -3501,6 +3548,16 @@ input {
   text-decoration: underline;
 }
 
+.pop-up__super-desc--finish {
+  position: absolute;
+  bottom: 2.5%;
+  left: 50%;
+  font-size: 14px;
+  transform: translateX(-50%);
+  margin: 0;
+  text-decoration: none;
+}
+
 .pop-up__title {
   font-weight: bold;
   font-size: 18px;
@@ -3556,6 +3613,10 @@ input {
   width: 100%;
 }
 
+.pop-up__file {
+  margin: 40px 0px 0px 0px;
+}
+
 .popup-2__promo {
   font-family: "HelveticaBold";
   font-size: 24px;
@@ -3568,8 +3629,8 @@ input {
 }
 
 .popup-2__description {
-  font-family: "Helvetica";
-  font-size: 28px;
+  font-family: "HelveticaBold";
+  font-size: 18px;
   margin: 60px 0px 0px 0px;
   text-align: left;
 }
@@ -3598,7 +3659,7 @@ input {
 }
 
 .popup-3__form {
-  width: 60%;
+  width: 100%;
 }
 
 .popup-3__form input[type=file] {
@@ -3640,6 +3701,10 @@ input {
   position: relative;
 }
 
+.p-uploader__choose:hover .p-uploader__text {
+  color: #202020;
+}
+
 .p-uploader__img {
   position: absolute;
   right: 0;
@@ -3654,7 +3719,40 @@ input {
   display: block;
   text-align: left;
   font-style: "Helvetica";
+  color: #B7B7B7;
   font-size: 14px;
+}
+
+.card-file {
+  text-decoration: none;
+  width: 61%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 32px;
+  padding-right: 4px;
+  padding-bottom: 32px;
+  padding-left: 4px;
+  margin: 0 auto;
+  background: #FFFFFF;
+}
+
+.card-file__img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.card-file__title {
+  font-family: "Helvetica";
+  font-size: 18px;
+  padding-top: 16px;
+  padding-right: 12px;
+  padding-bottom: 0px;
+  padding-left: 12px;
+  line-height: 110%;
+  text-align: center;
+  color: #000000;
 }
 
 .pdf-reader {
@@ -3850,6 +3948,11 @@ input {
 }
 
 .parea__body {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -3888,23 +3991,35 @@ input {
   border-bottom-right-radius: 6px;
 }
 
+.parea__title--pink {
+  background-color: #F595A8;
+}
+
 .parea__subtitle {
+  width: 80%;
   font-family: "HelveticaBold";
   color: #000000;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 116%;
 }
 
 .parea__text {
   font-family: "Helvetica";
   color: #000000;
-  font-size: 24px;
+  font-size: 14px;
+  margin: 35px 0px 0px 0px;
 }
 
 .parea__btn {
-  width: 30%;
+  width: 80%;
   display: flex;
   justify-content: center;
+  font-size: 14px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin: 35px 0px 0px 0px;
 }
 
 .cover {
@@ -3984,6 +4099,60 @@ input {
   height: 100%;
 }
 
+.folder {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 28%;
+  transform: translateX(50%) translateY(-50%);
+}
+
+.folder__img {
+  object-position: center;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.folder__title {
+  font-family: "HelveticaBold";
+  color: #000000;
+  font-size: 18px;
+  margin: 12px 0px 0px 0px;
+  line-height: 116%;
+  text-align: center;
+  width: 100%;
+}
+
+.logos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.logos__img {
+  object-position: center;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.logos__title {
+  font-family: "Helvetica";
+  color: #000000;
+  font-size: 14px;
+  margin: 12px 0px 0px 0px;
+  line-height: 116%;
+  text-align: center;
+  width: 100%;
+}
+
 /*# sourceMappingURL=style.css.map */
 
 @media (min-width:1025px) {
@@ -3995,6 +4164,7 @@ input {
 @media (min-width:1442px) {
   .audit-cart,
   .audit__main,
+  .card-file,
   .card-profile,
   .card-rating,
   .card-txt,
@@ -4002,6 +4172,7 @@ input {
   .feature-card,
   .file-cards__item,
   .manifest,
+  .pop-up__poster--white,
   .profile-nav,
   .review-card,
   .review__header,
@@ -4020,6 +4191,7 @@ input {
 
   .audit-cart,
   .audit__main,
+  .card-file,
   .card-profile,
   .card-rating,
   .card-txt,
@@ -4027,6 +4199,7 @@ input {
   .feature-card,
   .file-cards__item,
   .manifest,
+  .pop-up__poster--white,
   .profile-nav,
   .review-card,
   .review__header,
@@ -5310,6 +5483,22 @@ input {
     font-size: 0.8321775312vw;
   }
 
+  .social__web {
+    font-size: 0.9708737864vw;
+  }
+
+  .social__web {
+    margin: 0.5547850208vw 0vw 0vw 0vw;
+  }
+
+  .social__copy {
+    font-size: 0.6241331484vw;
+  }
+
+  .social__copy {
+    margin: 0.5547850208vw 0vw 0vw 0vw;
+  }
+
   .pop-up__labels {
     padding: 0vw 0.8321775312vw 0.8321775312vw 0.8321775312vw;
   }
@@ -5327,7 +5516,7 @@ input {
   }
 
   .pop-up__inner {
-    padding-top: 1.6643550624vw;
+    padding-top: 0vw;
     padding-right: 3.6061026352vw;
     padding-bottom: 1.6643550624vw;
     padding-left: 3.6061026352vw;
@@ -5375,6 +5564,10 @@ input {
     font-size: 0.693481276vw;
   }
 
+  .pop-up__super-desc--finish {
+    font-size: 0.9708737864vw;
+  }
+
   .pop-up__title {
     font-size: 1.2482662968vw;
   }
@@ -5385,6 +5578,10 @@ input {
     width: 2.080443828vw;
     height: 2.080443828vw;
     margin-right: 0.8321775312vw;
+  }
+
+  .pop-up__file {
+    margin: 2.773925104vw 0vw 0vw 0vw;
   }
 
   .popup-2__promo {
@@ -5399,7 +5596,7 @@ input {
   }
 
   .popup-2__description {
-    font-size: 1.9417475728vw;
+    font-size: 1.2482662968vw;
   }
 
   .popup-2__description {
@@ -5435,6 +5632,24 @@ input {
 
   .p-uploader__text {
     font-size: 0.9708737864vw;
+  }
+
+  .card-file {
+    padding-top: 2.2191400832vw;
+    padding-right: 0.2773925104vw;
+    padding-bottom: 2.2191400832vw;
+    padding-left: 0.2773925104vw;
+  }
+
+  .card-file__title {
+    font-size: 1.2482662968vw;
+  }
+
+  .card-file__title {
+    padding-top: 1.1095700416vw;
+    padding-right: 0.8321775312vw;
+    padding-bottom: 0vw;
+    padding-left: 0.8321775312vw;
   }
 
   .pdf-reader__btn {
@@ -5490,11 +5705,30 @@ input {
   }
 
   .parea__subtitle {
-    font-size: 1.6643550624vw;
+    font-size: 1.2482662968vw;
   }
 
   .parea__text {
-    font-size: 1.6643550624vw;
+    font-size: 0.9708737864vw;
+  }
+
+  .parea__text {
+    margin: 2.427184466vw 0vw 0vw 0vw;
+  }
+
+  .parea__btn {
+    font-size: 0.9708737864vw;
+  }
+
+  .parea__btn {
+    padding-top: 0.693481276vw;
+    padding-right: 0.693481276vw;
+    padding-bottom: 0.693481276vw;
+    padding-left: 0.693481276vw;
+  }
+
+  .parea__btn {
+    margin: 2.427184466vw 0vw 0vw 0vw;
   }
 
   .cover__footer {
@@ -5507,6 +5741,22 @@ input {
 
   .cover__text {
     font-size: 1.6643550624vw;
+  }
+
+  .folder__title {
+    font-size: 1.2482662968vw;
+  }
+
+  .folder__title {
+    margin: 0.8321775312vw 0vw 0vw 0vw;
+  }
+
+  .logos__title {
+    font-size: 0.9708737864vw;
+  }
+
+  .logos__title {
+    margin: 0.8321775312vw 0vw 0vw 0vw;
   }
 }
 
@@ -5602,6 +5852,7 @@ input {
 @media (max-width:979px) {
   .audit-cart,
   .audit__main,
+  .card-file,
   .card-profile,
   .card-rating,
   .card-txt,
@@ -5609,6 +5860,7 @@ input {
   .feature-card,
   .file-cards__item,
   .manifest,
+  .pop-up__poster--white,
   .profile-nav,
   .review-card,
   .review__header,
@@ -5627,6 +5879,7 @@ input {
 
   .audit-cart,
   .audit__main,
+  .card-file,
   .card-profile,
   .card-rating,
   .card-txt,
@@ -5634,6 +5887,7 @@ input {
   .feature-card,
   .file-cards__item,
   .manifest,
+  .pop-up__poster--white,
   .profile-nav,
   .review-card,
   .review__header,
@@ -6645,6 +6899,14 @@ input {
     font-size: 1.2257405516vw;
   }
 
+  .social__web {
+    font-size: 1.4300306435vw;
+  }
+
+  .social__copy {
+    font-size: 0.9193054137vw;
+  }
+
   .pop-up__labels {
     font-size: 1.0214504597vw;
   }
@@ -6658,7 +6920,7 @@ input {
   }
 
   .pop-up__inner {
-    padding-top: 2.4514811032vw;
+    padding-top: 0vw;
     padding-right: 5.3115423902vw;
     padding-bottom: 2.4514811032vw;
     padding-left: 5.3115423902vw;
@@ -6690,6 +6952,10 @@ input {
     font-size: 1.0214504597vw;
   }
 
+  .pop-up__super-desc--finish {
+    font-size: 1.4300306435vw;
+  }
+
   .pop-up__title {
     font-size: 1.8386108274vw;
   }
@@ -6706,7 +6972,7 @@ input {
   }
 
   .popup-2__description {
-    font-size: 2.860061287vw;
+    font-size: 1.8386108274vw;
   }
 
   .popup-3__promo {
@@ -6735,6 +7001,24 @@ input {
 
   .p-uploader__text {
     font-size: 1.4300306435vw;
+  }
+
+  .card-file {
+    padding-top: 3.2686414709vw;
+    padding-right: 0.4085801839vw;
+    padding-bottom: 3.2686414709vw;
+    padding-left: 0.4085801839vw;
+  }
+
+  .card-file__title {
+    font-size: 1.8386108274vw;
+  }
+
+  .card-file__title {
+    padding-top: 1.6343207354vw;
+    padding-right: 1.2257405516vw;
+    padding-bottom: 0vw;
+    padding-left: 1.2257405516vw;
   }
 
   .pdf-reader__btn {
@@ -6782,11 +7066,22 @@ input {
   }
 
   .parea__subtitle {
-    font-size: 2.4514811032vw;
+    font-size: 1.8386108274vw;
   }
 
   .parea__text {
-    font-size: 2.4514811032vw;
+    font-size: 1.4300306435vw;
+  }
+
+  .parea__btn {
+    font-size: 1.4300306435vw;
+  }
+
+  .parea__btn {
+    padding-top: 1.0214504597vw;
+    padding-right: 1.0214504597vw;
+    padding-bottom: 1.0214504597vw;
+    padding-left: 1.0214504597vw;
   }
 
   .cover__subtitle {
@@ -6795,6 +7090,14 @@ input {
 
   .cover__text {
     font-size: 2.4514811032vw;
+  }
+
+  .folder__title {
+    font-size: 1.8386108274vw;
+  }
+
+  .logos__title {
+    font-size: 1.4300306435vw;
   }
 }
 
@@ -7024,6 +7327,7 @@ input {
 @media (max-width:576px) {
   .audit-cart,
   .audit__main,
+  .card-file,
   .card-profile,
   .card-rating,
   .card-txt,
@@ -7031,6 +7335,7 @@ input {
   .feature-card,
   .file-cards__item,
   .manifest,
+  .pop-up__poster--white,
   .profile-nav,
   .review-card,
   .review__header,
@@ -7049,6 +7354,7 @@ input {
 
   .audit-cart,
   .audit__main,
+  .card-file,
   .card-profile,
   .card-rating,
   .card-txt,
@@ -7056,6 +7362,7 @@ input {
   .feature-card,
   .file-cards__item,
   .manifest,
+  .pop-up__poster--white,
   .profile-nav,
   .review-card,
   .review__header,
@@ -7484,6 +7791,14 @@ input {
     font-size: 2.0833333333vw;
   }
 
+  .social__web {
+    font-size: 2.4305555556vw;
+  }
+
+  .social__copy {
+    font-size: 1.5625vw;
+  }
+
   .pop-up__labels {
     font-size: 1.7361111111vw;
   }
@@ -7508,6 +7823,10 @@ input {
     font-size: 1.7361111111vw;
   }
 
+  .pop-up__super-desc--finish {
+    font-size: 2.4305555556vw;
+  }
+
   .pop-up__title {
     font-size: 3.125vw;
   }
@@ -7517,7 +7836,7 @@ input {
   }
 
   .popup-2__description {
-    font-size: 4.8611111111vw;
+    font-size: 3.125vw;
   }
 
   .popup-3__promo {
@@ -7526,6 +7845,10 @@ input {
 
   .p-uploader__text {
     font-size: 2.4305555556vw;
+  }
+
+  .card-file__title {
+    font-size: 3.125vw;
   }
 
   .pdf-download__title {
@@ -7545,11 +7868,15 @@ input {
   }
 
   .parea__subtitle {
-    font-size: 4.1666666667vw;
+    font-size: 3.125vw;
   }
 
   .parea__text {
-    font-size: 4.1666666667vw;
+    font-size: 2.4305555556vw;
+  }
+
+  .parea__btn {
+    font-size: 2.4305555556vw;
   }
 
   .cover__subtitle {
@@ -7558,6 +7885,14 @@ input {
 
   .cover__text {
     font-size: 4.1666666667vw;
+  }
+
+  .folder__title {
+    font-size: 3.125vw;
+  }
+
+  .logos__title {
+    font-size: 2.4305555556vw;
   }
 }
 

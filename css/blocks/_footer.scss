@@ -113,6 +113,22 @@
   display: flex;
   flex-direction: row-reverse;
 
+  &__web {
+    font-family: $fontFamilyPrimary;
+    @include font-size(14px);
+    @include margin(8px);
+    color: $textColorPrimary;
+    text-align: center;
+  }
+
+  &__copy {
+    font-family: $fontFamilyPrimary;
+    @include font-size(9px);
+    @include margin(8px);
+    color: $textColorPrimary;
+    text-align: center;
+  }
+
   &__link {
     display: block;
     padding: 4px;

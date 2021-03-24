@@ -50,7 +50,7 @@
 
                         <div class="audit__submit">
                             <span class="input-wrapper__error"></span>
-                            <button type="submit" class="button audit__btn" name="submit" data-show-popup="20"
+                            <button type="submit" class="button audit__btn" name="submit" data-show-popup="finished"
                                 data-formsended="free_audit_" data-step="1">
                                 Отправить
                             </button>
@@ -59,174 +59,25 @@
 
 
                 </div>
-
-                <div class="audit__files file-cards">
-                    <div class="file-cards__item">
-                        <img class="file-cards__img" src="./media/pdf_img.svg" alt="pdf_img">
-                        <span class="file-cards__title">“Технический аудит”</span>
-                    </div>
-
-                    <div class="file-cards__item">
-                        <img class="file-cards__img" src="./media/pdf_img.svg" alt="pdf_img">
-                        <span class="file-cards__title">“Предварительная экспертная оценка”</span>
-                    </div>
-
-                    <div class="file-cards__item">
-                        <img class="file-cards__img" src="./media/pdf_img.svg" alt="pdf_img">
-                        <span class="file-cards__title">“До / После”</span>
-                    </div>
-                </div>
             </form>
-        </div>
 
-    </div>
+            <div class="audit__files file-cards">
+                <button class="file-cards__item" data-show-popup="200" data-formsended="technical_audit_" data-step="1">
+                    <img class="file-cards__img" src="./media/pdf_img.svg" alt="pdf_img">
+                    <span class="file-cards__title">“Технический аудит”</span>
+                </button>
 
-</section>
+                <button class="file-cards__item" data-show-popup="202" data-formsended="expert_assessment_"
+                    data-step="1">
+                    <img class="file-cards__img" src="./media/pdf_img.svg" alt="pdf_img">
+                    <span class="file-cards__title">“Предварительная экспертная оценка”</span>
+                </button>
 
-
-<section class="audit" id="audit">
-
-    <div class="audit__wrap container">
-        <h2 class="audit__title">
-            Предлагаем бесплатно проанализировать Вашу статью
-            и рассчитать стоимость необходимых услуг
-        </h2>
-
-        <div class="audit__inner">
-
-            <div class="audit__main extended-block">
-
-                <div class="audit__header extended-header">
-                    <h3 class="audit__subtitle">
-                        Проведем бесплатный технический аудит, чтобы оценить
-                        возможность публикации Вашей рукописи в журнале с
-                        необходимыми характеристиками, а также сформировать
-                        перечень требующихся доработок и рассчитать их стоимость
-                    </h3>
-                </div>
-
-                <div class="audit__content">
-
-                    <form novalidate name="24" class="audit__form audit-form" action="/" method="get">
-
-                        <div class="audit-form__inputs">
-
-                            <div class="input-wrapper audit-form__input-wrapper">
-                                <input class="audit-form__input" type="text" name="lastname" placeholder="Фамилия"
-                                    required>
-                                <span class="input-wrapper__error"></span>
-                            </div>
-
-                            <div class="input-wrapper audit-form__input-wrapper">
-                                <input class="audit-form__input" type="text" name="firstname" placeholder="Имя"
-                                    required>
-                                <span class="input-wrapper__error"></span>
-                            </div>
-
-                            <div class="input-wrapper audit-form__input-wrapper">
-                                <input class="audit-form__input" type="tel" name="phone" placeholder="Номер телефона"
-                                    pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
-                                <span class="input-wrapper__error"></span>
-                            </div>
-
-                            <div class="input-wrapper audit-form__input-wrapper">
-                                <input class="audit-form__input" type="email" name="email"
-                                    placeholder="Электронная почта"
-                                    pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
-                                    required>
-                                <span class="input-wrapper__error"></span>
-                            </div>
-
-                        </div>
-
-                        <div class="audit-form__inputs audit-form__inputs--file">
-                            <div class="uploader">
-                                <label for="file-upload-4" class="uploader__choose">
-                                    <img loading="lazy" class="uploader__img" src="./media/folder.png"
-                                        alt="uploader-img">
-                                </label>
-                                <span class="uploader__text">
-                                    Нажмите на квадрат,
-                                    чтобы загрузить с компьютера
-                                    статью для аудита
-                                </span>
-                                <input name="file" id="file-upload-4" type="file" accept=".pdf, .doc, .docx" required>
-                            </div>
-                            <span class="input-wrapper__error"></span>
-
-                            <button type="submit" class="button audit-form__btn" name="submit" data-show-popup="20"
-                                data-formsended="free_audit_" data-step="1">
-                                Отправить заявку на бесплатный аудит
-                            </button>
-                        </div>
-
-                    </form>
-
-                    <div class="audit__instruction">
-                        <h4 class="audit__instruction-title">
-                            На электронную почту Вам поступит
-                            следующая информация:
-                        </h4>
-                        <ol class="audit__instruction-text">
-                            <li>1) Результат проверки текста на наличие заимствований</li>
-                            <li>2) Технический аудит разделов статьи</li>
-                            <li>3) Перечень и стоимость работ</li>
-                        </ol>
-                    </div>
-
-                </div>
-
+                <button class="file-cards__item" data-show-popup="206" data-formsended="before_after_" data-step="1">
+                    <img class="file-cards__img" src="./media/pdf_img.svg" alt="pdf_img">
+                    <span class="file-cards__title">“До / После”</span>
+                </button>
             </div>
-
-            <div class="audit__items">
-                <div class="audit__item audit-cart">
-                    <div class="audit-cart__inner">
-                        <h3 class="audit-cart__title">Технический аудит</h3>
-                        <p class="audit-cart__text">
-                            Заранее определим необходимые доработки
-                            и их последовательность для
-                            успешной публикации Вашей рукописи
-                        </p>
-                        <button class="button audit-cart__link" data-show-popup="200" data-formsended="technical_audit_"
-                            data-step="1">Открыть пример
-                        </button>
-                    </div>
-                    <img loading="lazy" src="./media/human_a.svg" alt="human_a" class="audit-cart__img">
-                </div>
-
-                <div class="audit__item audit-cart">
-                    <div class="audit-cart__inner">
-                        <h3 class="audit-cart__title">Предварительная экспертная оценка</h3>
-                        <p class="audit-cart__text">
-                            Проверим научную составляющую и получим ценные рекомендации от
-                            действующего рецензента авторитетного журнала по Вашей тематике
-                        </p>
-                        <button class="button audit-cart__link" data-show-popup="202"
-                            data-formsended="expert_assessment_" data-step="1">Открыть
-                            пример
-                        </button>
-                    </div>
-                    <img loading="lazy" src="./media/audit/humaaans-2.svg" alt="human_a" class="audit-cart__img">
-                </div>
-
-                <div class="audit__item audit-cart">
-                    <div class="audit-cart__inner">
-                        <h3 class="audit-cart__title">До / После</h3>
-                        <p class="audit-cart__text">
-                            Мы вкладываем 80% бюджета в доработку статьи, состоящую из 11
-                            этапов. Посмотрите, как изменится Ваша статья перед отправкой в
-                            журнал
-                        </p>
-                        <button class="button audit-cart__link" data-show-popup="206" data-formsended="before_after_"
-                            data-step="1">
-                            Открыть пример
-                        </button>
-                    </div>
-                    <img loading="lazy" src="./media/audit/humaaans-3.svg" alt="human_a" class="audit-cart__img">
-                </div>
-
-            </div>
-
         </div>
 
     </div>
