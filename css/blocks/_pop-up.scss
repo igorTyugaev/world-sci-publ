@@ -362,9 +362,14 @@
     background-color: $colorAccent;
     border: 1px solid $colorAccent;
 
-    .p-uploader__text {
+    .p-uploader__choose {
       color: #FFFEFE;
+
+      &:hover {
+        color: #B7B7B7;
+      }
     }
+
   }
 
   &:active {
@@ -673,12 +678,12 @@
 
   &__title {
     position: relative;
-    font-family: $fontFamilyPrimary;
+    font-family: $fontFamilySecondary;
     color: $textColorSecondary;
     @include font-size(18px);
     line-height: 116%;
     background-color: $colorPrimary;
-    @include padding(32px, 77px, 32px, 15px);
+    @include padding(32px, 70px, 32px, 70px);
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
 

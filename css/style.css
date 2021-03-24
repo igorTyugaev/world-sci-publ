@@ -2184,6 +2184,7 @@ input {
 .audit__title {
   font-family: "HelveticaBold";
   font-size: 36px;
+  margin: 0px 0px 22px 0px;
 }
 
 .audit__desc {
@@ -2240,9 +2241,7 @@ input {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: 22px 0px 0px 0px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   width: 65%;
 }
 
@@ -3711,8 +3710,12 @@ input {
   border: 1px solid #219653;
 }
 
-.p-uploader--active .p-uploader__text {
+.p-uploader--active .p-uploader__choose {
   color: #FFFEFE;
+}
+
+.p-uploader--active .p-uploader__choose:hover {
+  color: #B7B7B7;
 }
 
 .p-uploader:active {
@@ -4007,15 +4010,15 @@ input {
 
 .parea__title {
   position: relative;
-  font-family: "Helvetica";
+  font-family: "HelveticaBold";
   color: #FFFFFF;
   font-size: 18px;
   line-height: 116%;
   background-color: #031435;
   padding-top: 32px;
-  padding-right: 77px;
+  padding-right: 70px;
   padding-bottom: 32px;
-  padding-left: 15px;
+  padding-left: 70px;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
 }
@@ -5018,6 +5021,10 @@ input {
     font-size: 2.4965325936vw;
   }
 
+  .audit__title {
+    margin: 0vw 0vw 1.5256588072vw 0vw;
+  }
+
   .audit__desc {
     font-size: 1.2482662968vw;
   }
@@ -5053,10 +5060,6 @@ input {
     padding-right: 2.5658807212vw;
     padding-bottom: 1.4563106796vw;
     padding-left: 0vw;
-  }
-
-  .audit__inner {
-    margin: 1.5256588072vw 0vw 0vw 0vw;
   }
 
   .audit__main {
@@ -5115,6 +5118,10 @@ input {
 
   .file-cards {
     margin: 1.5256588072vw 0vw 0vw 0vw;
+  }
+
+  .file-cards__item {
+    height: 10.4715672677vw;
   }
 
   .file-cards__item {
@@ -5729,9 +5736,9 @@ input {
 
   .parea__title {
     padding-top: 2.2191400832vw;
-    padding-right: 5.3398058252vw;
+    padding-right: 4.854368932vw;
     padding-bottom: 2.2191400832vw;
-    padding-left: 1.040221914vw;
+    padding-left: 4.854368932vw;
   }
 
   .parea__subtitle {
@@ -6627,6 +6634,10 @@ input {
   }
 
   .file-cards__item {
+    height: 15.4239019408vw;
+  }
+
+  .file-cards__item {
     padding-top: 0.4085801839vw;
     padding-right: 0.4085801839vw;
     padding-bottom: 0.4085801839vw;
@@ -7091,9 +7102,9 @@ input {
 
   .parea__title {
     padding-top: 3.2686414709vw;
-    padding-right: 7.8651685393vw;
+    padding-right: 7.1501532176vw;
     padding-bottom: 3.2686414709vw;
-    padding-left: 1.5321756895vw;
+    padding-left: 7.1501532176vw;
   }
 
   .parea__subtitle {
@@ -7206,6 +7217,10 @@ input {
   .p-slider__img-wrapper {
     border-radius: 0.78125vw;
     filter: drop-shadow(0.1302083333vw 0.1302083333vw 0.5208333333vw rgba(0,0,0,0.25));
+  }
+
+  .file-cards__item {
+    height: 19.6614583333vw;
   }
 
   .tabs-team__item {

@@ -6,6 +6,7 @@
   &__title {
     font-family: $fontFamilySecondary;
     @include font-size(36px);
+    @include margin(0px, 0px, 22px, 0px);
   }
 
   &__desc {
@@ -57,9 +58,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    @include margin(22px);
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     width: 65%;
   }
 
@@ -375,6 +374,19 @@
     justify-content: space-around;
     align-items: center;
     height: 151px;
+
+    @include _more-than($bp-xxl-1442) {
+      height: #{get-vw(151px, $bp-xxl-1442)};
+    }
+
+    @include _less-than($bp-lg-979) {
+      height: #{get-vw(151px, $bp-lg-979)};
+    }
+
+    @include _less-than($bp-md-768) {
+      height: #{get-vw(151px, $bp-md-768)};
+    }
+
     @include padding(4px, 4px, 4px, 4px);
 
     background: $popupBackground;

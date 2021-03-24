@@ -4,7 +4,7 @@ function initForm(_form) {
         let codeStatus = true;
         let hasFileInput = false;
         let hasLatterInput = false;
-        const {currentTarget} = e;
+        const { currentTarget } = e;
         const idPopup = currentTarget.hasAttribute('data-popup')
             ? currentTarget.getAttribute('data-popup')
             : null;
@@ -220,9 +220,9 @@ function initForm(_form) {
             // /main-test/letter -
 
             /* Для отладки испольховать: */
-            const base_url = 'https://worldscipubl.com/main-test/';
+            // const base_url = 'https://worldscipubl.com/main-test/';
 
-            // const base_url = '/main/';
+            const base_url = '/main/';
             const file_ep = 'add-file/';
             const letter_ep = 'letter/';
             let url = base_url;
@@ -239,8 +239,8 @@ function initForm(_form) {
                 .post(
                     url,
                     sendData,
-                    {withCredentials: true},
-                    {headers: headers}
+                    { withCredentials: true },
+                    { headers: headers }
                 )
                 .then(
                     (response) => {
