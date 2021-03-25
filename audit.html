@@ -7,12 +7,13 @@
         </h2>
 
         <div class="audit__inner">
-            <form class="audit__form" novalidate name="24" action="/" method="get">
+            <form novalidate class="audit__form" id="dran-n-drop" name="24" action="/" enctype="multipart/form-data"
+                method="post">
                 <div class="audit__main">
 
-                    <div class="audit__uploader uploader" id="file-upload-form" action="/">
+                    <div class="audit__uploader uploader" id="file-upload-form">
                         <input class="uploader__input-file" id="file-upload" type="file" name="fileUpload"
-                            accept=".pdf, .doc, .docx" required />
+                            accept=".pdf, .doc, .docx" required>
                         <label class="uploader__inner" for="file-upload" id="file-drag">
                             <div class="uploader__img">
                                 <img class="uploader__cloud" src="./media/uploader_img.svg" alt="uploader__cloud">
@@ -21,17 +22,13 @@
                             </div>
 
                             <span class="uploader__text" id="messages">Загрузите научную работу</span>
+                            <span class="input-wrapper__error"></span>
                             <span class="uploader__text" id="status"></span>
 
                             <span id="file-upload-btn" class="button">
                                 Загрузить статью (.pdf .doc .docx)
                             </span>
                         </label>
-
-                        <progress id="file-progress" value="0">
-                            <span>0</span>%
-                        </progress>
-
                     </div>
 
                     <p class="audit__desc">
@@ -51,8 +48,8 @@
 
                         <div class="audit__submit">
                             <span class="input-wrapper__error"></span>
-                            <button type="submit" class="button audit__btn" name="submit" data-show-popup="finished"
-                                data-formsended="free_audit_" data-step="1">
+                            <button type="submit" id="fileUploadBtn" class="button audit__btn" name="submit"
+                                data-show-popup="finished" data-formsended="free_audit_" data-step="1">
                                 Отправить
                             </button>
                         </div>

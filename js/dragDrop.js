@@ -2,7 +2,6 @@
   function Init() {
     const fileSelect = document.getElementById('file-upload');
     const fileDrag = document.getElementById('file-drag');
-    const submitButton = document.getElementById('submit-button');
 
     fileSelect.addEventListener('change', fileSelectHandler, false);
 
@@ -40,6 +39,13 @@
     _fileUploadBtn.style.display = 'none';
     _uploaderArrowImg.style.display = 'none';
     _uploaderDoneImg.style.display = 'block';
+
+    const _wrapperError = fileDrag.querySelector('.input-wrapper__error');
+    if (_wrapperError) {
+      _wrapperError.classList.remove('input-wrapper__error--show');
+      _wrapperError.innerHTML = '';
+    }
+
   }
 
   function fileSelectHandler(e) {
@@ -67,14 +73,6 @@
     _status.innerHTML = msg;
   }
 
-  function setProgressMaxValue(e) {
-    let pBar = document.getElementById('file-progress');
-
-    if (e.lengthComputable) {
-      pBar.max = e.total;
-    }
-  }
-
   function updateFileProgress(e) {
     let percent = (e.loaded / e.total) * 100;
     // _("status").innerHTML = Math.round(percent) + "% uploaded... please wait";
@@ -85,7 +83,6 @@
 
     let xhr = new XMLHttpRequest(),
       fileInput = document.getElementById('class-roster-file'),
-      pBar = document.getElementById('file-progress'),
       fileSizeLimit = 2048; // In MB
 
     if (xhr.upload) {
@@ -93,8 +90,6 @@
       // Check if file is less than x MB
       if (file.size <= fileSizeLimit * 1024 * 1024) {
         // Progress bar
-        pBar.style.display = 'inline';
-        xhr.upload.addEventListener('loadstart', setProgressMaxValue, false);
         xhr.upload.addEventListener('progress', updateFileProgress, false);
 
         // File received / failed

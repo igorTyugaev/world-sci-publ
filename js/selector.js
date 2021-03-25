@@ -11,7 +11,7 @@ function initSelector(_selector) {
         }
     });
 
-// Close when click to option
+    // Close when click to option
     for (let i = 0; i < _selectorLabels.length; i++) {
         _selectorLabels[i].addEventListener('click', (evt) => {
             _selectorTitle.textContent = evt.target.textContent;

@@ -21,8 +21,32 @@ function initForm(_form) {
             console.log('Отправка формы...');
             sendForm(data, currentTarget);
             if (codeStatus) {
-                if (idShowPopUp != 0) showPopUpLogic(false);
+                if (idShowPopUp != 0) {
+                    if (data.has('email'))
+                        localStorage.setItem('email', data.get('email'))
+                    showPopUpLogic();
+                }
                 currentTarget.reset();
+                if (_form.id === 'dran-n-drop') {
+                    const fileDrag = document.getElementById('file-drag');
+                    fileDrag.classList.remove('uploader__inner--drag');
+                    fileDrag.className = 'uploader__inner';
+
+                    const _fileUploadBtn = document.getElementById('file-upload-btn');
+                    const _uploaderArrowImg = _form.querySelector('.uploader__arrow');
+                    const _uploaderDoneImg = _form.querySelector('.uploader__done');
+
+                    const _status = document.getElementById('status');
+                    _status.innerHTML = '';
+
+                    const _messages = document.getElementById('messages');
+                    _messages.innerHTML = 'Загрузите научную работу';
+
+                    _fileUploadBtn.style.display = 'block';
+                    _uploaderArrowImg.style.display = 'block';
+                    _uploaderDoneImg.style.display = 'none';
+
+                }
             }
         }
 
@@ -130,6 +154,16 @@ function initForm(_form) {
                         return false;
                     }
                     break;
+                case 'fileUpload':
+                    if (input.validity.valid) {
+                        removeErrorInput(input, hint);
+                        hasFileInput = true;
+                        return true;
+                    } else {
+                        setErrorInput(input, hint, 'Загрузите файл!');
+                        return false;
+                    }
+                    break;
                 case 'text':
                     if (input.validity.valid) {
                         removeErrorInput(input, hint);
@@ -195,7 +229,6 @@ function initForm(_form) {
             }
 
             fo.append('csrfToken', csrfToken);
-            // fo.append('formsended', currentForm.getAttribute('name'));
             fo.append('formsended', formName);
 
             return fo;
@@ -208,9 +241,9 @@ function initForm(_form) {
                 Accept: 'application/json',
                 'Content-Type': 'multipart/form-data',
                 /* <CORS> */
-                'Access-Control-Allow-Origin': "http://localhost:8848",
-                'Access-Control-Allow-Credentials': true,
-                'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type,' + ' Accept'
+                // 'Access-Control-Allow-Origin': "http://localhost:8848",
+                // 'Access-Control-Allow-Credentials': true,
+                // 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type,' + ' Accept'
                 /* </CORS> */
             };
 
@@ -234,6 +267,8 @@ function initForm(_form) {
                 url += letter_ep;
                 hasLatterInput = false;
             }
+
+            console.log(url);
 
             axios
                 .post(

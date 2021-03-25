@@ -11,8 +11,10 @@ function initPopUp(input) {
     }, false);
 
     function setNameFile(msg) {
-        const _label = input.parentNode.querySelector('label');
+        const _label = input.parentNode.querySelector('.p-uploader__text');
+        const _img = input.parentNode.querySelector('.p-uploader__img');
         _label.innerHTML = msg;
+        _img.src = "./media/folder/folder_white_done.svg";
         _label.style.color = "#FFFFFF";
     }
 
@@ -24,7 +26,6 @@ function initPopUp(input) {
     }
 
     function updateFileProgress(e) {
-        console.log('I am here 2');
         let percent = (e.loaded / e.total) * 100;
         setStatusFile("Загружено " + Math.round(percent) + "%");
     }
@@ -36,7 +37,6 @@ function initPopUp(input) {
         if (xhr.upload) {
             // Check if file is less than x MB
             if (file.size <= fileSizeLimit * 1024 * 1024) {
-                console.log('I am here 13');
                 xhr.upload.addEventListener('progress', updateFileProgress, false);
             }
         }
