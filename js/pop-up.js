@@ -188,5 +188,15 @@ let popups = new Map([]);
 buttons.forEach((button) => {
     const idShowPopUp = button.dataset.showPopup;
     if (idShowPopUp == 0) popups.set(idShowPopUp, null);
-    else popups.set(idShowPopUp, initPopUp(button));
+    else {
+        if (idShowPopUp === 'finished') {
+            popups.set(idShowPopUp, initPopUp(button));
+            const button_copy = button.cloneNode(true);
+            button_copy.setAttribute('data-show-popup', 'finished-2');
+            popups.set('finished-2', initPopUp(button_copy));
+
+        }
+        else
+            popups.set(idShowPopUp, initPopUp(button));
+    }
 });

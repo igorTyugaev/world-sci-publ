@@ -10,7 +10,7 @@ function initForm(_form) {
             : null;
         const _button = currentTarget.querySelector('[data-show-popup]');
         const idShowPopUp = _button.dataset.showPopup;
-        const showPopUpLogic = popups.get(idShowPopUp);
+        let showPopUpLogic = popups.get(idShowPopUp);
 
         const step = _button.getAttribute('data-step');
         const formSender = _button.getAttribute('data-formsended');
@@ -24,7 +24,11 @@ function initForm(_form) {
                 if (idShowPopUp != 0) {
                     if (data.has('email'))
                         localStorage.setItem('email', data.get('email'))
-                    showPopUpLogic();
+                    if (idShowPopUp === 'finished') {
+                        checkEmail();
+                    } else {
+                        showPopUpLogic();
+                    }
                 }
                 currentTarget.reset();
                 if (_form.id === 'dran-n-drop') {
@@ -258,6 +262,7 @@ function initForm(_form) {
             const base_url = '/main/';
             const file_ep = 'add-file/';
             const letter_ep = 'letter/';
+            const is_exists = 'is-exists/';
             let url = base_url;
 
             if (hasFileInput) {
@@ -319,6 +324,55 @@ function initForm(_form) {
                     }
                 );
         }
+
+        function checkEmail() {
+
+            const headers = {
+                Accept: 'application/json',
+                'Content-Type': 'multipart/form-data',
+                // 'Access-Control-Allow-Origin': "http://localhost:8848",
+                // 'Access-Control-Allow-Credentials': true,
+                // 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type,' + ' Accept'
+            };
+
+            // const base_url = 'https://worldscipubl.com/main-test/';
+            const base_url = '/main/';
+            const is_exists = 'is-exists/';
+            const url = base_url + is_exists;
+            const fo = new FormData();
+            const email = localStorage.getItem('email');
+
+
+
+            if (email != null) {
+                fo.append('email', email);
+                fo.append('csrfToken', csrfToken);
+                fo.append('formsended', formName);
+
+                axios
+                    .post(
+                        url,
+                        fo,
+                        { withCredentials: true },
+                        { headers: headers }
+                    )
+                    .then(
+                        (response) => {
+                            const resData = response.data;
+                            if (resData === true) {
+                                console.log(resData);
+                                showPopUpLogic = popups.get("finished-2");
+                                showPopUpLogic();
+                            } else {
+                                showPopUpLogic();
+                            }
+                        },
+                        (error) => {
+                            console.log(error);
+                        }
+                    );
+            }
+        };
     });
 }
 
