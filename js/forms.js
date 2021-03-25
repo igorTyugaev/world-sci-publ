@@ -19,7 +19,7 @@ function initForm(_form) {
         const data = scrabbleInputs(currentTarget);
         if (data) {
             console.log('Отправка формы...');
-            // sendForm(data, currentTarget);
+            sendForm(data, currentTarget);
             if (isUploadDone) {
                 triggerGoal(formName);
                 if (idShowPopUp != 0) {
