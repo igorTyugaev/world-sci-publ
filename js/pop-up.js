@@ -86,6 +86,7 @@ function initPopUp(button) {
             }
         }
 
+        // Отправка цели для случаев где нет формы
         if (button.getAttribute('type') !== 'submit') {
             showPopUpLogic();
 

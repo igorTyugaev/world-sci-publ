@@ -1,7 +1,7 @@
 function initForm(_form) {
     _form.addEventListener('submit', (e) => {
         e.preventDefault();
-        let codeStatus = true;
+        let isUploadDone = true;
         let hasFileInput = false;
         let hasLatterInput = false;
         const { currentTarget } = e;
@@ -19,12 +19,13 @@ function initForm(_form) {
         const data = scrabbleInputs(currentTarget);
         if (data) {
             console.log('Отправка формы...');
-            sendForm(data, currentTarget);
-            if (codeStatus) {
+            // sendForm(data, currentTarget);
+            if (isUploadDone) {
+                triggerGoal(formName);
                 if (idShowPopUp != 0) {
                     if (data.has('email'))
                         localStorage.setItem('email', data.get('email'))
-                    if (idShowPopUp === 'finished') {
+                    if (idShowPopUp === 'file_upload' || idShowPopUp === 'file_upload-2' || idShowPopUp === 'finished') {
                         checkEmail();
                     } else {
                         showPopUpLogic();
@@ -141,7 +142,7 @@ function initForm(_form) {
                 case 'coupon':
                     if (input.validity.valid) {
                         removeErrorInput(input, hint);
-                        codeStatus = false;
+                        isUploadDone = false;
                         return true;
                     } else {
                         setErrorInput(input, hint, 'Введите купон!');
@@ -239,8 +240,6 @@ function initForm(_form) {
         }
 
         function sendForm(sendData, currentForm) {
-            triggerGoal(formName);
-
             const headers = {
                 Accept: 'application/json',
                 'Content-Type': 'multipart/form-data',
@@ -307,11 +306,11 @@ function initForm(_form) {
                                     resDataWarning['time']
                                 );
 
-                            codeStatus = false;
+                            isUploadDone = false;
                         } else {
-                            if (!codeStatus) {
+                            if (!isUploadDone) {
                                 console.log('Промокод успешно активирован!');
-                                codeStatus = true;
+                                isUploadDone = true;
                                 showPopUpLogic();
                                 currentForm.reset();
                                 removeErrorInput(input, hint);
@@ -343,7 +342,6 @@ function initForm(_form) {
             const email = localStorage.getItem('email');
 
 
-
             if (email != null) {
                 fo.append('email', email);
                 fo.append('csrfToken', csrfToken);
@@ -358,6 +356,7 @@ function initForm(_form) {
                     )
                     .then(
                         (response) => {
+                            console.log(response);
                             const resData = response.data;
                             if (resData === true) {
                                 console.log(resData);
