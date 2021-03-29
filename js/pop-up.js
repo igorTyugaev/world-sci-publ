@@ -52,7 +52,6 @@ function initPopUp(button) {
             openPopUp(_popUp, duration);
             currentShowPopUp = idPopUp;
         } else {
-            console.log('currentShowPopUp: ' + currentShowPopUp);
             closePopUpById(currentShowPopUp, false);
             openPopUp(_popUp, false);
             currentShowPopUp = idPopUp;
@@ -192,10 +191,15 @@ buttons.forEach((button) => {
     else {
         if (idShowPopUp === 'finished') {
             popups.set(idShowPopUp, initPopUp(button));
-            const button_copy = button.cloneNode(true);
-            button_copy.setAttribute('data-show-popup', 'finished-2');
-            popups.set('finished-2', initPopUp(button_copy));
 
+            const button_copy = button.cloneNode(true);
+            const button_copy_2 = button.cloneNode(true);
+
+            button_copy.setAttribute('data-show-popup', 'finished-2');
+            button_copy_2.setAttribute('data-show-popup', 'finished-3');
+
+            popups.set('finished-2', initPopUp(button_copy));
+            popups.set('finished-3', initPopUp(button_copy_2));
         }
         else
             popups.set(idShowPopUp, initPopUp(button));

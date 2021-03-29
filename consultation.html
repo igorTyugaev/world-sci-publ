@@ -65,16 +65,17 @@
         <div class="pop-up__inner pop-up__inner--narrow">
             <div class="pop-up__narrow">
                 <h3 class="pop-up__title">
-                    Укажите e-mail, на который направить комплектацию тарифов с указанием стоимости и сроков публикации
-                    в журналах из баз Scopus / Web of Science
+                    Необходима публикация<br>
+                    в Scopus/Web of Science?
                 </h3>
 
                 <p class="pop-up__desc">
-                    Письмо поступит на указанный эл.адрес<br>
-                    в течение 15 минут.
+                    Мы перезвоним Вам,<br>
+                    чтобы подобрать лучшее решение
                 </p>
 
-                <form novalidate name="1" data-popup="1000" action="/">
+                <form novalidate id="activate_promo_code_" name="activate_promo_code_" action="/"
+                    enctype="multipart/form-data">
                     <div class="pop-up__inputs">
                         <div class="input-wrapper">
                             <input name="name" type="text" class="pop-up__input" placeholder="ФИО" required />
@@ -82,13 +83,14 @@
                         </div>
 
                         <div class="input-wrapper">
-                            <input name="phone" type="tel" class="pop-up__input" placeholder="Введите номер телефона"
-                                pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required />
+                            <input name="email" type="email" class="pop-up__input" placeholder="Email"
+                                pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                                required />
                             <span class="input-wrapper__error"></span>
                         </div>
 
                         <div class="input-wrapper">
-                            <input name="coupon" class="pop-up__input" placeholder="Промокод" required>
+                            <input name="coupon" class="pop-up__input" placeholder="Промокод" required />
                             <span class="input-wrapper__error"></span>
                         </div>
                     </div>
@@ -150,6 +152,7 @@
                             <input name="email" type="email" class="pop-up__input" placeholder="Email"
                                 pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                                 required />
+                            <span class="input-wrapper__error"></span>
                         </div>
                     </div>
 

@@ -35,6 +35,7 @@
                             <input name="email" type="email" class="pop-up__input" placeholder="Email"
                                 pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                                 required />
+                                <span class="input-wrapper__error"></span>
                         </div>
                     </div>
 
@@ -297,6 +298,7 @@
                             <input name="email" type="email" class="pop-up__input" placeholder="Email"
                                 pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                                 required />
+                                <span class="input-wrapper__error"></span>
                         </div>
                     </div>
 
@@ -510,7 +512,7 @@
                 </p>
 
                 <div class="popup-3__form">
-                    <form novalidate name="3" enctype="multipart/form-data" method="post" action="/">
+                    <form novalidate name="file-uploader" enctype="multipart/form-data" method="post" action="/">
                         <div class="pop-up__inputs">
                             <div class="selector" data-state="">
                                 <div class="selector__title" data-default="Option 0">
@@ -762,6 +764,7 @@
     </div>
 </section>
 
+<!-- Для Drag-n-Drop, если уже есть email в базе -->
 <section id="popup-finished-2" class="pop-up">
     <div class="pop-up__poster pop-up__poster--white">
         <div class="pop-up__labels pop-up__labels--sign">
@@ -775,8 +778,8 @@
             </h4>
 
             <p class="parea__text">
-                Мы отправили письмо с паролем для входа
-                на указанную Вами почту:
+                В целях безопасности загрузите статью на технический аудит через личный кабинет.
+                Профиль зарегистрирован на
                 <span class="parea__text parea__email">{Email Автора}</span>
             </p>
 
@@ -798,7 +801,8 @@
         <div class="parea">
             <div class="parea__header">
                 <h3 class="parea__title parea__title--pink">
-                    Вы уже зарегистрированы в личном кабинете. Загрузите статью на аудит через личный кабинет.
+                    Вы уже зарегистрированы в личном кабинете.
+                    Загрузите статью на аудит через личный кабинет.
                     <img src="./media/logo.svg" alt="logo" class="parea__logo">
                 </h3>
             </div>
@@ -845,4 +849,84 @@
         <img loading="lazy" src="./media/X.svg" alt="" class="close_btn" />
     </div>
 </section>
-<!-- Войдите в личный кабинет. -->
+
+<!-- Для PopUp-ов, если уже есть email в базе -->
+<section id="popup-finished-3" class="pop-up">
+    <div class="pop-up__poster pop-up__poster--white">
+        <div class="pop-up__labels pop-up__labels--sign">
+            <span class="pop-up__label pop-up__label--black">Личный кабинет</span>
+            <span class="pop-up__label pop-up__label--black">World Sci Publ</span>
+        </div>
+
+        <div class="parea__body">
+            <h3 class="pop-up__title">
+                Спасибо,
+                в ближайшее время с Вами свяжется ответственный специалист.
+            </h3>
+
+            <h3 class="pop-up__title">Хорошего дня!</h3>
+
+            <button class="pop-up__button pop-up__button--close">
+                Закрыть
+            </button>
+        </div>
+
+        <img loading="lazy" class="pop-up__human" src="./media/humaaans.svg" alt="pop-up__logo" />
+
+        <img loading=" lazy" class="pop-up__logo pop-up__logo--right" src="./media/logo-min.svg" alt="pop-up__logo" />
+
+        <button class="pop-up__super-desc pop-up__super-desc--finish" data-show-popup="500">
+            Политика конфеденциальности
+        </button>
+    </div>
+
+    <div class="pop-up__main">
+        <div class="pop-up__video">
+            <div class="pop-up__iframe">
+                <iframe loading="lazy" class="reviews__iframe" src="https://www.youtube.com/embed/KGs2k6BFbrQ"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        <div class="parea">
+            <div class="pop-up__folder logos">
+                <img src="./media/World_Sci_Publ_Logo.svg" alt="folder" class="logos__img">
+                <p class="logos__title">
+                    Сервис подготовики и продвижения научной статьи в проверенные журналы из баз данных Scopus и WoS
+                </p>
+            </div>
+
+            <div class="parea__footer">
+                <div class="pop-up__social social">
+                    <a href="https://teleg.run/worldscipubl" target="_blank" class="social__link">
+                        <img loading="lazy" src="./media/social/telegram.png" alt="telegram" class="social__img" />
+                    </a>
+                    <a href="https://vk.com/worldscipubl/" target="_blank" class="social__link">
+                        <img loading="lazy" src="./media/social/vk.png" alt="vk" class="social__img" />
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B79086008126&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9D%D0%BE%D0%BC%D0%B5%D1%80+%D0%BC%D0%BE%D0%B5%D0%B9+%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B8%3A+undefined&app_absent=0"
+                        target="_blank" class="social__link">
+                        <img loading="lazy" src="./media/social/whatsapp.png" alt="whatsapp" class="social__img" />
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC9Wuvp-a1pZn_iHkPAFrwKA?view_as=subscriber"
+                        target="_blank" class="social__link">
+                        <img loading="lazy" src="./media/social/youtube.png" alt="youtube" class="social__img" />
+                    </a>
+                    <a href="https://www.instagram.com/world.sci.publ/" target="_blank" class="social__link">
+                        <img loading="lazy" src="./media/social/instagram.png" alt="instagram" class="social__img" />
+                    </a>
+                    <a href="https://www.facebook.com/worldscipubl/" target="_blank" class="social__link">
+                        <img loading="lazy" src="./media/social/facebook.png" alt="facebook" class="social__img" />
+                    </a>
+                </div>
+                <a class="social__web" href="www.worldscipubl.com">www.worldscipubl.com</a>
+                <p class="social__copy">Copyright @ 2021 WorldSciPubl, Все права защищены.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-up__close">
+        <img loading="lazy" src="./media/X.svg" alt="" class="close_btn" />
+    </div>
+</section>

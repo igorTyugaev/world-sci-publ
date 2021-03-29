@@ -63,7 +63,7 @@
                     <h3 class="app-form__title">
                         Получите предложение с указанием стоимости и сроков публикации на почту
                     </h3>
-                    <form novalidate name="26" class="app-form__inner">
+                    <form novalidate name="promo" class="app-form__inner">
                         <div class="input-wrapper">
                             <input name="email" type="email" class="app-form__input" placeholder="Email"
                                 pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
@@ -244,10 +244,11 @@
                             <input name="email" type="email" class="pop-up__input" placeholder="Email"
                                 pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                                 required />
+                                <span class="input-wrapper__error"></span>
                         </div>
                     </div>
 
-                    <button class="pop-up__button" type="submit" data-show-popup="finished" data-step="3">
+                    <button class="pop-up__button" type="submit" data-show-popup="finished-3" data-step="3">
                         Получить комплектацию тарифов
                     </button>
                 </form>
