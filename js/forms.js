@@ -28,7 +28,7 @@ function initForm(_form) {
             else if (idShowPopUp === 'file_upload' || idShowPopUp === 'file_upload-2') {
                 const email = localStorage.getItem('email');
                 console.log('Проверка email перед запуском popup file_upload');
-                if (email) checkEmail(true, email);
+                if (email) checkEmail(true, email, data);
                 else sendForm(data, currentTarget);  // Отправляем форму
             }
             /*    Если форма не требует поддтверждения, то фиксируем цель    */
@@ -43,7 +43,7 @@ function initForm(_form) {
                     /*    Если email, указаный в форме dran-n-drop существует, то   */
                     /*    файл отправлять не надо. Сразу показываем завершающий PopUp   */
                     console.log('Запрос на подтверждение email перед загрузкой dran-n-drop');
-                    checkEmail(true, data.get('email'));
+                    checkEmail(true, data.get('email'), data);
                 } else {
                     console.log('Запрос на подтверждение email перед обычным popup-ом');
                     sendFormWithConfirm(data, currentTarget);  // Отправляем форму
@@ -316,6 +316,8 @@ function initForm(_form) {
                                 resDataWarning['time']
                             );
                     } else {
+
+
                         triggerGoal(formName);          // Фиксируем цель
                         openNextPopUp();                // Открываем следующий PopUp
                         removeErrorInput(input, hint);
@@ -377,7 +379,7 @@ function initForm(_form) {
             );
         }
 
-        function checkEmail(isDragDrop = false, email = null) {
+        function checkEmail(isDragDrop = false, email = null, data = null) {
             console.log('checkEmail');
 
             const head = {
@@ -414,9 +416,10 @@ function initForm(_form) {
                         const resData = response.data;
                         if (resData === true) {
                             console.log("Email already exists!");
-                            showPopUpLogic = popups.get("finished-3");
-                            triggerGoal(formName);          // Фиксируем цель
-                            openNextPopUp();                // Открываем следующий PopUp
+                            if (data) {
+                                showPopUpLogic = popups.get("finished-2");
+                                openNextPopUp();                // Открываем следующий PopUp
+                            }
                         } else {
                             console.log("Email does't exist");
                             if (isDragDrop)
