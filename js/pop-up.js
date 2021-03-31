@@ -155,6 +155,7 @@ function closePopUpById(id, duration = false) {
     popUpCloser.classList.remove('pop-up_active');
     currentShowPopUp = 0;
     scrollAdd();
+    clearFrom(popUpCloser);
 }
 
 function closePopUp(popUp, duration = false) {
@@ -162,6 +163,7 @@ function closePopUp(popUp, duration = false) {
     popUp.classList.remove('pop-up_active');
     currentShowPopUp = 0;
     scrollAdd();
+    clearFrom(popUp);
 }
 
 function addAnimation(item, duration) {
@@ -170,6 +172,33 @@ function addAnimation(item, duration) {
     setTimeout(() => {
         item.style.transition = ``;
     }, duration * 1000);
+}
+
+function clearFrom(popUp) {
+    const _form = popUp.querySelector('form');
+    if (_form) {
+        _form.reset();
+        if (_form.id === 'dran-n-drop') {
+            const fileDrag = document.getElementById('file-drag');
+            fileDrag.classList.remove('uploader__inner--drag');
+            fileDrag.className = 'uploader__inner';
+
+            const _fileUploadBtn = document.getElementById('file-upload-btn');
+            const _uploaderArrowImg = _form.querySelector('.uploader__arrow');
+            const _uploaderDoneImg = _form.querySelector('.uploader__done');
+
+            const _status = document.getElementById('status');
+            _status.innerHTML = '';
+
+            const _messages = document.getElementById('messages');
+            _messages.innerHTML = 'Загрузите научную работу';
+
+            _fileUploadBtn.style.display = 'block';
+            _uploaderArrowImg.style.display = 'block';
+            _uploaderDoneImg.style.display = 'none';
+
+        }
+    }
 }
 
 // управление скролом
