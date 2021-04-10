@@ -48,10 +48,14 @@ function initPopUp(button) {
             }
         }
 
-        if (currentShowPopUp == 0) {
+        if (idPopUp === "popup-500") {
+            openPopUp(_popUp, false);
+            currentShowPopUp = idPopUp;
+        } else if (currentShowPopUp == 0) {
             openPopUp(_popUp, duration);
             currentShowPopUp = idPopUp;
-        } else {
+        }
+        else {
             closePopUpById(currentShowPopUp, false);
             openPopUp(_popUp, false);
             currentShowPopUp = idPopUp;

@@ -12,6 +12,14 @@
 
   &__form {
     width: 85%;
+
+    @include _less-than(1300px) {
+      width: 92%;
+    }
+
+    @include _less-than(1190px) {
+      width: 100%;
+    }
   }
 
   &_transition {
@@ -65,7 +73,7 @@
   &__logo {
     position: absolute;
     left: 0;
-    top: -2.85%;
+    top: 0;
     object-fit: contain;
 
     $h-logo: 160px;
@@ -102,7 +110,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: top center;
   }
 
   &__main {
@@ -132,8 +140,16 @@
     width: 80%;
     margin: 0 auto;
 
-    @include _less-than ($bp-xl-1170) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    @include _less-than($bp-xl-1170) {
       width: 100%;
+    }
+
+    &--center {
+      justify-content: center;
     }
   }
 
@@ -179,6 +195,10 @@
       color: #fff;
       background-color: #000;
     }
+
+    &--close {
+      align-self: flex-start;
+    }
   }
 
   &__super-desc {
@@ -189,7 +209,7 @@
     text-align: left;
 
     &--link {
-      margin: 0;
+      @include margin(0px);
       text-decoration: underline;
     }
 
@@ -207,23 +227,34 @@
   &__title {
     font-weight: bold;
     @include font-size(18px);
-    margin-bottom: 16px;
     line-height: 120%;
+
+    & + & {
+      margin-top: 2vh;
+    }
 
     color: #000000;
   }
 
   &__video {
     width: 80%;
-    @include margin(128px, 0px, 65px, 0px);
+    margin: 4vh 0;
+    align-self: flex-start;
   }
 
   &__social {
     align-items: center;
     justify-content: space-between;
-    margin: 0 auto;
+    align-self: flex-start;
+    width: 60%;
 
-    .social__link {}
+    &--center {
+      width: 85%;
+      align-self: center;
+    }
+
+    .social__link {
+    }
   }
 
   &__iframe {
@@ -250,11 +281,11 @@
     cursor: pointer;
     transition: opacity 0.3s;
 
-    right: 20px;
-    top: 20px;
-    width: 30px;
-    height: 30px;
-    margin-right: 12px;
+    right: 1.3vw;
+    top: 1.5vh;
+
+    width: 25px;
+    height: 25px;
 
     @include _more-than($bp-xxl-1442) {
       right: #{get-vw(20px, $bp-xxl-1442)};
@@ -275,7 +306,7 @@
   }
 
   &__file {
-    @include margin(40px);
+
   }
 
 }
@@ -292,7 +323,6 @@
   &__description {
     font-family: $fontFamilySecondary;
     @include font-size(18px);
-    @include margin(60px);
     text-align: left;
     cursor: default;
   }
@@ -300,7 +330,7 @@
   &__form {
     width: 80%;
 
-    @include _less-than ($bp-xl-1170) {
+    @include _less-than($bp-xl-1170) {
       width: 100%;
     }
   }
@@ -320,17 +350,17 @@
     font-size: 24px;
     padding-right: 100px;
 
-    @include _more-than ($bp-xxl-1442) {
+    @include _more-than($bp-xxl-1442) {
       padding-right: #{get-vw(140px, $bp-xxl-1442)};
       font-size: #{get-vw(24px, $bp-xxl-1442)};
     }
 
-    @include _less-than ($bp-xl-1170) {
+    @include _less-than($bp-xl-1170) {
       font-size: 20px;
       padding-right: 70px;
     }
 
-    @include _less-than ($bp-lg-979) {
+    @include _less-than($bp-lg-979) {
       padding: 0;
       width: 100%;
       font-size: 18px;
@@ -343,7 +373,7 @@
   &__form {
     width: 100%;
 
-    @include _less-than ($bp-xl-1170) {
+    @include _less-than($bp-xl-1170) {
       width: 100%;
     }
 
@@ -423,11 +453,19 @@
   justify-content: space-around;
   align-items: center;
   @include padding(32px, 4px, 32px, 4px);
-  margin: 0 auto;
+  margin: 2vh auto;
   cursor: default;
 
   background: $popupBackground;
   @extend %s-border;
+
+  @include _less-than($bp-xl-1170) {
+    width: 90%;
+  }
+
+  @include _less-than-height(700px) {
+    display: none;
+  }
 
   &__img {
     object-fit: contain;
@@ -444,9 +482,11 @@
   }
 }
 
-.popup-4 {}
+.popup-4 {
+}
 
-.popup-7 {}
+.popup-7 {
+}
 
 .pdf-reader {
   display: flex;
@@ -482,7 +522,8 @@
     height: 100%;
   }
 
-  &__close {}
+  &__close {
+  }
 
   &__btn {
     border: 1px solid #000000;
@@ -578,7 +619,7 @@
   &__input {
     display: none;
 
-    &:checked+label {
+    &:checked + label {
       background-color: $colorAccent;
       overflow: hidden;
     }
@@ -602,7 +643,7 @@
 
     overflow: hidden;
 
-    &+input+& {
+    & + input + & {
       border-top: 0 solid #C7CCD160;
     }
 
@@ -630,7 +671,7 @@
       opacity: 1;
     }
 
-    .selector__label+.selector__input+.selector__label {
+    .selector__label + .selector__input + .selector__label {
       max-height: 40px;
       border-top-width: 1px;
     }

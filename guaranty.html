@@ -121,50 +121,51 @@
                     </h3>
                 </div>
 
-                <div class="pop-up__file">
-                    <div class="card-file">
-                        <img class="card-file__img" src="./media/pdf_img.svg" alt="pdf_img">
-                        <span class="card-file__title">
+                <div class="card-file">
+                    <img class="card-file__img" src="./media/pdf_img.svg" alt="pdf_img">
+                    <span class="card-file__title">
                             Статья<br>
                             “Финансовая безопасность
                             при публикации научных статей”
                         </span>
+                </div>
+
+                <div class="pop-up__file">
+
+                    <p class="popup-2__description">
+                        Узнайте, как обезопасить себя от финансовых потерь при публикации научной статьи.
+                    </p>
+
+                    <p class="pop-up__desc">
+                        Укажите,пожалуйста, контактный номер телефона с WhatsApp,
+                        статья поступит в течение 15 минут.
+                    </p>
+
+                    <div class="popup-2__form">
+                        <form novalidate name="2" action="/">
+                            <div class="pop-up__inputs">
+                                <div class="input-wrapper">
+                                    <input name="phone" type="tel" class="pop-up__input"
+                                           placeholder="Введите номер телефона"
+                                           pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required />
+                                    <span class="input-wrapper__error"></span>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="pop-up__button" data-show-popup="file_upload-2" data-step="2">
+                                Получить статью
+                            </button>
+                        </form>
                     </div>
                 </div>
 
-                <p class="popup-2__description">
-                    Узнайте, как обезопасить себя от финансовых потерь при публикации научной статьи.
+                <p class="pop-up__super-desc">
+                    Нажимая на кнопку, вы даете согласие на обработку своих
+                    персональных данных и соглашаетесь с
+                    <button class="pop-up__super-desc pop-up__super-desc--link" data-show-popup="500">
+                        Политикой конфиденциальности
+                    </button>
                 </p>
-
-                <p class="pop-up__desc">
-                    Укажите,пожалуйста, контактный номер телефона с WhatsApp,
-                    статья поступит в течение 15 минут.
-                </p>
-
-                <div class="popup-2__form">
-                    <form novalidate name="2" action="/">
-                        <div class="pop-up__inputs">
-                            <div class="input-wrapper">
-                                <input name="phone" type="tel" class="pop-up__input"
-                                    placeholder="Введите номер телефона"
-                                    pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required />
-                                <span class="input-wrapper__error"></span>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="pop-up__button" data-show-popup="file_upload-2" data-step="2">
-                            Получить статью
-                        </button>
-                    </form>
-
-                    <p class="pop-up__super-desc">
-                        Нажимая на кнопку, вы даете согласие на обработку своих
-                        персональных данных и соглашаетесь с
-                        <button class="pop-up__super-desc pop-up__super-desc--link" data-show-popup="500">
-                            Политикой конфиденциальности
-                        </button>
-                    </p>
-                </div>
             </div>
         </div>
     </div>
