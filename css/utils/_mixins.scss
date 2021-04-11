@@ -11,16 +11,6 @@
   }
 }
 
-@font-face {
-  font-family: 'Helvetica World';
-  src: url('HelveticaWorld.eot');
-  src: local('HelveticaWorld'), local('HelveticaWorld'),
-    url('HelveticaWorld.woff2') format('woff2'),
-    url('HelveticaWorld.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 @mixin font-size($f-size: 12px, ) {
   font-size: $f-size;
 

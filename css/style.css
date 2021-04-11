@@ -1,13 +1,5 @@
 @charset "UTF-8";
 
-@font-face {
-  font-family: 'Helvetica World';
-  src: url("HelveticaWorld.eot");
-  src: local("HelveticaWorld"),local("HelveticaWorld"),url("HelveticaWorld.woff2") format("woff2"),url("HelveticaWorld.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
 .audit-cart,
 .audit__main,
 .card-file,
@@ -33,14 +25,6 @@
   box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
   border-radius: 6px;
   border-left: #001437 solid 12px;
-}
-
-@font-face {
-  font-family: 'Helvetica World';
-  src: url("HelveticaWorld.eot");
-  src: local("HelveticaWorld"),local("HelveticaWorld"),url("HelveticaWorld.woff2") format("woff2"),url("HelveticaWorld.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
 }
 
 .audit-cart,
