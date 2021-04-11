@@ -1749,6 +1749,7 @@ input {
   position: absolute;
   object-fit: contain;
   object-position: top;
+  width: 100%;
   top: 0;
   left: 0;
 }
