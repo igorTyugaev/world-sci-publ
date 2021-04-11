@@ -1579,7 +1579,7 @@ input {
 .manifest__logo {
   position: absolute;
   right: 0;
-  top: -2.19214881%;
+  top: 0;
   object-fit: contain;
   height: 80px;
 }
