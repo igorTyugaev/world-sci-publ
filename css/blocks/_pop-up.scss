@@ -789,6 +789,15 @@
   height: 100%;
   width: 62.363%;
 
+  &__btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @include font-size(18px);
+    @include padding(15px, 10px, 15px, 10px);
+    @include margin(35px);
+  }
+
   &__header {
     display: flex;
     align-items: center;
@@ -806,13 +815,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 1;
+    flex: 4;
   }
 
   &__footer {
     width: 70%;
     @include margin(0px, 0px, 20px, 0px);
-    flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -827,7 +835,7 @@
   &__subtitle {
     font-family: $fontFamilySecondary;
     color: $textColorPrimary;
-    @include font-size(24px);
+    @include font-size(36px);
     line-height: 116%;
   }
 
@@ -835,12 +843,7 @@
     font-family: $fontFamilyPrimary;
     color: $textColorPrimary;
     @include font-size(24px);
-  }
-
-  &__btn {
-    width: 30%;
-    display: flex;
-    justify-content: center;
+    @include margin(24px);
   }
 }
 

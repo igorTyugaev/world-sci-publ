@@ -4098,6 +4098,18 @@ input {
   width: 62.363%;
 }
 
+.cover__btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  padding-top: 15px;
+  padding-right: 10px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  margin: 35px 0px 0px 0px;
+}
+
 .cover__header {
   display: flex;
   align-items: center;
@@ -4114,13 +4126,12 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 1;
+  flex: 4;
 }
 
 .cover__footer {
   width: 70%;
   margin: 0px 0px 20px 0px;
-  flex: 2;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -4135,7 +4146,7 @@ input {
 .cover__subtitle {
   font-family: "HelveticaBold";
   color: #000000;
-  font-size: 24px;
+  font-size: 36px;
   line-height: 116%;
 }
 
@@ -4143,12 +4154,7 @@ input {
   font-family: "Helvetica";
   color: #000000;
   font-size: 24px;
-}
-
-.cover__btn {
-  width: 30%;
-  display: flex;
-  justify-content: center;
+  margin: 24px 0px 0px 0px;
 }
 
 .pop-up-cover {
@@ -5861,16 +5867,35 @@ input {
     margin: 2.427184466vw 0vw 0vw 0vw;
   }
 
+  .cover__btn {
+    font-size: 1.2482662968vw;
+  }
+
+  .cover__btn {
+    padding-top: 1.040221914vw;
+    padding-right: 0.693481276vw;
+    padding-bottom: 1.040221914vw;
+    padding-left: 0.693481276vw;
+  }
+
+  .cover__btn {
+    margin: 2.427184466vw 0vw 0vw 0vw;
+  }
+
   .cover__footer {
     margin: 0vw 0vw 1.386962552vw 0vw;
   }
 
   .cover__subtitle {
-    font-size: 1.6643550624vw;
+    font-size: 2.4965325936vw;
   }
 
   .cover__text {
     font-size: 1.6643550624vw;
+  }
+
+  .cover__text {
+    margin: 1.6643550624vw 0vw 0vw 0vw;
   }
 
   .folder__title {
@@ -7235,8 +7260,19 @@ input {
     padding-left: 1.0214504597vw;
   }
 
+  .cover__btn {
+    font-size: 1.8386108274vw;
+  }
+
+  .cover__btn {
+    padding-top: 1.5321756895vw;
+    padding-right: 1.0214504597vw;
+    padding-bottom: 1.5321756895vw;
+    padding-left: 1.0214504597vw;
+  }
+
   .cover__subtitle {
-    font-size: 2.4514811032vw;
+    font-size: 3.6772216547vw;
   }
 
   .cover__text {
@@ -8035,8 +8071,12 @@ input {
     font-size: 2.4305555556vw;
   }
 
+  .cover__btn {
+    font-size: 3.125vw;
+  }
+
   .cover__subtitle {
-    font-size: 4.1666666667vw;
+    font-size: 6.25vw;
   }
 
   .cover__text {
