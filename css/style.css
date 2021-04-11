@@ -1044,12 +1044,12 @@ input {
   top: 0;
   transition: 0.6s;
   height: 100vh;
-  width: 30vw;
+  width: 40vw;
   background-color: #031435;
-  padding-top: 0px;
-  padding-right: 50px;
+  padding-top: 20px;
+  padding-right: 65px;
   padding-bottom: 0px;
-  padding-left: 50px;
+  padding-left: 65px;
 }
 
 .nav__header {
@@ -4522,10 +4522,10 @@ input {
   }
 
   .nav {
-    padding-top: 0vw;
-    padding-right: 3.46740638vw;
+    padding-top: 1.386962552vw;
+    padding-right: 4.507628294vw;
     padding-bottom: 0vw;
-    padding-left: 3.46740638vw;
+    padding-left: 4.507628294vw;
   }
 
   .nav__links {
@@ -5928,7 +5928,7 @@ input {
   }
 
   .nav {
-    width: 42vw;
+    width: 50vw;
   }
 
   .promo__title {
@@ -6210,10 +6210,10 @@ input {
   }
 
   .nav {
-    padding-top: 0vw;
-    padding-right: 5.1072522983vw;
+    padding-top: 2.0429009193vw;
+    padding-right: 6.6394279877vw;
     padding-bottom: 0vw;
-    padding-left: 5.1072522983vw;
+    padding-left: 6.6394279877vw;
   }
 
   .nav__link {
