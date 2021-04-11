@@ -3738,12 +3738,15 @@ input {
   border: 1px solid #219653;
 }
 
-.p-uploader--active .p-uploader__choose {
-  color: #FFFEFE;
+.p-uploader--active:hover {
+  border: 1px solid rgba(0,0,0,0.49);
+  background-color: #FFFEFE;
+  color: #b7b7b7;
 }
 
-.p-uploader--active .p-uploader__choose:hover {
-  color: #B7B7B7;
+.p-uploader--active:hover .p-uploader__choose .p-uploader__text {
+  color: #b7b7b7!important;
+  content: "sdfds";
 }
 
 .p-uploader:active {
@@ -3895,8 +3898,9 @@ input {
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: #FFFEFE;
   margin: 15px 0px 0px 0px;
+  border: 1px solid rgba(0,0,0,0.49);
+  background-color: #FFFEFE;
   color: #b7b7b7;
   font-style: "Helvetica";
   font-size: 14px;
@@ -3904,7 +3908,6 @@ input {
   padding-right: 12px;
   padding-bottom: 12px;
   padding-left: 12px;
-  border: 1px solid rgba(0,0,0,0.49);
   border-radius: 6px;
   z-index: 2;
   cursor: pointer;
@@ -3921,7 +3924,9 @@ input {
 }
 
 .selector__title--show:hover {
-  color: #FFFEFE;
+  border: 1px solid rgba(0,0,0,0.49);
+  background-color: #FFFEFE;
+  color: #b7b7b7;
 }
 
 .selector__content {
