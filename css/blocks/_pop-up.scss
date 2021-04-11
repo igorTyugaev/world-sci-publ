@@ -22,6 +22,13 @@
     }
   }
 
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &_transition {
     transition: transform 0.5s;
   }
@@ -119,6 +126,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    &--gray {
+      background: #F5F5F5;
+    }
   }
 
   &__inner {
@@ -220,7 +231,7 @@
       @include font-size(14px);
       transform: translateX(-50%);
       margin: 0;
-      text-decoration: none;
+      text-decoration: underline;
     }
   }
 
@@ -237,8 +248,8 @@
   }
 
   &__video {
-    width: 80%;
-    margin: 4vh 0;
+    width: 100%;
+    margin: 4vh auto;
     align-self: flex-start;
   }
 

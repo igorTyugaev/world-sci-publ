@@ -3410,6 +3410,13 @@ input {
   width: 85%;
 }
 
+.pop-up__footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .pop-up_transition {
   transition: transform 0.5s;
 }
@@ -3488,6 +3495,10 @@ input {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.pop-up__main--gray {
+  background: #F5F5F5;
 }
 
 .pop-up__inner {
@@ -3593,7 +3604,7 @@ input {
   font-size: 14px;
   transform: translateX(-50%);
   margin: 0;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .pop-up__title {
@@ -3608,8 +3619,8 @@ input {
 }
 
 .pop-up__video {
-  width: 80%;
-  margin: 4vh 0;
+  width: 100%;
+  margin: 4vh auto;
   align-self: flex-start;
 }
 
