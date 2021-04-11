@@ -7473,13 +7473,6 @@ input {
   }
 }
 
-@media (max-width:760px) {
-  .pop-up-cover {
-    display: block;
-    z-index: 99999;
-  }
-}
-
 @media (max-width:720px) {
   .quiz__subtitle {
     padding-top: 7px;
@@ -7497,6 +7490,11 @@ input {
     padding-right: 28px;
     padding-bottom: 0px;
     padding-left: 0px;
+  }
+
+  .pop-up-cover {
+    display: block;
+    z-index: 99999;
   }
 }
 

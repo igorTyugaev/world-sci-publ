@@ -860,7 +860,7 @@
     height: 100%;
   }
 
-  @include _less-than(760px) {
+  @include _less-than(720px) {
     display: block;
     z-index: 99999;
   }
