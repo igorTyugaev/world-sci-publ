@@ -1837,10 +1837,9 @@ input {
   flex: 0 0 100%;
   max-width: 100%;
   position: relative;
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 48px;
-  padding-left: 0px;
+  padding-left: 3.2%;
+  padding-right: 2%;
+  padding-bottom: 6vw;
 }
 
 .stages-slider__title {
@@ -4924,13 +4923,6 @@ input {
     font-size: 4.9930651872vw;
   }
 
-  .stages-slider__item {
-    padding-top: 0vw;
-    padding-right: 0vw;
-    padding-bottom: 3.3287101248vw;
-    padding-left: 0vw;
-  }
-
   .stages-slider__title {
     font-size: 1.2482662968vw;
   }
@@ -6530,13 +6522,6 @@ input {
   .quote:after,
   .quote:before {
     font-size: 7.3544433095vw;
-  }
-
-  .stages-slider__item {
-    padding-top: 0vw;
-    padding-right: 0vw;
-    padding-bottom: 4.9029622063vw;
-    padding-left: 0vw;
   }
 
   .stages-slider__title {

@@ -15,7 +15,14 @@
     flex: 0 0 100%;
     max-width: 100%;
     position: relative;
-    @include padding(0px, 0px, 48px, 0px);
+    //@include padding(0px, 0px, 52px, 0px);
+    padding-left: 3.2%;
+    padding-right: 2%;
+    padding-bottom: 6vw;
+  }
+
+  &__content {
+
   }
 
   &__nav {
