@@ -35,12 +35,22 @@
 
   &__logo-txt {
     font-family: $fontFamilyPrimary;
-    @include font-size(8px);
     line-height: 101%;
     text-align: center;
     align-items: center;
     color: $textColorSecondary;
     padding: 0;
+
+    @include font-size(8px);
+
+    @media (max-width: #{800px}) {
+      font-size: #{get-vw(9px, 800px)};
+    }
+
+    @media (max-width: #{750px}) {
+      font-size: #{get-vw(9px, 750px)};
+    }
+
 
     position: absolute;
     top: 48%;
@@ -92,7 +102,8 @@
     }
   }
 
-  &__scroll-bar {}
+  &__scroll-bar {
+  }
 
   &__bg {
     height: 100%;

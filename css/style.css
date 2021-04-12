@@ -1262,12 +1262,12 @@ input {
 
 .consultation__logo-txt {
   font-family: "Helvetica";
-  font-size: 8px;
   line-height: 101%;
   text-align: center;
   align-items: center;
   color: #FFFFFF;
   padding: 0;
+  font-size: 8px;
   position: absolute;
   top: 48%;
   left: 50%;
@@ -7279,6 +7279,12 @@ input {
   }
 }
 
+@media (max-width:800px) {
+  .consultation__logo-txt {
+    font-size: 1.125vw;
+  }
+}
+
 @media (max-width:768px) {
   .extended-subtitle:after {
     border-radius: 0.78125vw;
@@ -7455,6 +7461,12 @@ input {
 
   .review-card__index {
     font-size: 2.4305555556vw;
+  }
+}
+
+@media (max-width:750px) {
+  .consultation__logo-txt {
+    font-size: 1.2vw;
   }
 }
 
