@@ -489,7 +489,7 @@
   }
 
   &__title {
-    font-family: $fontFamilyPrimary;
+    font-family: $fontFamilySecondary;
     @include font-size(18px);
     @include padding(16px, 12px, 0px, 12px);
     line-height: 110%;
