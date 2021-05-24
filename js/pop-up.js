@@ -155,42 +155,44 @@ function initPopUpById(id, scriptForm = null) {
 
 function getPdfDocById(popUp) {
     const _iframe = popUp.querySelector('iframe');
-    const iframeID = _iframe.getAttribute('id');
+    if (_iframe && _iframe.hasAttribute('id')) {
+        const iframeID = _iframe.getAttribute('id');
 
-    switch (iframeID) {
-        case "cooperation_agreement":
-            _iframe.src = "https://drive.google.com/file/d/1W-CW3Q27ebiwfl-wv9S4B_3oIZaWSgUY/preview";
-            break;
+        switch (iframeID) {
+            case "cooperation_agreement":
+                _iframe.src = "https://drive.google.com/file/d/1W-CW3Q27ebiwfl-wv9S4B_3oIZaWSgUY/preview";
+                break;
 
-        case "privacy_policy":
-            _iframe.src = "https://drive.google.com/file/d/1MF_Wx6QopTXjhBHDtE-IRUXVrxKyIZ8o/preview";
-            break;
+            case "privacy_policy":
+                _iframe.src = "https://drive.google.com/file/d/1MF_Wx6QopTXjhBHDtE-IRUXVrxKyIZ8o/preview";
+                break;
 
-        case "example_tech_audit":
-            _iframe.src = "https://drive.google.com/file/d/1wmHktxsPSc2OqqKaP4OT2vP2ysWUr9x-/preview";
-            break;
+            case "example_tech_audit":
+                _iframe.src = "https://drive.google.com/file/d/1wmHktxsPSc2OqqKaP4OT2vP2ysWUr9x-/preview";
+                break;
 
-        case "example_provisional_defect":
-            _iframe.src = "https://drive.google.com/file/d/1yJMEpbTCqqu7kJmzuz3JQVVHjW0Gcv1-/preview";
-            break;
+            case "example_provisional_defect":
+                _iframe.src = "https://drive.google.com/file/d/1yJMEpbTCqqu7kJmzuz3JQVVHjW0Gcv1-/preview";
+                break;
 
-        case "example_scientific_editing":
-            _iframe.src = "https://drive.google.com/file/d/1pqEmIpPLWBEhOjG6Z8YFTT6q_ERx0iL7/preview";
-            break;
+            case "example_scientific_editing":
+                _iframe.src = "https://drive.google.com/file/d/1pqEmIpPLWBEhOjG6Z8YFTT6q_ERx0iL7/preview";
+                break;
 
-        case "example_revision_certificate":
-            _iframe.src = "https://drive.google.com/file/d/1QP-ZloUgdMxDXPfIgN5ut9rnw4QEQ6W4/preview";
-            break;
+            case "example_revision_certificate":
+                _iframe.src = "https://drive.google.com/file/d/1QP-ZloUgdMxDXPfIgN5ut9rnw4QEQ6W4/preview";
+                break;
 
-        case "example_cover_letter":
-            _iframe.src = "https://drive.google.com/file/d/1w904xoCCq6lhLxyY_09YaA4DjuHRV7Sw/preview";
-            break;
+            case "example_cover_letter":
+                _iframe.src = "https://drive.google.com/file/d/1w904xoCCq6lhLxyY_09YaA4DjuHRV7Sw/preview";
+                break;
 
-        case "example_final_article":
-            _iframe.src = "https://drive.google.com/file/d/1eJf04ioy7zhJkao60TA6KjFmvIKCivFH/preview";
-            break;
-        default:
-            return;
+            case "example_final_article":
+                _iframe.src = "https://drive.google.com/file/d/1eJf04ioy7zhJkao60TA6KjFmvIKCivFH/preview";
+                break;
+            default:
+                return;
+        }
     }
 }
 
