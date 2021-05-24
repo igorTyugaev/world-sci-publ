@@ -52,7 +52,6 @@ function hideMenu() {
     toggleScroll(_navBar.classList.contains("nav--show"));
 }
 
-
 const scrollItems = document.querySelectorAll('[data-scroll]');
 scrollItems.forEach((item) => {
     item.addEventListener("click", () => {

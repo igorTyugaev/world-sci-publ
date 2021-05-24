@@ -8,6 +8,14 @@ function initPopUp(button) {
     const _closeButton = _popUp.querySelector('.pop-up__close');
     const _closeBtn = _popUp.querySelector('.pop-up__button--close');
 
+    const _currentURL = new URL(window.location.href);
+    const _popUPFromURL = _currentURL.searchParams.get("get-popup-by-id");
+
+// if (popups.get(idShowPopUp)) {
+//     const showPopUpLogic = popups.get(idShowPopUp)
+//
+// }
+
     if (_closeBtn) {
         _closeBtn.addEventListener('click', () => {
             closePopUp(_popUp, duration);
@@ -54,8 +62,7 @@ function initPopUp(button) {
         } else if (currentShowPopUp == 0) {
             openPopUp(_popUp, duration);
             currentShowPopUp = idPopUp;
-        }
-        else {
+        } else {
             closePopUpById(currentShowPopUp, false);
             openPopUp(_popUp, false);
             currentShowPopUp = idPopUp;
@@ -102,6 +109,10 @@ function initPopUp(button) {
     _closeButton.addEventListener('click', () => {
         closePopUp(_popUp, duration);
     });
+
+    if (_popUPFromURL === idPopUp) {
+        showPopUpLogic();
+    }
 
     return showPopUpLogic;
 }
@@ -234,8 +245,7 @@ buttons.forEach((button) => {
 
             popups.set('finished-2', initPopUp(button_copy));
             popups.set('finished-3', initPopUp(button_copy_2));
-        }
-        else
+        } else
             popups.set(idShowPopUp, initPopUp(button));
     }
 });
