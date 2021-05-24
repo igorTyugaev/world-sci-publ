@@ -52,6 +52,18 @@ function hideMenu() {
     toggleScroll(_navBar.classList.contains("nav--show"));
 }
 
+function showOutPopup() {
+    const showPopUpLogic = popups.get("6");
+    showPopUpLogic();
+}
+
+
+glio.init(
+    ['top', function () {
+        showOutPopup();
+    }]
+);
+
 const scrollItems = document.querySelectorAll('[data-scroll]');
 scrollItems.forEach((item) => {
     item.addEventListener("click", () => {
